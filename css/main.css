@@ -65,6 +65,7 @@ body {
 
 .carousel-caption a {
 	margin: 30px;
+	padding: 10px 30px;
 }
 
 .featurette img {
@@ -81,8 +82,30 @@ body {
 	background-image: url(../img/temp/back.jpg);
 }
 
-.shadowtext {
+.carousel-inner p {
+	text-shadow: 5px 5px 100px black, 0 0 1em black; /* Параметры тени */
+	color: white; /* Белый цвет текста */
+}
+
+.carousel-inner h1 {
 	text-shadow: 5px 5px 10px black, 0 0 1em black; /* Параметры тени */
-    color: white; /* Белый цвет текста */
-    font-size: 2em; /* Размер надписи */
+	color: white; /* Белый цвет текста */
+	font-size: 50px;
+}
+
+.head-img {
+	margin-bottom: 100px;
+}
+
+.btn-info,
+.navbar-default {
+	background-color: rgba(81,135,161, 0.9);
+	border-color: #333333;
+}
+
+.navbar-default a {
+	color: #fff !important;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: #5187a1 !important;
 }

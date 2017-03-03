@@ -80,3 +80,9 @@ body {
 .section {
 	background-image: url(../img/temp/back.jpg);
 }
+
+.shadowtext {
+	text-shadow: 5px 5px 10px black, 0 0 1em black; /* Параметры тени */
+    color: white; /* Белый цвет текста */
+    font-size: 2em; /* Размер надписи */
+}

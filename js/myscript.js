@@ -25,10 +25,6 @@ jQuery(document).ready(function() {
 		cursorwidth :"8px",
 		zindex:"9999"
 	});
-
-	$(window).scroll(function(){
-		Scrollissimo.knock();
-	});
 });
 
 

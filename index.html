@@ -14,7 +14,6 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
-	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
 	<link href="css/animate.css" rel="stylesheet" type="text/css" media="all" />
       <link href="css/owl.carousel.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -28,44 +27,12 @@
 	
 	<script src="js/jquery.min.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
 	<script src="js/superfish.min.js" type="text/javascript"></script>
 	<script src="js/jquery.flexslider-min.js" type="text/javascript"></script>
 	<script src="js/owl.carousel.js" type="text/javascript"></script>
 	<script src="js/animate.js" type="text/javascript"></script>
-	<script src="js/jquery.BlackAndWhite.js"></script>
 	<script src="js/myscript.js" type="text/javascript"></script>
-	<script>
-		
-		//PrettyPhoto
-		jQuery(document).ready(function() {
-			$("a[rel^='prettyPhoto']").prettyPhoto();
-		});
-		
-		//BlackAndWhite
-		$(window).load(function(){
-			$('.client_img').BlackAndWhite({
-				hoverEffect : true, // default true
-				// set the path to BnWWorker.js for a superfast implementation
-				webworkerPath : false,
-				// for the images with a fluid width and height 
-				responsive:true,
-				// to invert the hover effect
-				invertHoverEffect: false,
-				// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-				intensity:1,
-				speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-					fadeIn: 300, // 200ms for fadeIn animations
-					fadeOut: 300 // 800ms for fadeOut animations
-				},
-				onImageReady:function(img) {
-					// this callback gets executed anytime an image is converted
-				}
-			});
-		});
-		
-	</script>
 	
 </head>
 <body>
@@ -95,7 +62,7 @@
 					<!-- SEARCH FORM -->
 					<div id="search-form" class="pull-right">
 						<form method="get" action="#">
-							<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+							<input type="text" name="Search" value="Поиск" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
 						</form>
 					</div><!-- SEARCH FORM -->
 					
@@ -786,9 +753,9 @@
 						<div id="note"></div>
 						<div id="fields">
 							<form id="contact-form-face" class="clearfix" action="#">
-								<input type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
-								<textarea name="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
-								<input class="contact_btn" type="submit" value="Send message" />
+								<input type="text" name="name" value="Имя" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
+								<textarea name="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Сообщение</textarea>
+								<input class="contact_btn" type="submit" value="Отправить сообщение" />
 							</form>
 						</div>
 					</div><!-- //CONTACT FORM -->
@@ -803,13 +770,6 @@
 			</div><!-- //ROW -->
 		</div><!-- //CONTAINER -->
 	</footer><!-- //FOOTER -->
-	
-	
-	<!-- MAP -->
-	<div id="map">
-		<a class="map_hide" href="javascript:void(0);" ><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
-		<iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed" ></iframe>
-	</div><!-- //MAP -->
 
 </div>
 </body>

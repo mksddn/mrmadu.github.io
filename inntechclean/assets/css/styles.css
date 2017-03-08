@@ -983,7 +983,7 @@ button:active {
     margin-left: 27px;
     padding-left: 29px;
     position: relative;
-    color: #008cd0;
+    color: #5187a1;
     font-size: 14px;
     line-height: 16px;
     vertical-align: middle; }
@@ -2954,7 +2954,7 @@ button:active {
     padding-bottom: 10px; }
 .section_type_service {
   background: #fff;
-  background: linear-gradient(to bottom, #cee3fd 0%, #fff 100%);
+  background: linear-gradient(to bottom, #5187a1 0%, #fff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cee3fd', endColorstr='#fff',GradientType=0 ); }
 .section_type_about {
   background: #fff; }

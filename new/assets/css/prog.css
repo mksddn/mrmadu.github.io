@@ -1,0 +1,19 @@
+#panel {
+        position: relative;
+    top: 80px;
+    z-index: 9999;
+}
+.addprice{
+	    margin-top: -30px;
+    font-size: 12px;
+        margin-bottom: -20px;
+/*        height: 0;
+        overflow: hidden;*/
+}
+.add_back {
+	margin-left: 70px;
+}
+.catalog__spec{
+	height: 155px;
+    overflow: hidden;
+}

@@ -53,7 +53,7 @@
   .form__name {
     display: block;
     color: #fff;
-    font: normal 22px/22px Tahoma, Verdana, sans-serif; }
+    font: normal 22px/22px 'Roboto Condensed', Verdana, sans-serif; }
     .form_type_feedback .form__name {
       margin-bottom: 26px;
       margin-left: 15px; }
@@ -148,7 +148,7 @@
     top: -4px;
     left: 0;
     color: #fff;
-    font: normal 15px/25px Tahoma, Verdana, sans-serif; }
+    font: normal 15px/25px 'Roboto Condensed', Verdana, sans-serif; }
     .form__message span {
       display: block;
       margin-bottom: 50px;
@@ -667,7 +667,7 @@ p {
   display: block;
   margin: 0 0 35px;
   color: #4f5b66;
-  font-family: Tahoma, Verdana, sans-serif;
+  font-family: 'Roboto Condensed', Verdana, sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 46px; }
@@ -786,7 +786,7 @@ p {
     display: inline-block;
     padding-right: 21px;
     position: relative;
-    font: normal 18px/24px Tahoma, Verdana, sans-serif;
+    font: normal 18px/24px 'Roboto Condensed', Verdana, sans-serif;
     color: #0088d0;
     text-decoration: underline;
     transition: all .3s; }
@@ -816,7 +816,7 @@ p {
     .layout__category a {
       display: inline-block;
       color: #5187a1;
-      font: normal 16px/21px Tahoma, Verdana, sans-serif;
+      font: normal 16px/21px 'Roboto Condensed', Verdana, sans-serif;
       text-decoration: underline;
       vertical-align: middle; }
       .layout__category a:hover {
@@ -875,7 +875,7 @@ p {
   .layout__title {
     margin: 0 0 15px;
     color: #fff;
-    font: bold 32px/34px Tahoma, Verdana, sans-serif; }
+    font: bold 32px/34px 'Roboto Condensed', Verdana, sans-serif; }
   .layout__heading {
     margin-bottom: 30px; }
     .layout__section_type_advantages .layout__heading {
@@ -925,9 +925,9 @@ p {
     .layout ~ #fp-nav ul li:first-of-type {
       margin: 0; }
     .layout ~ #fp-nav ul li a {
-      background: #b7b7b7; }
+      background: #8EA5B1; }
       .layout ~ #fp-nav ul li a.active {
-        background: #5187a1; }
+        background: #77C7ED; }
       .layout ~ #fp-nav ul li a span {
         display: none; }
 
@@ -949,7 +949,7 @@ button:active {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: #fff; }
+  background: rgba(191,222,237,0.7); }
   .header:before {
     height: 1px;
     width: 100%;
@@ -962,6 +962,7 @@ button:active {
     padding-top: 19px;
     padding-bottom: 19px; }
   .header__about {
+    margin-top: 10px;
     float: left; }
   .header__logo {
     font: 0/0 a;
@@ -984,7 +985,7 @@ button:active {
     padding-left: 29px;
     position: relative;
     color: #5187a1;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 16px;
     vertical-align: middle; }
     @media screen and (max-width: 1100px) {
@@ -1001,7 +1002,7 @@ button:active {
     float: left;
     margin-left: 30px;
     color: #2d2d2d;
-    font: normal 14px/22px Tahoma, Verdana, sans-serif;
+    font: normal 14px/22px 'Roboto Condensed', Verdana, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .7px;
@@ -1015,11 +1016,11 @@ button:active {
       color: #008cd0; }
 
 .footer {
-  background: #4f5b66; }
+  background: #375C6E; }
   .footer__holder {
     padding-top: 15px;
     padding-bottom: 15px;
-    font: normal 14px/20px Tahoma, Verdana, sans-serif; }
+    font: normal 14px/20px 'Roboto Condensed', Verdana, sans-serif; }
   .footer__copyright {
     float: left;
     color: #fff; }
@@ -1048,7 +1049,7 @@ button:active {
     padding: 0 15px;
     color: #008cd0;
     cursor: pointer;
-    font: normal 14px/33px Tahoma, Verdana, sans-serif;
+    font: normal 14px/33px 'Roboto Condensed', Verdana, sans-serif;
     letter-spacing: .7px; }
     .brands__anchor:first-of-type {
       border-left: none;
@@ -1086,7 +1087,7 @@ button:active {
     display: inline-block;
     margin-bottom: 15px;
     color: #4f5b66;
-    font: bold 26px/30px Tahoma, Verdana, sans-serif;
+    font: bold 26px/30px 'Roboto Condensed', Verdana, sans-serif;
     text-decoration: underline; }
     .brands__name:hover {
       text-decoration: none; }
@@ -1126,7 +1127,7 @@ button:active {
   margin: 130px 0 15px;
   display: block;
   color: #4f5b66;
-  font: normal 40px/50px Tahoma, Verdana, sans-serif; }
+  font: normal 40px/50px 'Roboto Condensed', Verdana, sans-serif; }
   @media screen and (max-width: 1300px) {
     .boss__name {
       margin-top: 50px;
@@ -1143,7 +1144,7 @@ button:active {
 .boss__post {
   display: block;
   color: #4f5b66;
-  font: normal 14px/20px Tahoma, Verdana, sans-serif;
+  font: normal 14px/20px 'Roboto Condensed', Verdana, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px; }
 .boss__description {
@@ -1199,7 +1200,7 @@ button:active {
     .business__name span {
       display: inline-block;
       color: #0088d0;
-      font: bold 24px/30px Tahoma, Verdana, sans-serif;
+      font: bold 24px/30px 'Roboto Condensed', Verdana, sans-serif;
       vertical-align: middle; }
     @media screen and (max-width: 1300px) {
       .business__name {
@@ -1222,7 +1223,7 @@ button:active {
     .business__hidden span {
       display: block;
       margin-bottom: 15px;
-      font: bold 24px/30px Tahoma, Verdana, sans-serif; }
+      font: bold 24px/30px 'Roboto Condensed', Verdana, sans-serif; }
     .business__hidden p {
       max-height: 154px;
       overflow: hidden; }
@@ -1246,7 +1247,7 @@ button:active {
   display: block;
   margin-top: 15px;
   color: #fff;
-  font: normal 20px/24px Tahoma, Verdana, sans-serif; }
+  font: normal 20px/24px 'Roboto Condensed', Verdana, sans-serif; }
 
 .implemented__holder {
   box-shadow: 0 15px 20px 0 rgba(3, 51, 95, 0.25);
@@ -1343,7 +1344,7 @@ button:active {
     display: block;
     margin: 25px 0 15px;
     color: #4f5b66;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: 'Roboto Condensed', Verdana, sans-serif;
     font-size: 20px; }
     .manager__name span {
       display: block;
@@ -1493,7 +1494,7 @@ button:active {
     line-height: 25px; }
   .feedback__name {
     margin: 20px 0 12px;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: 'Roboto Condensed', Verdana, sans-serif;
     font-size: 20px; }
     .feedback__name span {
       display: block;
@@ -1514,7 +1515,7 @@ button:active {
     vertical-align: middle; }
   .feedback__post span {
     display: inline-block;
-    font-family: Tahoma, Verdana, sans-serif;
+    font-family: 'Roboto Condensed', Verdana, sans-serif;
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 1.2px;
@@ -1553,7 +1554,7 @@ button:active {
     padding-left: 100px;
     position: relative;
     background: #5187a1;
-    font: normal 18px/107px Tahoma, Verdana, sans-serif;
+    font: normal 18px/107px 'Roboto Condensed', Verdana, sans-serif;
     color: #fff;
     transition: all .3s; }
     .direction__link img {
@@ -1580,7 +1581,7 @@ button:active {
     .direction_type_promo .direction__link {
       background: rgba(81,135,161,0.75); }
     .direction__link:hover {
-      background: #4f5b66; }
+      background: #5187a1; }
     .direction__link_state_current {
       background: #4f5b66; }
       .direction__link_state_current:before {
@@ -1596,6 +1597,7 @@ button:active {
         left: 50%;
         content: ''; }
   .direction__anchor {
+    margin: 10px;
     display: inline-block;
     line-height: 25px;
     vertical-align: middle; }
@@ -1752,13 +1754,13 @@ button:active {
     padding-top: 70px;
     width: 50%;
     color: #4f5b66;
-    font: normal 18px/25px Tahoma, Verdana, sans-serif; }
+    font: normal 18px/25px 'Roboto Condensed', Verdana, sans-serif; }
     @media screen and (max-width: 1366px) {
       .error__inner {
         padding-top: 50px; } }
   .error__title {
     display: block;
-    font: bold 100px/80px Tahoma, Verdana, sans-serif; }
+    font: bold 100px/80px 'Roboto Condensed', Verdana, sans-serif; }
   .error__subtitle {
     display: block;
     margin: 20px 0 55px;
@@ -1941,7 +1943,7 @@ button:active {
     background: none; }
     .projects__slider .slick-dots li.slick-active button, .promo .slick-dots li.slick-active button {
       border-color: #fff;
-      background: #4f5b66; }
+      background: #375C6E; }
   .service__slider .slick-dots {
     display: none !important; }
 
@@ -1994,7 +1996,7 @@ button:active {
   .news__date {
     display: block;
     color: #4f5b66;
-    font: normal 12px/18px Tahoma, Verdana, sans-serif;
+    font: normal 12px/18px 'Roboto Condensed', Verdana, sans-serif;
     text-transform: uppercase; }
     .layout__navigation .news__date {
       float: left;
@@ -2005,7 +2007,7 @@ button:active {
     display: inline-block;
     margin: 15px 0;
     color: #008cd0;
-    font: normal 20px/25px Tahoma, Verdana, sans-serif; }
+    font: normal 20px/25px 'Roboto Condensed', Verdana, sans-serif; }
     .news__item_type_picture .news__link {
       margin: 12px 0; }
     .news__link:hover {
@@ -2057,7 +2059,7 @@ button:active {
     width: 36px;
     background: #5187a1;
     color: #fff;
-    font: bold 14px/36px Tahoma, Verdana, sans-serif;
+    font: bold 14px/36px 'Roboto Condensed', Verdana, sans-serif;
     text-align: center;
     vertical-align: top;
     transition: all .3s; }
@@ -2112,7 +2114,7 @@ button:active {
     width: 100%;
     background: #fff;
     color: #4f5b66;
-    font: normal 18px/25px Tahoma, Verdana, sans-serif; }
+    font: normal 18px/25px 'Roboto Condensed', Verdana, sans-serif; }
     .search__field::-moz-placeholder {
       color: #4f5b66;
       opacity: 1;
@@ -2137,7 +2139,7 @@ button:active {
     background: none;
     color: #5187a1;
     cursor: pointer;
-    font: normal 18px/37px Tahoma, Verdana, sans-serif;
+    font: normal 18px/37px 'Roboto Condensed', Verdana, sans-serif;
     text-align: center;
     transition: all .3s; }
     .search__button:before {
@@ -2173,7 +2175,7 @@ button:active {
       top: 30px;
       left: 0;
       color: #666665;
-      font: normal 18px/25px Tahoma, Verdana, sans-serif;
+      font: normal 18px/25px 'Roboto Condensed', Verdana, sans-serif;
       counter-increment: item;
       content: counter(item) "."; }
   .search__picture {
@@ -2192,7 +2194,7 @@ button:active {
       position: relative;
       top: -4px;
       color: #008cd0;
-      font: normal 20px/25px Tahoma, Verdana, sans-serif;
+      font: normal 20px/25px 'Roboto Condensed', Verdana, sans-serif;
       vertical-align: top; }
       .search__description a:hover {
         text-decoration: underline; }
@@ -2212,7 +2214,7 @@ button:active {
     left: 0;
     z-index: 50;
     background: #fff;
-    font: normal 16px/20px Tahoma, Verdana, sans-serif; }
+    font: normal 16px/20px 'Roboto Condensed', Verdana, sans-serif; }
     .search__hidden ul {
       margin: 0;
       padding: 0;
@@ -2274,7 +2276,7 @@ button:active {
     display: block;
     margin-bottom: 20px;
     color: #4f5b66;
-    font: bold 28px/30px Tahoma, Verdana, sans-serif; }
+    font: bold 28px/30px 'Roboto Condensed', Verdana, sans-serif; }
     @media screen and (max-width: 1024px) {
       .catalog__title {
         font-size: 24px; } }
@@ -2344,7 +2346,7 @@ button:active {
   .catalog__link {
     display: inline-block;
     color: #5187a1;
-    font: bold 16px/21px Tahoma, Verdana, sans-serif;
+    font: bold 16px/21px 'Roboto Condensed', Verdana, sans-serif;
     vertical-align: middle;
     transition: all .3s; }
     .catalog__link:hover {
@@ -2475,7 +2477,7 @@ button:active {
     width: 364px;
     background: #5187a1;
     color: #fff;
-    font: normal 22px/52px Tahoma, Verdana, sans-serif;
+    font: normal 22px/52px 'Roboto Condensed', Verdana, sans-serif;
     text-align: center;
     transition: all .3s; }
     @media screen and (max-width: 1300px) {
@@ -2574,21 +2576,12 @@ button:active {
         margin-top: 0;
         height: 700px; } }
   .contacts__navigation {
-    width: 50%;
+    width: 100%;
     float: left;
     position: relative;
     z-index: 100; }
     .contacts_page_index .contacts__navigation {
-      height: 100%; }
-    .contacts__navigation:before {
-      height: 100%;
-      width: 15px;
-      box-shadow: inset -7px 0 10px 0 rgba(0, 0, 0, 0.3);
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 100;
-      content: ''; }
+      height: 50%; }
   .contacts__map {
     display: none;
     height: 650px; }
@@ -2605,15 +2598,14 @@ button:active {
         max-height: 100%; }
   .contacts__wrapper {
     width: 100%;
+    height: 50%;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0; }
   .contacts__holder {
     box-sizing: border-box;
     padding-left: 50px;
-    padding-top: 35px;
-    width: 50%;
-    float: right; }
+    padding-top: 35px;}
   .contacts__header {
     border-bottom: 1px solid #d9dada;
     padding-bottom: 15px; }
@@ -2623,7 +2615,7 @@ button:active {
     position: relative;
     color: #5187a1;
     cursor: pointer;
-    font: normal 18px/25px Tahoma, Verdana, sans-serif;
+    font: normal 18px/25px 'Roboto Condensed', Verdana, sans-serif;
     letter-spacing: .9px;
     text-transform: uppercase; }
     .contacts__tab:before {
@@ -2749,7 +2741,7 @@ button:active {
     padding: 18px 30px;
     background: rgba(255, 255, 255, 0.75);
     color: #4f5b66;
-    font: bold 40px/45px Tahoma, Verdana, sans-serif; }
+    font: bold 40px/45px 'Roboto Condensed', Verdana, sans-serif; }
 
 .about {
   position: relative; }
@@ -2818,7 +2810,7 @@ button:active {
     width: 220px;
     position: relative;
     color: #5187a1;
-    font: normal 18px/25px Tahoma, Verdana, sans-serif;
+    font: normal 18px/25px 'Roboto Condensed', Verdana, sans-serif;
     text-align: center;
     transition: all .3s; }
     .about__link:before {
@@ -2884,7 +2876,7 @@ button:active {
     padding-left: 24px;
     position: relative;
     color: #fff;
-    font: bold 18px/30px Tahoma, Verdana, sans-serif;
+    font: bold 18px/30px 'Roboto Condensed', Verdana, sans-serif;
     letter-spacing: .9px;
     text-transform: uppercase; }
     .about__message span {
@@ -2943,8 +2935,8 @@ button:active {
 .section_type_promo {
   background: #fff; }
 .section_type_projects {
-  background: #737d85;
-  background: linear-gradient(to bottom, #838d95 0%, #5187a1 100%);
+  background: #BFDEED;
+  background: linear-gradient(to bottom, #BFDEED 0%, #5187a1 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#838d95', endColorstr='#5187a1',GradientType=0 ); }
 .section_type_catalog {
   background: #747e86;
@@ -2953,8 +2945,8 @@ button:active {
   .section_type_catalog .slick-slide {
     padding-bottom: 10px; }
 .section_type_service {
-  background: #fff;
-  background: linear-gradient(to bottom, #5187a1 0%, #fff 100%);
+  background: #BFDEED;
+  background: linear-gradient(to bottom, #5187a1 0%, #BFDEED 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cee3fd', endColorstr='#fff',GradientType=0 ); }
 .section_type_about {
   background: #fff; }
@@ -2977,6 +2969,7 @@ button:active {
       margin-bottom: 20px; } }
 
 .b-projects {
+  padding-top: 50px;
   color: #262626;
   font: normal 15px/22px Arial, Helvetica, sans-serif; }
   @media screen and (max-width: 1366px) {
@@ -3047,7 +3040,7 @@ button:active {
     display: block;
     margin-bottom: 30px;
     color: #5187a1;
-    font: bold 36px/42px Tahoma, Verdana, sans-serif; }
+    font: bold 36px/42px 'Roboto Condensed', Verdana, sans-serif; }
   .b-projects__link {
     border-radius: 25px;
     box-sizing: border-box;
@@ -3058,7 +3051,7 @@ button:active {
     left: 40px;
     bottom: 40px;
     color: #5187a1;
-    font: normal 18px/25px Tahoma, Verdana, sans-serif;
+    font: normal 18px/25px 'Roboto Condensed', Verdana, sans-serif;
     text-align: center;
     transition: all .3s; }
     .b-projects__link:before {
@@ -3154,7 +3147,7 @@ button:active {
     display: block;
     margin-bottom: 10px;
     color: #414548;
-    font: bold 18px/25px Tahoma, Verdana, sans-serif;
+    font: bold 18px/25px 'Roboto Condensed', Verdana, sans-serif;
     letter-spacing: .9px;
     text-transform: uppercase; }
   .b-service__phone, .b-service__mail {

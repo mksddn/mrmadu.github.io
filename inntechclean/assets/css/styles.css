@@ -949,7 +949,7 @@ button:active {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(191,222,237,0.7); }
+  background: #5187A1; }
   .header:before {
     height: 1px;
     width: 100%;
@@ -984,7 +984,7 @@ button:active {
     margin-left: 27px;
     padding-left: 29px;
     position: relative;
-    color: #5187a1;
+    color: #BFDEED;
     font-size: 18px;
     line-height: 16px;
     vertical-align: middle; }

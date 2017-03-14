@@ -8,17 +8,17 @@
 </head>
 <body>
 
-	<header>
+	<header class="hidden-xs">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3 logotype">
+				<div class="col-sm-3 logotype wow fadeInLeft">
 					<img src="img/logo.png" alt="Логотип" class="img-responsive">
 				</div>
-				<div class="col-sm-6 text-center descript">
+				<div class="col-sm-6 text-center descript wow fadeInDown">
 					<h4>Сэнди-Бич</h4>
 					<h5>Позволь себе хоть что-то</h5>
 				</div>
-				<div class="col-sm-3 phone_number">
+				<div class="col-sm-3 phone_number wow fadeInRight">
 					<h3><i class="fa fa-mobile"></i><a href="tel:+79999999999">+7 (999) 999 99 99</a></h3>
 					<p>Режим работы c 9<sup>00</sup> до 18<sup>00</sup></p>
 				</div>
@@ -26,34 +26,55 @@
 		</div>
 	</header>
 
-	<nav>
+	<nav id="nav" class="hidden-xs">
 		<div class="container">
 			<div class="row">
 				<ul class="list-inline">
-					<a href="#"><li>Главная</li></a>
-					<a href="#"><li>Виды песка</li></a>
-					<a href="#"><li>Наши работы</li></a>
-					<a href="#"><li>Акция</li></a>
-					<a href="#"><li>Отзывы</li></a>
-					<a href="#"><li>Контакты</li></a>
+					<li class="wow bounceInDown" data-wow-delay="0.7s"><a href="#main">Главная</a></li>
+					<li class="wow bounceInDown" data-wow-delay="0.6s"><a href="#sandy_types">Виды песка</a></li>
+					<li class="wow bounceInDown" data-wow-delay="0.5s"><a href="#works">Наши работы</a></li>
+					<li class="wow bounceInDown" data-wow-delay="0.4s"><a href="#action">Акция</a></li>
+					<li class="wow bounceInDown" data-wow-delay="0.3s"><a href="#feedback">Отзывы</a></li>
+					<li class="wow bounceInDown" data-wow-delay="0.2s"><a href="#contacts">Контакты</a></li>
 				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<nav class="visible-xs">
+		<div class="container">
+			<div class="col-xs-3 text-center">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+					<i class="fa fa-bars"></i>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#main">Главная</a></li>
+					<li><a href="#sandy_types">Виды песка</a></li>
+					<li><a href="#works">Наши работы</a></li>
+					<li><a href="#action">Акция</a></li>
+					<li><a href="#feedback">Отзывы</a></li>
+					<li><a href="#contacts">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-xs-offset-3">
+				<img src="img/logo_sm.png" alt="LOGO" class="img-responsive pull-right">
 			</div>
 		</div>
 	</nav>
 
 	<section id="main">
 		<div class="container">
-			<div class="row">
-				<h1><span>Морской песок,</span><br> 
+			<div  class="row">
+				<h1 class="wow fadeInUp"><span>Морской песок,</span><br> 
 					<span>бережно собранный</span><br> 
 					<span>перед бурей</span></h1>
 			</div>
 			<div class="row">
-				<h3>Песок, собранный нами, <span>отличается отменным качеством и незабываемым ароматом!</span> </h3>
+				<h3 class="wow fadeInLeft" data-wow-delay="0.3s">Песок, собранный нами, <span>отличается отменным качеством и незабываемым ароматом!</span> </h3>
 			</div>
 			<div class="row">
-				<button data-toggle="modal" href="#" id="button1">Оформить заказ</button>
-				<a href="#sandy_types"><button id="button2">Типы песка</button></a>
+				<button class="wow fadeInLeft" data-wow-delay="0.5s" data-toggle="modal" href="#buy_modal" id="buy">Оформить заказ</button>
+				<a href="#sandy_types"><button class="wow fadeInLeft" data-wow-delay="0.6s" id="types">Типы песка</button></a>
 			</div>
 		</div>
 	</section>
@@ -62,44 +83,44 @@
 		<div class="container">
 			<div class="row">
 				<div class="section_header text-center">
-					<h2>Виды песка</h2>
+					<h2 class="wow fadeInUp">Виды песка</h2>
 				</div>
 			</div>
 			<div class="row text-center">
-				<div class="col-md-3">
-					<div class="card">
+				<div class="col-md-3 col-sm-6">
+					<div class="card wow bounceInUp" data-wow-delay="0.2s">
 						<img src="img/type1.jpg" alt="ALT" class="img-responsive center-block">
 						<h4>Волшебный песок</h4>
 						<br>
-						<button class="more_btn" data-toggle="modal" href="#">Подробнее</button>
-						<button class="offer_btn" data-toggle="modal" href="#">Заказать</button>
+						<button class="more_btn" data-toggle="modal" href="#more_modal">Подробнее</button>
+						<button class="offer_btn" data-toggle="modal" href="#buy_modal">Заказать</button>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="card">
+				<div class="col-md-3 col-sm-6">
+					<div class="card wow bounceInUp" data-wow-delay="0.4s">
 						<img src="img/type2.jpg" alt="ALT" class="img-responsive center-block">
 						<h4>Мокрый песок</h4>
 						<br>
-						<button class="more_btn" data-toggle="modal" href="#">Подробнее</button>
-						<button class="offer_btn" data-toggle="modal" href="#">Заказать</button>
+						<button class="more_btn" data-toggle="modal" href="#more_modal">Подробнее</button>
+						<button class="offer_btn" data-toggle="modal" href="#buy_modal">Заказать</button>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="card">
+				<div class="col-md-3 col-sm-6">
+					<div class="card wow bounceInUp" data-wow-delay="0.6s">
 						<img src="img/type3.jpg" alt="ALT" class="img-responsive center-block">
 						<h4>Магический песок</h4>
 						<br>
-						<button class="more_btn" data-toggle="modal" href="#">Подробнее</button>
-						<button class="offer_btn" data-toggle="modal" href="#">Заказать</button>
+						<button class="more_btn" data-toggle="modal" href="#more_modal">Подробнее</button>
+						<button class="offer_btn" data-toggle="modal" href="#buy_modal">Заказать</button>
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="card">
+					<div class="card wow bounceInUp" data-wow-delay="0.8s">
 						<img src="img/type4.jpg" alt="ALT" class="img-responsive center-block">
 						<h4>Желтый песок</h4>
 						<br>
-						<button class="more_btn" data-toggle="modal" href="#">Подробнее</button>
-						<button class="offer_btn" data-toggle="modal" href="#">Заказать</button>
+						<button class="more_btn" data-toggle="modal" href="#more_modal">Подробнее</button>
+						<button class="offer_btn" data-toggle="modal" href="#buy_modal">Заказать</button>
 					</div>
 				</div>
 			</div>
@@ -110,23 +131,23 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-2">
-					<h3>Не знаете, какой песок выбрать?</h3>
+					<h3 class="wow fadeInUp">Не знаете, какой песок выбрать?</h3>
 					<p>Оставьте заявку и наш специалист поможет Вам определиться. Мы расскажем Вам о всех особенностях каждого типа песка.</p>
 					<br>
-					<button data-toggle="modal" href="#">Бесплатная консультация</button>
+					<button class="wow fadeInLeft" data-toggle="modal" href="#buy_modal">Бесплатная консультация</button>
 				</div>
 				<div class="col-md-2">
-					<img src="img/monkey.jpg" alt="ALT" class="img-responsive center-block">
+					<img src="img/monkey.jpg" alt="ALT" class="img-responsive center-block wow bounceInRight">
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="works">
+	<section id="works" class="hidden-xs">
 		<div class="container">
 			<div class="row">
 				<div class="section_header text-center">
-					<h2>Наши довольные клиенты</h2>
+					<h2 class="wow fadeInUp">Наши довольные клиенты</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -153,24 +174,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<img src="img/14.jpg" alt="ALT" class="img-responsive center-block gift">
+					<img src="img/14.jpg" alt="ALT" class="img-responsive center-block wow bounceInLeft">
 				</div>
 				<div class="col-md-9">
-					<h4>Акция</h4>
+					<h4 class="wow fadeInUp">Акция</h4>
 					<h3>Закажите ведро песка прямо сейчас</h3>
 					<p>И получите фотографию с места сбора песка <span id="free">бесплатно!</span></p>
 					<div class="row">
 						<form action="#">
-							<div class="col-md-4 input-group">
+							<div class="col-md-4 col-sm-4 input-group">
 							<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
 								<input name="name" type="text" required placeholder="Имя..." class="form-control form_input">
 							</div>
-							<div class="col-md-4 input-group">
+							<div class="col-md-4 col-sm-4 input-group">
 							<span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
 								<input name="phone" type="text" required placeholder="Телефон..." class="form-control form_input">
 							</div>
-							<div class="col-md-4 button">
-								<button type="submit">Заказать песок</button>
+							<div class="col-md-4 col-sm-4 button">
+								<button class="wow fadeInRight" type="submit">Заказать песок</button>
 							</div>
 						</form>
 					</div>
@@ -183,7 +204,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="section_header text-center">
-					<h2>Отзывы</h2>
+					<h2 class="wow fadeInUp">Отзывы</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -295,55 +316,140 @@
 		</div>
 	</section>
 
-	<footer class="contacts">
+	<footer class="contacts" id="contacts">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<div class="map">
+					<div class="map wow fadeInLeft" data-wow-delay="0.8s">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=hMJ59Cb2vZN0IBvl21MddNvnHmW6mZGn&amp;width=100%25&amp;height=330&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 					</div>
 				</div>
-				<div class="col-md-6">
-					<h2>Контакты</h2>
+				<div class="col-md-6 attr">
+					<h2 class="wow fadeInUp">Контакты</h2>
 					<div class="row">
-						<address>
+						<address class="wow fadeInRight">
 							<p id="address"><i class="fa fa-map-marker"></i>Адрес:</p>
 							<p id="city">Новороссийск</p>
 						</address>
 					</div>
 					<div class="row">
-						<div class="phone_footer">
+						<div class="phone_footer wow fadeInRight" data-wow-delay="0.4s">
 							<p id="phone_footer">
 							<i class="fa fa-phone"></i>Телефон:</p>
 							<p id="number">+7(989)760-02-04</p>
 						</div>
 					</div>
-					<div class="row social">
+					<div class="row social wow bounceInDown">
 						<a href="#"><i class="fa fa-vk fa-2x"></i></a>
 						<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
-						<button data-toggle="modal" href="#">Задать вопрос</button>
+						<button data-toggle="modal" href="#buy_modal">Задать вопрос</button>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 details">
+				<div class="col-md-4 col-sm-4 details wow fadeInLeft">
 					<h5>ООО "Сэнди-Бич"</h5>
 					<p>ОГРН 11238791421</p>
 					<p>ИНН 4325237817231</p>
 				</div>
-				<div class="col-md-4 policy text-center">
+				<div class="col-md-4 col-sm-4 policy text-center wow fadeInUp">
 					<a href="#" data-toggle="modal">Политика конфединциальности</a>
 					<br>
 					<hr>
 					<p>Copyright</p>
 				</div>
-				<div class="col-md-4 web-makster text-right">
+				<div class="col-md-4 col-sm-4 web-makster text-right wow fadeInRight">
 				<h4>Сайт разработан:</h4>
 					<a href="http://web-makster.ru" target="_blank">web-makster.ru</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+
+	<!-- Заказ звонка -->
+
+	<div class="modal fade bs-example-modal-sm" id="buy_modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+				</div>
+				<div class="modal-body text-center">
+					<div class="row">
+						<div class="header_modal">
+							<h4>Оставьте заявку, и наш специалист сяжется с Вами!</h3>
+							</div>
+						</div>
+						<div class="row">
+						<form action="send.php" method="post">
+							<div class="col-xs-12 input-group">
+								<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+								<input name="name" type="text" required placeholder="Имя..." class="form-control form_input">
+							</div>
+							<div class="col-xs-12 input-group">
+								<span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+								<input name="phone" type="text" required placeholder="Телефон..." class="form-control form_input">
+							</div>
+							<div class="col-xs-12 button">
+								<button id="but_modal" type="submit">Заказать звонок</button>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Подробнее -->
+
+		<div class="modal fade" id="more_modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="header_modal">
+								<h4>Описание выбранного типа песка</h3>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-5">
+									<div class="fotorama">
+										<img src="img/10.jpg" alt="ALT">
+										<img src="img/11.jpg" alt="ALT">
+										<img src="img/12.jpg" alt="ALT">
+										<img src="img/13.jpg" alt="ALT">
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. </p><p> Предупреждал текст снова вскоре текстами наш повстречался речью они пояс назад запятых пустился жизни, </p><p>  прямо на берегу мир языком, это возвращайся.</p>
+								</div>
+							</div>
+							<div class="row">
+							<form action="send.php" method="post">
+								<div class="col-xs-12 col-sm-4 input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+									<input name="name" type="text" required placeholder="Имя..." class="form-control form_input">
+								</div>
+								<div class="col-xs-12 col-sm-4 input-group">
+									<span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+									<input name="phone" type="text" required placeholder="Телефон..." class="form-control form_input">
+								</div>
+								<div class="col-xs-12 col-sm-4 button">
+									<button id="but_modal" type="submit">Заказать звонок</button>
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>

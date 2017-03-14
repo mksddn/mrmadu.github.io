@@ -6,7 +6,8 @@ body {
   background-color: #EFECCA; }
 
 section {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  padding-top: 50px; }
 
 .section_header {
   text-transform: uppercase;
@@ -18,8 +19,12 @@ button:hover {
   -o-transition: all 0.2s 0.01s ease;
   -webkit-transition: all 0.2s 0.01s ease; }
 
+button:focus {
+  outline: none; }
+
 /*=============== ШАПКА ===============*/
 header {
+  height: 110px;
   padding-top: 25px;
   padding-bottom: 20px; }
   header .descript h4 {
@@ -42,7 +47,11 @@ header {
 
 /*=============== НАВИГАЦИЯ ===============*/
 nav {
-  background-color: #E6E2AF; }
+  position: fixed;
+  top: 110px;
+  z-index: 100;
+  background-color: #E6E2AF;
+  width: 100%; }
   nav ul {
     margin-bottom: 0; }
   nav .list-inline a {
@@ -58,6 +67,39 @@ nav {
       text-decoration: none;
       background-color: #046380;
       color: #EFECCA; }
+
+.dropdown-toggle {
+  border: 1px solid #002F2F;
+  padding: 10px 15px;
+  margin-top: 10px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  margin-left: -10px; }
+  .dropdown-toggle:hover {
+    background-color: #046380;
+    color: #EFECCA; }
+  .dropdown-toggle i {
+    margin-top: 10px;
+    font-size: 18px; }
+
+.dropdown-menu {
+  min-width: 100vh;
+  top: 45px;
+  background-color: #EFECCA;
+  left: -15px;
+  -webkit-border-radius: 0;
+          border-radius: 0; }
+  .dropdown-menu li {
+    text-transform: uppercase;
+    padding: 10px;
+    padding-left: 20px; }
+    .dropdown-menu li:hover {
+      background-color: #EFECCA !important; }
+
+.visible-xs {
+  top: 0;
+  height: 60px;
+  padding-top: 10px; }
 
 /*=============== ГЛАВНЫЙ ЭКРАН ===============*/
 #main {
@@ -81,17 +123,17 @@ nav {
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
     margin-bottom: 100px; }
-  #main #button1 {
+  #main #buy {
     background-color: #A7A37E; }
-    #main #button1:hover {
+    #main #buy:hover {
       background-color: #E6E2AF; }
-  #main #button2 {
+  #main #types {
     color: #002F2F;
     padding: 13px 28px;
     background-color: transparent;
     border: 2px solid #A7A37E;
     margin-left: 20px; }
-    #main #button2:hover {
+    #main #types:hover {
       background-color: rgba(239, 236, 202, 0.5);
       color: #EFECCA; }
 
@@ -167,7 +209,7 @@ nav {
 /*=============== НАШИ РАБОТЫ ===============*/
 /*=============== АКЦИЯ ===============*/
 #action {
-  padding-top: 20px; }
+  padding-top: 70px; }
   #action h4 {
     text-transform: uppercase;
     color: #046380; }
@@ -199,7 +241,6 @@ nav {
     padding: 16px 25px;
     text-transform: uppercase;
     font-family: "Roboto Condensed", sans-serif;
-    margin-bottom: 100px;
     background-color: #A7A37E; }
     #action button:hover {
       background-color: #E6E2AF; }
@@ -274,3 +315,230 @@ footer {
     border-bottom: 1px dashed; }
   footer .web-makster {
     text-transform: uppercase; }
+
+/*===============  ВСПЛЫВАЮЩИЕ ОКНА ===============*/
+.modal-dialog {
+  padding-top: 10%; }
+
+#buy_modal .modal-dialog h4 {
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 30px; }
+
+#buy_modal .modal-dialog .modal-header {
+  border-bottom: none;
+  margin-top: -40px; }
+  #buy_modal .modal-dialog .modal-header .close {
+    margin-right: -40px;
+    text-shadow: none;
+    color: #EFECCA;
+    opacity: 0.9; }
+
+#buy_modal .modal-dialog input {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #EFECCA;
+  padding: 25px; }
+  #buy_modal .modal-dialog input:hover {
+    background-color: #E6E2AF; }
+
+#buy_modal .modal-dialog .input-group {
+  width: 90%;
+  margin: 15px 0;
+  margin-left: 5%; }
+
+#buy_modal .modal-dialog .input-group-addon {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #EFECCA; }
+
+#buy_modal .modal-dialog #but_modal {
+  margin-top: 15px;
+  border: none;
+  padding: 16px 25px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #A7A37E;
+  width: 100%; }
+  #buy_modal .modal-dialog #but_modal:hover {
+    background-color: #E6E2AF; }
+
+#buy_modal .modal-content {
+  background-color: #EFECCA;
+  -webkit-border-radius: 0;
+          border-radius: 0; }
+
+#more_modal .modal-dialog h4 {
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 30px; }
+
+#more_modal .modal-dialog .modal-header {
+  border-bottom: none;
+  margin-top: -40px; }
+  #more_modal .modal-dialog .modal-header .close {
+    margin-right: -40px;
+    text-shadow: none;
+    color: #EFECCA;
+    opacity: 0.9; }
+
+#more_modal .modal-dialog input {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #EFECCA;
+  padding: 25px; }
+  #more_modal .modal-dialog input:hover {
+    background-color: #E6E2AF; }
+
+#more_modal .modal-dialog .input-group {
+  float: left;
+  padding: 10px; }
+
+#more_modal .modal-dialog .input-group-addon {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #EFECCA; }
+
+#more_modal .modal-dialog #but_modal {
+  margin-top: 10px;
+  border: none;
+  padding: 16px 25px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #A7A37E; }
+  #more_modal .modal-dialog #but_modal:hover {
+    background-color: #E6E2AF; }
+
+#more_modal .modal-content {
+  background-color: #EFECCA;
+  -webkit-border-radius: 0;
+          border-radius: 0; }
+
+/*===============  АДАПТАЦИЯ ===============*/
+@media (min-width: 0px) and (max-width: 320px) {
+  section {
+    margin-bottom: 0; }
+  #main h1 {
+    font-size: 20px;
+    line-height: 1.7; }
+  #main h3 {
+    font-size: 18px;
+    padding: 5px; }
+  #main #buy {
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px; }
+  #main #types {
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+    padding: 8px; }
+  #cons button {
+    display: inline-block;
+    margin-left: auto; }
+  #action button {
+    margin-bottom: 0; }
+  footer {
+    margin-top: 60px;
+    text-align: center; }
+    footer .map {
+      margin-left: 15px; }
+    footer h2 {
+      margin-left: 0; }
+    footer .web-makster {
+      text-align: center;
+      padding-bottom: 15px; } }
+
+@media (min-width: 321px) and (max-width: 480px) {
+  section {
+    margin-bottom: 0; }
+  #main h1 {
+    font-size: 26px;
+    line-height: 1.7; }
+  #main h3 {
+    font-size: 22px;
+    padding: 5px; }
+  #main #buy {
+    margin: 5px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 12px; }
+  #main #types {
+    margin: 5px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px; }
+  #cons button {
+    display: inline-block;
+    margin-left: auto; }
+  #action button {
+    margin-bottom: 0; }
+  #feedback .fotorama__wrap {
+    margin: 0 auto; }
+  footer {
+    margin-top: 60px;
+    text-align: center; }
+    footer .map {
+      margin-left: 15px; }
+    footer h2 {
+      margin-left: 0; }
+    footer .web-makster {
+      text-align: center;
+      padding-bottom: 15px; } }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    margin-bottom: 0; }
+  #main h1 {
+    font-size: 30px;
+    line-height: 1.9; }
+  #main h3 {
+    font-size: 22px;
+    padding: 10px; }
+  #main #buy {
+    margin: 5px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 12px; }
+  #main #types {
+    margin: 5px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px; }
+  #cons button {
+    display: inline-block;
+    margin-left: auto; }
+  #action button {
+    margin-bottom: 0; }
+  #feedback .fotorama__wrap {
+    margin: 0 auto; }
+  footer {
+    margin-top: 60px;
+    text-align: center; }
+    footer .map {
+      margin-left: 15px; }
+    footer h2 {
+      margin-left: 0; }
+    footer .web-makster {
+      text-align: center;
+      padding-bottom: 15px; } }
+
+@media (min-width: 769px) and (max-width: 992px) {
+  header h3 {
+    font-size: 16px; }
+  header p {
+    font-size: 12px; }
+  #action button {
+    margin-bottom: 0; }
+  #feedback .fotorama__wrap {
+    margin: 0 auto; }
+  .attr {
+    padding-left: 50px; } }
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  header h3 {
+    font-size: 22px; }
+  header p {
+    font-size: 16px; } }

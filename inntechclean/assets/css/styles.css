@@ -731,9 +731,9 @@ p {
     overflow: hidden; }
     .layout__page:before {
       background: #fff;
-      background: linear-gradient(to bottom, #cee3fd 0%, #fff 100%);
+      background: linear-gradient(to top, #77C7ED 0%, #BFDEED 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cee3fd', endColorstr='#fff',GradientType=0 );
-      height: 750px;
+      height: 100%;
       width: 100%;
       position: absolute;
       top: 0;
@@ -2262,6 +2262,9 @@ button:active {
     text-align: center;
     vertical-align: middle; }
     .catalog__thumbnail img {
+      object-fit: cover;
+      width: 600px;
+      height: 300px;
       display: inline-block; }
   .catalog__info {
     padding-top: 25px;

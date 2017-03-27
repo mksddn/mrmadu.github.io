@@ -949,7 +949,7 @@ button:active {
   left: 0;
   z-index: 1000;
   box-shadow: 0 0 20px black;
-  background: #6eb6d8 }
+  background: #98d3ef }
   .header:before {
     height: 1px;
     width: 100%;
@@ -2263,8 +2263,9 @@ button:active {
     vertical-align: middle; }
     .catalog__thumbnail img {
       object-fit: cover;
-      height: 300px;
+      height: 250px;
       max-width: 100%;
+      margin:20px;
       display: inline-block; }
   .catalog__info {
     padding-top: 25px;

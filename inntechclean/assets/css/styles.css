@@ -2263,9 +2263,8 @@ button:active {
     vertical-align: middle; }
     .catalog__thumbnail img {
       object-fit: cover;
-      height: 250px;
+      height: 350px;
       max-width: 100%;
-      margin:20px;
       display: inline-block; }
   .catalog__info {
     padding-top: 25px;

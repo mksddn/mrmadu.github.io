@@ -730,7 +730,7 @@ p {
     box-sizing: border-box;
     overflow: hidden; }
     .layout__page:before {
-      background: #FCFFF5;
+      background: rgba(33, 150, 243, 0.1);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cee3fd', endColorstr='#fff',GradientType=0 );
       height: 100%;
       width: 100%;

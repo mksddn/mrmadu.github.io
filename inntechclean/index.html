@@ -1,472 +1,189 @@
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="lt-ie10 lt-ie9 ie8"> <![endif]-->
-<!--[if IE 9]><html class="lt-ie10 ie9"><![endif]-->
-<!--[if gt IE 9]><!--><html><!--<![endif]-->
+<html lang="ru">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>InnTechClean</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <meta name="viewport" content="content=1024px">
-  <meta name="format-detection" content="#" />
-  <meta name="robots" content="#" />
-  <meta name="robots" content="#" />
-  <meta property="og:url" content="#"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="#"/>
-  <meta property="og:image" content="#"/>
+	<meta charset="utf-8">
 
-  <link rel="apple-touch-icon" sizes="29x29" href="/assets/img/apple/Icon-App-29x29@1x.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple/Icon-App-76x76@1x.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple/Icon-App-60x60@1x.png">
-  <link rel="apple-touch-icon" sizes="40x40" href="/assets/img/apple/Icon-App-40x40@1x.png">
+	<title>InnTechClean</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/js/plugins/fullPage-master/jquery.fullPage.css">
-  <link rel="stylesheet" href="assets/js/plugins/slick-master/slick.css">
-  <link rel="stylesheet" href="assets/js/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/js/plugins/fancyapps-fancyBox-v2.1.5-0/jquery.fancybox.css">
-  <link rel="stylesheet" href="assets/css/prog.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <!--[if lt IE 9]>
-        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script>window.html5 || document.write('<script src="/assets/js/vendor/html5shiv.js"><\/script>')</script>
-        <![endif]-->
-      </head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-      <body>
-    <!--  <div class="preloader">
-          <div class="cssload-cssload-wrap2">
-               <div class="cssload-wrap">
-                    <div class="cssload-overlay"></div>
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
-                    <div class="cssload-cogWheel cssload-one">
-                         <div class="cssload-cog cssload-one"></div>
-                         <div class="cssload-cog cssload-two"></div>
-                         <div class="cssload-cog cssload-three"></div>
-                         <div class="cssload-cog cssload-four"></div>
-                         <div class="cssload-cog cssload-five"></div>
-                         <div class="cssload-center"></div>
-                   </div>
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-                   <div class="cssload-cogWheel cssload-two">
-                         <div class="cssload-cog cssload-one"></div>
-                         <div class="cssload-cog cssload-two"></div>
-                         <div class="cssload-cog cssload-three"></div>
-                         <div class="cssload-cog cssload-four"></div>
-                         <div class="cssload-cog cssload-five"></div>
-                         <div class="cssload-center"></div>
-                   </div>
-             </div>
-       </div>
-     </div> -->
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
-     <div id="panel"></div>
+</head>
 
-     <div class="layout">
-      <header class="header">
-        <div class="header__holder">
-          <div class="header__about">
-              <a href="index.html"><span>INNTECHCLEAN</span></a> 
-            <!-- <a class="header__logo"  title="InnTechClean">InnTechClean</a> -->
-            <span class="header__title">
-              Инновационные Технологии в Чистоте</span>
-            </div>
-            <nav class="header__menu">
-              <a class="header__link " href="index.html" title="Начало">Начало</a><a class="header__link " href="about.html" title="О Компании">О Компании</a><a class="header__link " href="catalog.html" title="Каталог">Каталог</a><a class="header__link " href="/contacts/" title="Контакты">Контакты</a>                </nav>
-            </div>
-          </header>
-          <div class="layout__wrapper js-index-page                                            ">
-           <section class="section section_type_promo">
-             <div class="promo">
-               <div class="promo__slider js-slider-autoplay">
-                 <a title="Слайдер" >
-                   <div class="promo__slide" style="background-image: url(images/slider/1.jpg)"></div>
-                 </a>
-                 <a title="Слайдер" >
-                   <div class="promo__slide" style="background-image: url(images/slider/2214.jpg)"></div>
-                 </a>
-                 <a title="Слайдер" >
-                   <div class="promo__slide" style="background-image: url(images/slider/43.jpg)"></div>
-                 </a>
-                 <a title="Слайдер" >
-                   <div class="promo__slide" style="background-image: url(images/slider/head1.jpg)"></div>
-                 </a>
+<body class="ishome">
 
-               </div>
-
-
-               <div class="direction direction_type_promo">
-                <div class="direction__item">
-                  <a class="direction__link " href="/business/oborudovanie-dlya-azs5205/" title="AWD Мойки высокого давления">
-                    
-                    <span class="direction__anchor">Оборудование для мойки машин и техники</span>
-                  </a>
-                </div>
-
-
-                <div class="direction__item">
-                 <a class="direction__link direction__link_type_washing" href="/business/Zaryadnye-stantsii-dlya-elektromobiley-tzone/" title="Оборудование. Мойки паром.">
-                   
-                   <span class="direction__anchor">Оборудование для авто химчичтки и детейлинга</span>
-                 </a>
-               </div>
-
-
-               <div class="direction__item">
-                <a class="direction__link direction__link_type_gas" href="/business/moyki-br-samoobsluzhivaniya/" title="Пена-экстракторы">
-                  
-                  <span class="direction__anchor">Оборудование для уборки и санобработки помещений</span>
-                </a>
-              </div>
-
-
-              <div class="direction__item">
-               <a class="direction__link " href="/business/tekhnika-dlya-klininga-ru/" title="Мобильный комплекс">
-                 
-                 <span class="direction__anchor">Мобильный комплекс</span>
-               </a>
-             </div>
-
-
-           </div>
-         </div>
-       </section>
-
-       <section class="section section_type_service">
-         <div class="b-service">
-          <div class="b-service__visual" style="background-image: url(images/works/123.png)"></div>
-          <div class="section__holder">
-           <div class="b-service__holder">
-            <h2 class="section__name">О компании</h2>
-            <div class="b-service__item">
-             <p>
-              Проект «ИннТехКлин» это одно из основных направлении компании ООО «Иллада» основанной в 2010 году. 
-В рамках этого проекта, наша компания представляет на рынке РФ и стран СНГ профессиональное моющее оборудование, нескольких ведущих Итальянских производителей. На производствах применяется исключительно ручная сборка с персонализированным контролем качества выпускаемой продукции.
-Все фабрики отличаются внедрением передовых новаторских технологий в производимое оборудование. Продукция этих компаний пользуется устойчивым спросом в 75-ти странах мира!
-Представляемая нами продукция является лидером по таким показателям, как производительность, экономичность, ресурсоэффективность и экологичность. 
-
-            </p>
-          </div>
-          <br>
-          В ассортимент, предлагаемый нами входит оборудование для:
-          <div class="b-service__item">
-           <ul>
-            <li>мойки машин и техники </li>
-            <li>авто химчистки и детейлинга</li>
-            <li>уборки и чисти ковровых покрытий и твердых полов</li>
-            <li>санобработки туалетных и ванных комнат</li>
-            <li>а также широкий выбор различных аксессуаров, химии и моющих средств для этого оборудования</li>
-          </ul>
-        </div>                    
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section section_type_projects">
-   <div class="section__holder">
-     <div class="b-projects">
-       <h2 class="section__name">Наши партнеры</h2>
-       <div class="b-projects__holder">
-         <div class="b-projects__content">
-          <div class="b-projects__inner">
-            <div class="js-projects-holder">
-              <div>
-                <div class="b-projects__slide">
-                  <span class="b-projects__name">Idromatic</span>
-                  <img src="images/logos/IDROMATIC+LOGO.jpg" alt="">
-                  <a class="b-projects__link" href="#" title="Перейти в проект">Подробнее</a>
-                </div>
-              </div>
-
-
-              <div>
-               <div class="b-projects__slide">
-                 <span class="b-projects__name">Santoemma</span>
-                  <img src="images/logos/Logo-Santoemma-Negativo-Blu-vettoriale.jpg" alt="">
-                 <a class="b-projects__link" href="#" title="Перейти в проект">Подробнее</a>
-               </div>
-             </div>
-
-
-             <div>
-              <div class="b-projects__slide">
-                <span class="b-projects__name">Maer</span>
-                  <img src="images/logos/maer.jpg" alt="">
-                <a class="b-projects__link" href="#" title="Перейти в проект">Подробнее</a>
-              </div>
-            </div>
-
-
-            <div>
-             <div class="b-projects__slide">
-               <span class="b-projects__name">Imex</span>
-                  <img src="images/logos/logo_imexserve2.png" alt="">
-               <a class="b-projects__link" href="#" title="Перейти в проект">Подробнее</a>
-             </div>
-           </div>
-
-
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-</section>
-
-
-
-<!--
-
-<section class="section section_type_catalog">
-	<div class="section__holder">
-		<div class="b-catalog b-catalog_page_index">
-			<h2 class="section__name">Каталог</h2>
-			<div class="b-catalog__slider js-slider-quarter">
-
-
-
-				<div>                                   <div class="b-catalog__item">
-					<div class="b-catalog__holder">
-						<a class="b-catalog__link" href="/catalog/oborudovanie-dlya-azs/" title=""></a>
-						<div class="b-catalog__view">
-							<img class="b-catalog__picture" src="/upload/iblock/095/azs.jpg" alt="Оборудование для АЗС" title="Оборудование для АЗС">
-
-						</div>
-						<span class="b-catalog__anchor">Оборудование для АЗС</span>
-					</div>
-				</div>
-				<div class="b-catalog__item">
-					<div class="b-catalog__holder">
-						<a class="b-catalog__link" href="/catalog/kommercheskie-zaryadnye-stantsii-dlya-elektromobiley/" title=""></a>
-						<div class="b-catalog__view">
-							<img class="b-catalog__picture" src="/upload/iblock/ccf/4_1.jpg" alt="Зарядные станции для электромобилей" title="Зарядные станции для электромобилей">
-
-						</div>
-						<span class="b-catalog__anchor">Зарядные станции для электромобилей</span>
-					</div>
-				</div>
-			</div>                                  <div>                                   <div class="b-catalog__item">
-			<div class="b-catalog__holder">
-				<a class="b-catalog__link" href="/catalog/oborudovanie-dlya-azs/toplivorazdatochnoe-oborudovanie/" title=""></a>
-				<div class="b-catalog__view">
-					<img class="b-catalog__picture" src="/upload/iblock/5ef/overview_quantium510_small.jpg" alt="Топливораздаточное оборудование" title="Топливораздаточное оборудование">
-
-				</div>
-				<span class="b-catalog__anchor">Топливораздаточное оборудование</span>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">InnTechClean</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<span class="header__title">Инновационные технологии в чистоте</span>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Начало</a></li>
+					<li><a href="about.html">О компании</a></li>
+					<li><a href="catalog.html">Каталог</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
 			</div>
 		</div>
-		<div class="b-catalog__item">
-			<div class="b-catalog__holder">
-				<a class="b-catalog__link" href="/catalog/moyki-samoobsluzhivaniya/" title=""></a>
-				<div class="b-catalog__view">
-					<img class="b-catalog__picture" src="/upload/iblock/947/img_0_0_14_s.jpg" alt="Автомойки самообслуживания" title="Автомойки самообслуживания">
+	</nav>
 
-				</div>
-				<span class="b-catalog__anchor">Автомойки самообслуживания</span>
+<div id="fullpage">
+
+	<section id="promo" class="section promo">
+		<div class="promo__slider">
+			<div class="promo__slider__item"><h1 class="promo__title">Оборудование для мойки машин и техники</h1><img src="img/1.jpg" alt="ALT" class="img-responsive"></div>
+			<div class="promo__slider__item"><h1 class="promo__title">Оборудование для авто химчистки и детейлинга</h1><img src="img/2.jpg" alt="ALT" class="img-responsive"></div>
+			<div class="promo__slider__item"><h1 class="promo__title">Оборудование для уборки и санобработки помещений</h1><img src="img/3.jpg" alt="ALT" class="img-responsive"></div>
+			<div class="promo__slider__item"><h1 class="promo__title">Мобильный комплекс</h1><img src="img/42.jpg" alt="ALT" class="img-responsive"></div>
+		</div>
+
+		<div class="promo__categories">
+			<div class="col-md-3 col-sm-6 col-xs-12 promo__categories__item"><a href="#"><i class="fa fa-s15 fa-3" aria-hidden="true"></i><span>Оборудование для мойки машин и техники</span></a></div>
+			<div class="col-md-3 col-sm-6 col-xs-12  promo__categories__item"><a href="#"><i class="fa fa-car fa-3" aria-hidden="true"></i><span>Оборудование для авто химчистки и детейлинга</span></a></div>
+			<div class="col-md-3 col-sm-6 col-xs-12  promo__categories__item"><a href="#"><i class="fa fa-home fa-3" aria-hidden="true"></i><span>Оборудование для уборки и санобработки помещений</span></a></div>
+			<div class="col-md-3 col-sm-6 col-xs-12  promo__categories__item"><a href="#"><i class="fa fa-truck fa-3" aria-hidden="true"></i><span>Мобильный комплекс</span></a></div>
+			</div>
+</section>
+
+<section id="about" class="section about">
+	<div class="container wrapper">
+		<div class="col-md-8 col-md-offset-2 about__title text-center">
+			<h2>О компании</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-3 about__logo"><img src="img/54_illada_1.jpg" alt="" class="img-responsive about__img"></div>
+			<div class="col-md-9 about__list">
+				<p>В ассортимент, предлагаемый нами входит оборудование для:</p>
+				<ul>
+					<li>мойки машин и техники</li>
+					<li>авто химчистки и детейлинга</li>
+					<li>уборки и чисти ковровых покрытий и твердых полов</li>
+					<li>санобработки туалетных и ванных комнат</li>
+					<li>а также широкий выбор различных аксессуаров, химии и моющих средств для этого оборудования</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<hr>
+			<div class="col-md-12 about__text text-right">
+				<p>Проект «ИннТехКлин» это одно из основных направлении компании ООО «Иллада» основанной в 2010 году. В рамках этого проекта, наша компания представляет на рынке РФ и стран СНГ профессиональное моющее оборудование, нескольких ведущих Итальянских производителей. На производствах применяется исключительно ручная сборка с персонализированным контролем качества выпускаемой продукции. Все фабрики отличаются внедрением передовых новаторских технологий в производимое оборудование. Продукция этих компаний пользуется устойчивым спросом в 75-ти странах мира! Представляемая нами продукция является лидером по таким показателям, как производительность, экономичность, ресурсоэффективность и экологичность.</p>
 			</div>
 		</div>
 	</div>
-</div>
-</div>
 </section>
 
-<section class="section section_type_service">
-  <div class="b-service">
-    <div class="b-service__visual" style="background-image: url(/upload/iblock/dfb/service_picture.jpg)"></div>
-    <div class="section__holder">
-      <div class="b-service__holder">
-        <h2 class="section__name">Сервис</h2>
-        <div class="b-service__item">
-          <p>
-            Сервис в нашем понимании — это не только сопровождение сделки по продаже, но и сопровождение оборудования клиента в процессе эксплуатации. Работая с нами Вы получаете надежного партнера и множество программ поддержки вашего бизнеса. Сервис для нас — это не только бесплатный ремонт оборудования в гарантийный период, сервис для нас — это индивидуальный подход к каждому клиенту, эксплуатирующему наше оборудование.
-          </p>
-          <p>
-            Сервисные инженеры регулярно проходят обучение на заводах-изготовителях оборудования и имеют большой опыт в осуществлении технического обслуживания оборудования.
-          </p>
-        </div>
-        Наш сервис это:
-        <div class="b-service__item">
-          <ul>
-            <li>Квалифицированный персонал;</li>
-            <li>Оборудованный для выездного ремонта транспорт;</li>
-            <li>Материально-техническая база;</li>
-            <li>Собственная ремонтная мастерская и склад запасных частей и расходных материалов;</li>
-            <li>Фонд подменного оборудования.</li>
-          </ul>
-        </div>
-        <br>
-        <span class="b-service__title">Сервисный отдел:</span> <span class="b-service__phone">+375 29&nbsp;335-06-01</span>&nbsp;<a class="b-service__mail" href="mailto:azs@aqt.by" title="">info@aqt.by</a><br>
-        <br>                        </div>
-      </div>
-    </div>
-  </section>
+<section id="features" class="section features">
+<div class="container">
+	<!-- <div class="col-md-8 col-md-offset-2 text-center features__title"><h2>Блок с преимуществами</h2></div> -->
+	<div class="col-md-12 features__content">
+		<div class="features__content__item">
+			<div class="features__content__item__icon"><i class="fa fa-star fa-2x"></i></div>
+			<div class="features__content__item__title">Раз</div>
+			<div class="features__content__item__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Курсивных lorem взобравшись раз букв страна путь предупредила наш реторический оксмокс что, своего диких буквенных не возвращайся гор назад, деревни.</div>
+		</div>
+		<div class="features__content__item">
+			<div class="features__content__item__icon"><i class="fa fa-star fa-2x"></i></div>
+			<div class="features__content__item__title">Два</div>
+			<div class="features__content__item__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Моей запятых его пустился даль своего запятой, осталось сбить рукопись.</div>
+		</div>
+		<div class="features__content__item">
+			<div class="features__content__item__icon"><i class="fa fa-star fa-2x"></i></div>
+			<div class="features__content__item__title">Три</div>
+			<div class="features__content__item__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переулка рот снова текстами эта буквенных. Взгляд маленький эта, заглавных моей возвращайся последний собрал использовало рекламных силуэт осталось гор рыбными.</div>
+		</div>
+		<div class="features__content__item">
+			<div class="features__content__item__icon"><i class="fa fa-star fa-2x"></i></div>
+			<div class="features__content__item__title">Четыре</div>
+			<div class="features__content__item__text">Далеко-далеко за словесными горами в стране.</div>
+		</div>
+	</div>
+	</div>
+</section>
 
-  <section class="section section_type_about">
-    <div class="about about_page_index">
-      <div class="about__info" style="background-image: url()">
-        <div class="about__wrapper">
+<section id="contacts" class="section contacts">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="contacts__logos">
+					<div class="col-md-8 col-md-offset-2 contacts__logos__title">
+						<h2 class="text-center">Наши партнеры</h2>
+					</div>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="contacts__logos__slider">
+								<div class="contacts__logos__slider__item"><img src="img/logos/IDROMATIC+LOGO.jpg" class="img-responsive" alt=""></div>
+								<div class="contacts__logos__slider__item"><img src="img/logos/Logo-Santoemma-Negativo-Blu-vettoriale.jpg" class="img-responsive" alt=""></div>
+								<div class="contacts__logos__slider__item"><img src="img/logos/maer.jpg" class="img-responsive" alt=""></div>
+								<div class="contacts__logos__slider__item"><img src="img/logos/logo_imexserve2.png" class="img-responsive" alt=""></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__text">
+				<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Города рукопись вопроса вскоре, маленький заглавных текста? Переписали большой, силуэт, что все необходимыми коварных курсивных себя заглавных ведущими путь переписывается.</p>
+				</div>
+			</div>
+			<div class="col-md-4 contacts__form">
+				<h3 class="text-center">Напишите нам. Это бесплатно!</h3>
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" required placeholder="Ваше имя">
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" required placeholder="Email">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Номер телефона">
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" rows="3">Ваше сообщение</textarea>
+					</div>
+					<button type="submit" class="btn btn-default">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="col-md-5 footer__text">&copy InnTechClean 2017</div>
+			<div class="col-md-5 col-md-offset-2 text-right footer__text">ООО "Иллада"</div>
+		</div>
+	</footer>
+</section>
 
-          <div class="about__item">
-            <div class="about__table">
-              <div class="about__title">
-                <p class="about__message">Работаем с <b>2001&nbsp;</b>г.</p>
-              </div>
-            </div>
-            <div class="about__hidden">
-              <div class="about__table">
-                <ul class="about__list">
-                  <li>У нас более 3 700 клиентов</li>                           </ul>
-                </div>
-              </div>
-            </div>
-            <div class="about__item">
-              <div class="about__table">
-                <div class="about__title">
-                  <p class="about__message">Более&nbsp;<b>5000</b> единиц оборудования</p>
-                </div>
-              </div>
-              <div class="about__hidden">
-                <div class="about__table">
-                  <ul class="about__list">
-                    &gt; 1 500 аппаратов высокого давления<br>
-                    &gt; 1 000 поломоечных машин<br>
-                    &gt; 350 подметальных и коммунальных машин<br>
-                    <br>                            </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="about__item">
-                <div class="about__table">
-                  <div class="about__title">
-                    <p class="about__message">Оснащено <br>
-                      <b>более</b> <b>400</b> АЗС<br></p>
-                    </div>
-                  </div>
-                  <div class="about__hidden">
-                    <div class="about__table">
-                      <ul class="about__list">
-                        <li>Поставлено более 1000 топливных колонок</li>
-                        <li>Запущено более 70 автоматических моек</li>                            </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="about__item">
-                    <div class="about__table">
-                      <div class="about__title">
-                        <p class="about__message">С<b> 2011</b> г.&nbsp;работает наш филиал в России</p>
-                      </div>
-                    </div>
-                    <div class="about__hidden">
-                      <div class="about__table">
-                        <ul class="about__list">
-                          <li>Оснащено более 10 АЗС</li>
-                          <li>Поставлено более 30 единиц техники</li>                           </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about__item">
-                      <div class="about__table">
-                        <div class="about__title">
-                          <p class="about__message">Более <b>10 000</b> метров <br>
-                            топливных трубопроводов</p>
-                          </div>
-                        </div>
-                        <div class="about__hidden">
-                          <div class="about__table">
-                            <ul class="about__list">
-                              <li>Технологический инжиниринг на АЗС с 2012 г.&nbsp;<br>
-                              </li>
-                              <li>На 30 АЗС смонтированы технологические трубопроводы &nbsp;</li>
-                              <li>Восстановлена технология на &nbsp;45 АЗС</li>                           </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="about__item">
-                          <div class="about__table">
-                            <div class="about__title">
-                              <p class="about__message">Собственное производство <br>
-                                с <b>2014&nbsp;</b>г.</p>
-                              </div>
-                            </div>
-                            <div class="about__hidden">
-                              <div class="about__table">
-                                <ul class="about__list">
-                                  <li>Запущено в эксплуатацию 5 моек самообслуживания.&nbsp;</li>
-                                  <li>Внедрены собственные технологические решения на 10 предприятиях пищевой промышленности.&nbsp;<br>
-                                  </li>                           </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="section__holder">
-                          <div class="about__holder about__holder">
-                            <h1 class="section__name">Главная - О компании</h1>
-                            <div class="about__inner">
-                              <p>
-                                Образованное в 2001 году, сегодня предприятие «Акватехника» является успешным поставщиком оборудования для клининга, АЗС и автомоек. В товарный ассортимент компании входит широкий спектр техники и оборудования для проведения уборки как на профессиональном уровне, так и в домашних условиях.
-                              </p>
-                              <p>
-                              </p>
-                              <p>
-                                У нас в продаже имеются аппараты высокого давления, пылесосы, машины для мойки оборудования и деталей, поломоечные машины. Также мы предлагаем большой выбор моющих средств: как для чистки и защиты транспортных средств, так и для повседневной уборки или профессионального клининга.
-                              </p>
-                              <blockquote>
-                                Мы постоянно учимся и работаем, чтобы наш сервис помогал вам зарабатывать и занимать лидирующие позиции в бизнесе!
-                              </blockquote>
-                              <a class="about__link" href="/company/" title="Подробнее о нас">Подробнее о нас</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
--->
 
-                    <section class="section section_type_contacts">
 
-                      <div class="contacts contacts_page_index">
-                        <div class="contacts__navigation">
-                        <div class="slider-logos">
-                          
-                        </div>
-                          
-                        </div>
-                        <div class="contacts__wrapper">
-                          <div class="layout__holder">
-                            <div class="contacts__holder">
-                              <h1 class="layout__name">Контакты</h1>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+	</div>
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
 
-                        
-
-                        <footer class="footer">
-                         <div class="footer__holder">
-                           <p class="footer__copyright">
-                             &copy; InnTechClean 2017 
-                             </p>
-                           </div>
-                         </footer>
-                       </section>
-                     </div>
-                   </div>
-
-                   <script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
-                   <script src="assets/js/plugins/fullPage-master/jquery.fullPage.min.js"></script>
-                   <script src="assets/js/plugins/slick-master/slick.min.js"></script>
-                   <script src="assets/js/plugins/fancyapps-fancyBox-v2.1.5-0/jquery.fancybox.js"></script>
-
-                   <script src="assets/js/plugins.js"></script>
-                   <script src="assets/js/main.js"></script>
-                   <script src="assets/js/full-page.js"></script>
-                   <script src="assets/js/prog.js"></script>
-                 </body>
-                 </html>
+</body>
+</html>

@@ -30,6 +30,9 @@
 </head>
 
 <body >
+<div id="before-load">
+  <i></i>
+</div>
 	<header class="head">
 		<nav id="menu" class="navbar navbar-default navbar-fixed-top navbar__top">
 			<div class="container">
@@ -744,7 +747,7 @@
 		</div>
 	</section>
 
-	<!-- <section id="gallery" class="gallery">
+	<section id="gallery" class="gallery">
 		<div class="container">
 			<div class="row">
 				<div class="pattern">
@@ -765,7 +768,7 @@
 				<div class="col-md-3 col-sm-4 col-xs-6 gallery__content__item"><a href="#"><img src="img/photo.png" alt="" class="img-responsive"></a></div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<section id="feedback" class="feedback">
 		<div class="container">
@@ -979,10 +982,44 @@
 						<p>&copy Карельский монументъ 2017</p>
 					</div>
 				</div>
+				<div id="slidebox">
+				<h4>Текст для акции</h4>
+				<form>
+					<div class="col-md-12 form-group">
+						<input type="name" class="form-control" id="name" placeholder="Ваше имя">
+					</div>
+					<div class="col-md-12 form-group">
+						<input type="tel" class="form-control" id="tel" placeholder="Ваш телефон">
+					</div>
+					<br>
+					<button type="submit" class="btn btn-default">Узнать подробности</button>
+				</form>
+				<p>Мы перезвоним Вам в течение 3-х минут</p>
+				</div>
 			</footer>
 
 			<link rel="stylesheet" href="css/main.min.css">
 			<script src="js/scripts.min.js"></script>
+
+			<!-- Start SiteHeart code -->
+<!-- <script>
+(function(){
+var widget_id = 875818;
+_shcp =[{widget_id : widget_id}];
+var lang =(navigator.language || navigator.systemLanguage 
+|| navigator.userLanguage ||"en")
+.substr(0,2).toLowerCase();
+var url ="widget.siteheart.com/widget/sh/"+ widget_id +"/"+ lang +"/widget.js";
+var hcc = document.createElement("script");
+hcc.type ="text/javascript";
+hcc.async =true;
+hcc.src =("https:"== document.location.protocol ?"https":"http")
++"://"+ url;
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hcc, s.nextSibling);
+})();
+</script> -->
+<!-- End SiteHeart code -->
 
 		</body>
 		</html>

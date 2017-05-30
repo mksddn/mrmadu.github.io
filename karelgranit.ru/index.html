@@ -85,10 +85,10 @@
 	</nav>
 	<div class="row head__info">
 		<div class="container">
-			<div class="col-md-3  col-sm-3 col-xs-4 head__info__tel"><a href="tel:+7 (987) 69 33 44" class="tel">+7 (987) 69 33 44</a></div>
+			<div class="col-md-3  col-sm-3 col-xs-6 head__info__tel"><a href="tel:+7 (987) 69 33 44" class="tel">+7 (987) 69 33 44</a></div>
 			<div class="col-md-5 col-sm-5 col-xs-4 head__info__address"><a href="#map">Новороссийск, Героев Десантников 24</a></div>
 			<!-- <div class="col-md-3 col-sm-3 col-xs-4 head__info__socicons"><a href="#"><i class="fa fa-vk"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div> -->
-			<div class="col-md-4 col-sm-4 col-xs-4 head__info__basket text-right">
+			<div class="col-md-4 col-sm-4 col-xs-6 head__info__basket text-right">
 				<img src="img/bag.png" alt="" class="img-responsive">
 				<button class="btn btn-default" type="submit">В корзине: 0</button>
 			</div>
@@ -983,6 +983,25 @@
 					</div>
 				</div>
 				<div class="call_back animated infinite"><a href="#">Задать вопрос</a></div>
+				<div class="call_back_panel">
+				<h4 style="line-height:1.3;">Мы перезвоним Вам в течение 3-х минут!</h4>
+				<form>
+					<input type="hidden" name="project_name" value="Карельский Монументъ">
+					<input type="hidden" name="admin_email" value="info@web-makster.ru">
+					<input type="hidden" name="form_subject" value="Заявка из баннера с вопросом">
+					<div class="col-md-12 form-group">
+						<input type="text" name="Имя" class="form-control" id="name" placeholder="Ваше имя" required>
+					</div>
+					<div class="col-md-12 form-group">
+						<input type="text" name="Телефон" class="form-control" id="tel" placeholder="Ваш телефон" required>
+					</div>
+					<div class="col-md-12 form-group">
+						<textarea rows="3" type="text" name="Сообщение" class="form-control" id="message" placeholder="Ваше сообщение" required></textarea>
+					</div>
+					<br>
+					<button type="submit" class="btn btn-default">Задать вопрос</button>
+				</form>
+				</div>
 				<div id="slidebox">
 				<h4>Текст для акции</h4>
 				<form>
@@ -996,7 +1015,7 @@
 					<button type="submit" class="btn btn-default">Узнать подробности</button>
 				</form>
 				<p>Мы перезвоним Вам в течение 3-х минут</p>
-				<div class="close"><i class="fa fa-times"></i></div>
+				<!-- <div class="close"><i class="fa fa-times"></i></div> -->
 				</div>
 			</footer>
 

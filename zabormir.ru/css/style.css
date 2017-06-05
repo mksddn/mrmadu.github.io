@@ -829,6 +829,8 @@ li.resp-tab-item:hover {
 }
 .news-01 img {
     width: 100%;
+    height: 280px;
+    object-fit: cover;
 }
 .resp-vtabs .resp-tab-content {
     border: none;

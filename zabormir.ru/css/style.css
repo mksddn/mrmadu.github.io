@@ -295,13 +295,13 @@ nav a:focus {
 }
 /*--banner-bottom--*/
 .banner{
-    background: url(../images/zabor.jpg) no-repeat 0px 0px;
+    background: url(../images/zabor.jpg) no-repeat 0px -200px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    min-height:530px;
+    min-height:270px;
 }
 /*--header--*/
 #slider2,
@@ -444,7 +444,7 @@ nav a:focus {
     padding: 0;
     margin: 0;
     display: block;
-   bottom: -14%;
+   bottom: 16%;
     z-index: 0;
     right: -5%;
 }
@@ -486,7 +486,7 @@ nav a:focus {
     border:3px solid#CFDC43;
 }
 .banner-info {
-     margin-top: 12em;
+     margin-top: 5em;
     text-align: center;
 }
 .banner-info h3 {
@@ -1167,12 +1167,12 @@ h5.m_26 a:hover{
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    min-height:600px;
+    min-height:400px;
 }
 .car-bottom-right {
     float: right;
     padding: 0;
-    margin-top: 9em;
+    margin-top: 3em;
 }
 .car-bottom-right h3 {
     font-size: 3em;

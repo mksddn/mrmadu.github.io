@@ -185,6 +185,9 @@ label{
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
+hr {
+  border: 1px;
+}
 /*--start-h_menu--*/
 .top-menu {
 	    margin-top: 2.2em;
@@ -791,6 +794,39 @@ li.resp-tab-item1.resp-tab-active span{
 }
 /*-- stop tabs --*/
 
+.product__item {
+  border: 2px solid rgba(153, 119, 103, 0.5);
+  box-shadow: 0 0 15px rgba(153, 119, 103, 0.20);
+  height: 500px;
+  margin: 30px 0;
+}
+.product__item__text {
+  margin: 20px 0;
+}
+.product__item__text  .price {
+  font-size: 24px;
+}
+.product__item__text p {
+  margin: 20px 0;
+}
+.product__item__text .quate {
+  float: left;
+}
+.product__item__img img {
+  object-fit: cover;
+  height: 460px;
+  margin: 20px 0;
+  border: 2px solid rgba(153, 119, 103, 0.5);
+  box-shadow: 0 0 15px rgba(153, 119, 103, 0.20);
+}
+.product__item:nth-child(2n) .product__item__img {
+  float: right;
+}
+
+.info-section {
+  margin: 30px 0;
+}
+
 /*-----------Vertical tabs-----------*/
 .resp-vtabs ul.resp-tabs-list {
     float: left;
@@ -1125,7 +1161,7 @@ h5.m_26 a:hover{
 /*--gallery--*/
 /*--car-bottom --*/
 .car-bottom {
-    background: url(../images/car-bottom.jpg)no-repeat ;
+    background: url(../images/IMG_0328.jpg) no-repeat 50% 50%;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

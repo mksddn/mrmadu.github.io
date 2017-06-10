@@ -5,24 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />	
-<script src="js/jquery.min.js"> </script>
-<!--webfonts-->
- <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
- <link href='//fonts.googleapis.com/css?family=Raleway:400,500' rel='stylesheet' type='text/css'>
-<!--//webfonts-->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){		
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			});
-</script>
-
+<link href="css/style.css" rel='stylesheet' type='text/css' />
 </head>
 <body>
 	<!--start-home-->
@@ -30,7 +13,7 @@
 		<div class="container">
 	     <div class="header-top">
 	        <div class="logo">
-					<a href="index.html"><h1><span>М</span>ир заборов</h1></a>
+					<a href="index.html"><span><span class="black">М</span>ир заборов</span></a>
 				</div>
 					<div class="h-right">
 					  <div class="working-hours">
@@ -57,7 +40,7 @@
 					</div>
 					<div class="clearfix"> </div>
 					<div class="quate">
-									<a href="#" class="hvr-bounce-to-bottom m1">Вызвать менеджера</a>
+									<a href="#" class="hvr-bounce-to-bottom m1" data-toggle="modal" data-target=".call-of-manager">Вызвать менеджера</a>
 								</div>
 								<br><br><br>
 					<div class="quate">
@@ -225,12 +208,15 @@
 				<div class="container">
 					 <div class="footer-inner">
 					    <div class="col-md-3 footer-grid">
-					       <h3 class="widget-title">Контакты</h3>
-						   <p> <i class="glyphicon glyphicon-map-marker"></i> Адрес<br>
-							Адрес<br>
-							Адрес</span></p>
-							<p class="phone"><i class="glyphicon glyphicon-earphone"></i>Телефон</p>
-							<p><i class="glyphicon glyphicon-envelope"></i> <a href="mailto:info@example.com">Почта</a></p>
+					       <h3 class="widget-title">Разделы сайта</h3>
+						      <ul class="menu-customer-service">
+						        <li><a href="#">Раз</a></li>
+								<li><a href="#">Два</a></li>
+								<li><a href="#">Три</a></li>
+								<li><a href="#">Четыре</a></li>
+								<li><a href="#">Пять</a></li>
+								<li><a href="#">Шесть</a></li>
+							  </ul>
 			           </div>
 					   <div class="col-md-3 footer-grid second">
 					       <h3 class="widget-title">Разделы сайта</h3>
@@ -269,18 +255,59 @@
 			<div class="copy">
 		              <p>© 2017 Иллада. Все права защищены | Создание сайта <a href="http://web-makster.ru/">web-makster.ru</a> </p>
 		            </div>
-			<!--start-smooth-scrolling-->
-			<script type="text/javascript">
-								jQuery(document).ready(function($) {
-									$(".scroll").click(function(event){		
-										event.preventDefault();
-										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-									});
-								});
-								</script>
-							<!--start-smoth-scrolling-->
-						<script type="text/javascript">
-									$(document).ready(function() {
+
+		            <div class="modal fade call-of-manager" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		            	<div class="modal-dialog" role="document">
+		            		<div class="modal-content">
+		            			<form>
+		            				<div class="form-group">
+		            					<label class="your-para">Ваше имя</label>
+		            					<input type="text" value="" required onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+		            				</div>
+		            				<div class="form-group">
+		            					<label class="your-para">Ваш телефон</label>
+		            					<input type="text" value="" required onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+		            				</div>
+		            				<div class="form-group">
+		            					<label class="your-para">Ваш Email</label>
+		            					<input type="text" value="" required onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+		            				</div>
+		            				<div class="form-group">
+		            					<label class="your-para">Ваше сообщение</label>
+		            					<textarea placeholder="Необязательно" rows="6" onfocus="this.value='';" onblur="if (this.value == '') {this.value = '';}"></textarea>
+		            				</div>
+		            				<div class="send">
+		            					<input type="submit" value="Отправить" >
+		            				</div>
+		            				<p>Нажимая конпку действия, Вы даете согласие на обработку Ваших персональных данных</p>
+		            			</form>
+		            		</div>
+		            	</div>
+		            </div>
+
+<script src="js/jquery.min.js"> </script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+		});
+	});
+</script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!--start-smoth-scrolling-->
+<script type="text/javascript">
+	$(document).ready(function() {
 										/*
 										var defaults = {
 								  			containerID: 'toTop', // fading element id
@@ -288,12 +315,12 @@
 											scrollSpeed: 1200,
 											easingType: 'linear' 
 								 		};
-										*/
-										
-										$().UItoTop({ easingType: 'easeOutQuart' });
-										
-									});
-								</script>
+								 		*/
+
+								 		$().UItoTop({ easingType: 'easeOutQuart' });
+
+								 	});
+								 </script>
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
 </body>

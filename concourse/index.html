@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+
+	<section class="main">
+		<div class="main__sky"></div>
+		<div class="row main__first_row">
+			<div class="main__air"><img src="img/air.png" alt="АЛЬТ" class="img-fluid"></div>
+			<div class="main__logo"><a href="#"><img src="img/vnovoros.png" alt="АЛЬТ" class="img-fluid"></a></div>
+		</div>
+		<div class="row main__second_row">
+			<div class="main__title"><h1><span style="font-size: 150%;">Бесплатный перелет</span><br>при покупке квартиры<br><span style="font-size: 190%;">в Новороссийск</span></h1></div>
+			<div class="main__form">
+				<div class="row main__form__title"><h2>Заявка на бесплатный подбор квартиры</h2></div>
+				<div class="row main__form__form">
+					<form>
+						<div class="row fields">
+							<input type="text" name="name" placeholder="Ваше имя" required>
+							<input type="text" name="tel" placeholder="Ваш номер телефона" required>
+						</div>
+						<div class="row button">
+							<button type="submit">Получить подбор квартиры</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+			<div class="row info__wrapper">
+				<div class="row info__title">
+					<h2>Условия получения подарочного сертификата</h2>
+				</div>
+				<div class="row info__items">
+					<div class="info__item"><div class="info__item__img"></div>
+					<div class="info__item__text">Быть подписанными на страницу Информационный портал | Новороссийск</div></div>
+					<div class="info__item"><div class="info__item__img"></div>
+					<div class="info__item__text">Нажать "Рассказать друзьям" и закрепить на своей личной странице.</div></div>
+					<div class="info__item"><div class="info__item__img"></div>
+					<div class="info__item__text">Оставить заявку на бесплатный подбор квартиры на нашем сайте</div></div>
+				</div>
+				<div class="row info__text">
+					<p>Итоги подведем 21 октября 2017 года приложением Kamaninga. Всем удачи! <br> *Конкурс является состоявшимся при достижении 50 репостов. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Thank you!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+
+});
+	</script>
+
+</body>
+</html>

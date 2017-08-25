@@ -16,6 +16,7 @@
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#000">
@@ -31,7 +32,7 @@
 <body>
 
 	<section class="main">
-		<div class="main__sky"></div>
+		<div class="main__sky" style="background-image: url('img/sky.jpg')"></div>
 		<div class="row main__first_row">
 			<div class="main__air"><img src="img/air.png" alt="АЛЬТ" class="img-fluid"></div>
 			<div class="main__logo"><a href="#"><img src="img/vnovoros.png" alt="АЛЬТ" class="img-fluid"></a></div>
@@ -42,9 +43,12 @@
 				<div class="row main__form__title"><h2>Заявка на бесплатный подбор квартиры</h2></div>
 				<div class="row main__form__form">
 					<form>
+						<input type="hidden" name="project_name" value="pereezd.vnovoros.ru">
+						<input type="hidden" name="admin_email" value="info@web-makster.ru">
+						<input type="hidden" name="form_subject" value="Получить подбор квартиры">
 						<div class="row fields">
-							<input type="text" name="name" placeholder="Ваше имя" required>
-							<input type="text" name="tel" placeholder="Ваш номер телефона" required>
+							<input type="text" name="Имя" placeholder="Ваше имя" required>
+							<input type="text" name="Телефон" placeholder="Ваш номер телефона" required>
 						</div>
 						<div class="row button">
 							<button type="submit">Получить подбор квартиры</button>
@@ -62,11 +66,11 @@
 					<h2>Условия получения подарочного сертификата</h2>
 				</div>
 				<div class="row info__items">
-					<div class="info__item"><div class="info__item__img"></div>
+					<div class="info__item"><div class="info__item__img" style="background-image: url('../img/iconset.png')"></div>
 					<div class="info__item__text">Быть подписанными на страницу Информационный портал | Новороссийск</div></div>
-					<div class="info__item"><div class="info__item__img"></div>
+					<div class="info__item"><div class="info__item__img" style="background-image: url('../img/iconset.png')"></div>
 					<div class="info__item__text">Нажать "Рассказать друзьям" и закрепить на своей личной странице.</div></div>
-					<div class="info__item"><div class="info__item__img"></div>
+					<div class="info__item"><div class="info__item__img" style="background-image: url('../img/iconset.png')"></div>
 					<div class="info__item__text">Оставить заявку на бесплатный подбор квартиры на нашем сайте</div></div>
 				</div>
 				<div class="row info__text">
@@ -82,25 +86,25 @@
 	<script>
 		$(document).ready(function() {
 
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            alert("Thank you!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
-    });
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Ваша заявка отправлена!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
 
 });
-	</script>
+</script>
 
 </body>
 </html>

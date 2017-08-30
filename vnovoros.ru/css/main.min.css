@@ -3066,7 +3066,6 @@ form {
 .welcome {
   padding-bottom: 10px; }
   .welcome__wrapper {
-    background-image: url("../img/sherba.jpg");
     -webkit-background-size: cover;
             background-size: cover;
     background-repeat: no-repeat; }

@@ -1839,6 +1839,8 @@ section {
 
 section.section-slider {
     padding: 0
+    padding-top: 30px;
+    margin-top: 30px;
 }
 
 section h2:first-child {

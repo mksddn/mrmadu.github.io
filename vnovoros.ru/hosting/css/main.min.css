@@ -3020,8 +3020,7 @@ form {
 .single__news__item {
   display: inline-block;
   width: 70%;
-  font-size: 18px;
-  padding-right: 15px; }
+  font-size: 18px; }
   .single__news__item__img {
     margin-bottom: 15px; }
   .single__news__item__title h1 {
@@ -3032,19 +3031,14 @@ form {
   .single__news__item__link {
     text-align: right; }
 
-.pin-wrapper {
-  width: 30% !important;
-  margin-left: 15px; }
-
 .sidebar {
   display: inline-block;
-  width: 100%;
+  width: 30%;
   padding-left: 15px;
-  border-left: 1px solid rgba(0, 0, 0, 0.1); }
+  border-top: 3px solid #7A685A; }
   .sidebar__title {
     text-transform: uppercase;
-    font-size: 1.5em;
-    border-top: 3px solid #7A685A; }
+    font-size: 1.5em; }
     .sidebar__title h3 {
       margin-top: 5px; }
   .sidebar__item {

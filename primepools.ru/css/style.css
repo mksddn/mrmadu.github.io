@@ -3,11 +3,13 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
     overflow-x: hidden;
+    overflow-scrolling: touch;
 }
 
 body {
     margin: 0;
     overflow-x: hidden;
+    overflow-scrolling: touch;
 }
 
 article,
@@ -24,6 +26,11 @@ nav,
 section,
 summary {
     display: block
+}
+
+main {
+    overflow-x: hidden;
+    background-color: #f9f9f9;
 }
 
 audio,
@@ -1841,7 +1848,7 @@ section {
 section.section-slider {
     padding: 0
     padding-top: 30px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 section h2:first-child {
@@ -1964,7 +1971,10 @@ a.button-light {
 .button-dark,
 a.button-dark,
 header {
-    background: #0473c1
+    /*background: #0473c1*/
+    position: fixed;
+    z-index: 100;
+    opacity: 0.8;
 }
 
 strong {
@@ -2168,6 +2178,10 @@ select option {
     text-align: center
 }
 
+.section-slider .slider .owl-dots {
+    bottom: 50px;
+}
+
 .slider .owl-dots .owl-dot {
     -webkit-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .2);
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .2);
@@ -2236,7 +2250,7 @@ select option {
 }
 
 .section-slider {
-    margin-bottom: 150px
+    margin-bottom: 0;
 }
 
 .section-slider .slider .owl-item h2 {
@@ -2265,7 +2279,7 @@ select option {
 }
 
 .section-slider .slider .slide {
-    height: 550px;
+    height: 100vh;
     overflow: hidden;
     text-align: center;
     position: relative
@@ -8862,7 +8876,9 @@ input::-moz-focus-inner {
 }
 
 .about-us {
-    background-color: #fff
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .about-us p {
@@ -9370,7 +9386,8 @@ form .form-row textarea {
 }
 
 .contacts form {
-    padding-bottom: 60px
+    padding-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .contacts form .input-wrapper {
@@ -9884,6 +9901,5 @@ footer p a:hover {
 
 .stuck_container .home img {
     max-width: 150px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
 }

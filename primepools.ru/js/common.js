@@ -253,9 +253,6 @@ $(function() {
     $('.about-us .hidden-text').toggleClass("show_this");
     $('.about-us .hidden-text').slideDown("slow");
 
-    var targetParam = 'clickmore';
-    yaCounter44591707.reachGoal(targetParam);
-
 
     $(this).toggleClass("show_this");
     if ($(this).hasClass("show_this")) {
@@ -269,10 +266,10 @@ $(function() {
 
 
   //to top scroll
-  $(".to-top").click(function () {
-      $("html, body").animate({ scrollTop: 0}, "slow");
-      return false;
-  });
+  // $(".to-top").click(function () {
+  //     $("html, body").animate({ scrollTop: 0}, "slow");
+  //     return false;
+  // });
 
 
   //label up when text input
@@ -353,143 +350,143 @@ $(function() {
 
   });
 
-  $("#building-menu").click(function (event) {
-      event.preventDefault();
-      $("html, body").animate({
-         scrollTop: $("section.building").offset().top - MENU_HEIGHT
-      }, "slow");
+  // $("#building-menu").click(function (event) {
+  //     event.preventDefault();
+  //     $("html, body").animate({
+  //        scrollTop: $("section.building").offset().top - MENU_HEIGHT
+  //     }, "slow");
 
-      setTimeout(function() {
-          // Done Functions
-        changeActiveMenu("building-menu");
-        mobile_panel_title.text("Строительство");
-        runMP("descriptions/building-description.html");
+  //     setTimeout(function() {
+  //         // Done Functions
+  //       changeActiveMenu("building-menu");
+  //       mobile_panel_title.text("Строительство");
+  //       runMP("descriptions/building-description.html");
 
-      }, POPUP_OPEN_DELAY);
-  });
+  //     }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#service-menu").click(function (event) {
-      event.preventDefault();
-      $("html, body").animate({
-         scrollTop: $("section.service").offset().top - MENU_HEIGHT
-      }, "slow");
+  // $("#service-menu").click(function (event) {
+  //     event.preventDefault();
+  //     $("html, body").animate({
+  //        scrollTop: $("section.service").offset().top - MENU_HEIGHT
+  //     }, "slow");
 
-      setTimeout(function() {
-          // Done Functions
-        changeActiveMenu("service-menu");
-        mobile_panel_title.text("Обслуживание");
-        runMP("descriptions/service-description.html");
-      }, POPUP_OPEN_DELAY);
-  });
+  //     setTimeout(function() {
+  //         // Done Functions
+  //       changeActiveMenu("service-menu");
+  //       mobile_panel_title.text("Обслуживание");
+  //       runMP("descriptions/service-description.html");
+  //     }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#gallery-menu").click(function (event) {
-      event.preventDefault();
-      $("html, body").animate({
-         scrollTop: $("section.our-works").offset().top - MENU_HEIGHT*1.5
-      }, "slow");
-      setTimeout(function() {
-          // Done Functions
-        changeActiveMenu("gallery-menu");
-        mobile_panel_title.text("Галлерея работ");
-      }, POPUP_OPEN_DELAY);
-  });
+  // $("#gallery-menu").click(function (event) {
+  //     event.preventDefault();
+  //     $("html, body").animate({
+  //        scrollTop: $("section.our-works").offset().top - MENU_HEIGHT*1.5
+  //     }, "slow");
+  //     setTimeout(function() {
+  //         // Done Functions
+  //       changeActiveMenu("gallery-menu");
+  //       mobile_panel_title.text("Галлерея работ");
+  //     }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#spa-menu").click(function (event) {
-    event.preventDefault();
-    $("html, body").animate({
-       scrollTop: $(".serv.spa").offset().top - MENU_HEIGHT
-    }, "slow");
+  // $("#spa-menu").click(function (event) {
+  //   event.preventDefault();
+  //   $("html, body").animate({
+  //      scrollTop: $(".serv.spa").offset().top - MENU_HEIGHT
+  //   }, "slow");
 
-    setTimeout(function() {
-        // Done Functions
-      changeActiveMenu("saunas-etc-menu, spa-menu");
-      mobile_panel_title.text("Спа-бассейны");
-      runMP("descriptions/spa-description.html");
-    }, POPUP_OPEN_DELAY);
-  });
+  //   setTimeout(function() {
+  //       // Done Functions
+  //     changeActiveMenu("saunas-etc-menu, spa-menu");
+  //     mobile_panel_title.text("Спа-бассейны");
+  //     runMP("descriptions/spa-description.html");
+  //   }, POPUP_OPEN_DELAY);
+  // });
 
 
-  $("#decking-menu").click(function (event) {
-    event.preventDefault();
-    $("html, body").animate({
-       scrollTop: $(".serv.decking").offset().top - MENU_HEIGHT
-    }, "slow");
+  // $("#decking-menu").click(function (event) {
+  //   event.preventDefault();
+  //   $("html, body").animate({
+  //      scrollTop: $(".serv.decking").offset().top - MENU_HEIGHT
+  //   }, "slow");
 
-    setTimeout(function() {
-        // Done Functions
-      changeActiveMenu("saunas-etc-menu", "decking-menu");
-      mobile_panel_title.text("Террасная доска");
-      runMP("descriptions/decking-description.html");
-    }, POPUP_OPEN_DELAY);
-  });
+  //   setTimeout(function() {
+  //       // Done Functions
+  //     changeActiveMenu("saunas-etc-menu", "decking-menu");
+  //     mobile_panel_title.text("Террасная доска");
+  //     runMP("descriptions/decking-description.html");
+  //   }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#saunas-menu").click(function (event) {
-    event.preventDefault();
-    $("html, body").animate({
-       scrollTop: $(".serv.saunas").offset().top - MENU_HEIGHT
-    }, "slow");
+  // $("#saunas-menu").click(function (event) {
+  //   event.preventDefault();
+  //   $("html, body").animate({
+  //      scrollTop: $(".serv.saunas").offset().top - MENU_HEIGHT
+  //   }, "slow");
 
-    setTimeout(function() {
-        // Done Functions
-      changeActiveMenu("saunas-etc-menu", "saunas-menu");
-      mobile_panel_title.text("Сауны");
-      runMP("descriptions/saunas-description.html");
-    }, POPUP_OPEN_DELAY);
-  });
+  //   setTimeout(function() {
+  //       // Done Functions
+  //     changeActiveMenu("saunas-etc-menu", "saunas-menu");
+  //     mobile_panel_title.text("Сауны");
+  //     runMP("descriptions/saunas-description.html");
+  //   }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#hammams-menu").click(function (event) {
-    event.preventDefault();
-    $("html, body").animate({
-       scrollTop: $(".serv.hammams").offset().top - MENU_HEIGHT
-    }, "slow");
+  // $("#hammams-menu").click(function (event) {
+  //   event.preventDefault();
+  //   $("html, body").animate({
+  //      scrollTop: $(".serv.hammams").offset().top - MENU_HEIGHT
+  //   }, "slow");
 
-    setTimeout(function() {
-        // Done Functions
-      changeActiveMenu("saunas-etc-menu","hammams-menu");
-      mobile_panel_title.text("Хаммамы");
-      runMP("descriptions/hammams-description.html");
-    }, POPUP_OPEN_DELAY);
-  });
+  //   setTimeout(function() {
+  //       // Done Functions
+  //     changeActiveMenu("saunas-etc-menu","hammams-menu");
+  //     mobile_panel_title.text("Хаммамы");
+  //     runMP("descriptions/hammams-description.html");
+  //   }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#driers-menu").click(function (event) {
-    event.preventDefault();
-    $("html, body").animate({
-       scrollTop: $(".serv.driers").offset().top - MENU_HEIGHT
-    }, "slow");
+  // $("#driers-menu").click(function (event) {
+  //   event.preventDefault();
+  //   $("html, body").animate({
+  //      scrollTop: $(".serv.driers").offset().top - MENU_HEIGHT
+  //   }, "slow");
 
-    setTimeout(function() {
-        // Done Functions
-      changeActiveMenu("saunas-etc-menu","driers-menu");
-      mobile_panel_title.text("Осушители воздуха");
-      runMP("descriptions/driers-description.html");
-    }, POPUP_OPEN_DELAY);
-  });
+  //   setTimeout(function() {
+  //       // Done Functions
+  //     changeActiveMenu("saunas-etc-menu","driers-menu");
+  //     mobile_panel_title.text("Осушители воздуха");
+  //     runMP("descriptions/driers-description.html");
+  //   }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#autocovers-menu").click(function (event) {
-    event.preventDefault();
-    $("html, body").animate({
-       scrollTop: $(".serv.autocovers").offset().top - MENU_HEIGHT
-    }, "slow");
+  // $("#autocovers-menu").click(function (event) {
+  //   event.preventDefault();
+  //   $("html, body").animate({
+  //      scrollTop: $(".serv.autocovers").offset().top - MENU_HEIGHT
+  //   }, "slow");
 
-    setTimeout(function() {
-        // Done Functions
-      changeActiveMenu("saunas-etc-menu","autocovers-menu");
-      mobile_panel_title.text("Автоматические покрытия");
-      runMP("descriptions/autocovers-description.html");
-    }, POPUP_OPEN_DELAY);
-  });
+  //   setTimeout(function() {
+  //       // Done Functions
+  //     changeActiveMenu("saunas-etc-menu","autocovers-menu");
+  //     mobile_panel_title.text("Автоматические покрытия");
+  //     runMP("descriptions/autocovers-description.html");
+  //   }, POPUP_OPEN_DELAY);
+  // });
 
-  $("#contacts-menu").click(function (event) {
-      event.preventDefault();
-      $("html, body").animate({
-         scrollTop: $("section.contacts").offset().top - MENU_HEIGHT
-      }, "slow");
-      setTimeout(function() {
-          // Done Functions
-        changeActiveMenu("contacts-menu");
-        mobile_panel_title.text("Контакты");
-      }, POPUP_OPEN_DELAY);
-  });
+  // $("#contacts-menu").click(function (event) {
+  //     event.preventDefault();
+  //     $("html, body").animate({
+  //        scrollTop: $("section.contacts").offset().top - MENU_HEIGHT
+  //     }, "slow");
+  //     setTimeout(function() {
+  //         // Done Functions
+  //       changeActiveMenu("contacts-menu");
+  //       mobile_panel_title.text("Контакты");
+  //     }, POPUP_OPEN_DELAY);
+  // });
 
 //menu active change while scroll
   var about_us = $("section.about-us");
@@ -656,33 +653,31 @@ $(function() {
 
   //E-mail Ajax Send
   //Documentation & Example: https://github.com/agragregra/uniMail
-  $("#sendmessage").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      var targetParam = 'sendmessage';
-      yaCounter44591707.reachGoal(targetParam);
+  // $("#sendmessage").submit(function() { //Change
+  //   var th = $(this);
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "mail.php", //Change
+  //     data: th.serialize()
+  //   }).done(function() {
 
-      if ($('#form-sent-window').length) {
-        $.magnificPopup.open({
-          items: {
-            src: '#form-sent-window'
-          },
-          type: 'inline'
-        });
-      }
+  //     if ($('#form-sent-window').length) {
+  //       $.magnificPopup.open({
+  //         items: {
+  //           src: '#form-sent-window'
+  //         },
+  //         type: 'inline'
+  //       });
+  //     }
 
 
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
+  //     setTimeout(function() {
+  //       // Done Functions
+  //       th.trigger("reset");
+  //     }, 1000);
+  //   });
+  //   return false;
+  // });
 
   //Chrome Smooth Scroll
   // try {
@@ -723,3 +718,36 @@ $(function() {
 
 
 });
+
+ $('body').append('<div id="toTop" class="btn btn-info"><i class="fa fa-angle-up"></i></div>');
+      $(window).scroll(function () {
+      if ($(this).scrollTop() != 0) {
+        $('#toTop').fadeIn();
+      } else {
+        $('#toTop').fadeOut();
+      }
+    }); 
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+
+    $(function(){
+    $('a[href^="#"]').on('click', function(event) {
+    // отменяем стандартное действие
+    event.preventDefault();
+    
+    var sc = $(this).attr("href"),
+    dn = $(sc).offset().top;
+    /*
+    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+    * dn - определяем положение блока на странице
+    */
+    
+    $('html, body').animate({scrollTop: dn}, 1000);
+    
+    /*
+    * 1000 скорость перехода в миллисекундах
+    */
+  });
+  });

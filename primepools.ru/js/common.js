@@ -7,7 +7,7 @@ function changeActiveMenu(){
 
   for(var i=0;i<arguments.length;i++) {
     sel = "li#"+arguments[i];
-    console.log(sel);
+    // console.log(sel);
     $(sel).addClass("active");
   }
 
@@ -492,16 +492,16 @@ $(function() {
   var about_us = $("section.about-us");
   about_us.waypoint(function(direction){
 
-    console.log("about_us section");
+    // console.log("about_us section");
     changeActiveMenu("about_us-menu");
     mobile_panel_title.text("О нас");
 
     if (direction === 'down') {
       $(".to-top").addClass("show");
-      console.log("show-to-top");
+      // console.log("show-to-top");
     }else if (direction === 'up') {
       $(".to-top").removeClass("show");
-      console.log("hide-to-top");
+      // console.log("hide-to-top");
     }
 
   },{
@@ -511,7 +511,7 @@ $(function() {
 
   var building = $("section.building");
   building.waypoint(function(){
-    console.log("building section");
+    // console.log("building section");
 
     if ($width > 480) {
       changeActiveMenu("building-menu", "service-menu");
@@ -525,7 +525,7 @@ $(function() {
 
   var service = $("section.service");
   service.waypoint(function(){
-    console.log("service section");
+    // console.log("service section");
 
     if ($width > 480) {
       changeActiveMenu("building-menu", "service-menu");
@@ -539,7 +539,7 @@ $(function() {
 
   var gallery = $("section.our-works");
   waypoints = gallery.waypoint(function(direction){
-    console.log("gallery section");
+    // console.log("gallery section");
 
     changeActiveMenu("gallery-menu");
     mobile_panel_title.text("Галлерея работ");
@@ -569,7 +569,7 @@ $(function() {
   if ($width > 768) {
     var saunas_etc = $("section.saunas-etc");
     waypoints = saunas_etc.waypoint(function(){
-      console.log("saunas-etc section");
+      // console.log("saunas-etc section");
 
       changeActiveMenu("saunas-etc-menu");
       mobile_panel_title.text("Спа-бассейны");
@@ -577,10 +577,10 @@ $(function() {
       offset: "30%"
     });
   }else{
-    console.log("I am here");
+    // console.log("I am here");
     var spa = $(".serv.spa");
     waypoints = spa.waypoint(function(){
-      console.log("spa block");
+      // console.log("spa block");
 
       changeActiveMenu("spa-menu");
       mobile_panel_title.text("Спа-бассейны");
@@ -590,7 +590,7 @@ $(function() {
 
     var decking = $(".serv.decking");
     waypoints = decking.waypoint(function(){
-      console.log("decking block");
+      // console.log("decking block");
 
       changeActiveMenu("decking-menu");
       mobile_panel_title.text("Террасная доска");
@@ -600,7 +600,7 @@ $(function() {
 
     var saunas = $(".serv.saunas");
     waypoints = saunas.waypoint(function(){
-      console.log("saunas block");
+      // console.log("saunas block");
 
       changeActiveMenu("saunas-menu");
       mobile_panel_title.text("Сауны");
@@ -610,7 +610,7 @@ $(function() {
 
     var hammams = $(".serv.hammams");
     waypoints = hammams.waypoint(function(){
-      console.log("hammams block");
+      // console.log("hammams block");
 
       changeActiveMenu("hammams-menu");
       mobile_panel_title.text("Хаммамы");
@@ -621,7 +621,7 @@ $(function() {
 
   var contacts = $("section.contacts");
   waypoints = contacts.waypoint(function(){
-    console.log("contacts section");
+    // console.log("contacts section");
 
     changeActiveMenu("contacts-menu");
     mobile_panel_title.text("Контакты");
@@ -733,21 +733,16 @@ $(function() {
     });
 
     $(function(){
-    $('a[href^="#"]').on('click', function(event) {
-    // отменяем стандартное действие
-    event.preventDefault();
-    
-    var sc = $(this).attr("href"),
-    dn = $(sc).offset().top;
-    /*
-    * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-    * dn - определяем положение блока на странице
-    */
-    
-    $('html, body').animate({scrollTop: dn}, 1000);
-    
-    /*
-    * 1000 скорость перехода в миллисекундах
-    */
+    $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 2000);
+        return false;
+      }
+    }
   });
   });

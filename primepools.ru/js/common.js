@@ -196,54 +196,54 @@ $(function() {
   }
 
   // popup windows
-  $('.full-block-link, .button:not(#footersend), .partners a').magnificPopup({
-      type: 'ajax',
-      preloader: false,
-      removalDelay: 300,
-      overflowY: 'scroll',
-      mainClass: 'my-mfp-zoom-in',
-      cursor: 'mfp-ajax-cur', // CSS class that will be added to body during the loading (adds "progress" cursor)
-      tError: '<a href="%url%">The content</a> could not be loaded.', //  Error message, can contain %curr% and %total% tags if gallery is enabled
-      callbacks: {
-        open: function() {
-          // Will fire when this exact popup is opened
-          // this - is Magnific Popup object
-          this_popup = "."+ $.magnificPopup.instance.contentContainer.context.className;
-          console.log(this_popup);
-          $(this_popup).addClass("description popup-block");
-          console.log('Popup opened',  $.magnificPopup.instance);
+  // $('.full-block-link, .button:not(#footersend), .partners a').magnificPopup({
+  //     type: 'ajax',
+  //     preloader: false,
+  //     removalDelay: 300,
+  //     overflowY: 'scroll',
+  //     mainClass: 'my-mfp-zoom-in',
+  //     cursor: 'mfp-ajax-cur', // CSS class that will be added to body during the loading (adds "progress" cursor)
+  //     tError: '<a href="%url%">The content</a> could not be loaded.', //  Error message, can contain %curr% and %total% tags if gallery is enabled
+  //     callbacks: {
+  //       open: function() {
+  //         // Will fire when this exact popup is opened
+  //         // this - is Magnific Popup object
+  //         this_popup = "."+ $.magnificPopup.instance.contentContainer.context.className;
+  //         console.log(this_popup);
+  //         $(this_popup).addClass("description popup-block");
+  //         console.log('Popup opened',  $.magnificPopup.instance);
 
-        },
-        ajaxContentAdded: function() {
-          // Ajax content is loaded and appended to DOM
-          slider_in_popup = this_popup +" .slider";
-          console.log(slider_in_popup);
-          if ($(slider_in_popup).length) {
-            console.log("slider exist!");
-            $(slider_in_popup).owlCarousel({
-              items: 1,
-              nav : true,
-              navText : "",
-              loop : true,
-              dots: false,
-              autoplay : false,
-              autoplayHoverPause : true,
-              fluidSpeed : 600,
-              autoplaySpeed : 600,
-              navSpeed : 600,
-              dotsSpeed : 600,
-              dragEndSpeed : 600
+  //       },
+  //       ajaxContentAdded: function() {
+  //         // Ajax content is loaded and appended to DOM
+  //         slider_in_popup = this_popup +" .slider";
+  //         console.log(slider_in_popup);
+  //         if ($(slider_in_popup).length) {
+  //           console.log("slider exist!");
+  //           $(slider_in_popup).owlCarousel({
+  //             items: 1,
+  //             nav : true,
+  //             navText : "",
+  //             loop : true,
+  //             dots: false,
+  //             autoplay : false,
+  //             autoplayHoverPause : true,
+  //             fluidSpeed : 600,
+  //             autoplaySpeed : 600,
+  //             navSpeed : 600,
+  //             dotsSpeed : 600,
+  //             dragEndSpeed : 600
 
-            });
-          }
-        },
-        close: function() {
-          // Will fire when popup is closed
-        }
-        // e.t.c.
-      }
-      // modal: true
-  });
+  //           });
+  //         }
+  //       },
+  //       close: function() {
+  //         // Will fire when popup is closed
+  //       }
+  //       // e.t.c.
+  //     }
+  //     // modal: true
+  // });
 
 
 
@@ -489,24 +489,24 @@ $(function() {
   // });
 
 //menu active change while scroll
-  var about_us = $("section.about-us");
-  about_us.waypoint(function(direction){
+  // var about_us = $("section.about-us");
+  // about_us.waypoint(function(direction){
 
-    // console.log("about_us section");
-    changeActiveMenu("about_us-menu");
-    mobile_panel_title.text("О нас");
+  //   // console.log("about_us section");
+  //   changeActiveMenu("about_us-menu");
+  //   mobile_panel_title.text("О нас");
 
-    if (direction === 'down') {
-      $(".to-top").addClass("show");
-      // console.log("show-to-top");
-    }else if (direction === 'up') {
-      $(".to-top").removeClass("show");
-      // console.log("hide-to-top");
-    }
+  //   if (direction === 'down') {
+  //     $(".to-top").addClass("show");
+  //     // console.log("show-to-top");
+  //   }else if (direction === 'up') {
+  //     $(".to-top").removeClass("show");
+  //     // console.log("hide-to-top");
+  //   }
 
-  },{
-    offset: "30%"
-  });
+  // },{
+  //   offset: "30%"
+  // });
 
 
   var building = $("section.building");
@@ -689,7 +689,7 @@ $(function() {
 
   // };
 
-  $("img, a").on("dragstart", function(event) { event.preventDefault(); });
+  // $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
   // $(".preloader").fadeOut();
 

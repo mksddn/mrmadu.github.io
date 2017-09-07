@@ -74,7 +74,7 @@ dfn {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0.67em 0
 }
 
@@ -1871,33 +1871,33 @@ h6 {
 }
 
 h1 {
-    font-size: 4.375em;
+    font-size: 3.375em;
     line-height: 80px
 }
 
 h2,
 h3 {
-    font-size: 3.125em;
+    font-size: 3em;
     line-height: 50px
 }
 
 h4 {
-    font-size: 1.875em;
+    font-size: 1.5em;
     line-height: 36px
 }
 
 h5 {
-    font-size: 1.25em;
+    font-size: 1.1em;
     line-height: 20px
 }
 
 h6 {
-    font-size: 1.125em;
+    font-size: 1em;
     line-height: 18px
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 34px
 }
 
@@ -1942,7 +1942,7 @@ a.read-more {
     box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .2);
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.25em;
+    font-size: 1.1em;
     display: inline-block;
     height: 60px;
     line-height: 60px;
@@ -2495,7 +2495,7 @@ button::-moz-focus-inner {
     filter: alpha(opacity=65);
     padding: 0 0 18px 10px;
     font-style: normal;
-    font-size: 28px;
+    font-size: 24px;
     font-family: Arial, Baskerville, monospace
 }
 
@@ -8839,11 +8839,11 @@ input::-moz-focus-inner {
 }
 
 .popup-block h3 {
-    font-size: 3.7rem
+    font-size: 3.5rem
 }
 
 .popup-block li {
-    font-size: 1.1em;
+    font-size: 1em;
     list-style-type: disc
 }
 
@@ -8892,7 +8892,7 @@ input::-moz-focus-inner {
 }
 
 .about-us h4 {
-    font-size: 3.125em;
+    font-size: 3em;
     line-height: 1
 }
 
@@ -8907,7 +8907,7 @@ form fieldset {
 }
 
 form legend {
-    font-size: 1.1875em;
+    font-size: 1em;
     font-family: LetoSansThin, sans-serif;
     color: rgba(4, 115, 193, 0.3)
 }
@@ -9043,7 +9043,7 @@ form .form-row textarea {
     bottom: 10%;
     left: 10%;
     background: rgba(5, 152, 255, 0.8);
-    font-size: 40px;
+    font-size: 36px;
     padding: 0 30px;
     z-index: 2;
     -webkit-transition: all ease .5s;
@@ -9147,7 +9147,7 @@ form .form-row textarea {
 }
 
 .our-works .popup-gallery .image-block .image-block-text-wrapper p {
-    font-size: 1.4em
+    font-size: 1.2em
 }
 
 .our-works .popup-gallery .image-block h4 {
@@ -9235,7 +9235,7 @@ form .form-row textarea {
     bottom: 10%;
     left: 10%;
     background: rgba(5, 152, 255, 0.8);
-    font-size: 40px;
+    font-size: 36px;
     padding: 0 30px;
     overflow: hidden
 }
@@ -9384,7 +9384,7 @@ form .form-row textarea {
 .contacts .contacts-wrapper .form-wrapper .social {
     text-align: center;
     color: #fff;
-    font-size: 40px
+    font-size: 36px
 }
 
 .contacts .contacts-wrapper .form-wrapper .social a {
@@ -9442,7 +9442,7 @@ form .form-row textarea {
     line-height: 60px;
     left: 20px;
     top: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(255, 255, 255, .6);
     cursor: text;
     -webkit-transition: all ease .5s;
@@ -9451,7 +9451,7 @@ form .form-row textarea {
 
 .contacts form .input-wrapper div label.up {
     top: -40px;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff
 }
 
@@ -9461,7 +9461,7 @@ form .form-row textarea {
 
 .contacts form .input-wrapper div input:focus+label {
     top: -40px;
-    font-size: 18px;
+    font-size: 16px;
     z-index: 2;
     color: #fff
 }
@@ -9482,7 +9482,7 @@ form .form-row textarea {
     line-height: 60px;
     left: 20px;
     top: 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     cursor: text;
     -webkit-transition: all ease .5s;
@@ -9492,7 +9492,7 @@ form .form-row textarea {
 
 .contacts form .textarea-wrapper label.up {
     top: -40px;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff
 }
 
@@ -9502,7 +9502,7 @@ form .form-row textarea {
 
 .contacts form .textarea-wrapper textarea:focus+label {
     top: -40px;
-    font-size: 18px;
+    font-size: 16px;
     z-index: 2;
     color: #fff
 }
@@ -9530,7 +9530,7 @@ form button.button {
 
 form input,
 form textarea {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
     border: 2px solid #fff;
     background: 0 0;
@@ -9587,7 +9587,7 @@ footer p a:hover {
     color: inherit
 }
 
-.to-top {
+/*.to-top {
     cursor: pointer;
     z-index: 5;
     width: 50px;
@@ -9608,9 +9608,9 @@ footer p a:hover {
     visibility: hidden;
     -webkit-transition: all, .5s;
     transition: all, .5s
-}
+}*/
 
-.to-top.show {
+/*.to-top.show {
     visibility: visible;
     opacity: .4
 }
@@ -9618,7 +9618,7 @@ footer p a:hover {
 .to-top:hover {
     background: rgba(4, 115, 193, 0.3);
     opacity: 1
-}
+}*/
 
 #form-sent-window {
     position: relative;
@@ -9657,10 +9657,10 @@ footer p a:hover {
         right: 0
     }
     h2 {
-        font-size: 45px
+        font-size: 38px
     }
     p {
-        font-size: 21px
+        font-size: 18px
     }
     footer {
         height: auto
@@ -9702,17 +9702,17 @@ footer p a:hover {
         margin-bottom: 70px
     }
     h2 {
-        font-size: 40px
+        font-size: 36px
     }
     h3 {
-        font-size: 3.75em;
+        font-size: 3.3em;
         line-height: 60px
     }
     h4 {
-        font-size: 2.5em
+        font-size: 2em
     }
     a.read-more {
-        font-size: 1.125em
+        font-size: 1em
     }
     .brand .logo {
         width: 70%
@@ -9735,7 +9735,7 @@ footer p a:hover {
         left: 60px;
         right: 60px;
         color: #000;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 60px;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -9807,7 +9807,7 @@ footer p a:hover {
         bottom: auto;
         width: -webkit-calc(100% - 30px);
         width: calc(100% - 30px);
-        font-size: 28px
+        font-size: 24px
     }
     .building .button,
     .saunas-etc .serv .button,
@@ -9837,15 +9837,15 @@ footer p a:hover {
 
 @media only screen and (max-width:480px) {
     h2 {
-        font-size: 35px;
+        font-size: 32px;
         line-height: 35px
     }
     h3 {
-        font-size: 2.8125em;
+        font-size: 2.5em;
         line-height: 45px
     }
     h4 {
-        font-size: 1.3125em;
+        font-size: 1em;
         line-height: 20px
     }
     .button,
@@ -9879,12 +9879,18 @@ footer p a:hover {
         padding: 15px 10px
     }
     .popup-block h2 {
-        font-size: 30px
+        font-size: 26px
     }
     .our-works .popup-gallery .image-block {
         width: 50%
     }
+    .our-works .works-gallery .image-block {
+        width: 50%
+    }
     .our-works .popup-gallery .image-block .image-block-text-wrapper {
+        display: none
+    }
+    .our-works .works-gallery .image-block .image-block-text-wrapper {
         display: none
     }
     .contacts form .input-wrapper div,
@@ -9895,14 +9901,14 @@ footer p a:hover {
     .contacts form .input-wrapper {
         height: 270px
     }
-    .to-top {
+/*    .to-top {
         width: 30px;
         height: 30px;
         bottom: 10px;
         right: 10px;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px
-    }
+    }*/
     .partner-img {
         width: 100%
     }
@@ -9938,4 +9944,176 @@ footer p a:hover {
   cursor: pointer;
   display: none;
   font-size: 48px;
+}
+
+.contacts {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 1px 1px 2px black;
+}
+
+.about-us.page {
+    padding-top: 100px;
+}
+.about-us.page .main h1 {
+    color: #3e3739;
+}
+.about-us.page .main .description {
+    font-style: italic;
+    text-align: right;
+}
+.about-us.page .about-us-text-wrapper p {
+    text-align: left;
+    padding: 0;
+}
+
+.about-us.single {
+    padding-top: 100px;
+}
+.section-single_wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.about-us.single .single_wrapper {
+    width: 68%;
+    display: inline-block;
+}
+.about-us.single .sidebar {
+    /*width: 28%;*/
+    display: inline-block;
+    text-align: right;
+    padding: 0 15px;
+}
+.about-us.single .sidebar h3 {
+    text-align: right;
+    font-size: 2.5em;
+}
+.about-us.single .sidebar p {
+    padding: 0;
+}
+.about-us.single .main h1 {
+    color: #3e3739;
+}
+.about-us.single .main .description {
+    font-style: italic;
+    text-align: right;
+}
+.about-us.single .about-us-text-wrapper p {
+    text-align: left;
+    padding: 0;
+}
+
+.works-gallery {
+    padding-top: 60px;
+}
+.our-works .works-gallery .image-block {
+    border: 1px solid #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    float: left;
+    text-align: center;
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all ease .5s;
+    transition: all ease .5s
+}
+
+.our-works .works-gallery .image-block.on {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.our-works .works-gallery .image-block a.darken {
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    width: 101%
+}
+
+.our-works .works-gallery .image-block a.darken img {
+    display: block;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear
+}
+
+.our-works .works-gallery .image-block img {
+    width: 100%
+}
+
+.our-works .works-gallery .image-block .image-block-text-wrapper {
+    width: 100%;
+    padding: 10px 50px;
+    color: #231F20;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    line-height: 24px;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: all, .5s;
+    transition: all, .5s
+}
+
+.our-works .works-gallery .image-block .image-block-text-wrapper p {
+    font-size: 1.2em
+}
+
+.our-works .works-gallery .image-block h4 {
+    text-transform: uppercase;
+    margin-bottom: 0
+}
+
+.our-works .works-gallery .image-block:hover .image-block-text-wrapper {
+    opacity: 1;
+    top: 30%
+}
+
+.our-works .works-gallery .image-block:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.our-works .works-gallery .image-block .object_name {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    color: #fff;
+    font-size: 34px;
+    line-height: initial;
+}
+.our-works .works-gallery .image-block .object_name span {
+    text-shadow: 1px 1px 2px black;
+}
+
+.order {
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px 0;
+}
+.order .order_title, .order .order_form input::-webkit-input-placeholder {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+.order .order_title {
+    margin-bottom: 20px;
 }

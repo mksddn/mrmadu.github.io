@@ -719,6 +719,7 @@ $(function() {
 
 });
 
+$(function(){
  $('body').append('<div id="toTop" class="btn btn-info"><i class="fa fa-angle-up"></i></div>');
       $(window).scroll(function () {
       if ($(this).scrollTop() != 0) {
@@ -731,6 +732,7 @@ $(function() {
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
+      });
 
     $(function(){
     $('a[href*=#]:not([href=#])').click(function() {

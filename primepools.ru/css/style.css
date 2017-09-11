@@ -9940,10 +9940,23 @@ footer p a:hover {
 #toTop{
   position: fixed;
   bottom: 10px;
-  right: 20px;
+  right: 30px;
   cursor: pointer;
   display: none;
   font-size: 48px;
+  background-color: rgba(4, 115, 193, 0.3);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 
 .contacts {
@@ -9972,12 +9985,12 @@ footer p a:hover {
     padding-top: 100px;
 }
 .section-single_wrapper {
+    overflow-x: hidden;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    justify-content: space-between;
 }
 .about-us.single .single_wrapper {
     width: 68%;
@@ -9985,6 +9998,7 @@ footer p a:hover {
 }
 .about-us.single .sidebar {
     /*width: 28%;*/
+    width: 350px;
     display: inline-block;
     text-align: right;
     padding: 0 15px;
@@ -10117,3 +10131,4 @@ footer p a:hover {
 .order .order_title {
     margin-bottom: 20px;
 }
+

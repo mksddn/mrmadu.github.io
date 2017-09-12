@@ -1,0 +1,26 @@
+RewriteEngine on
+RewriteRule ^credits.php.* - [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} \.(css|jpg|jpeg|gif|png|js)$
+Rewriterule (.*) credits.php?id=$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} ^\/doverennost\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/uvolnenie\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/harakteristika\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/rezyume\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/raznoe\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/otzyv\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/prikaz\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/akt\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/zayavlenie\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/jaloba\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/polojenie\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/soglashenie\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/isk\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/pretenziya\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/dokument\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/postanovlenie\/.* [OR]
+RewriteCond %{REQUEST_URI} ^\/pismo\/.*
+Rewriterule (.*) credits.php?id=$1&%{QUERY_STRING} [L]

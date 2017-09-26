@@ -3478,7 +3478,7 @@ form {
     font-size: 36px;
     position: absolute;
     right: 5px;
-    top: -2px;
+    top: -4px;
   }
 .catalog .filter__form__second {
   display: -webkit-flex;
@@ -3547,7 +3547,7 @@ form {
     font-size: 28px;
     position: absolute;
     right: 5px;
-    top: -2px;
+    top: -4px;
   }
 .catalog__item {
   border: 1px solid #4c849d;

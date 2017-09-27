@@ -3463,6 +3463,7 @@ form {
 }
 .catalog .filter__form__first select {
   text-transform: uppercase;
+  cursor: pointer;
 }
 .catalog .select_wrapper {
     display: inline-block;
@@ -3479,6 +3480,7 @@ form {
     position: absolute;
     right: 5px;
     top: -4px;
+    pointer-events: none;
   }
 .catalog .filter__form__second {
   display: -webkit-flex;
@@ -3489,25 +3491,37 @@ form {
   justify-content: space-around;
 }
 .catalog .filter__form__second .size, .filter__form__second .price {
-  width: 42%;
+  width: 33%;
 }
 .catalog .filter__form__second .select_wrapper {
   width: 45%;
 }
-.catalog .filter__form__second .price .select_wrapper:after {
+/*.catalog .filter__form__second .price .select_wrapper:after {
     content: 'руб.';
     color: #4c849d;
     position: absolute;
     right: 5px;
     top: 10px;
-  }
-.catalog .filter__form__second .size .select_wrapper:after {
+  }*/
+.catalog .filter__form__second .price .select_wrapper, .catalog .filter__form__second .size .select_wrapper {
+  width: 100%;
+  text-align: center;
+}
+.catalog .filter__form__second .price .select_wrapper input, .catalog .filter__form__second .size .select_wrapper input {
+  border: 1px solid #4c849d;
+  padding: 8px;
+  width: 40%;
+}
+.catalog .filter__form__second .price .select_wrapper input::-webkit-input-placeholder, .catalog .filter__form__second .size .select_wrapper input::-webkit-input-placeholder {
+  color: #4c849d;
+}
+/*.catalog .filter__form__second .size .select_wrapper:after {
     content: 'м2';
     color: #4c849d;
     position: absolute;
     right: 5px;
     top: 10px;
-  }
+  }*/
 .catalog .filter__form__second button {
   margin: 0 auto;
   display: block;
@@ -3537,6 +3551,7 @@ form {
   border-color: #000;
   color: #000;
   padding: 5px 10px;
+  cursor: pointer;
 }
 .catalog .sort .select_wrapper {
   width: 50%;
@@ -3548,6 +3563,7 @@ form {
     position: absolute;
     right: 5px;
     top: -4px;
+    pointer-events: none;
   }
 .catalog__item {
   border: 1px solid #4c849d;

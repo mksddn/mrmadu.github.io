@@ -134,38 +134,18 @@
             <div class="filter__form__second">
               <div class="price">
                 <div class="select_wrapper">
-                  <select name="price">
-                    <option value="">Цена от</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-                <div class="select_wrapper">
-                  <select name="price">
-                    <option value="">Цена до</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
+                  <input name="price_start" placeholder="Цена от">
+                  </input>
+                  <input name="price_end" placeholder="до, руб.">
+                  </input>
                 </div>
               </div>
               <div class="size">
                 <div class="select_wrapper">
-                  <select name="size">
-                    <option value="">Площадь от</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-                <div class="select_wrapper">
-                  <select name="size">
-                    <option value="">Площадь до</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
+                  <input name="size_start" placeholder="Площадь от">
+                  </input>
+                  <input name="size_end" placeholder="до, м2">
+                  </input>
                 </div>
               </div>
               <div class="button">
@@ -179,9 +159,9 @@
             <label for="order">Сортировать</label>
             <div class="select_wrapper">
               <select name="order" id="order">
-                <option value="По умолчанию">По умолчанию</option>
-                <option value="По цене">По цене</option>
-                <option value="По площади">По площади</option>
+                <option value="По умолчанию">По дате</option>
+                <option value="По цене">Дешевле</option>
+                <option value="По площади">Дороже</option>
               </select>
             </div>
           </div>

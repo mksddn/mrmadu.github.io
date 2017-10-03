@@ -30,6 +30,34 @@
 
 <body>
 
+  <div class="mobile_menu">
+    <a href="#" id="hamburger" class="mm-slideout">
+      <span class="hamburger hamburger--collapse">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </span>
+    </a>
+    <nav id="menu">
+      <ul class="flex">
+        <li><a href="about.html">О компании</a></li>
+        <li>
+          <a href="#">Услуги</a>
+          <ul>
+            <li><a href="creat.html">Создание сайта</a></li>
+            <li><a href="support.html">Поддержка сайта</a></li>
+            <li><a href="advert.html">Реклама</a></li>
+            <li><a href="market.html">Маркетинг</a></li>
+            <li><a href="seo.html">SEO</a></li>
+          </ul>
+        </li>
+        <li><a href="articles.html">Статьи</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <header class="header">
     <div class="header__top">
       <div class="container">
@@ -83,14 +111,20 @@
     <div class="container">
       <div class="row">
         <div id="accordion" class="faq__item">
-          <h2 class="faq__item__title btn btn">Продвижение на вечно</h2>
-          <div class="faq__item__content"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там безорфографичный дороге языком маленький, домах но всемогущая. Свой большого толку вопрос над наш речью но</p>
+          <div class="accordion_in">
+            <h2 class="faq__item__title btn btn acc_head">Продвижение на вечно</h2>
+            <div class="faq__item__content acc_content"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там безорфографичный дороге языком маленький, домах но всемогущая. Свой большого толку вопрос над наш речью но</p>
+            </div>
           </div>
-          <h2 class="faq__item__title btn">Белые методы продвижения</h2>
-          <div class="faq__item__content"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там безорфографичный дороге языком маленький, домах но всемогущая. Свой большого толку вопрос над наш речью но</p>
+          <div class="accordion_in">
+            <h2 class="faq__item__title btn acc_head">Белые методы продвижения</h2>
+            <div class="faq__item__content acc_content"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там безорфографичный дороге языком маленький, домах но всемогущая. Свой большого толку вопрос над наш речью новсемогущая. Свой большого толку вопрос над наш речью но</p>
+            </div>
           </div>
-          <h2 class="faq__item__title btn">Комплексная оптимизация сайта</h2>
-          <div class="faq__item__content"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там безорфографичный дороге языком маленький, домах но всемогущая. Свой большого толку вопрос над наш речью но</p>
+          <div class="accordion_in">
+            <h2 class="faq__item__title btn acc_head">Комплексная оптимизация сайта</h2>
+            <div class="faq__item__content acc_content"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там безорфографичный дороге языком маленький, домах но всемогущая.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -148,12 +182,30 @@
   <link rel="stylesheet" href="css/main.min.css">
   <script src="js/scripts.min.js"></script>
 
-  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
     $( "#accordion" ).accordion();
   } );
-  </script>
+</script> -->
+
+<script>
+  $("#accordion").accordionjs({
+
+  // The section open on first init.
+  activeIndex : 1,     
+
+  // Closeable section.
+  closeAble: false, 
+
+  // Close other sections.
+  closeOther  : true,  
+
+  // the speed of slide animation.
+  slideSpeed: 200 
+  
+});
+</script>
 
 </body>
 </html>

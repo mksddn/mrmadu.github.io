@@ -65,7 +65,7 @@
 				<div class="row jc-between ai-center ">
 					<div class="header__top__tel"><address><a href="callto:+79676653355">8 (967) 665-33-55</a></address></div>
 					<div class="header__top__logo"><a href="index.html"><img src="img/logo.png" alt="АЛЬТ" class="img-fluid"></a></div>
-					<div class="header__top__button"><a href="#" class="btn-light">Обратный звонок</a></div>
+					<div class="header__top__button"><a href="#callback" class="btn-light popup_callback">Обратный звонок</a></div>
 				</div>
 			</div>
 		</div>
@@ -343,32 +343,33 @@
 			<div class="row jc-between ai-center ">
 				<div class="header__top__tel"><address><a href="callto:+79676653355">8 (967) 665-33-55</a></address></div>
 				<div class="header__top__logo"><a href="http://agtesla.ru/"><img src="img/logo.png" alt="АЛЬТ" class="img-fluid"></a></div>
-				<div class="header__top__button"><a href="#" class="btn-light">Обратный звонок</a></div>
+				<div class="header__top__button"><a href="#callback" class="btn-light popup_callback">Обратный звонок</a></div>
 			</div>
 		</div>
 	</footer>
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/scripts.min.js"></script>
 
-	<!-- <div class="modal">
-		<div class="callback_form">
+	<div class="modal">
+		<div id="callback" class="callback_form zoom-anim-dialog mfp-hide">
 			<div class="callback_form__header">
 				<h2>Закажите звонок</h2>
 				<hr>
-				<form> -->
+				<form>
 					<!-- Hidden Required Fields -->
-						<!-- <input type="hidden" name="project_name" value="Site Name">
+						<input type="hidden" name="project_name" value="Site Name">
 						<input type="hidden" name="admin_email" value="admin@mail.com">
-						<input type="hidden" name="form_subject" value="Form Subject"> -->
+						<input type="hidden" name="form_subject" value="Form Subject">
 						<!-- END Hidden Required Fields -->
-						<!-- <input type="text" name="Name" placeholder="Ваше имя:" required><br>
-						<input type="text" name="Phone" placeholder="Ваш телефон:" required><br>
+						<input type="text" name="Имя" placeholder="Ваше имя*:" required><br>
+						<input type="text" name="Телефон" placeholder="Ваш телефон*:" required><br>
+						<textarea type="text" name="Сообщение" placeholder="Сообщение:"></textarea><br>
 						<button class="btn btn-blue">Заказать звонок</button>
 					</form>
 			</div>
 		</div>
-	</div> -->
-	
-	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script>
+	</div>
 
 </body>
 </html>

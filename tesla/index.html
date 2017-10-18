@@ -175,7 +175,7 @@
 				<div class="portfolio__item context"><a href="#"><img src="http://instantfap.com/image/UMTjdN4.jpg" alt="" class="img-fluid"></a></div>
 				<div class="portfolio__item project"><a href="#"><img src="http://instantfap.com/image/UMTjdN4.jpg" alt="" class="img-fluid"></a></div>
 			</div>
-			<div class="row portfolio__more"><a href="#" class="btn-light">Показать больше работ</a></div>
+			<div class="row portfolio__more btn-light">Показать больше работ</div>
 		</div>
 	</section>
 
@@ -358,18 +358,38 @@
 				<hr>
 				<form>
 					<!-- Hidden Required Fields -->
-						<input type="hidden" name="project_name" value="Site Name">
-						<input type="hidden" name="admin_email" value="admin@mail.com">
-						<input type="hidden" name="form_subject" value="Form Subject">
-						<!-- END Hidden Required Fields -->
-						<input type="text" name="Имя" placeholder="Ваше имя*:" required><br>
-						<input type="text" name="Телефон" placeholder="Ваш телефон*:" required><br>
-						<textarea type="text" name="Сообщение" placeholder="Сообщение:"></textarea><br>
-						<button class="btn btn-blue">Заказать звонок</button>
-					</form>
+					<input type="hidden" name="project_name" value="Site Name">
+					<input type="hidden" name="admin_email" value="admin@mail.com">
+					<input type="hidden" name="form_subject" value="Form Subject">
+					<!-- END Hidden Required Fields -->
+					<input type="text" name="Имя" placeholder="Ваше имя*:" required><br>
+					<input type="text" name="Телефон" placeholder="Ваш телефон*:" required><br>
+					<textarea type="text" name="Сообщение" placeholder="Сообщение:"></textarea><br>
+					<button class="btn btn-blue">Заказать звонок</button>
+				</form>
 			</div>
 		</div>
 	</div>
+
+	<div id="overlay">
+		<div class="popup__book">
+			<div class="book__form">
+				<div class="book__form__title section__title"><h2>Получить книгу</h2></div>
+				<h3>&laquo;Эффективное продвижение от А до Я&raquo; совершенно бесплатно</h3>
+				<form>
+					<input type="hidden" name="project_name" value="TESLA">
+					<input type="hidden" name="admin_email" value="info@agtesla.ru">
+					<input type="hidden" name="form_subject" value="Завка со страницы *">
+					<input type="hidden" name="form_subject" value="Получить книгу &laquo;Эффективное продвижение от А до Я&raquo;">
+					<input type="text" name="Email" placeholder="Ваш email:" required>
+					<button class="btn-blue" onclick="yaCounter33422803.reachGoal('getbook'); return true;">Получить</button>
+				</form>
+				<img src="http://agtesla.ru/wp-content/themes/agtesla/img/Instagramm.png" alt="Эффективное продвижение в инстаграм от А до Я">
+			</div>
+			<button class="close" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"><i class="fa fa-times"></i></button>
+		</div>
+	</div>
+
 
 </body>
 </html>

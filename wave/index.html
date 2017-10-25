@@ -120,7 +120,11 @@
 			<div class="title_wrapper">
 				<div class="title">Галерея</div>
 				<hr>
-				<div class="link"><a href="#" class="btn-quadro white">Смотреть еще</a></div>
+				<div class="link">
+					<a href="https://mrmadu.github.io/wave/img/slide1.jpg" class="btn-quadro white" title="Описание 1">Смотреть еще</a>
+					<a href="https://mrmadu.github.io/wave/img/slide2.jpg" class="visually-hidden" title="Описание 2"></a>
+					<a href="https://mrmadu.github.io/wave/img/slide3.jpg" class="visually-hidden" title="Описание 3"></a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -208,7 +212,7 @@
 			<div class="title_wrapper">
 				<div class="title">Специальное предложение!</div>
 				<div class="subtitle">При заказае номера "Люкс" час сауны - в подарок!</div>
-				<div class="link"><a href="#" class="btn-quadro white">Подробнее</a></div>
+				<div class="link"><a href="#modal_action" class="btn-quadro white popup">Подробнее</a></div>
 			</div>
 		</div>
 		<div class="overlay"></div>
@@ -321,31 +325,73 @@
 		<div id="standart" class="window window_appart flex zoom-anim-dialog mfp-hide">
 			<div class="slider mobile100per">
 				<div class="slider_for">
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
 				</div>
 				<div class="slider_nav">
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room2.jpg" alt="АЛЬТ"></div>
 				</div>
 			</div>
 			<div class="wrapper mobile100per">
 				<div class="window_appart__info">
 					<div class="name">
-						<h3>Эконом</h3>
+						<h3>Стандарт</h3>
 					</div>
 					<div class="price">
-						<span>700 </span>руб/чел
+						<span>2 100 </span>руб/сутки
 					</div>
 					<div class="details">
 						<p>Мест: <span>2</span></p>
-						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел</span></p>
-						<p>Кровати: <span>две односпальные</span></p>
-						<p>Дополнительная информация: <span>вмещает максимально 3-е взрослых или 2-е взрослых + 2-е детей</span></p>
+						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел...</span></p>
+						<p>Кровати: <span>одна двухместная</span></p>
+					</div>
+				</div>
+				<div class="window_appart__form">
+					<form>
+						<input type="hidden" name="project_name" value="База Отдыха &laquo;Волна&raquo;">
+						<input type="hidden" name="admin_email" value="web-makster.ru">
+						<input type="hidden" name="form_subject" value="Номер СТАНДАРТ">
+						<div class="form_wrapper flex">
+							<input type="text" name="Email или Телефон" placeholder="Ваш email или номер телефона" required>
+						</div>
+						<button class="btn-quadro btn">Подать заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="luxe" class="window window_appart flex zoom-anim-dialog mfp-hide">
+			<div class="slider mobile100per">
+				<div class="slider_for">
+					<div class="slider_for__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+				</div>
+				<div class="slider_nav">
+					<div class="slider_nav__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room3.jpg" alt="АЛЬТ"></div>
+				</div>
+			</div>
+			<div class="wrapper mobile100per">
+				<div class="window_appart__info">
+					<div class="name">
+						<h3>Люкс</h3>
+					</div>
+					<div class="price">
+						<span>3 200 </span>руб/сутки
+					</div>
+					<div class="details">
+						<p>Мест: <span>2</span></p>
+						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел...</span></p>
+						<p>Кровати: <span>одна двухместная</span></p>
 					</div>
 				</div>
 				<div class="window_appart__form">
@@ -362,48 +408,22 @@
 			</div>
 		</div>
 
-		<div id="luxe" class="window window_appart flex zoom-anim-dialog mfp-hide">
-			<div class="slider mobile100per">
-				<div class="slider_for">
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+		<div id="modal_action" class="window window_action flex zoom-anim-dialog mfp-hide">
+				<div class="info">
+					<p>Описание и условия участия в акции</p>
 				</div>
-				<div class="slider_nav">
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
-				</div>
-			</div>
-			<div class="wrapper mobile100per">
-				<div class="window_appart__info">
-					<div class="name">
-						<h3>Эконом</h3>
-					</div>
-					<div class="price">
-						<span>700 </span>руб/чел
-					</div>
-					<div class="details">
-						<p>Мест: <span>2</span></p>
-						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел</span></p>
-						<p>Кровати: <span>две односпальные</span></p>
-						<p>Дополнительная информация: <span>вмещает максимально 3-е взрослых или 2-е взрослых + 2-е детей</span></p>
-					</div>
-				</div>
+				<hr>
 				<div class="window_appart__form">
 					<form>
 						<input type="hidden" name="project_name" value="База Отдыха &laquo;Волна&raquo;">
 						<input type="hidden" name="admin_email" value="web-makster.ru">
-						<input type="hidden" name="form_subject" value="Номер ЭКОНОМ">
+						<input type="hidden" name="form_subject" value="Пользователь заинтересовался акцией">
 						<div class="form_wrapper flex">
 							<input type="text" name="Email или Телефон" placeholder="Ваш email или номер телефона" required>
 						</div>
 						<button class="btn-quadro btn">Подать заявку</button>
 					</form>
 				</div>
-			</div>
 		</div>
 
 	</div>

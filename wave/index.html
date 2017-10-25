@@ -17,6 +17,7 @@
 <body>
 
 	<header>
+		<div class="menu-toggle"></div>
 		<div class="info">
 			<div class="container">
 				<div class="wrapper flex">
@@ -38,13 +39,13 @@
 			<div class="container tablet100per">
 				<nav>
 					<ul class="flex">
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Галерея</a></li>
-						<li><a href="#">Номера</a></li>
-						<li><a href="#">Банкеты</a></li>
-						<li><a href="#">Акции и предложения</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#welcome">О нас</a></li>
+						<li><a href="#service">Услуги</a></li>
+						<li><a href="#gallery">Галерея</a></li>
+						<li><a href="#appart">Номера</a></li>
+						<li><a href="#banquet">Банкеты</a></li>
+						<li><a href="#action">Акции и предложения</a></li>
+						<li><a href="#contact">Контакты</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -65,7 +66,7 @@
 		</div>
 	</section>
 
-	<section class="informer blue">
+	<section id="informer" class="informer blue">
 		<div class="container tablet100per">
 			<div class="wrapper flex">
 				<span>По вопросам бронирования и другой информации звоните</span>
@@ -74,7 +75,7 @@
 		</div>
 	</section>
 
-	<section class="welcome gray">
+	<section id="welcome" class="welcome gray">
 		<div class="container">
 			<div class="flex wrapper">
 				<div class="img flex mobile100per">
@@ -94,7 +95,7 @@
 		</div>
 	</section>
 
-	<section class="service blue">
+	<section id="service" class="service blue">
 		<div class="container">
 			<div class="title_wrapper">
 				<div class="title">Услуги</div>
@@ -114,7 +115,7 @@
 		</div>
 	</section>
 
-	<section class="gallery blue flex">
+	<section id="gallery" class="gallery blue flex">
 		<div class="container">
 			<div class="title_wrapper">
 				<div class="title">Галерея</div>
@@ -124,7 +125,7 @@
 		</div>
 	</section>
 
-	<section class="appart">
+	<section id="appart" class="appart">
 		<div class="container">
 			<div class="title_wrapper">
 				<div class="title">Наши номера</div>
@@ -148,7 +149,7 @@
 						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел</span></p>
 						<p>Кровати: <span>две односпальные</span></p>
 					</div>
-					<div class="link"><a href="#" class="btn-quadro white">Подробнее</a></div>
+					<div class="link"><a href="#econom" class="btn-quadro white popup">Подробнее</a></div>
 				</div>
 				<div class="appart__item mobile100per">
 					<div class="img"><img src="img/room2.jpg" alt="АЛЬТ"></div>
@@ -163,7 +164,7 @@
 						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел...</span></p>
 						<p>Кровати: <span>одна двухместная</span></p>
 					</div>
-					<div class="link"><a href="#" class="btn-quadro white">Подробнее</a></div>
+					<div class="link"><a href="#standart" class="btn-quadro white popup">Подробнее</a></div>
 				</div>
 				<div class="appart__item mobile100per">
 					<div class="img"><img src="img/room3.jpg" alt="АЛЬТ"></div>
@@ -178,13 +179,13 @@
 						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел...</span></p>
 						<p>Кровати: <span>одна двухместная</span></p>
 					</div>
-					<div class="link"><a href="#" class="btn-quadro white">Подробнее</a></div>
+					<div class="link"><a href="#luxe" class="btn-quadro white popup">Подробнее</a></div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="banquet gray">
+	<section id="banquet" class="banquet gray">
 		<div class="container">
 			<div class="title_wrapper">
 				<div class="title">Банкеты</div>
@@ -202,7 +203,7 @@
 		</div>
 	</section>
 
-	<section class="action blue flex">
+	<section id="action" class="action blue flex">
 		<div class="container">
 			<div class="title_wrapper">
 				<div class="title">Специальное предложение!</div>
@@ -213,7 +214,7 @@
 		<div class="overlay"></div>
 	</section>
 
-	<section class="contact flex">
+	<section id="contact" class="contact flex">
 		<div class="contact_wrapper mobile100per">
 			<div class="title_wrapper">
 				<div class="title">Свяжитесь с нами</div>
@@ -270,6 +271,142 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal">
+
+		<div id="econom" class="window window_appart flex zoom-anim-dialog mfp-hide">
+			<div class="slider mobile100per">
+				<div class="slider_for">
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+				</div>
+				<div class="slider_nav">
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+				</div>
+			</div>
+			<div class="wrapper mobile100per">
+				<div class="window_appart__info">
+					<div class="name">
+						<h3>Эконом</h3>
+					</div>
+					<div class="price">
+						<span>700 </span>руб/чел
+					</div>
+					<div class="details">
+						<p>Мест: <span>2</span></p>
+						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел</span></p>
+						<p>Кровати: <span>две односпальные</span></p>
+						<p>Дополнительная информация: <span>вмещает максимально 3-е взрослых или 2-е взрослых + 2-е детей</span></p>
+					</div>
+				</div>
+				<div class="window_appart__form">
+					<form>
+						<input type="hidden" name="project_name" value="База Отдыха &laquo;Волна&raquo;">
+						<input type="hidden" name="admin_email" value="web-makster.ru">
+						<input type="hidden" name="form_subject" value="Номер ЭКОНОМ">
+						<div class="form_wrapper flex">
+							<input type="text" name="Email или Телефон" placeholder="Ваш email или номер телефона" required>
+						</div>
+						<button class="btn-quadro btn">Подать заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="standart" class="window window_appart flex zoom-anim-dialog mfp-hide">
+			<div class="slider mobile100per">
+				<div class="slider_for">
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+				</div>
+				<div class="slider_nav">
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+				</div>
+			</div>
+			<div class="wrapper mobile100per">
+				<div class="window_appart__info">
+					<div class="name">
+						<h3>Эконом</h3>
+					</div>
+					<div class="price">
+						<span>700 </span>руб/чел
+					</div>
+					<div class="details">
+						<p>Мест: <span>2</span></p>
+						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел</span></p>
+						<p>Кровати: <span>две односпальные</span></p>
+						<p>Дополнительная информация: <span>вмещает максимально 3-е взрослых или 2-е взрослых + 2-е детей</span></p>
+					</div>
+				</div>
+				<div class="window_appart__form">
+					<form>
+						<input type="hidden" name="project_name" value="База Отдыха &laquo;Волна&raquo;">
+						<input type="hidden" name="admin_email" value="web-makster.ru">
+						<input type="hidden" name="form_subject" value="Номер ЭКОНОМ">
+						<div class="form_wrapper flex">
+							<input type="text" name="Email или Телефон" placeholder="Ваш email или номер телефона" required>
+						</div>
+						<button class="btn-quadro btn">Подать заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="luxe" class="window window_appart flex zoom-anim-dialog mfp-hide">
+			<div class="slider mobile100per">
+				<div class="slider_for">
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_for__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+				</div>
+				<div class="slider_nav">
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+					<div class="slider_nav__item"><img src="img/room1.jpg" alt="АЛЬТ"></div>
+				</div>
+			</div>
+			<div class="wrapper mobile100per">
+				<div class="window_appart__info">
+					<div class="name">
+						<h3>Эконом</h3>
+					</div>
+					<div class="price">
+						<span>700 </span>руб/чел
+					</div>
+					<div class="details">
+						<p>Мест: <span>2</span></p>
+						<p>В номере: <span>шкаф, журнальный столик, две прикроватные тумбочки, холодильник, сплит, санузел</span></p>
+						<p>Кровати: <span>две односпальные</span></p>
+						<p>Дополнительная информация: <span>вмещает максимально 3-е взрослых или 2-е взрослых + 2-е детей</span></p>
+					</div>
+				</div>
+				<div class="window_appart__form">
+					<form>
+						<input type="hidden" name="project_name" value="База Отдыха &laquo;Волна&raquo;">
+						<input type="hidden" name="admin_email" value="web-makster.ru">
+						<input type="hidden" name="form_subject" value="Номер ЭКОНОМ">
+						<div class="form_wrapper flex">
+							<input type="text" name="Email или Телефон" placeholder="Ваш email или номер телефона" required>
+						</div>
+						<button class="btn-quadro btn">Подать заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
 	
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>

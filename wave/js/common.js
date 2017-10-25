@@ -1,33 +1,75 @@
 $(function() {
 
-  var h_hght = 60;
-  var h_mrg = 0; 
+  if ($(window).width() > 768) {
+    var h_hght = 60;
+    var h_mrg = 0; 
 
-  var elem = $('.menu');
-  var top = $(this).scrollTop();
+    var elem = $('.menu');
+    var top = $(this).scrollTop();
 
-  if(top > h_hght){
-    elem.css('top', h_mrg);
-  }           
-
-  $(window).scroll(function(){
-    top = $(this).scrollTop();
-
-    if (top+h_mrg < h_hght) {
-      elem.css('top', (h_hght-top));
-      elem.css('background-color', 'rgba(0,0,0,0)');
-    } else {
+    if(top > h_hght){
       elem.css('top', h_mrg);
-      elem.css('background-color', 'rgba(0,0,0,0.3)');
+    }           
+
+    $(window).scroll(function(){
+      top = $(this).scrollTop();
+
+      if (top+h_mrg < h_hght) {
+        elem.css('top', (h_hght-top));
+        elem.css('background-color', 'rgba(0,0,0,0)');
+      } else {
+        elem.css('top', h_mrg);
+        elem.css('background-color', 'rgba(0,0,0,0.3)');
+      }
+    });
+  }
+
+  if ($(window).width() < 768) {
+    var h_hght = 400;
+    var h_mrg = 0; 
+
+    var elem = $('.informer');
+    var top = $(this).scrollTop();
+
+    if(top > h_hght){
+      elem.css('top', h_mrg);
+    }           
+
+    $(window).scroll(function(){
+      top = $(this).scrollTop();
+
+      if (top+h_mrg < h_hght) {
+        elem.css('top', (h_hght-top));
+      } else {
+        elem.css('top', h_mrg);
+      }
+    });
+  }
+
+  if($(window).width() < 767) {
+    $( '.menu-toggle, .menu nav li a' ).click( function() {
+     if ( $( '.menu nav' ).is( ':hidden' ) ) {
+      $( '.menu nav' ).show('slideDown');
+    } else {
+      $( '.menu nav' ).hide('slideUp');
     }
+  });
+  };
+
+  $("nav").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
   });
 
   $('.main__slider').slick({
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
     arrows: false,
     dots: true,
     responsive: [
@@ -37,10 +79,42 @@ $(function() {
         dots: false
       }
     }
-  ]
+    ]
+  });
+
+  $('.slider_for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '.slider_nav'
+  });
+  $('.slider_nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider_for',
+    centerMode: true,
+    focusOnSelect: true
+  });
+
+  $('.popup').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
   });
 
 });
+
+
 
 
 
@@ -56,10 +130,10 @@ function init () {
   });
   var myPlacemarkTemp = new ymaps.GeoObject({
     geometry: {
-        type: "Point",
+      type: "Point",
         coordinates: [44.679423, 37.627068] // координаты, где будет размещаться флажок на карте
-    }
-  });
+      }
+    });
   myMapTemp.geoObjects.add(myPlacemarkTemp);
   var layer = myMapTemp.layers.get(0).get(0);
   waitForTilesLoad(layer).then(function() {
@@ -89,12 +163,12 @@ function getTileContainer(layer) {
       if (
         layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
         || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
-      ) {
+        ) {
         return layer[k];
-      }
     }
   }
-  return null;
+}
+return null;
 }
 function loadScript(url, callback){
   var script = document.createElement("script");
@@ -102,11 +176,11 @@ function loadScript(url, callback){
   if (script.readyState){  // IE
     script.onreadystatechange = function(){
       if (script.readyState == "loaded" ||
-              script.readyState == "complete"){
+        script.readyState == "complete"){
         script.onreadystatechange = null;
-        callback();
-      }
-    };
+      callback();
+    }
+  };
   } else {  // Другие браузеры
     script.onload = function(){
       callback();
@@ -118,14 +192,14 @@ function loadScript(url, callback){
 }
 var ymap = function() {
   $('.ymap-container').mouseenter(function(){
-      if (!check_if_load) {
-        check_if_load = true; 
-        spinner.addClass('is-active');
-        loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
-           ymaps.load(init);
-        });                
-      }
+    if (!check_if_load) {
+      check_if_load = true; 
+      spinner.addClass('is-active');
+      loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
+       ymaps.load(init);
+     });                
     }
+  }
   );  
 }
 $(function() {

@@ -86,23 +86,40 @@ $(function() {
     mainClass: 'my-mfp-zoom-in'
   });
 
-  $('.gallery_link').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Идет загрузка #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено.',
-      titleSrc: function(item) {
-        return item.el.attr('title') + '<small>База отдыха ВОЛНА</small>';
-      }
-    }
+  var groups = {};
+  $('.gallery_link a').each(function() {
+    var id = parseInt($(this).attr('data-group'), 10);
+    if(!groups[id]) {
+      groups[id] = [];
+    } 
+    groups[id].push( this );
   });
+  $.each(groups, function() {
+    $(this).magnificPopup({
+      type: 'image',
+      closeOnContentClick: true,
+      closeBtnInside: false,
+      gallery: { enabled:true }
+    })
+  });
+
+  // $('.gallery_link').magnificPopup({
+  //   delegate: 'a',
+  //   type: 'image',
+  //   tLoading: 'Идет загрузка #%curr%...',
+  //   mainClass: 'mfp-img-mobile',
+  //   gallery: {
+  //     enabled: true,
+  //     navigateByImgClick: true,
+  //     preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  //   },
+  //   image: {
+  //     tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено.',
+  //     titleSrc: function(item) {
+  //       return item.el.attr('title') + '<small>База отдыха ВОЛНА</small>';
+  //     }
+  //   }
+  // });
 
   $('ul.tabs').delegate('li:not(.current)', 'click', function () {
     $(this).addClass('current').siblings().removeClass('current')

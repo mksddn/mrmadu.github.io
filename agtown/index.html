@@ -9,7 +9,7 @@
   <meta name="description" content="">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <meta property="og:image" content="path/to/image.jpg">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -29,22 +29,22 @@
 </head>
 
 <header>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row search-row">
-      <!-- <div class="menu-toggle">
-        <i class="fa fa-bars"></i>
-      </div> -->
-      <div class="col-md-2 col-6 town">
+      <div class="col-md-3 col-sm-3 col-6 town">
+        <div class="menu-toggle">
+          <i class="fa fa-bars"></i>
+        </div>
         <i class="fa fa-location-arrow"></i>
         <a href="#">Новороссийск</a>
       </div>
-      <div class="col-md-8 col-sm-12 search">
+      <div class="col-md-6 col-sm-12 search">
         <form>
           <input class="col-12" type="text" name="s" placeholder="Введите название компании или категории">
           <input class="submit" type="submit" value="Найти">
         </form>
       </div>
-      <div class="col-md-2 col-6 lk-menu">
+      <div class="col-md-3 col-sm-3 col-6 offset-sm-6 offset-md-0 lk-menu">
         Личный кабинет
       </div>
     </div>
@@ -83,7 +83,7 @@
       <div class="sidebar category-nav">
         <nav>
           <ul>
-            <li>
+            <li class="active">
               <i class="fa fa-snowflake-o"></i><span>Услуги</span>
               <ul class="sub-menu">
                 <li><a href="category.html">Подкатегория номер 1</a></li>
@@ -346,7 +346,7 @@
       </div>
     </aside>
 
-    <div class="main-wrapper col-lg-9">
+    <div class="col-lg-9 main-wrapper">
 
       <section class="banner">
         <div class="slider">

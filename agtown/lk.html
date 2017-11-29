@@ -46,17 +46,15 @@
       </div>
       <div class="col-sm-3 col-6 offset-sm-6 offset-md-0 lk-menu">
           <div class="dropdown">
-          <div class="title">username<i class="fa fa-caret-down"></i></div>
+          <div class="title"><i class="fa fa-user"></i>username<!-- <i class="fa fa-caret-down"></i> --></div>
           <ul>
-            <li><a href="lk.html"><i class="fa fa-user"></i>Личный кабинет</a></li>
-            <li><a href="lk.html"><i class="fa fa-cog"></i>Настройки</a></li>
-            <li><a href="lk.html"><i class="fa fa-envelope"></i>Сообщения</a></li>
+            <li><a href="lk.html"><i class="fa fa-cog"></i>Личный кабинет</a></li>
             <li><a href="lk.html"><i class="fa fa-pencil-square"></i>Добавить организацию</a></li>
             <li><a href="#"><i class="fa fa-arrow-left"></i>Выход</a></li>
           </ul>
         </div>
         <div class="mail">
-          <a href="#"><i class="fa fa-envelope"></i><span class="notific">(2)</span></a>
+          <a href="lk.html"><i class="fa fa-envelope"></i><span class="notific">(2)</span></a>
         </div>
       </div>
     </div>
@@ -76,7 +74,7 @@
                 <li><a href="archive.html">Новости</a></li>
                 <li><a href="archive.html">Акции</a></li>
                 <li><a href="archive.html">Вакансии</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="contact.html">Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -357,6 +355,7 @@
       <a href="single.html" class="col-9">Продукты, опасные для вашего здоровья</a>
   </article>
   <div class="more"><a href="archive.html">Все новости</a></div>
+  <div class="more"><a class="link-red" href="#">Разместить новость</a></div>
 </div>
 
 <div class="sidebar widget advert">
@@ -414,6 +413,7 @@
     <a href="single.html" class="col-9">Продукты, опасные для вашего здоровья</a>
 </article>
 <div class="more"><a href="archive.html">Все акции</a></div>
+<div class="more"><a class="link-red" href="#">Разместить акцию</a></div>
 </div>
 
 </aside>
@@ -421,21 +421,28 @@
     <div class="col-lg-9 main-wrapper">
 
       <main class="page-wrapper">
-        <div class="row page-head">
-          <div class="col-12 archive-title">
-            <i class="fa fa-snowflake-o"></i>
-            <h1>Личный кабинет пользователя</h1>
-          </div>
+        <div class="page-title">
+          <i class="fa fa-snowflake-o"></i>
+          <h1>Личный кабинет пользователя</h1>
         </div>
         <div class="row lk-tabs-wrapper">
-          <div class="col-12 lk-tabs">
+          <div class="col-sm-10 lk-tabs">
             <ul>
               <li>Настройки</li>
-              <li class="current">Сообщения</li>
-              <li>Отзывы</li>
+              <li class="current">Уведомления</li>
+              <!-- <li>Отзывы</li> -->
               <li>Мои организации</li>
               <li>Добавить организацию</li>
-              <li>Выход</li>
+              <li>Сообщения</li>
+              <li>Отзывы</li>
+              <li>Вакансии</li>
+              <li>Новости</li>
+              <li>Акции</li>
+            </ul>
+          </div>
+          <div class="col-sm-2 lk-tabs">
+            <ul>
+              <li class="btn-red">Выход</li>
             </ul>
           </div>
         </div>
@@ -443,40 +450,174 @@
 
           <section class="col-12 lk-tab settings">
             <form>
-              <h3>Информация</h3>
-              <p>Имя</p>
-              <input type="text">
-              <p>Фамилия</p>
-              <input type="text">
-              <h3>Изменить пароль</h3>
-              <p>Новый пароль</p>
-              <input type="password">
-              <p>Еще раз</p>
-              <input type="password">
-              <h3>Изменить e-mail</h3>
-              <p>Текущий пароль</p>
-              <span>email@email.com</span>
-              <p>Новый email</p>
-              <input type="email">
-              <h3>Изменить телефон</h3>
-              <p>Текущий телефон</p>
-              <span>Не указан</span>
-              <p>Новый телефон</p>
-              <input type="tel">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h3>Информация</h3>
+                  <p>Имя</p>
+                  <input type="text">
+                  <p>Фамилия</p>
+                  <input type="text">
+                  <h3>Изменить пароль</h3>
+                  <p>Новый пароль</p>
+                  <input type="password">
+                  <p>Еще раз</p>
+                  <input type="password">
+                </div>
+                <div class="col-sm-6">
+                  <h3>Изменить e-mail</h3>
+                  <p>Текущий e-mail</p>
+                  <span>email@email.com</span>
+                  <p>Новый email</p>
+                  <input type="email">
+                  <h3>Изменить телефон</h3>
+                  <p>Текущий телефон</p>
+                  <span>Не указан</span>
+                  <p>Новый телефон</p>
+                  <input type="tel">
+                </div>
+              </div>
               <button class="btn btn-green" type="submit">Сохранить информацию</button>
             </form>
           </section>
 
-          <section class="col-12 lk-tab messages visible">
-            <p>Вкладка 2</p>
+          <section class="col-12 lk-tab notifications visible">
+
+            <div class="row company-items">
+              <article class="col-12 company-item premium">
+                <div class="row">
+                  <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                  <div class="col-10 company-info">
+                    <div class="row company-item-head">
+                      <div class="col-sm-9 company-title">
+                        <h3>Новый отзыв</h3>
+                      </div>
+                      <div class="col-sm-3 notific-author">
+                        Имя автора
+                      </div>
+                    </div>
+                    <div class="company-excerpt">
+                      <p>Проверка финансовой и хозяйственно-экономической деятельности учреждения...</p>
+                      <div class="buttons-row">
+                        <a href="#" class="btn btn-green">Посмотреть</a>
+                        <a href="#" class="btn btn-green">Все отзывы</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-12 company-item premium">
+                <div class="row">
+                  <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                  <div class="col-10 company-info">
+                    <div class="row company-item-head">
+                      <div class="col-sm-9 company-title">
+                        <h3>Новое сообщение</h3>
+                      </div>
+                      <div class="col-sm-3 notific-author">
+                        Имя автора
+                      </div>
+                    </div>
+                    <div class="company-excerpt">
+                      <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Дороге, власти? Бросил семь продолжил...</p>
+                      <div class="buttons-row">
+                        <a href="#" class="btn btn-green">К диалогу</a>
+                        <a href="#" class="btn btn-green right">Все сообщения</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-12 company-item premium">
+                <div class="row">
+                  <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                  <div class="col-10 company-info">
+                    <div class="row company-item-head">
+                      <div class="col-sm-9 company-title">
+                        <h3>Отклик на вакансию &laquo;Грузчик-экспедитор&raquo;</h3>
+                      </div>
+                      <div class="col-sm-3 notific-author">
+                        Имя автора
+                      </div>
+                    </div>
+                    <div class="company-excerpt">
+                      <div class="buttons-row">
+                        <a href="#" class="btn btn-green">Посмотреть</a>
+                        <a href="#" class="btn btn-green">Мои вакансии</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
           </section>
 
-          <section class="col-12 lk-tab reviews">
+          <!-- <section class="col-12 lk-tab reviews">
             <p>Вкладка 3</p>
-          </section>
+          </section> -->
 
           <section class="col-12 lk-tab companies">
-            <p>Вкладка 4</p>
+
+            <div class="row company-items">
+              <article class="col-12 company-item">
+                <div class="row">
+                  <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                  <div class="col-10 company-info">
+                    <div class="row company-item-head">
+                      <div class="col-sm-9 company-title">
+                        <h3>ООО "Эксперт Аудит"</h3>
+                      </div>
+                      <div class="col-sm-3 company-more"><a class="btn btn-green" href="lk-edit.html">Редактировать</a></div>
+                    </div>
+                    <div class="company-excerpt">
+                      <p>Проверка финансовой и хозяйственно-экономической деятельности учреждения, финансовые услуги,подготовка к аудиторским проверкам, открытие и ликвидация организаций, другое...</p>
+                    </div>
+                    <div class="details"><address>
+                      <div class="address"><i class="fa fa-map-marker"></i>Новороссийск, Советов, 36</div>
+                      <div class="tel"><a href="#"><i class="fa fa-phone"></i>8 8617 22 33 44</a></div>
+                      <div class="email"><a href="#"><i class="fa fa-envelope"></i>expert-audit@domen.ru</a></div>
+                      <div class="site"><a href="#"><i class="fa fa-external-link"></i>expert-audit.ru</a></div>
+                    </address></div>
+                  </div>
+                  <div class="col-12">
+                    <div class="buttons-row">
+                      <a href="#" class="btn btn-red"><i class="fa fa-star"></i>Перейти на ПРЕМИУМ</a>
+                      <a href="#" class="btn btn-red"><i class="fa fa-check-square"></i>Перейти на СТАНДАРТ</a>
+                      <a href="#" class="btn btn-green"><i class="fa fa-window-restore"></i>Подробней о тарифах</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-12 company-item premium">
+                <div class="row">
+                  <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                  <div class="col-10 company-info">
+                    <div class="row company-item-head">
+                      <div class="col-sm-9 company-title">
+                        <a href="single-company.html"><h3>ИП Калинин - Грузоперевозки</h3></a>
+                      </div>
+                      <div class="col-sm-3 company-more"><a class="btn btn-green" href="lk-edit.html">Редактировать</a></div>
+                    </div>
+                    <div class="company-excerpt">
+                      <p>Проверка финансовой и хозяйственно-экономической деятельности учреждения, финансовые услуги,подготовка к аудиторским проверкам, открытие и ликвидация организаций, другое...</p>
+                    </div>
+                    <div class="details"><address>
+                      <div class="address"><i class="fa fa-map-marker"></i>Новороссийск, Советов, 36</div>
+                      <div class="tel"><a href="#"><i class="fa fa-phone"></i>8 8617 22 33 44</a></div>
+                      <div class="email"><a href="#"><i class="fa fa-envelope"></i>expert-audit@domen.ru</a></div>
+                      <div class="site"><a href="#"><i class="fa fa-external-link"></i>expert-audit.ru</a></div>
+                    </address></div>
+                  </div>
+                  <div class="col-12">
+                    <div class="buttons-row">
+                      <a href="#" class="btn btn-red"><i class="fa fa-shopping-cart"></i>Подключить ИНТЕРНЕТ-МАГАЗИН</a>
+                      <a href="#" class="btn btn-green"><i class="fa fa-window-restore"></i>Подробней о тарифах</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
           </section>
 
           <section class="col-12 lk-tab add-company">
@@ -503,24 +644,24 @@
                       <option>Пункт 2</option>
                     </select>
                   </div>
-                  <p>Район *</p>
+                  <!-- <p>Район *</p>
                   <div class="select-wrapper">
                     <select>
                       <option>Выберите район</option>
                       <option>Пункт 1</option>
                       <option>Пункт 2</option>
                     </select>
-                  </div>
+                  </div> -->
                   <p>Телефон *</p>
                   <input type="tel">
+                  <p>Email</p>
+                  <input type="email">
                   
                 </div>
                 <div class="col-sm-6">
                   <p>Миниатюра компании</p>
                   <input id="file" type="file" >
                   <img id="result">
-                  <p>Email</p>
-                  <input type="email">
                   <p>Сайт</p>
                   <input type="url">
                   <p>ИНН/ОГРН</p>
@@ -533,40 +674,161 @@
                   <textarea></textarea>
                 </div>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-12">
-                  
+
                   <p>Фото на слайдер</p>
                   <div class="slider-add">
                     <input id="slider" type="file" multiple="multiple">
                   </div>
-                  <!-- <div id="sortable">
-                      <img src="img/tits.jpg" alt="АЛЬТ">
-                      <img src="img/tits.jpg" alt="АЛЬТ">
-                      <img src="img/tits.jpg" alt="АЛЬТ">
-                  </div> -->
-                  <p>Видео</p>
+                    <p>Видео</p>
+                  </div>
+                </div> -->
+                <div class="row">
+                  <div class="col-12">
+                    <input type="checkbox" id="accept" checked><label for="accept">Согласие с правилами сайта</label>
+                    <button class="btn btn-green" type="submit">Добавить организацию</button>
+                  </div>
+                  <div class="col-12">
+                    <p>Модерация - сутки</p>
+                  </div>
                 </div>
+              </form>
+            </section>
+
+            <section class="col-12 lk-tab">
+              Сообщения
+            </section>
+
+            <section class="col-12 lk-tab review">
+
+              <div class="row company-items">
+                <article class="col-12 company-item premium">
+                  <div class="row">
+                    <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                    <div class="col-10 company-info">
+                      <div class="row company-item-head">
+                        <div class="col-sm-9 company-title">
+                          <h3>Имя автора</h3>
+                        </div>
+                      </div>
+                      <div class="company-excerpt">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс раз заманивший родного от всех рыбного возвращайся, домах, текст не свой вдали маленькая строчка! Великий вопрос, возвращайся переулка раз океана.</p>
+                        <div class="buttons-row">
+                          <a href="#" class="btn btn-red"><i class="fa fa-minus-circle"></i>Удалить отзыв</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
               </div>
-              <div class="row">
+
+            </section>
+
+            <section class="col-12 lk-tab vacancy">
+
+              <div class="row company-items">
+                <article class="col-12 company-item premium">
+                  <div class="row">
+                    <div class="col-2 company-img"><div class="img-wrapper"><img src="img/tits.jpg" alt="АЛЬТ"></div></div>
+                    <div class="col-10 company-info">
+                      <div class="row company-item-head">
+                        <div class="col-12 company-title">
+                          <h3>Грузчик экспедитор</h3>
+                        </div>
+                      </div>
+                      <div class="company-excerpt">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. То снова оксмокс единственное вскоре свою но путь великий обеспечивает там силуэт сбить, послушавшись пояс путь домах свой вопроса ты.</p>
+                        <div class="buttons-row">
+                          <a href="single.html" class="btn btn-green"><i class="fa fa-external-link"></i>Перейти</a>
+                          <a href="#" class="btn btn-green"><i class="fa fa-pencil"></i>Редактировать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  
+                  <div class="col-12">
+                    <div class="buttons-row">
+                      <a href="#" class="btn btn-red"><i class="fa fa-plus"></i>Разместить вакансию</a>
+                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+
+              <section class="lk-tab col-12 news">
+
+                <div class="row archive-items">
+                  <article class="col-12 archive-item">
+                    <div class="row">
+                      <div class="col-sm-12 archive-info">
+                        <div class="archive-time"><time>Ноябрь 14, 2017</time></div>
+                        <div class="archive-title"><a href="single.html"><h2>Новость</h2></a></div>
+                        <div class="archive-author"><a href="single.html">Название компании</a></div>
+                        <div class="archive-excerpt"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Взобравшись рукопись безопасную моей вопрос. Вопрос прямо, рыбными семантика все. Бросил, первую курсивных эта его своего предложения составитель моей продолжил.</p></div>
+                        <div class="buttons-row">
+                          <a href="single.html" class="btn btn-green"><i class="fa fa-external-link"></i>Перейти</a>
+                          <a href="#" class="btn btn-green"><i class="fa fa-pencil"></i>Редактировать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                  <div class="col-12">
+                    <div class="buttons-row">
+                      <a href="#" class="btn btn-red"><i class="fa fa-plus"></i>Разместить новость</a>
+                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+
+            </section>
+
+            <section class="lk-tab col-12 action">
+
+              <div class="row archive-items">
+                <article class="col-12 archive-item">
+                  <div class="row">
+                    <div class="col-sm-3 archive-img">
+                      <a href="single.html"><img class="hover-shadow" src="img/tits.jpg" alt="АЛЬТ"></a>
+                    </div>
+                    <div class="col-sm-9 archive-info">
+                      <div class="archive-time"><time>Ноябрь 14, 2017</time> - <span>Декабрь 14, 2017</span></div>
+                      <div class="archive-title"><a href="single.html"><h2>Акция</h2></a></div>
+                      <div class="archive-author"><a href="single.html">Название компании</a></div>
+                      <div class="archive-excerpt"><p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Взобравшись рукопись безопасную моей вопрос. Вопрос прямо, рыбными семантика все. Бросил, первую курсивных эта его своего предложения составитель моей продолжил.</p></div>
+                      <div class="buttons-row">
+                        <a href="single.html" class="btn btn-green"><i class="fa fa-external-link"></i>Перейти</a>
+                        <a href="#" class="btn btn-green"><i class="fa fa-pencil"></i>Редактировать</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
                 <div class="col-12">
-                  <button class="btn btn-green" type="submit">Сохранить информацию</button>
+                  <div class="buttons-row">
+                    <a href="#" class="btn btn-red"><i class="fa fa-plus"></i>Разместить акцию</a>
+                  </div>
                 </div>
+
               </div>
-            </form>
-          </section>
 
-        </div>
+            </section>
 
-      </main>
+          </div>
+
+        </main>
+
+      </div>
 
     </div>
-
   </div>
-</div>
 
 
-<footer>
+  <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-4 footer-info">

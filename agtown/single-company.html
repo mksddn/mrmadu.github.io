@@ -44,7 +44,7 @@
                 <li><a href="archive.html">Новости</a></li>
                 <li><a href="archive.html">Акции</a></li>
                 <li><a href="archive.html">Вакансии</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="contact.html">Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -77,7 +77,7 @@
 .cp-wrapper {
   font-size: 1.2rem;
 }
-.cp-wrapper a, .cp-wrapper button, .cp-wrapper .slider .slick-dots .slick-active:before, .cp-nav a:hover, .cp-section-title h2, .cp-review-author, .cp-review-add a:hover, .slick-arrow, .cp-shop-title, .cp-shop-buy .price, .cp-contact-item i {
+.cp-wrapper a, .cp-wrapper button, .cp-wrapper .slider .slick-dots .slick-active:before, .cp-nav a:hover, .cp-section-title h2, .cp-review-author, .cp-review-add a:hover, .slick-arrow, .cp-shop-title, .cp-shop-buy .price, .contact-item i {
   color: #ffa60a;
 }
 .cp-section-title h2:after, #cp-action, .cp-review-add a, .cp-shop-buy .val, .cp-wrapper .pagination .active, .cp-wrapper .pagination a:hover {
@@ -479,21 +479,21 @@
         </div>
         <address>
           <div class="row">
-            <div class="col-sm-6 cp-contact-item">
+            <div class="col-sm-6 contact-item">
               <i class="fa fa-map-marker"></i>
               <span>
                 <strong>Адрес:</strong><br>
                 г. Новороссийск, ул. Набережная, д. 41<br>
               </span>
             </div>
-            <div class="col-sm-6 cp-contact-item">
-              <i class="fa fa-map-marker"></i>
+            <div class="col-sm-6 contact-item">
+              <i class="fa fa-external-link"></i>
               <span>
                 <strong>Сайт:</strong><br>
                 <a href="#">www.site.ru</a><br>
               </span>
             </div>
-            <div class="col-sm-6 cp-contact-item">
+            <div class="col-sm-6 contact-item">
               <i class="fa fa-phone"></i>
               <span>
                 <strong>Телефон:</strong><br>
@@ -501,23 +501,23 @@
                 <a href="callto:+79189875056">8 918 9875056</a><br>
               </span>
             </div>
-            <div class="col-sm-6 cp-contact-item">
-              <i class="fa fa-phone"></i>
+            <div class="col-sm-6 contact-item">
+              <i class="fa fa-envelope"></i>
               <span>
                 <strong>Email:</strong><br>
                 <a href="mailto:test@test.ru">test@test.ru</a><br>
               </span>
             </div>
-            <div class="col-sm-6 cp-contact-item">
-              <i class="fa fa-map-marker"></i>
+            <div class="col-sm-6 contact-item">
+              <i class="fa fa-clock-o"></i>
               <span>
                 <strong>Режим работы:</strong><br>
                 09.00 - 18.00<br>
                 выходной: воскресенье
               </span>
             </div>
-            <div class="col-sm-6 cp-contact-item">
-              <i class="fa fa-phone"></i>
+            <div class="col-sm-6 contact-item">
+              <i class="fa fa-file"></i>
               <span>
                 <strong>ИНН/ОГРН:</strong><br>
                 326456524342<br>
@@ -564,10 +564,8 @@
 
 <script>
   $(function() {
-
     var h_hght = 60;
     var h_mrg = 0;
-
     $(function(){
       var elem = $('.cp-head-wrapper');
       var top = $(this).scrollTop();
@@ -582,10 +580,18 @@
           elem.css('top', h_mrg);
         }
       });
-
     });
 
+    $(window).resize(function() {
+      if ($(window).width() > 767) {
+        $( '.cp-nav nav' ).show();
+      }
+      else {
+        $( '.cp-nav nav' ).hide();
+      }
+    });
 
+    if ($(window).width() < 767) {
     $( '.cp-menu-toggle, .cp-nav nav a' ).click( function() {
       if ( $( '.cp-nav nav' ).is( ':hidden' ) ) {
         $( '.cp-nav nav' ).slideDown('fast');
@@ -599,6 +605,7 @@
         container.slideUp('fast');
       }
     });
+  };
 
 
     $('.cp-main-slider').slick({

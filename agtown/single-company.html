@@ -80,11 +80,18 @@
 .cp-wrapper a, .cp-wrapper button, .cp-wrapper .slider .slick-dots .slick-active:before, .cp-nav a:hover, .cp-section-title h2, .cp-review-author, .cp-review-add a:hover, .slick-arrow, .cp-shop-title, .cp-shop-buy .price, .contact-item i {
   color: #ffa60a;
 }
-.cp-section-title h2:after, #cp-action, .cp-review-add a, .cp-shop-buy .val, .cp-wrapper .pagination .active, .cp-wrapper .pagination a:hover {
+.cp-section-title h2:after, #cp-action, .cp-review-add a, .cp-shop-buy .val, .cp-wrapper .pagination .active, .cp-wrapper .pagination a:hover, .cp-cart-icon, .message-button {
   background-color: #ffa60a;
 }
-.cp-footer {
+.cp-footer, input, textarea, button {
   border-color: #ffa60a;
+}
+.popup-modal input, .popup-modal textarea, .popup-modal button
+{
+  border-color: #ffa60a;
+}
+.popup-modal button {
+  color: #ffa60a
 }
 #toTop {
   background-color: #ffa60a !important;
@@ -160,7 +167,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -182,7 +189,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -204,7 +211,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -226,7 +233,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -248,7 +255,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -270,7 +277,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -292,7 +299,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -314,7 +321,7 @@
                 <div class="val">
                   <span>Купить&emsp;</span>
                   <span class="minus">-</span>
-                  <input type="text" value="1"/>
+                  <span class="result">0</span>
                   <span class="plus">+</span>
                 </div>
               </div>
@@ -459,7 +466,7 @@
         </div>
       </div>
       <div class="cp-review-add">
-        <a href="#" class="btn"><i class="fa fa-pencil"></i>Добавить отзыв</a>
+        <a href="#modalReview" class="btn popup-link"><i class="fa fa-pencil"></i>Добавить отзыв</a>
       </div>
     </div>
   </section>
@@ -531,6 +538,42 @@
 
   </div>
 
+  <div class="message-wrapper">
+    <div class="message-button">Написать сообщение</div>
+    <div class="message-panel">
+      <form>
+        <input type="text" placeholder="Здесь текст">
+        <input type="text" placeholder="Здесь текст">
+        <input type="text" placeholder="Здесь текст">
+        <textarea></textarea>
+        <button type="submit" class="btn">Отправить сообщение</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="cp-cart-icon">
+    <span class="val">0</span>
+    <i class="fa fa-shopping-cart"></i>
+  </div>
+
+  <div class="modals">
+    <div id="modalReview" class="popup-modal mfp-hide">
+      <div class="modal-head">
+        <h3>Заголовок</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="text" placeholder="Здесь текст">
+          <input type="text" placeholder="Здесь текст">
+          <input type="text" placeholder="Здесь текст">
+          <textarea></textarea>
+          <button type="submit" class="btn">Отправить сообщение</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <footer class="cp-footer">
@@ -592,20 +635,20 @@
     });
 
     if ($(window).width() < 767) {
-    $( '.cp-menu-toggle, .cp-nav nav a' ).click( function() {
-      if ( $( '.cp-nav nav' ).is( ':hidden' ) ) {
-        $( '.cp-nav nav' ).slideDown('fast');
-      } else {
-        $( '.cp-nav nav' ).slideUp('fast');
-      }
-    });
-    $(document).mouseup(function (e) {
-      var container = $('.cp-nav nav');
-      if (container.has(e.target).length === 0){
-        container.slideUp('fast');
-      }
-    });
-  };
+      $( '.cp-menu-toggle, .cp-nav nav a' ).click( function() {
+        if ( $( '.cp-nav nav' ).is( ':hidden' ) ) {
+          $( '.cp-nav nav' ).slideDown('fast');
+        } else {
+          $( '.cp-nav nav' ).slideUp('fast');
+        }
+      });
+      $(document).mouseup(function (e) {
+        var container = $('.cp-nav nav');
+        if (container.has(e.target).length === 0){
+          container.slideUp('fast');
+        }
+      });
+    };
 
 
     $('.cp-main-slider').slick({
@@ -657,40 +700,82 @@
     $('.cp-gallery-items').magnificPopup({
       delegate: 'a',
       type: 'image',
-    closeBtnInside: false,
-    image: {
-      verticalFit: true
-    },
-    gallery: {
-      enabled: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300, // don't foget to change the duration also in CSS
-      opener: function(element) {
-        return element.find('img');
+      closeBtnInside: false,
+      image: {
+        verticalFit: true
+      },
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        opener: function(element) {
+          return element.find('img');
+        }
       }
-    }
-  });
+    });
 
 
     $('.minus').click(function () {
-      var $input = $(this).parent().find('input');
-      var count = parseInt($input.val()) - 1;
-      count = count < 1 ? 1 : count;
-      $input.val(count);
-      $input.change();
-      return false;
-    });
+      var span = $(this).next();
+      var span_numb = parseInt(span.text());
+      if(span_numb) {
+       span.text(--span_numb);
+     }
+   });
     $('.plus').click(function () {
-      var $input = $(this).parent().find('input');
-      $input.val(parseInt($input.val()) + 1);
-      $input.change();
-      return false;
+     var span = $(this).prev();
+     var span_numb = parseInt(span.text());
+     if(span_numb || span_numb == 0) {
+       span.text(++span_numb);
+     }
+   });
+
+    $('.cp-shop-buy .val *').click(function(){
+      $('.cp-cart-icon').slideDown('fast');
+    });
+
+    var total; 
+    $('.cp-shop-buy .result').each(function(idx, elem) {
+      total += parseInt($(elem).text());
+    });
+    $('.cp-cart-icon .val').text(total);
+
+    // $('.cp-shop-item .minus').click(function () {
+    //   var $cart = $('.cp-cart-icon .val');
+    //   var count = parseInt($cart.text()) - 1;
+    //   count = count < 1 ? 1 : count;
+    //   $cart.text(count);
+    //   $cart.change();
+    //   return false;
+    // });
+    // $('.cp-shop-item .plus').click(function () {
+    //   var $cart = $('.cp-cart-icon .val');
+    //   $cart.text(parseInt($cart.text()) + 1);
+    //   $cart.change();
+    //   return false;
+    // });
+
+
+    $( '.message-button' ).click( function() {
+      if ( $( '.message-panel' ).is( ':hidden' ) ) {
+        $( '.message-panel' ).show();
+        $( '.message-button' ).css('margin-right', '-300px');
+      } else {
+        $( '.message-panel' ).hide();
+        $( '.message-button' ).css('margin-right', '0');
+      }
+    });
+    $(document).mouseup(function (e) {
+      if ($('.message-panel').has(e.target).length === 0){
+        $('.message-panel').hide('fast');
+        $( '.message-button' ).css('margin-right', '0');
+      }
     });
 
 
-});
+  });
 </script>
 
 </body>

@@ -355,7 +355,7 @@
       <a href="single.html" class="col-9">Продукты, опасные для вашего здоровья</a>
   </article>
   <div class="more"><a href="archive.html">Все новости</a></div>
-  <div class="more"><a class="link-red" href="#">Разместить новость</a></div>
+  <div class="more"><a class="link-red" href="add-single.html">Разместить новость</a></div>
 </div>
 
 <div class="sidebar widget banner">
@@ -413,7 +413,7 @@
     <a href="single.html" class="col-9">Продукты, опасные для вашего здоровья</a>
 </article>
 <div class="more"><a href="archive.html">Все акции</a></div>
-<div class="more"><a class="link-red" href="#">Разместить акцию</a></div>
+<div class="more"><a class="link-red" href="add-single.html">Разместить акцию</a></div>
 </div>
 
 </aside>
@@ -425,31 +425,57 @@
           <i class="fa fa-snowflake-o"></i>
           <h1>&laquo;Название организации&raquo; - редактирование</h1>
         </div>
+        <div class="row lk-tabs-wrapper">
+          <div class="col-sm-10 lk-tabs">
+            <ul>
+              <li>Настройки</li>
+              <li class="current">Уведомления</li>
+              <li>Мои организации</li>
+              <li>Добавить организацию</li>
+              <li>Сообщения</li>
+              <li>Отзывы</li>
+              <li>Вакансии</li>
+              <li>Новости</li>
+              <li>Акции</li>
+            </ul>
+          </div>
+          <div class="col-sm-2 lk-tabs">
+            <ul>
+              <li class="btn-red">Выход</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row lk-tab-wrapper">
 
-        <section class="col-12 lk-tab visible edit-company">
-          <form>
-            <div class="row">
-              <div class="col-sm-6">
-                <p>Название *</p>
-                <input type="text" value="Старое значение">
-                <p>Адрес *</p>
-                <input type="text" value="Старое значение">
-                <p>Категория *</p>
-                <div class="select-wrapper">
-                  <select value="Старое значение">
-                    <option>Выберите категорию</option>
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
-                  </select>
-                </div>
-                <p>Подкатегория *</p>
-                <div class="select-wrapper">
-                  <select value="Старое значение">
-                    <option>Выберите подкатегорию</option>
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
-                  </select>
-                </div>
+          <section class="col-12 lk-tab visible edit-company">
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>Название *</p>
+                  <div class="check-length compTitle">
+                    <div class="input-count">
+                      <span class="current">0</span> <span class="maximum">/ 40 </span>
+                    </div>
+                    <input id="compTitle" type="text" value="Старое значение" maxlength="40">      
+                  </div>
+                  <p>Адрес *</p>
+                  <input id="compAddr" type="text" value="Старое значение">
+                  <p>Категория *</p>
+                  <div class="select-wrapper">
+                    <select id="compCat" value="Старое значение">
+                      <option>Выберите категорию</option>
+                      <option>Пункт 1</option>
+                      <option>Пункт 2</option>
+                    </select>
+                  </div>
+                  <p>Подкатегория *</p>
+                  <div class="select-wrapper">
+                    <select id="compSubCat" value="Старое значение">
+                      <option>Выберите подкатегорию</option>
+                      <option>Пункт 1</option>
+                      <option>Пункт 2</option>
+                    </select>
+                  </div>
                   <!-- <p>Район *</p>
                   <div class="select-wrapper">
                     <select>
@@ -459,25 +485,42 @@
                     </select>
                   </div> -->
                   <p>Телефон *</p>
-                  <input type="tel" value="Старое значение">
+                  <input id="compTel" type="tel" value="Старое значение">
                   <p>Email</p>
-                  <input type="email" value="Старое значение">
-                  
+                  <input id="compEmail" type="email" value="Старое значение">
+                  <p>Сайт</p>
+                  <input id="compSite" type="url" value="Старое значение">
                 </div>
                 <div class="col-sm-6">
                   <p>Миниатюра компании</p>
-                  <input id="file" type="file" >
-                  <img id="result" src="img/tits.jpg">
-                  <p>Сайт</p>
-                  <input type="url" value="Старое значение">
+                  <input id="compThumb" type="file" >
+                  <img id="compThumbResult" src="img/tits.jpg">
                   <p>ИНН/ОГРН</p>
-                  <input type="text" value="Старое значение">
+                  <input id="compInn" type="text" value="Старое значение">
+                  <p>Режим работы</p>
+                  с <input id="compTimeStart" type="time" value="">
+                  до <input id="compTime" type="time" value="">
+                  <span>Выходные:</span>
+                  <div class="compHolidays">
+                    <input type="checkbox" id="holyMon" name="compHolidays[]"><label for="holyMon">Понедельник</label>
+                    <input type="checkbox" id="holyTue" name="compHolidays[]"><label for="holyTue">Вторник</label>
+                    <input type="checkbox" id="holyWed" name="compHolidays[]"><label for="holyWed">Среда</label>
+                    <input type="checkbox" id="holyThu" name="compHolidays[]"><label for="holyThu">Четверг</label>
+                    <input type="checkbox" id="holyFri" name="compHolidays[]"><label for="holyFri">Пятница</label>
+                    <input type="checkbox" id="holySat" name="compHolidays[]" checked><label for="holySat">Суббота</label>
+                    <input type="checkbox" id="holySun" name="compHolidays[]" checked><label for="holySun">Воскресенье</label>
+                  </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                  <p>Информация о компании</p>
-                  <textarea>Старое значение</textarea>
+                  <p>Краткая нформация о компании (используется для продвижения в поисковых системах)</p>
+                  <div class="check-length compDesc">
+                    <div class="input-count">
+                      <span class="current">0</span> <span class="maximum">/ 160 </span>
+                    </div>
+                    <textarea id="compDesc" name="compDesc" maxlength="160"></textarea>
+                  </div>
                 </div>
               </div>
 
@@ -486,56 +529,188 @@
               </div>
 
               <div class="row">
-                <div class="col-12">
-                  <p>Фото на слайдер</p>
-                  <div class="slider-add">
-                    <input id="slider" type="file" multiple="multiple">
-                    <table class="table table-striped file-preview-table" id="file-preview-table">
-                      <tbody class="ui-sortable">
-                        <tr class="file-preview-row">
-                          <td><img src="img/tits.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
-                          <td class="filename">Название</td>
-                          <td class="filesize">Размер</td>
-                          <td class="remove-file"><button>×</button></td>
-                        </tr>
-                        <tr class="file-preview-row">
-                          <td><img src="img/tits2.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
-                          <td class="filename">Название</td>
-                          <td class="filesize">Размер</td>
-                          <td class="remove-file"><button>×</button></td>
-                        </tr>
-                        <tr class="file-preview-row">
-                          <td><img src="img/tits.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
-                          <td class="filename">Название</td>
-                          <td class="filesize">Размер</td>
-                          <td class="remove-file"><button>×</button></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="col-sm-6">
+                  <div class="config-row">
+                    <p>Фото на слайдер</p>
+                    <div class="slider-add">
+                      <input id="compSlider" type="file" multiple="multiple">
+                      <a href="#" class="btn btn-green">Или выбрать из предложенных</a>
+                      <table class="table table-striped file-preview-table" id="file-preview-table">
+                        <tbody class="ui-sortable">
+                          <tr class="file-preview-row">
+                            <td><img src="img/tits.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
+                            <td class="filename">Название</td>
+                            <td class="filesize">Размер</td>
+                            <td class="remove-file"><button>×</button></td>
+                          </tr>
+                          <tr class="file-preview-row">
+                            <td><img src="img/tits2.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
+                            <td class="filename">Название</td>
+                            <td class="filesize">Размер</td>
+                            <td class="remove-file"><button>×</button></td>
+                          </tr>
+                          <tr class="file-preview-row">
+                            <td><img src="img/tits.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
+                            <td class="filename">Название</td>
+                            <td class="filesize">Размер</td>
+                            <td class="remove-file"><button>×</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  <p>Новости и акции редактируются в <a href="#">личном кабинете</a></p>
-                  <p>Ссылка на видео</p>
-                  <input type="url">
                 </div>
+                <div class="col-sm-6">
+                  <div class="config-row">
+                    <p>Слоган компании</p>
+                    <div class="check-length compSlogan">
+                      <div class="input-count">
+                        <span class="current">0</span> <span class="maximum">/ 50 </span>
+                      </div>
+                      <input id="compSlogan" name="compSlogan" maxlength="50">                    
+                    </div>
+                  </div>
+                  <div class="config-row">
+                    <div class="color">
+                      <p>Цветовая схема:</p>
+                      <input type="radio" id="red" name="color">
+                      <label class="red" for="red">
+                      </label>
+                      <input type="radio" id="yellow" name="color">
+                      <label class="yellow" for="yellow">
+                      </label>
+                      <input type="radio" id="green" name="color">
+                      <label class="green" for="green">
+                      </label>
+                      <input type="radio" id="blue" name="color">
+                      <label class="blue" for="blue">
+                      </label>
+                      <input type="radio" id="purple" name="color">
+                      <label class="purple" for="purple">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="config-row">
+                    <p>Новости и акции редактируются в <a href="#">личном кабинете</a></p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="config-row">
+                    <p>Полная информация о компании</p>
+                    <textarea id="compInfo" name="compInfo"></textarea>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="config-row">
+                    <p>Фото для галереи</p>
+                    <div class="gallery-add">
+                      <input id="slider" type="file" multiple="multiple">
+                      <table class="table table-striped file-preview-table" id="file-preview-table">
+                        <tbody class="ui-sortable">
+                          <tr class="file-preview-row">
+                            <td><img src="img/tits.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
+                            <td class="filename">Название</td>
+                            <td class="filesize">Размер</td>
+                            <td class="remove-file"><button>×</button></td>
+                          </tr>
+                          <tr class="file-preview-row">
+                            <td><img src="img/tits2.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
+                            <td class="filename">Название</td>
+                            <td class="filesize">Размер</td>
+                            <td class="remove-file"><button>×</button></td>
+                          </tr>
+                          <tr class="file-preview-row">
+                            <td><img src="img/tits.jpg" class="file-preview-placeholder" alt="АЛЬТ"></td>
+                            <td class="filename">Название</td>
+                            <td class="filesize">Размер</td>
+                            <td class="remove-file"><button>×</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="config-row">
+                    <p>Ссылка на видео (YouTube)</p>
+                    <div class="compVideo-wrapper">
+                      <div class="link-icon-wrapper youtube">
+                        <input type="url" name="compVideo[]" placeholder="YouTube" value="Старое значение">
+                      </div>
+                    </div>
+                    <span class="compVideoAdd link">Добавить</span>
+                  </div>
+                  <div class="config-row">
+                    <p>Ссылки на соц. сети</p>
+                    <div class="link-icon-wrapper vk"><input type="url" placeholder="Вконтакте" value="Старое значение"></div>
+                    <div class="link-icon-wrapper insta"><input type="url" placeholder="Instagram"></div>
+                    <div class="link-icon-wrapper facebook"><input type="url" placeholder="Facebook" value="Старое значение"></div>
+                    <div class="link-icon-wrapper ok"><input type="url" placeholder="Одноклассники"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="page-title">
+                <h2>Каталог товаров</h2>
               </div>
 
               <div class="row">
                 <div class="col-12">
+                  <div class="compShop-wrapper">
+                    <!-- <div class="config-row">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p>Наименование товара (до 30 символов)</p>
+                            <input id="shopName" type="text" value="Старое значение" maxlength="30">
+                        </div>
+                        <div class="col-sm-6">
+                          <p>Цена за шт. (в рублях)</p>
+                          <input type="number" id="shopPrice" value="500">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <p>Изображение товара</p>
+                          <input id="shopThumb" type="file" >
+                          <img id="shopThumbResult" src="img/tits.jpg">
+                        </div>
+                        <div class="col-sm-6">
+                          <p>Описание товара (до 140 символов)</p>
+                            <textarea id="shopDesc" name="shopDesc" maxlength="140">Здесь старое значение</textarea>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                  <span class="compShopAdd link">Добавить позицию</span>
+                </div>
+              </div>
+
+              <hr>
+              <br>
+
+              <div class="row">
+                <div class="col-12">
+                  <input type="checkbox" id="accept" checked><label for="accept">Согласие с правилами сайта</label>
                   <button class="btn btn-green" type="submit">Сохранить информацию</button>
+                </div>
+                <div class="col-12">
+                  <p>Модерация - сутки</p>
                 </div>
               </div>
             </form>
           </section>
 
-        </main>
+        </div>
 
-      </div>
+      </main>
 
     </div>
+
   </div>
+</div>
 
 
-  <footer>
+<footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-4 footer-info">

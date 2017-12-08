@@ -420,125 +420,153 @@
 
     <div class="col-lg-9 main-wrapper">
 
-      <section class="banner">
-        <div class="slider">
-          <img src="img/tits.jpg" alt="АЛЬТ">
-          <img src="img/tits.jpg" alt="АЛЬТ">
-          <img src="img/tits.jpg" alt="АЛЬТ">
+      <main class="page-wrapper">
+        <div class="page-title">
+          <i class="fa fa-snowflake-o"></i>
+          <h1>Размещение новости</h1>
         </div>
-      </section>
-
-      <section class="catalog">
-
-        <div class="category-item">
-          <div class="row page-title">
-            <div class="col-sm-10 category-title">
-              <i class="fa fa-snowflake-o"></i>
-              <h2>Услуги</h2>
-            </div>
-            <div class="col-sm-2 category-more"><a href="category.html">Смотреть все</a></div>
+        <div class="row lk-tabs-wrapper">
+          <div class="col-sm-10 lk-tabs">
+            <ul>
+              <li>Настройки</li>
+              <li class="current">Уведомления</li>
+              <li>Мои организации</li>
+              <li>Добавить организацию</li>
+              <li>Сообщения</li>
+              <li>Отзывы</li>
+              <li>Вакансии</li>
+              <li>Новости</li>
+              <li>Акции</li>
+            </ul>
           </div>
-          <div class="row company-thumbnails">
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Финансовые услуги</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Такси</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Фотоуслуги - длинная строка для наглядного примера</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Грузоперевозки</h3>
-              </div></a>
-            </article>
+          <div class="col-sm-2 lk-tabs">
+            <ul>
+              <li class="btn-red">Выход</li>
+            </ul>
           </div>
         </div>
+        <div class="row lk-tab-wrapper">
 
-        <div class="category-item">
-          <div class="row page-title">
-            <div class="col-sm-10 category-title">
-              <i class="fa fa-snowflake-o"></i>
-              <h2>Магазины</h2>
-            </div>
-            <div class="col-sm-2 category-more"><a href="category.html">Смотреть все</a></div>
+          <section class="col-12 lk-tab visible add-single">
+
+            <form>
+              <div class="config-row">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>Автор (организация)</p>
+                    <select id="newsAuthor">
+                      <option value="0">1 организация</option>
+                      <option value="1">Организация вторая, длинное название</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-7">
+                    <p>Название новости</p>
+                    <input type="text" id="newsTitle" placeholder="до 50 символов" maxlength="50">
+                  </div>
+                </div>
+              </div>
+              <div class="config-row">
+                <p>Краткое описание</p>
+                <textarea id="newsDesc" placeholder="до 160 символов" maxlength="160"></textarea>
+              </div>
+              <div class="config-row">
+                <p>Содержимое</p>
+                <textarea id="newsCt"></textarea>
+              </div>
+            </form>
+            
+          </section>
+
+          <hr>
+          <div class="single-title">
+            А ТЕПЕРЬ АКЦИЯ
           </div>
-          <div class="row company-thumbnails">
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Финансовые услуги</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Такси</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Фотоуслуги - длинная строка для наглядного примера</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Грузоперевозки</h3>
-              </div></a>
-            </article>
+
+          <section class="col-12 lk-tab visible add-single">
+
+            <form>
+              <div class="config-row">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>Автор (организация)</p>
+                    <select id="actionAuthor">
+                      <option value="0">1 организация</option>
+                      <option value="1">Организация вторая, длинное название</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-7">
+                    <p>Название акции</p>
+                    <input type="text" id="actionTitle" placeholder="до 50 символов" maxlength="50">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>Добавьте изображение, чтобы привлечь внимание</p>
+                  <input type="file" id="actionImg">
+                </div>
+                <div class="col-sm-6">
+                  <p>Сроки проведения акции</p>
+                  <div class="action-date-wrapper">
+                    <input type="date" id="actionStart"><span>&mdash;</span><input type="date" id="actionFinish">
+                  </div>
+                </div>
+              </div>
+              <div class="config-row">
+                <p>Подробности акции</p>
+                <textarea id="actionCt"></textarea>
+              </div>
+            </form>
+            
+          </section>
+
+          <hr>
+          <div class="single-title">
+            А ТЕПЕРЬ ВАКАНСИЯ
           </div>
+
+          <section class="col-12 lk-tab visible add-single">
+
+            <form>
+              <div class="config-row">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <p>Автор (организация)</p>
+                    <select id="vacancyAuthor">
+                      <option value="0">1 организация</option>
+                      <option value="1">Организация вторая, длинное название</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-7">
+                    <p>Название вакансии</p>
+                    <input type="text" id="vacancyTitle" placeholder="до 50 символов" maxlength="50">
+                  </div>
+                </div>
+              </div>
+              <div class="config-row">
+                <p>Описание вакансии</p>
+                <textarea id="vacancyCt"></textarea>
+              </div>
+              <div class="config-row">
+                <p>Зарплата</p>
+                <input type="text" id="vacancyPay">
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <input type="checkbox" id="accept" checked><label for="accept">Согласие с правилами сайта</label>
+                  <button class="btn btn-green" type="submit">Опубликовать</button>
+                </div>
+                <div class="col-12">
+                  <p>Модерация - сутки</p>
+                </div>
+              </div>
+            </form>
+            
+          </section>
+
         </div>
 
-        <div class="category-item">
-          <div class="row page-title">
-            <div class="col-md-10 category-title">
-              <i class="fa fa-snowflake-o"></i>
-              <h2>Недвижимость и строительство</h2>
-            </div>
-            <div class="col-md-2 category-more"><a href="category.html">Смотреть все</a></div>
-          </div>
-          <div class="row company-thumbnails">
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Финансовые услуги</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Такси</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Фотоуслуги - длинная строка для наглядного примера</h3>
-              </div></a>
-            </article>
-            <article class="col-sm-3 col-6 company-thumb">
-              <a href="single-company.html"><div class="company-img"><img src="img/tits.jpg" alt="АЛЬТ"></div>
-              <div class="company-name">
-                <h3>Грузоперевозки</h3>
-              </div></a>
-            </article>
-          </div>
-        </div>
-
-      </section>
+      </main>
 
     </div>
 

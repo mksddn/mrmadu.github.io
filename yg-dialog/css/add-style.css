@@ -1,0 +1,70 @@
+/*МЕНЮ ФИЛЬТРА*/
+
+.filter>span {
+  display: inline-block;
+  padding:20px 20px 20px 0;
+  margin: 15px 10px 15px  10px;
+  border-right:1px solid rgba(255,255,255,0.5);
+}
+.filter span {
+  background-color: inherit !important;
+  border: none !important;
+  color: inherit !important;
+  width: auto !important;
+}
+.filter b {
+  border: none !important;
+  margin: 0 !important;
+  top: 0 !important;
+}
+.filter b:after {
+  content: "\f107";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.select2-dropdown {
+  min-width: 200px;
+}
+.select2-search__field, .select2-results>ul, .select2-results li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+
+
+/*СЛАЙДЕР*/
+
+.slick-dots {
+  width: 100%;
+  text-align: center;
+  margin: 30px auto;
+}
+.slick-dots button {
+  display: none;
+}
+.slick-dots li {
+  display: inline-block;
+  cursor: pointer;
+}
+.slick-dots li:after {
+  content: '';
+  display:inline-block;
+  margin:0 5px;
+  height:10px;
+  width:10px;
+  border-radius:5px;
+  background:#7e7e7e;
+}
+.slick-dots li:hover:after, .slick-dots .slick-active:after {
+  background:#50b848;
+}
+
+.slider-nav img {
+  cursor: pointer;
+}

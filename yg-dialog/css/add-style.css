@@ -21,7 +21,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
     z-index: 100;
   }
   .m-menu i {
@@ -220,7 +220,7 @@ html, body {
   }
   header nav {
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 0;
     width: 100%;
     height: auto;

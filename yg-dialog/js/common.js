@@ -1,5 +1,23 @@
 $(function() {
 
+  $(".m-menu i").click(function() {
+    $("header nav").slideToggle(500);
+  });
+  $(window).resize(function() {
+    if ($(window).width() > 768){
+      $("header nav").show();
+    }
+    if ($(window).width() < 768){
+      $("header nav").hide();
+      $(document).mouseup(function (e) {
+        var container = $('header nav');
+        if (container.has(e.target).length === 0){
+          container.slideUp('fast');
+        }
+      });
+    }
+  });
+
   $(document).ready(function() {
     $('.select2-item').select2();
   });

@@ -3,6 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>юг-диалог</title>
 
+  <!-- <link href="css/bootstrap-reboot.css" rel="stylesheet" type="text/css" /> -->
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="css/add-style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -15,9 +16,10 @@
 
   <header class="wrapper">
     <div class="clearfix">
+      <div class="m-menu"><i class="fa fa-bars"></i></div>
       <a class="call left" href="#"><i class="fa fa-volume-control-phone fa-2x"></i><span>заказать звонок</span></a>
       <div class="phone left"><span>8 (800) 222 67 02</span><span>бесплатный звонок по России</span></div>
-      <a class="sell right" href="#"><i class="fa fa-home"></i><span>продать объект</span></a>
+      <div class="button-wrapper right"><a class="sell right" href="#"><i class="fa fa-home"></i><span>продать объект</span></a></div>
     </div>
 
 
@@ -42,7 +44,7 @@
   <div class="subheader">
   </div><!--/subheader-->
 
-  <div class="filter wrapper">
+  <div class="filter clearfix wrapper">
     <span>
       <select class="select2-item">
         <option value="any" selected="selected">Категория объекта</option>
@@ -61,30 +63,6 @@
         <option value="">Коммерция</option>
       </select>
     </span>
-        <!-- <div class="filter-menu">
-          <div class="input-wrapper"><input type="text"></div>
-          <ul>
-            <li>Квартиры
-              <ul>
-                <li>1-комнатные</li>
-                <li>2-комнатные</li>
-                <li>3-комнатные</li>
-                <li>4-комнатные</li>
-                <li>Апартаменты</li>
-              </ul>
-            </li>
-            <li>Дома
-              <ul>
-                <li>Новые</li>
-                <li>Вторичные</li>
-              </ul>
-            </li>
-            <li>Земельные участки</li>
-            <li>Дачи</li>
-            <li>Гаражи</li>
-            <li>Коммерция</li>
-          </ul>
-        </div> -->
         <span>
           <select class="select2-item">
             <option value="any" selected="selected">Расположение</option>
@@ -120,7 +98,9 @@
 
       <div class="about clearfix wrapper">
         <h2 class="title">О компании</h2>
-        <img src="img/example.jpg" class="left">
+        <div class="img-wrapper-center left">
+          <img src="img/example.jpg" class="left">
+        </div>
         <div class="right">
           <p>Чтобы купить недвижимость в Анапе, абсолютно каждый покупатель готов 
             приложить максимум усилий, дабы не оказаться в роли «старухи с разбитым 
@@ -262,7 +242,9 @@
           <div class="slider">
 
             <div class="clearfix">
-              <img src="img/example.jpg" class="left">
+              <div class="img-wrapper-center">
+                <img src="img/example.jpg" class="left">
+              </div>
               <div class="right">
                 <h3 class="title">Независимый эксперт по новостройкам Анапы</h3>
                 <p>На дворе середина октября, температура + 13, пасмурно, погодка, прямо скажем, 
@@ -278,7 +260,9 @@
             </div>
 
             <div class="clearfix">
-              <img src="img/example.jpg" class="left">
+              <div class="img-wrapper-center">
+                <img src="img/example.jpg" class="left">
+              </div>
               <div class="right">
                 <h3 class="title">Второй объект слайдера</h3>
                 <p>На дворе середина октября, температура + 13, пасмурно, погодка, прямо скажем, 

@@ -1,5 +1,5 @@
   $(document).ready(function() {
-    
+
   //throttle
   
   $.throttle = function(func, wait, options) {
@@ -39,7 +39,7 @@
 var lastScrollTop = 0;    
 
 $(document).on('scroll', $.throttle(function() {
-  
+
   var stop = $(this).scrollTop();
   
   if($(window).scrollTop() > (80)) {          
@@ -71,18 +71,27 @@ $(document).on('scroll', $.throttle(function() {
 
 
   $(".m-menu i").click(function() {
-  if($(".main-menu nav").is( ':hidden' )){
-    $(".main-menu nav").slideToggle(500);
-  } else {
-    $(".main-menu nav").slideUp(500);
-  }
-});
-$(window).resize(function() {
-  if ($(window).width() > 768){
-    $(".main-menu nav").show();
-  }
+    if($(".main-menu nav").is( ':hidden' )){
+      $(".main-menu nav").slideToggle(500);
+    } else {
+      $(".main-menu nav").slideUp(500);
+    }
+  });
+  $(window).resize(function() {
+    if ($(window).width() > 768){
+      $(".main-menu nav").show();
+    }
+    if ($(window).width() < 768){
+      $(".main-menu nav").hide();
+      $(document).mouseup(function (e) {
+        var container = $('.main-menu nav');
+        if (container.has(e.target).length === 0){
+          container.slideUp('fast');
+        }
+      });
+    }
+  });
   if ($(window).width() < 768){
-    $(".main-menu nav").hide();
     $(document).mouseup(function (e) {
       var container = $('.main-menu nav');
       if (container.has(e.target).length === 0){
@@ -90,17 +99,8 @@ $(window).resize(function() {
       }
     });
   }
-});
-if ($(window).width() < 768){
-  $(document).mouseup(function (e) {
-    var container = $('.main-menu nav');
-    if (container.has(e.target).length === 0){
-      container.slideUp('fast');
-    }
-  });
-}
 
-$(".menu-item-has-children").click(function() {
+  $(".menu-item-has-children").click(function() {
     if($(this).find(".sub-menu").is( ':hidden' )){
       $(this).find(".sub-menu").slideToggle(300);
     } else {
@@ -113,3 +113,57 @@ $(".menu-item-has-children").click(function() {
       container.slideUp('fast');
     }
   });
+
+
+  $('.slider-seminars').slick({
+    infinite: false,
+    prevArrow: '<i class="fa fa-angle-left"></i>',
+    nextArrow: '<i class="fa fa-angle-right"></i>',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+
+  $('.slider-portfolio').slick({
+    infinite: false,
+    prevArrow: '<i class="fa fa-angle-left"></i>',
+    nextArrow: '<i class="fa fa-angle-right"></i>',
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        arrows: false
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        arrows: false
+      }
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+    ]
+  });
+
+
+
+  $(document).ready(function(){
+    $(".client-category").hide();
+    $(".client-icon").click(function () {
+     $(this).next().toggle("slow"); 
+   });
+  })

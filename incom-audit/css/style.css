@@ -1170,14 +1170,14 @@ bottom:0;*/
   /*СТРАНИЦА КЛИЕНТЫ*/
 
   .main-container .clients {
-    height:400px;
+    /*height:400px;*/
     background:#f9f9f9;
   }
 
   .main-container .projects {
     text-align:center;
     background-image:url(../img/bg-4.jpg);
-    height:500px;
+    /*height:500px;*/
     background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -1204,9 +1204,10 @@ bottom:0;*/
     text-align:left;
     display:inline-block;
     vertical-align:top;
-    width:30%;
+    width:42%;
     margin: 20px 15px;
     padding: 0 0 20px 0;
+    cursor: pointer;
 
 
 
@@ -1345,12 +1346,13 @@ bottom:0;*/
 
 .sertificates {
   background-image:url(../img/bg-5.jpg);
-  height:500px;
+  /*height:500px;*/
   background-size: cover;
   background-position:center;
   background-repeat:no-repeat;
   padding: 60px 0;
   box-sizing:border-box;
+  position: relative;
 }
 
 .sertificates h2 {
@@ -1358,9 +1360,9 @@ bottom:0;*/
   margin-bottom: 80px;
 }
 
-.sertificates .arrow {
+.slider .slick-arrow {
   position: absolute;
-  top: 50px;
+  bottom: 130px;
   display: block;
   width: 50px;
   height: 50px;
@@ -1369,35 +1371,45 @@ bottom:0;*/
   border-radius:50px;
   color:#777;
   font-size:42px;
-  text-align:center;
+  /*text-align:center;*/
   line-height:1.1;
+  cursor: pointer;
+  z-index: 99;
 }
-
-.sertificates .arrow:hover {
+.slider .fa-angle-right {
+  right: 2%;
+}
+.slider .fa-angle-left {
+  left: 3%;
+}
+.slider .slick-arrow:hover {
   background:none;
   color:#000;
 }
 
-.sertificates  .sertificates-block {
+.slider {
   text-align: center;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .sertificates .img-block {
-  overflow:hidden;
-  width:160px;
+  /*overflow:hidden;*/
+  /*width:160px !important;*/
   height:160px;
-  /*margin:0 10px;*/
+  margin:0 5px;
   border:6px solid #fff;
-  display: inline-block;
-  vertical-align:top;
-  border-radius: 100px;
+  /*display: inline-block;*/
+  /*vertical-align:top;*/
+  border-radius: 100%;
 }
 
-.sertificates .img-block img {
+/*.sertificates .img-block img {
   display: block;
   height:100%;
   width:auto;
-}
+}*/
 
 .chief .sertificates .img-block img {
   display: block;
@@ -1734,12 +1746,15 @@ bottom:0;*/
       margin: 0 0 0 20px;
     }
 
-    /*.sertificates {
-      height: 600px;
+    .client-item {
+      text-align: center;
     }
-    .sertificates .img-block {
-      margin: 10px;
-    }*/
+    .client-category {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      -o-column-count: 1;
+      column-count: 1p
+    }
 
   }
 
@@ -1959,6 +1974,10 @@ bottom:0;*/
       width: 100%;
       margin: 0;
       margin-bottom: 15px;
+    }
+
+    .client-item {
+      width: 100%;
     }
 
   }

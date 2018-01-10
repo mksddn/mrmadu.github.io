@@ -392,6 +392,14 @@ a {
     transition: all 0.3s ease;
     text-decoration: none; }
 
+input {
+  padding: 15px 60px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(41, 42, 41, 0.1);
+          box-shadow: 0px 0px 18px 0px rgba(41, 42, 41, 0.1); }
+
 img {
   max-width: 100%;
   -o-object-fit: cover;
@@ -411,9 +419,6 @@ img {
   display: -ms-flexbox;
   display: flex; }
 
-.center {
-  text-align: center; }
-
 .decor {
   font-family: "bristol";
   font-weight: 200;
@@ -423,14 +428,21 @@ img {
   display: inline-block;
   background-color: #ff4357;
   color: #fefefe;
-  padding: 30px 120px;
+  padding: 15px 60px;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   text-transform: uppercase;
-  font-size: 1.3rem; }
+  font-size: 1.1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .btn:hover {
     background-color: #ff5d6e;
-    color: #fefefe; }
+    color: #fefefe;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
 
 .accent-color {
   color: #ff4357; }
@@ -448,6 +460,16 @@ img {
   text-align: center;
   color: #ff4357;
   line-height: 1; }
+
+.ny, .bg {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+  .ny img, .bg img {
+    max-width: 1280px; }
 
 section, footer {
   padding: 50px 0;
@@ -531,6 +553,13 @@ header {
   .main .bloquote {
     width: 100%;
     margin-top: 30px; }
+  .main .btn {
+    padding: 30px 120px;
+    font-size: 1.3rem; }
+
+.about .ny {
+  top: 50px;
+  left: 10px; }
 
 .about .container {
   display: -webkit-box;
@@ -546,7 +575,9 @@ header {
 
 .about .text {
   padding: 0 50px;
-  text-align: justify; }
+  text-align: justify;
+  z-index: 11;
+  text-shadow: 5px 5px 3px #fefefe, 5px -5px 3px #fefefe, -5px -5px 3px #fefefe, -5px 5px 3px #fefefe; }
   .about .text h2 {
     text-align: left; }
 
@@ -556,7 +587,10 @@ header {
   top: 200px; }
 
 .already {
+  padding-top: 0;
   text-align: center; }
+  .already .bg {
+    top: 10%; }
   .already .bloquote {
     width: 250px;
     right: 100px;
@@ -566,7 +600,9 @@ header {
   font-family: "montserrat";
   color: #ff4357;
   font-size: 3rem;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  z-index: 11;
+  position: relative; }
   #summ * {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -611,6 +647,66 @@ header {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   margin-bottom: 30px; }
+
+.thank {
+  text-align: center;
+  position: relative;
+  padding: 100px 0; }
+  .thank .bg > img {
+    position: absolute; }
+    .thank .bg > img:first-child {
+      left: -50px;
+      top: 50px;
+      width: 500px; }
+    .thank .bg > img:nth-child(2) {
+      right: -50px;
+      width: 400px;
+      top: -150px; }
+  .thank .bg .bloquote {
+    right: 100px;
+    top: -130px;
+    width: 120px; }
+  .thank .ny {
+    width: 100%;
+    top: -40px; }
+    .thank .ny img {
+      width: 680px; }
+  .thank .content {
+    width: 480px;
+    margin: 0 auto;
+    z-index: 11;
+    position: relative; }
+  .thank p {
+    padding: 0 80px;
+    position: relative; }
+  .thank .accent-color {
+    font-style: italic; }
+  .thank span {
+    display: block; }
+  .thank .bloquote {
+    bottom: -40px;
+    width: -webkit-calc(100% - 160px);
+    width: calc(100% - 160px); }
+
+.form {
+  text-align: center; }
+  .form .container {
+    background-image: url("../img/bgform.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%; }
+  .form form {
+    width: 600px;
+    display: block;
+    margin: 0 auto; }
+  .form input, .form button {
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    text-align: center; }
+  .form .bloquote {
+    width: 200px;
+    left: 0;
+    top: 15px; }
 
 footer {
   background-image: url("../img/footer.jpg");

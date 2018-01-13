@@ -27,11 +27,11 @@
   <div class="container">
     <nav>
       <ul class="flex">
-        <li><a href="#">О проекте</a></li>
-        <li><a href="#">Собрано средств</a></li>
-        <li><a href="#">Конструктор</a></li>
-        <li><a href="#">Как вы помогаете</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="#about">О проекте</a></li>
+        <li><a href="#already">Собрано средств</a></li>
+        <li><a href="#constructor">Конструктор</a></li>
+        <li><a href="#help">Как вы помогаете</a></li>
+        <li><a href="#footer">Контакты</a></li>
       </ul>
     </nav>
     <div class="cart-icon">
@@ -95,10 +95,10 @@
 </section>
 
 <section id="already" class="already">
-  <div class="bg">
-    <img src="img/bgalready.png" alt="АЛЬТ">
-  </div>
   <div class="container">
+    <div class="bg">
+      <img src="img/bgalready.png" alt="АЛЬТ">
+    </div>
     <h2>Собрано средств:</h2>
     <div id="summ">
       <div class="counter">5</div>
@@ -116,7 +116,51 @@
 
 <section id="constructor" class="constructor">
   <div class="container">
-    <h2>Конструктор</h2>
+    <div class="const-img">
+      <div class="slider">
+        <img src="img/const.jpg" alt="АЛЬТ">
+        <img src="img/1.jpg" alt="АЛЬТ">
+        <img src="img/const.jpg" alt="АЛЬТ">
+      </div>
+      <div class="decor">50% от продажи каждой свечи, мы направим в приюты для Бездомных животных</div>
+    </div>
+    <div class="const-form">
+      <h2>Конструктор</h2>
+      <h3>выберите дизайн и аромат</h3>
+      <p>Свечи VINTAGE CANDELLA – это  экологически чистое пламя!</p>
+      <p>Абсолютно безопасное для детей и беременных женщин.</p>
+      <p>В составе:</p>
+      <p>Деревянные эко-фитили из натуральной экологически чистой древесины, не подвергавшейся химической обработке.</p>
+      <p>Высококачественные сертифицированные ароматические масла премиум-класса от компаний-производителей, входящих в десятку мировых лидеров по производству парфюмерии и косметики.</p>
+      <p>100% соевый воск.</p>
+      <p>Масса: 250 грамм</p>
+      <p>Время горения: 50 часов</p>
+      <form>
+        <div class="des">
+          <p>Выбрать дизайн:</p>
+          <div class="slider-nav">
+            <div class="slider-nav-item"><img src="img/const.jpg" alt=""><!-- <input type="radio" name="des" val="1"> --></div>
+            <div class="slider-nav-item"><img src="img/1.jpg" alt=""></div>
+            <div class="slider-nav-item"><img src="img/const.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="arom">
+          <p>Аромат:</p>
+          <select name="arom[]">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="desc">
+          <p>Описание аромата</p>
+          <p>интенсивный и натуральный аромат черного шоколада, который вызовет воспоминания о беззаботных днях. Стимулирующий аромат прекрасно освежает воздух в помещении.</p>
+        </div>
+        <div class="order">
+          <p>стоимость 800р/шт</p>
+          <button type="submit">Добавить в корзину</button>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -183,7 +227,7 @@
   </div>
 </section>
 
-<footer>
+<footer id="footer" class="footer">
   <div class="container flex">
     <div class="logo">
       <img src="img/logo.png" alt="АЛЬТ">

@@ -1279,13 +1279,13 @@ header {
   font-weight: bold;
   font-size: 1.1rem; }
 
-.constructor form {
+.constructor .form {
   margin-top: 30px; }
-  .constructor form p {
+  .constructor .form p {
     margin-bottom: 5px; }
-  .constructor form input, .constructor form select {
+  .constructor .form input, .constructor .form select {
     margin-bottom: 15px; }
-  .constructor form select, .constructor form button {
+  .constructor .form select, .constructor .form button {
     width: 100%; }
 
 .constructor .order p {

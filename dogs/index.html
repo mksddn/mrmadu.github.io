@@ -131,13 +131,13 @@
       <p>100% соевый воск.</p>
       <p>Масса: 250 грамм</p>
       <p>Время горения: 50 часов</p>
-      <form>
+      <div class="form">
         <div class="des">
           <p>Выбрать дизайн:</p>
           <div class="slider-nav">
-            <div class="slider-nav-item"><img src="img/const.jpg" alt=""><!-- <input type="radio" name="des" val="1"> --></div>
-            <div class="slider-nav-item"><img src="img/1.jpg" alt=""></div>
-            <div class="slider-nav-item"><img src="img/const.jpg" alt=""></div>
+            <div class="slider-nav-item" data-id="Первый"><img src="img/const.jpg" alt=""><!-- <input type="radio" name="des" val="1"> --></div>
+            <div class="slider-nav-item" data-id="2"><img src="img/1.jpg" alt=""></div>
+            <div class="slider-nav-item" data-id="three"><img src="img/const.jpg" alt=""></div>
           </div>
         </div>
         <div class="arom">
@@ -152,12 +152,12 @@
           <p>интенсивный и натуральный аромат черного шоколада, который вызовет воспоминания о беззаботных днях. Стимулирующий аромат прекрасно освежает воздух в помещении.</p>
         </div>
         <div class="order">
-          <p>стоимость 800р/шт</p>
-          <button type="submit">Добавить в корзину
+          <p class="price">стоимость 800р/шт</p>
+          <button>Добавить в корзину
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="22" viewBox="0 0 18 22"><image id="корзина" width="18" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWCAQAAABnVgTKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfiAQ0SAx0P26lAAAABS0lEQVQoz42QO0tcURSFvztqwEbQMmAXQQQFwVIEo4z5ARZioY0pxj9gpZ2tYJMmjZ1NmmkEH2QkiFHx1SlCYMBHIT4HnYeiX4oZrvcaH9lwDnvvs9Y6ey/4J9x2hfdCvYp3Eu9y/hf0/KtRZ9Q7Z/z6ulINw+Ed4fbY7YewSriqasYgCiqptw6FdbNF836KKyX97r2bkU7KkfgMAYC/6GSQ4ivbZMvccd+KQnm7BeCCNPvADmnSQJ40u8AWY2WlKi89N2G/OgE2qnPglNpb8Sl44CcNdLAGtFbOKtBHgZUnMxeAL8ERJyFow0ZaWA6KT6BFIAn8psla2pB1ksB83K8/Ppo1px5bCvPmOOjbC8vvld+qQ9QSKX4wyTWGvbOI4wC2s11JbzjnlDNO2WU6MAqaZYAcmVClni7gc5CJzjTinZORus4DD/0I8BfPOtPBzIck6gAAAABJRU5ErkJggg=="/></svg>
           </button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -254,8 +254,13 @@
 </footer>
 
 <div id="cart" class="zoom-anim-dialog mfp-hide modal">
-  <h2>Корзина</h2>
-  <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+  <div class="modal-head">
+      <h2>Оформить заказ</h2>
+    </div>
+    <div class="modal-body">
+      <div id="cartContent"></div>
+      <br>
+    </div>
 </div>
 
 <link rel="stylesheet" href="css/main.min.css">

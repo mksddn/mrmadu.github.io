@@ -885,6 +885,12 @@ button, select {
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
 
+select {
+  height: 40px;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-appearance: none; }
+
 img {
   max-width: 100%;
   -o-object-fit: cover;

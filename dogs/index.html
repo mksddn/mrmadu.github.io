@@ -142,14 +142,20 @@
         </div>
         <div class="arom">
           <p>Аромат:</p>
-          <select name="arom[]">
-            <option value="1">1</option>
-            <option value="2">2</option>
+          <select id="arom" name="arom">
+            <option selected data-desc="Дуэт ароматов розы и жасмина. Освежающая свеча усиливает чувство радости, снимает стресс и пробуждает чувства.">ROSE&amp;JASMIN</option>
+            <option data-desc="Насыщенный аромат пачули, который взбадривает и повышает активность, придает бодрость и свежесть.">INDIAN PATCHOULI</option>
+            <option data-desc="Свежий аромат фигового дерева, стимулирует творческое мышление и приносит уверенность в себе.">FIG</option>
+            <option data-desc="Интенсивный и натуральный аромат черного шоколада, который вызовет воспоминания о беззаботных днях. Стимулирующий аромат прекрасно освежает воздух в помещении.">CHOCOLATE DELUXЕ</option>
+            <option data-desc="Успокаивающий аромат иланга оказывает расслабляющее воздействие и создает гармонию, снимает нервозность, стимулирует восстановление сил.">YLANG YLANG</option>
+            <option data-desc="С языка хинди ветиверовое масло переводится как «масло спокойствия». Его название отражает основное свойство масла – успокаивающее, умиротворяющее.">VETIVER</option>
+            <option data-desc="Поможет Вашему телу расслабиться,настроит мысли на позитивный лад, что, безусловно, поспособствует скорейшему засыпанию и крепкому сну.">MUSK</option>
+            <option data-desc="Одна из самых известных и   самых дорогих пряностей в мире. Повышает настроение и работоспособность.">VANILLA</option>
           </select>
         </div>
         <div class="desc">
-          <p>Описание аромата</p>
-          <p>интенсивный и натуральный аромат черного шоколада, который вызовет воспоминания о беззаботных днях. Стимулирующий аромат прекрасно освежает воздух в помещении.</p>
+          <p>Описание аромата:</p>
+          <p id="aromDesc"></p>
         </div>
         <div class="order">
           <p class="price">стоимость 800р/шт</p>
@@ -253,14 +259,14 @@
   </div>
 </footer>
 
-<div id="cart" class="zoom-anim-dialog mfp-hide modal">
+<div id="cart" class="zoom-anim-dialog modal">
   <div class="modal-head">
-      <h2>Оформить заказ</h2>
-    </div>
-    <div class="modal-body">
-      <div id="cartContent"></div>
-      <br>
-    </div>
+    <h2>Оформить заказ</h2>
+  </div>
+  <div class="modal-body">
+    <div id="cartContent"></div>
+    <br>
+  </div>
 </div>
 
 <link rel="stylesheet" href="css/main.min.css">

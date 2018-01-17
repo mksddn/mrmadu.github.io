@@ -39,7 +39,7 @@
       <div class="img">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="27" viewBox="0 0 27 33"><image id="корзина" width="27" height="33" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAhCAMAAAAf6yCsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABfVBMVEX/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1f/Q1cAAACKkdmNAAAAfXRSTlMAJ+bhHW5pcF+vWwj48QJ1AQoEzMHA/suENy379yX1RYBErpwH08rU4gyNe0fo4L2dkKXNxayVXRx3UAv8rZsZPnMyl9DayYXr3v30qeWmJGA0I3EVnmJsKGE5V7Lvj376ohPW7pKCTdEwGsKfgWVUQzEGxOnDM202EMeRPVVPCj4AAAABYktHRH4/uEFzAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4gENETMV3ACp2AAAAVtJREFUKM+9kVVbw0AQRQct0pa2eItTXIO7Bnd3KO7ucv47TQlpAuWV+7J39uw3OyJiVlR0TKz8oTiI/4vZwPZ/LMGWCIm2pAgo2U5IDmcEmPLFwl243Ib1pGoozWVcpGdkZmXr3uuDnNxwojztbb4eFECK6ZPCIgcU64G/pNRjKcFTRvm3r3CLVZVQWfBLVV6NVRNRNRpz2yOy2lDSOqhXGqBRUZQmaFZagr61LcTaoUM6u+gO+h7olT7o14sZgEERlaGgH9ZyjYBXZ85RxkQGGXeLc4JJkUamjC6mYUZmYU7mYUEWM1gy2DKsyCqsSQesSxJsGCwWNsW1xbbsEPDLLuN74dHs41NVOw71gICq5jBsGtvhj76PTOzYigJeE6sIcHIa1pllF+fYL5TL/qvrm9u2O+ua/PfmlA+PTyb2/KOWEhMLTpuXV12P3/v50t6b790IPqYOrrXzE1SCkjcIOttrAAAAAElFTkSuQmCC"/></svg>
       </div>
-      <a href="#cart" class="popup">корзина</a>
+      <a href="#cart" class="popup"><span id="cartQ"></span>корзина</a>
     </div>
   </div>
 </header>
@@ -97,10 +97,11 @@
     </div>
     <h2>Собрано средств:</h2>
     <div id="summ">
-      <div class="counter">5</div>
+      <div class="summ-item">18350040</div>
+      <!-- <div class="counter">5</div>
       <div class="counter">000</div>
       <div class="counter">000</div>
-      <div class="counter">000</div>
+      <div class="counter">000</div> -->
     </div>
     <img src="img/2.jpg" alt="АЛЬТ">
     <div class="bloquote">
@@ -158,7 +159,7 @@
           <p id="aromDesc"></p>
         </div>
         <div class="order">
-          <p class="price">стоимость 800р/шт</p>
+          <p class="price">стоимость <span>800</span>р/шт</p>
           <button>Добавить в корзину
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="22" viewBox="0 0 18 22"><image id="корзина" width="18" height="22" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWCAQAAABnVgTKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfiAQ0SAx0P26lAAAABS0lEQVQoz42QO0tcURSFvztqwEbQMmAXQQQFwVIEo4z5ARZioY0pxj9gpZ2tYJMmjZ1NmmkEH2QkiFHx1SlCYMBHIT4HnYeiX4oZrvcaH9lwDnvvs9Y6ey/4J9x2hfdCvYp3Eu9y/hf0/KtRZ9Q7Z/z6ulINw+Ed4fbY7YewSriqasYgCiqptw6FdbNF836KKyX97r2bkU7KkfgMAYC/6GSQ4ivbZMvccd+KQnm7BeCCNPvADmnSQJ40u8AWY2WlKi89N2G/OgE2qnPglNpb8Sl44CcNdLAGtFbOKtBHgZUnMxeAL8ERJyFow0ZaWA6KT6BFIAn8psla2pB1ksB83K8/Ppo1px5bCvPmOOjbC8vvld+qQ9QSKX4wyTWGvbOI4wC2s11JbzjnlDNO2WU6MAqaZYAcmVClni7gc5CJzjTinZORus4DD/0I8BfPOtPBzIck6gAAAABJRU5ErkJggg=="/></svg>
           </button>
@@ -259,13 +260,25 @@
   </div>
 </footer>
 
-<div id="cart" class="zoom-anim-dialog modal">
+<div id="cart" class="zoom-anim-dialog mfp-hide modal">
   <div class="modal-head">
     <h2>Оформить заказ</h2>
   </div>
   <div class="modal-body">
-    <div id="cartContent"></div>
-    <br>
+    <ol id="cartContent"></ol>
+    <span>Итого: <strong>0</strong>р</span><br>
+    <button id="clear">Очистить корзину</button>
+    <form>
+      <input type="text" name="Имя" placeholder="Ваше имя" required>
+      <input type="email" name="Email" placeholder="Ваш email" required>
+      <br>
+      <input type="checkbox" name="Согласие на обработку ПД" checked value="">&emsp;<label for="ppd">Согласие на обработку персональных данных</label>
+      <input type="hidden" name="project_name" value="Site Name">
+      <input type="hidden" name="admin_email" value="admin@mail.com">
+      <input type="hidden" name="form_subject" value="Form Subject">
+      <textarea class="hidden" name="Заказанная продукция" id="prod" value=""></textarea>
+      <button type="submit" class="btn">Заказать</button>
+    </form>
   </div>
 </div>
 

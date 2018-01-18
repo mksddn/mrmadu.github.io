@@ -1157,7 +1157,7 @@ header {
   margin-bottom: 10px;
   z-index: 11;
   position: relative; }
-  #summ .span-wrapper {
+  #summ span {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -1716,7 +1716,7 @@ footer {
     font-size: 1.5rem; }
   .about .text {
     padding: 0 15px; }
-  #summ * {
+  #summ span {
     width: 50px;
     height: 50px;
     font-size: 1.2rem; }

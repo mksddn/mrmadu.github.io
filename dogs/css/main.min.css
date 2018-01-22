@@ -17,8 +17,8 @@
   font-family: "montserrat";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../fonts/Montserrat/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype"); }
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot");
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype"); }
 
 @font-face {
   font-family: "bristol";
@@ -26,6 +26,13 @@
   font-style: normal;
   src: url("../fonts/bristol/Bristol.eot");
   src: url("../fonts/bristol/Bristol.eot?#iefix") format("embedded-opentype"), url("../fonts/bristol/Bristol.woff") format("woff"), url("../fonts/bristol/Bristol.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "alegreya-black";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/alegreya-sans/AlegreyaSans-Black.eot");
+  src: url("../fonts/alegreya-sans/AlegreyaSans-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/alegreya-sans/AlegreyaSans-Black.woff") format("woff"), url("../fonts/alegreya-sans/AlegreyaSans-Black.ttf") format("truetype"); }
 
 @font-face {
   font-family: "alegreya";
@@ -716,6 +723,122 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
+.jq-checkbox,
+.jq-radio {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.jq-checkbox input,
+.jq-radio input {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  opacity: 0; }
+
+.jq-file {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; }
+
+.jq-file input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  font-size: 100px;
+  line-height: 1em; }
+
+.jq-file__name {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
+
+.jq-selectbox,
+.jq-select-multiple {
+  position: relative;
+  display: inline-block; }
+
+.jq-selectbox select,
+.jq-select-multiple select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0; }
+
+.jq-selectbox li,
+.jq-select-multiple li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap; }
+
+.jq-selectbox {
+  z-index: 10; }
+
+.jq-selectbox__select {
+  position: relative; }
+
+.jq-selectbox__select-text {
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
+
+.jq-selectbox__dropdown {
+  position: absolute; }
+
+.jq-selectbox__search input {
+  -webkit-appearance: textfield; }
+
+.jq-selectbox__search input::-webkit-search-cancel-button,
+.jq-selectbox__search input::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+.jq-selectbox__dropdown ul {
+  position: relative;
+  overflow: auto;
+  overflow-x: hidden;
+  list-style: none;
+  -webkit-overflow-scrolling: touch; }
+
+.jq-select-multiple ul {
+  position: relative;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.jq-number {
+  display: inline-block; }
+
+.jq-number__field input {
+  -moz-appearance: textfield;
+  text-align: left;
+  /* для Opera Presto */ }
+
+.jq-number__field input::-webkit-inner-spin-button,
+.jq-number__field input::-webkit-outer-spin-button {
+  margin: 0;
+  /* в каких-то браузерах присутствует отступ */
+  -webkit-appearance: none; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -851,6 +974,7 @@ h2 {
 
 a {
   color: #ff4357;
+  font-weight: bold;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
@@ -919,11 +1043,11 @@ img {
   display: inline-block;
   background-color: #ff4357;
   color: #fefefe;
+  font-family: "montserrat";
   padding: 15px 60px;
   -webkit-border-radius: 50px;
           border-radius: 50px;
   text-transform: uppercase;
-  font-size: 1.1rem;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -982,7 +1106,7 @@ header {
     padding-bottom: 30px;
     height: 100px;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-family: "alegreya-black";
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1096,7 +1220,8 @@ header {
     margin-top: 30px; }
   .main .btn {
     padding: 20px 80px;
-    font-size: 1.2rem; }
+    font-size: 1.1rem;
+    font-family: "alegreya-black"; }
 
 .about .ny {
   top: 50px;
@@ -1117,12 +1242,15 @@ header {
           flex: 1 0 50%; }
 
 .about .text {
-  padding: 0 50px;
+  padding: 0 50px 0 150px;
   text-align: justify;
   z-index: 11;
   text-shadow: 5px 5px 3px #fefefe, 5px -5px 3px #fefefe, -5px -5px 3px #fefefe, -5px 5px 3px #fefefe; }
   .about .text h2 {
     text-align: left; }
+
+.about .accent-color {
+  font-weight: bold; }
 
 .about .img {
   position: relative; }
@@ -1138,7 +1266,8 @@ header {
   top: 200px; }
 
 .about p {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  font-style: italic; }
 
 .already {
   padding-top: 0;
@@ -1281,7 +1410,7 @@ header {
 
 .constructor img {
   width: 720px;
-  height: 520px;
+  height: 600px;
   background-color: #d4d4d4;
   border: 1px solid #d4d4d4; }
 
@@ -1299,7 +1428,6 @@ header {
   width: 30%; }
   .constructor .const-form .slider-nav-item {
     display: inline-block;
-    text-align: center;
     cursor: pointer; }
   .constructor .const-form img {
     width: 50px;
@@ -1318,7 +1446,41 @@ header {
   .constructor .form input, .constructor .form select {
     margin-bottom: 15px; }
   .constructor .form select, .constructor .form button {
-    width: 100%; }
+    width: 100%;
+    font-family: "montserrat"; }
+  .constructor .form #arom {
+    display: none; }
+  .constructor .form .arom {
+    position: relative; }
+    .constructor .form .arom svg {
+      position: absolute;
+      bottom: 27px;
+      right: 10px;
+      fill: #fefefe;
+      z-index: 10;
+      cursor: pointer; }
+  .constructor .form .jq-selectbox {
+    background-color: #292a29;
+    color: #fefefe;
+    font-family: "montserrat";
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    margin-bottom: 15px; }
+    .constructor .form .jq-selectbox .jq-selectbox__select-text {
+      margin: 0 auto;
+      width: 100%; }
+    .constructor .form .jq-selectbox .jq-selectbox__dropdown {
+      background-color: #292a29;
+      width: 100%; }
+      .constructor .form .jq-selectbox .jq-selectbox__dropdown ul {
+        padding: 10px 0 0 0; }
+      .constructor .form .jq-selectbox .jq-selectbox__dropdown li {
+        padding: 10px 0;
+        cursor: pointer; }
+        .constructor .form .jq-selectbox .jq-selectbox__dropdown li:hover {
+          background-color: #363736; }
 
 .constructor .order p {
   font-size: 2.3rem;
@@ -1327,14 +1489,14 @@ header {
 .constructor .order button {
   background-color: #ff4357;
   position: relative;
-  font-size: 1.2rem; }
+  padding: 15px; }
   .constructor .order button:hover {
     background-color: #ff5d6e; }
 
 .constructor .order svg {
   position: absolute;
   right: 35px;
-  top: 7px; }
+  top: 10px; }
 
 .help {
   text-align: center; }
@@ -1385,7 +1547,7 @@ header {
     z-index: 11;
     position: relative; }
   .thank p {
-    padding: 0 80px;
+    padding: 0 60px;
     position: relative; }
   .thank .accent-color {
     font-style: italic; }
@@ -1393,29 +1555,33 @@ header {
     display: block; }
   .thank .bloquote {
     bottom: -40px;
-    width: -webkit-calc(100% - 160px);
-    width: calc(100% - 160px); }
+    width: -webkit-calc(100% - 120px);
+    width: calc(100% - 120px); }
 
-.form {
+.form .container {
+  background-image: url("../img/bgform.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%; }
+
+.form form {
+  width: 600px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; }
+
+.form input, .form button {
+  display: block;
+  margin: 15px auto;
+  width: 100%;
   text-align: center; }
-  .form .container {
-    background-image: url("../img/bgform.png");
-    background-repeat: no-repeat;
-    background-position: 100% 50%; }
-  .form form {
-    width: 600px;
-    max-width: 100%;
-    display: block;
-    margin: 0 auto; }
-  .form input, .form button {
-    display: block;
-    margin: 15px auto;
-    width: 100%;
-    text-align: center; }
-  .form .bloquote {
-    width: 200px;
-    left: 0;
-    top: 15px; }
+
+.form button {
+  padding: 15px 30px; }
+
+.form .bloquote {
+  width: 200px;
+  left: 0;
+  top: 15px; }
 
 footer {
   background-image: url("../img/footer.jpg");
@@ -1565,6 +1731,8 @@ footer {
             background-size: cover; }
   .about .img .ny {
     top: -7%; }
+  .about .text {
+    padding-left: 50px; }
   .already .bloquote {
     right: 0;
     bottom: 0; }

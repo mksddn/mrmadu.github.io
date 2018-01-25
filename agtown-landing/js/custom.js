@@ -75,4 +75,28 @@ $(document).ready(function () {
     mainClass: 'my-mfp-zoom-in'
 });
 
+  $(".main-menu").on('click','a[href^="#"]', function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 500);
+});
+
+
+  $("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+        type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            alert("Сообщение отправлено! Скоро мы свяжемся с вами!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
+
 });

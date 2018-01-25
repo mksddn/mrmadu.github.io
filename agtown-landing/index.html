@@ -60,7 +60,7 @@
 </script> 
 
 <script>
-  
+
 </script>
 
 
@@ -85,12 +85,12 @@
 
       <ul class="main-menu left">
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Стоимость</a></li>
-        <li><a href="#">Возможности</a></li>
-        <li><a href="#">Сравнение</a></li>
-        <li><a href="#">Примеры</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#"><i class="fa  fa-info-circle"></i>Поддержка</a></li>
+        <li><a href="#tarifs">Стоимость</a></li>
+        <li><a href="#offer1">Возможности</a></li>
+        <li><a href="#compare">Сравнение</a></li>
+        <li><a href="#examples">Примеры</a></li>
+        <!-- <li><a href="#">FAQ</a></li> -->
+        <li><a href="#support" class="popup-with-zoom-anim"><i class="fa  fa-info-circle"></i>Поддержка</a></li>
       </ul>
 
       <div class="phone right"><span><i class="fa  fa-phone"></i></span><a href="#">8 (900) 777 55 44</a></div>
@@ -114,8 +114,8 @@
 
 
       <div class="buttons clearfix">
-        <a href="#" class="site">Создать сайт</a>
-        <a href="#" class="demo">Смотреть демо</a>
+        <a href="#order" class="site popup-with-zoom-anim">Создать сайт</a>
+        <a href="#examples" class="demo">Смотреть демо</a>
       </div>
 
       <p>Великолепный инструмент, созданный семью профессиональными маркетологами</p>
@@ -189,8 +189,8 @@
         Создайте сайт на agtown самостоятельно!
       </h2>
       <div class="buttons clearfix">
-        <a href="#" class="site">Создать сайт</a>
-        <a href="#" class="demo">Смотреть демо</a>
+        <a href="#order" class="site popup-with-zoom-anim">Создать сайт</a>
+        <a href="#examples" class="demo">Смотреть демо</a>
       </div>
     </div>
   </div>
@@ -218,7 +218,7 @@
 
       </ul>
 
-      <a href="#small-dialog" class="ask popup-with-zoom-anim">Получить консультацию</a>
+      <a href="#support" class="ask popup-with-zoom-anim">Получить консультацию</a>
 
     </div>
   </div>
@@ -373,8 +373,8 @@
       <h2>Пришло время создать успешный сайт!
       </h2>
       <div class="buttons clearfix">
-        <a href="#" class="site">Начать зарабатывать</a>
-        <a href="#" class="demo">Смотреть демо</a>
+        <a href="#order" class="site popup-with-zoom-anim">Начать зарабатывать</a>
+        <a href="#examples" class="demo">Смотреть демо</a>
       </div>
     </div>
   </div>
@@ -402,7 +402,7 @@
           <p>Дополнительная информация о тарифе</p>
         </div>
 
-        <a href="#" class="site">Создать сайт</a>
+        <a href="#order" class="site popup-with-zoom-anim">Создать сайт</a>
 
         <a id="seemore2">Полная информация о тарифе</a>
 
@@ -424,7 +424,7 @@
           <p>Дополнительная информация о тарифе</p>
         </div>
 
-        <a href="#" class="site">Создать сайт</a>
+        <a href="#order" class="site popup-with-zoom-anim">Создать сайт</a>
 
         <a id="seemore3">Полная информация о тарифе</a>
 
@@ -441,7 +441,7 @@
       <h2>В бизнесе можно делегировать все, кроме получения прибыли.
       </h2>
       <div class="buttons clearfix">
-        <a href="#" class="site">Сделать шаг к прибыли</a>
+        <a href="#order" class="site popup-with-zoom-anim">Сделать шаг к прибыли</a>
         <a href="#" class="demo">Смотреть демо</a>
       </div>
     </div>
@@ -455,9 +455,34 @@
     </div>
   </footer>
 
-  <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-    <h1>Dialog example</h1>
-    <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.</p>
+  <div id="order" class="zoom-anim-dialog mfp-hide modal">
+    <h2>Заказать сайт</h2>
+    <form>
+      <!-- Hidden Required Fields -->
+      <input type="hidden" name="project_name" value="AGTOWN">
+      <input type="hidden" name="admin_email" value="info@web-makster.ru">
+      <input type="hidden" name="form_subject" value="Заявка на сайт">
+      <!-- END Hidden Required Fields -->
+      <input type="text" name="Имя" placeholder="Ваше имя" required><br>
+      <input type="text" name="E-mail" placeholder="Email" required><br>
+      <input type="text" name="Телеыон" placeholder="Ваш телефон"><br>
+      <button>Отправить заявку</button>
+    </form>
+  </div>
+
+  <div id="support" class="zoom-anim-dialog mfp-hide modal">
+    <h2>Задайте нам вопрос</h2>
+    <form>
+      <!-- Hidden Required Fields -->
+      <input type="hidden" name="project_name" value="AGTOWN">
+      <input type="hidden" name="admin_email" value="info@web-makster.ru">
+      <input type="hidden" name="form_subject" value="Сообщение с сайта">
+      <!-- END Hidden Required Fields -->
+      <input type="text" name="Имя" placeholder="Ваше имя" required><br>
+      <input type="text" name="E-mail" placeholder="Email" required><br>
+      <textarea name="Сообщение" rows="5" placeholder="Ваше сообщение"></textarea><br>
+      <button>Отправить сообщение</button>
+    </form>
   </div>
 
 

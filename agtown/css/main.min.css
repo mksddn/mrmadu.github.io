@@ -6344,13 +6344,6 @@ button.cp-shop-buy {
   opacity: 0.9;
   cursor: pointer;
   z-index: 10; }
-  .cp-cart-icon:hover .fa-shopping-cart {
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    -webkit-transform: rotateZ(-360deg);
-        -ms-transform: rotate(-360deg);
-            transform: rotateZ(-360deg); }
   .cp-cart-icon i {
     color: #f9f9f9; }
   .cp-cart-icon .fa-shopping-cart {
@@ -6436,6 +6429,10 @@ button.cp-shop-buy {
   padding: 10px;
   -webkit-box-shadow: 1px 1px 5px #5f5e5d;
           box-shadow: 1px 1px 5px #5f5e5d; }
+
+.ajaxContent {
+  width: 90%;
+  max-width: 992px; }
 
 @media only screen and (max-width: 992px) {
   .cp-gallery-items img, .cp-gallery-all {

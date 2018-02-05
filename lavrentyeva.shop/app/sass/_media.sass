@@ -1,0 +1,133 @@
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .header-nav>nav>ul>li
+    margin: 0 10px
+    font-size: 0.9rem
+  .header-panel
+    flex-wrap: wrap
+    .instruments, .social
+      width: 100%
+      float: right
+      margin: 5px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  body
+    padding-top: 0
+  .header-row
+    display: none
+    background-color: #fff
+    height: 100vh
+    overflow: scroll
+    .header-logo
+      display: none
+    .instruments
+      margin-bottom: 15px
+  .header-nav>nav>ul
+    display: block
+    li
+      display: block
+      height: auto
+      margin: 30px auto
+      ul
+        position: relative
+        text-align: center
+        left: initial
+        top: initial
+        width: 100%
+        background-color: initial
+  .menu-mobile
+    display: flex
+  .header-search
+    margin-bottom: 15px
+    input
+      top: initial
+      left: initial
+      position: relative
+      width: 100%
+      margin-bottom: 15px
+  .header-panel .instruments>.basket
+    display: block
+
+  .main-img
+    position: absolute
+    z-index: 0
+    filter: opacity(0.2)
+  .main-items
+    width: 100%
+
+  .cart
+    .vol
+      width: 100px
+      input
+        width: 30px
+    .minus, .plus
+      border: none
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .btn
+    padding: 15px 30px
+  .catalog .product-thumb img
+    max-height: initial
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .main-items
+    flex-wrap: wrap
+  .main-img
+    margin-top: 340px
+  .product-item
+    margin: 30px auto
+  .navi
+    .search
+      order: -1
+      margin-bottom: 30px
+      input
+        max-width: 100%
+  .product-title .to-basket
+    font-size: 1.5rem
+  footer .social
+    display: flex
+    flex-direction: column
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+
+/*==========  Mobile First  ==========*/
+
+@media only screen and (min-width : 320px)
+  /**/
+
+
+@media only screen and (min-width : 480px)
+  /**/
+
+@media only screen and (min-width : 576px)
+  .container
+    max-width: 540px
+
+
+@media only screen and (min-width : 768px)
+  .container
+    max-width: 720px
+
+
+@media only screen and (min-width : 992px)
+  .container
+    max-width: 960px
+
+
+@media only screen and (min-width : 1200px)
+  .container
+    max-width: 1140px
+

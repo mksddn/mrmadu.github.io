@@ -1,0 +1,1009 @@
+@import "fonts"
+
+@import "../libs/bootstrap/bootstrap-reboot"
+@import "../libs/bootstrap/bootstrap-grid"
+@import "../libs/font-awesome/css/font-awesome.min"
+@import "../libs/slick/slick/slick"
+@import "../libs/Magnific-Popup/dist/magnific-popup"
+@import "../libs/iEdit/src/iEdit"
+$font-family: "agtown", PT Sans
+$bg: #f9f9f9
+$font-color: #343434
+$font-light: #5f5e5d
+$green: rgb(147, 182, 88)
+$red: #e95054
+$metal: rgb(102, 101, 100)
+$gray: #eaeaea
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+// html, body
+//  height: 100%
+
+body
+  // min-width: 320px
+  // position: relative
+  // line-height: 1.75
+  font-family: $font-family
+  background-color: $bg
+  color: $font-color
+  overflow-x: hidden
+  opacity: 1
+
+
+// ОСНОВНЫЕ ЭЛЕМЕНТЫ
+
+.flex
+  display: flex
+
+a, button, .link
+  color: $green
+  transition: all 0.2s ease
+  cursor: pointer
+  &:hover
+    transition: all 0.2s ease
+    text-decoration: none
+    color: $metal
+  i
+    margin-right: 10px
+
+input, select, textarea, button
+  border-radius: 2px
+  border: 1px solid $green
+  height: 40px
+  background-color: #fff
+  padding: 10px
+input[type=file]
+  cursor: pointer
+  padding: 0
+  // -webkit-appearance: textfield
+input[type=file]::-webkit-file-upload-button
+  cursor: pointer
+  height: 100%
+  background-color: $gray
+  -webkit-appearance: none
+  border: none
+@-moz-document url-prefix()
+  input[type=file]
+    border: none
+    background-color: $gray
+
+input[type=checkbox]
+  display: none
+input[type=checkbox]+ label:before
+  font-family: 'fontAwesome'
+  content: ""
+  color: $green
+  border: 1px solid $gray
+  padding: 0 8px
+  text-align: center
+  margin-right: 10px
+  cursor: pointer
+input[type=checkbox]:checked + label:before
+  content: "\f00c"
+  padding: 0
+
+select
+  cursor: pointer
+  appearance: none
+  padding: 0 10px
+.select-wrapper
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    right: 30px
+    height: 40px
+    width: 1px
+    background-color: $green
+  &:after
+    content: '\f107'
+    font-family: FontAwesome
+    color: $green
+    font-size: 2rem
+    position: absolute
+    right: 5px
+    top: -3px
+    pointer-events: none
+
+.btn
+  padding: 8px 30px
+  border-radius: 4px
+  cursor: pointer
+  transition: all 0.2s ease
+  &:hover
+    transition: all 0.2s ease
+.btn-gray
+  background-color: $gray
+  &:hover
+    background-color: $green
+    color: $bg
+.btn-green
+  background-color: $green
+  color: $bg
+  &:hover
+    background-color: $gray
+    color: $font-color
+.btn-trans
+  border: 1px solid $green
+  &:hover
+    color: inherit
+    background-color: $green
+.btn-offer
+  text-transform: uppercase
+  font-size: 1.2rem
+  padding: 15px 50px
+.btn-red
+  background-color: lighten($red, 5%) !important
+  color: $bg !important
+  &:hover
+    background-color: $gray !important
+    color: $font-light !important
+
+.btn-wrapper
+  text-align: center
+  margin-bottom: 50px
+
+.link-red
+  color: $red
+  &:hover
+    color: $font-light
+
+.iEdit-img-edit-act
+  background-color: $green
+  color: $bg
+.iEdit-img-edit-cancel
+  background-color: $red
+.iEdit-img-edit-select
+  box-shadow: 0 0 0 3px $green
+.iEdit-img-edit-select-resize
+  background-color: $green
+  right: 0
+  bottom: 0
+
+.hover-shadow:hover
+  box-shadow: 0 0 5px 0px rgba(50, 50, 50, 0.75)
+
+// .to-premium
+//   position: relative
+//   &:after
+//     opacity: 0
+//     content: 'Сравнить тарифы'
+//     position: absolute
+//     right: -140px
+//     top: 0
+//     color: $bg
+//     background-color: lighten($red, 10%)
+//     padding: 8px 15px
+//     border-radius: 4px
+//     transition: opacity 0.2s ease
+//   &:hover:after
+//     opacity: 1
+//     transition: opacity 0.2s ease
+
+img
+  max-width: 100%
+  height: auto
+  object-fit: cover
+a>img
+  transition: box-shadow 0.2s ease
+  &:hover
+    transition: box-shadow 0.2s ease
+
+h1, h2, h3, h4
+  font-weight: 400
+  margin: 0
+
+nav ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+  .active, .active a
+    color: $font-color
+
+.slider-arrows
+  position: relative
+  .slick-arrow
+    position: absolute
+    font-size: 4rem
+    z-index: 10
+    top: 0
+    cursor: pointer
+  .fa-angle-left
+    left: -30px
+  .fa-angle-right
+    right: -30px
+
+#toTop
+  position: fixed
+  bottom: 20px
+  right: 40px
+  cursor: pointer
+  background-color: #93b658
+  border-radius: 2px
+  opacity: 0.8
+  padding: 6px 12px
+
+
+
+
+// ШАПКА
+
+header
+  position: relative
+  padding: 15px 0
+  border-bottom: 3px solid $green
+.menu-toggle
+  display: none
+  position: fixed
+  top: 5px
+  left: 10px
+  font-size: 200%
+  cursor: pointer
+  background-color: $bg
+  opacity: 0.8
+  padding: 6px 0 0 10px
+  border-radius: 4px
+  z-index: 10
+.search-row
+  align-items: center
+  margin-bottom: 10px
+  text-align: center
+  .town i
+    margin-right: 10px
+  form
+    position: relative
+  .submit
+    position: absolute
+    right: 0
+    top: 0
+    width: 100px
+    padding: 1px
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+.lk-menu
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+  text-align: center
+  .dropdown
+    position: relative
+    width: 71%
+  .title
+    background-color: $green
+    color: $bg
+    text-transform: uppercase
+    padding: 5px 10px
+    border-radius: 2px
+    cursor: pointer
+    i
+      padding-right: 10px
+  ul
+    display: none
+    position: absolute
+    z-index: 20
+    list-style-type: none
+    padding-left: 5px
+    padding-top: 10px
+    margin: 0
+    text-align: left
+    background-color: $gray
+    width: 100%
+    li
+      margin-left: -5px
+      margin-bottom: 10px
+      line-height: 1.2
+    a
+      display: flex
+      align-items: center
+      word-wrap: break-word
+      hyphens: auto
+    i
+      padding: 0 10px
+      font-size: 1.2rem
+  .mail
+    padding-left: 5px
+    i
+      padding-right: 5px
+    a
+      color: $green
+  .notific
+    color: $red
+  a
+    color: $font-color
+    display: inline-block
+    &:hover
+      color: $green
+.nav-row
+  align-items: flex-end
+.logo img
+  width: 150px
+.header-nav
+  ul
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  a
+    color: $font-light
+    &:hover
+      color: $green
+
+
+// СТРАНИЦА
+
+.page-container
+  padding-top: 20px
+  padding-bottom: 20px
+.page-title, .page-head
+  position: relative
+  color: $green
+  align-items: center
+  text-transform: uppercase
+  margin-bottom: 30px
+  &:after
+    content: ''
+    width: 100%
+    height: 2px
+    background-color: $green
+    position: absolute
+    bottom: 0
+    left: 0
+  h1, h2
+    display: inline
+    font-size: 180%
+  i
+    color: $font-light
+    font-size: 150%
+    margin-right: 15px
+.category-item .page-title:after
+  left: 15px
+  width: calc(100% - 30px)
+
+.page-wrapper
+  color: $font-light
+.page-content
+  margin-bottom: 30px
+.single-title
+  color: $green
+  position: relative
+  margin-bottom: 10px
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 2px
+    background-color: $green
+.single-time
+  margin-bottom: 10px
+.single-thumb
+  margin-bottom: 30px
+.single-author
+  font-size: 1.2rem
+  margin-bottom: 10px
+  a
+    color: $font-color
+    &:hover
+      color: $green
+
+.contact-item
+  display: flex
+  margin-bottom: 15px
+  padding-right: 30px
+  i
+    margin-right: 10px
+
+.archive-item
+  color: $font-light
+  position: relative
+  padding-bottom: 20px
+  margin-bottom: 30px
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 2px
+    background-color: $gray
+.archive-img
+  margin-bottom: 15px
+.archive-title
+  h2
+    font-weight: 700
+  a
+    color: $font-color
+    &:hover
+      color: $green
+.archive-time span
+  color: $red
+.archive-author
+  font-size: 1.2rem
+
+.add-post
+  display: inline-block
+  margin-bottom: 30px
+
+.banner
+  margin-bottom: 50px
+  img
+    height: 400px
+    object-fit: cover
+
+
+
+
+// САЙДБАР
+
+.sidebar
+  background-color: $gray
+  padding: 15px
+  margin-bottom: 15px
+  line-height: 1.2
+  border-radius: 2px
+  nav a
+    color: $font-light
+    &:hover
+      color: $green
+  &-title
+    text-align: center
+.category-nav
+  padding-bottom: 18px
+  position: relative
+  i
+    margin-right: 10px
+    color: $green
+    font-size: 120%
+  li
+    margin-bottom: 10px
+    display: flex
+    align-items: center
+    cursor: pointer
+    color: $font-light
+    &:hover
+      color: $green
+  nav>ul>li
+    margin-right: -15px
+    padding-right: 15px
+  span
+    position: relative
+    width: 100%
+    z-index: 11
+  .active span:after
+    content: ''
+    position: absolute
+    top: 10
+    right: -35px
+    border: 10px solid transparent
+    border-left: 10px solid $gray
+    z-index: 10
+  li>ul
+    display: none
+    position: absolute
+    top: 0
+    right: -300px
+    background-color: #fff
+    z-index: 10
+    width: 300px
+    height: 400px
+    overflow-y: scroll
+    padding: 15px
+    li
+      padding-left: 15px
+.sidebar-title
+  background-color: $green
+  text-transform: uppercase
+  margin: -15px
+  margin-bottom: 15px
+  color: #fff
+  padding: 10px 5px 5px 5px
+  h3
+    font-size: 100%
+.sidebar .item
+  margin-bottom: 15px
+  display: flex
+  align-items: center
+  a
+    color: inherit
+    &:hover
+      color: $green
+  time
+    color: $green
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: center
+    &:after
+      content: ''
+      width: 3px
+      height: 100%
+      background-color: $green
+      position: absolute
+      right: 0
+      top: 0
+    span
+      line-height: 1
+      text-transform: uppercase
+    .count
+      font-size: 200%
+      font-weight: 700
+    .month
+      font-weight: 600
+.sidebar .more
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: 15px
+
+.sidebar.action .item
+  padding-bottom: 15px
+  time
+    color: $red
+.sidebar.action  .action-author
+  text-align: center
+  padding: 10px 15px
+  a
+    color: $green
+    &:hover
+      text-decoration: underline
+.sidebar .action-img
+  text-align: center
+  margin-bottom: 10px
+
+.sidebar .banner-wrapper
+  height: 150px
+  padding: 30px
+  justify-content: center
+  align-items: center
+  text-align: center
+
+
+
+// СЛАЙДЕР
+.slider
+  position: relative
+  .slick-dots
+    position: absolute
+    bottom: 0
+    list-style-type: none
+    width: 100%
+    text-align: center
+    padding: 0
+    margin: 0
+    li
+      display: inline-block
+      margin: 0 5px
+      cursor: pointer
+      &:before
+        content: '•'
+        font-size: 220%
+        color: #fff
+    .slick-active:before
+      color: $green
+    button
+      display: none
+
+
+
+// КАТАЛОГ
+.category-item
+  margin-bottom: 50px
+.company-thumb
+  display: inline-block
+  padding: 0 10px
+  text-align: center
+  margin-bottom: 10px
+  &:hover
+    box-shadow: 0 0 5px 1px $gray
+    transition: box-shadow 0.2s ease
+  a
+    color: $font-light
+    &:hover
+      color: $green
+  img
+    width: 200px
+    height: 200px
+.company-img
+  img
+    object-fit: cover
+.company-name
+  height: 80px
+  display: flex
+  justify-content: center
+  align-items: center
+h3
+  font-size: 110%
+
+.company-item
+  color: $font-light
+  margin-bottom: 30px
+  .company-img
+    padding-top: 5px
+  img
+    height: 110px
+    width: 110px
+  p
+    word-wrap: break-word
+    hyphens: auto
+.company-more a
+  text-transform: uppercase
+  font-size: 0.8rem
+  padding: 5px 10px
+.company-title
+  text-transform: uppercase
+  h3
+    font-size: 1.5rem
+    font-weight: 700
+  a
+    text-decoration: underline
+.details address
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  color: $green
+  font-size: 0.9rem
+  i
+    padding-right: 5px
+.details address *
+  padding: 0 5px
+  margin-bottom: 5px
+.none-thumb
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $green
+  height: 110px
+  width: 110px
+  i
+    color: $bg
+    font-size: 2.5rem
+    margin: 15px
+.premium
+  .img-wrapper
+    display: inline-block
+    position: relative
+    overflow: hidden
+    margin-right: 2px
+    &:after
+      content: 'ПРОВЕРЕНО!'
+      position: absolute
+      top: 20px
+      right: -25px
+      padding: 0 20px
+      background-color: $red
+      color: #fff
+      font-size: 0.8rem
+      transform: rotate(45deg)
+
+
+
+
+// ЛК ПОЛЬЗОВАТЕЛЯ
+
+.lk-tabs
+  margin-bottom: 30px
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    text-align: center
+    li
+      display: flex
+      align-items: center
+      align-content: center
+      cursor: pointer
+      background-color: $gray
+      height: 50px
+      padding: 23px
+      transition: all 0.2s ease
+      &:hover, &.current
+        background-color: $green
+        color: $bg
+      &:nth-child(4)
+        margin-bottom: 15px
+
+.lk-tab
+  display: none
+  padding-bottom: 50px
+  &.visible
+    display: block
+  input:not([type="checkbox"]), .select-wrapper
+    width: 100%
+    max-width: 300px
+  input:not([type="checkbox"]), select, button, span, textarea
+    display: block
+    margin-bottom: 30px
+  textarea
+    width: 100%
+    height: 100px
+  .compDesc textarea
+    height: 100px
+  .btn
+    margin: 15px 0
+  &.settings
+    span
+      color: $font-color
+    h3
+      margin: 50px 0 20px 0
+      font-size: 1.3rem
+      font-weight: 700
+  &.add-company, &.edit-company
+    span
+      margin-bottom: 5px
+    select
+      width: 100%
+    p
+      font-weight: 700
+      font-size: 1.1rem
+      margin-bottom: 10px
+    img
+      display: inline-block
+      width: 200px
+      margin: 5px 5px 50px 5px
+  .slider-add, .gallery-add
+    margin-bottom: 50px
+    span>span>span
+      display: none
+    table
+      margin-top: 15px
+      img
+        margin-bottom: 10px
+      td
+        padding: 0 10px
+      button
+        margin-bottom: 5px
+        background-color: $green
+        color: $bg
+        cursor: pointer
+        padding: 0 13px
+        &:hover
+          background-color: $gray
+          color: $font-color
+  .company-item
+    padding-bottom: 15px
+    border-bottom: 1px solid $gray
+  .buttons-row
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.notific-author
+  color: $green
+
+.config-row
+  margin-bottom: 30px
+  border-bottom: 1px solid $gray
+.color
+  input[type=radio]
+    display: none
+  input[type=radio] + label
+    display: inline-block
+    vertical-align: middle
+    width: 30px
+    height: 30px
+    cursor: pointer
+    border: 1px solid $font-light
+  .red
+    background-color: #ef434a
+  .yellow
+    background-color: #ffa60a
+  .green
+    background-color: #2bae4b
+  .blue
+    background-color: #589db6
+  .purple
+    background-color: #923ac6
+  input[type=radio]:checked + label
+    border: 2px solid $red
+    cursor: text
+
+.link-icon-wrapper
+  position: relative
+  input
+    padding-left: 40px
+  &:after
+    font-family: 'fontAwesome'
+    position: absolute
+    top: 5px
+    left: 10px
+    z-index: 10
+  &.vk:after
+    content: '\f189'
+  &.insta:after
+    content: '\f16d'
+  &.facebook:after
+    content: '\f230'
+  &.ok:after
+    content: '\f264'
+  &.youtube:after
+    content: '\f167'
+
+.fieldRemove
+  margin-top: -20px
+  color: $red
+
+.check-length
+  span
+    display: inline-block
+    margin-bottom: 15px
+
+.compHolidays
+    height: 100px
+    border: solid 1px $gray
+    padding: 15px
+    overflow: auto
+    margin-bottom: 30px
+.compHolidays label 
+    display: block
+
+.lk-tab
+  &.add-single
+    input
+      max-width: 100% !important
+    // input[type=date]
+    //   max-width: 45%
+    //   width: 45%
+    //   display: inline-block
+.action-date-wrapper
+  display: flex
+  justify-content: space-between
+  input
+    width: 45% !important
+
+
+  
+
+
+// ПАГИНАЦИЯ
+
+.pagination
+  width: 100%
+  text-align: center
+  margin-bottom: 50px
+  a
+    display: inline-block
+    background-color: $gray
+    color: $font-color
+    width: 30px
+    height: 30px
+    padding: 3px
+    margin: 3px
+    border-radius: 4px
+    font-size: 1.2rem
+    &:hover
+      background-color: $green
+      color: $bg
+  i
+    margin: 0
+  .active
+    background-color: $green
+    color: $bg
+
+
+// ПОДВАЛ
+
+footer
+  position: relative
+  padding: 30px 0
+  border-top: 3px solid $green
+  .logo, .icons
+    margin-bottom: 15px
+.footer-info, .footer-nav, .footer-social
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.footer-nav, .footer-social
+  text-align: center
+.footer-info
+  font-size: 90%
+.footer-nav
+  a
+    color: $font-light
+    &:hover
+      color: $green
+.footer-social
+  a
+    font-size: 150%
+    color: #fff
+    padding: 5px
+  i
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    padding: 7px
+    transition: background-color 0.2s ease
+    &:hover
+      background-color: $green
+      transition: background-color 0.2s ease
+  .fa-odnoklassniki
+    background-color: #F2720C
+  .fa-facebook
+    background-color: #3b5998
+  .fa-instagram
+    background-color: #517fa4
+  .fa-vk
+    background-color: #45668e
+
+
+
+// МОДАЛЬНЫЕ ОКНА
+
+.popup-modal
+  position: relative
+  max-width: 320px
+  margin: 50px auto
+  background-color: $bg
+  padding: 30px 15px
+  border-radius: 4px
+  form
+    text-align: center
+  input, textarea, button
+    margin-bottom: 15px
+    width: 100%
+    max-width: 300px
+  textarea
+    height: 100px
+.modal-head
+  border-bottom: 1px solid $font-light
+  margin-bottom: 15px
+  font-size: 1.5rem
+
+.mfp-close-btn-in .mfp-close
+  color: $red
+  position: absolute
+  right: 10px
+  top: 0
+  cursor: pointer
+  width: auto
+
+.my-mfp-zoom-in
+  .popup-modal
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+  &.mfp-ready .popup-modal
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .popup-modal
+    transform: scale(0.8)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+
+
+
+
+@import "single-comp" 
+
+
+@import "media" // Всегда в конце

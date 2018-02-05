@@ -1,0 +1,436 @@
+// #ef434a красный
+// #ffa60a желтый
+// #2bae4b зеленый
+// #589db6 голубой
+// #923ac6 сиреневый
+
+// @import "../libs/animate/animate.min"
+
+.cp-header
+  height: 60px
+  padding: 5px 0
+  border-bottom: 1px solid $gray
+  .nav-row
+    align-items: center
+  .header-nav
+    padding-top: 15px
+  .lk-menu .title
+    background-color: $gray
+    color: $font-light
+  .lk-menu .mail a
+    color: $font-light
+
+#cp-main, #cp-map
+  padding: 0 !important
+
+#cp-main
+  position: relative
+.cp-head-wrapper
+  position: fixed
+  width: 100%
+  z-index: 15
+  background-color: rgba(200,200,200,0.6)
+  border-bottom: 1px solid $gray
+.cp-head
+  justify-content: space-between
+.cp-logo
+  display: flex
+  align-items: center
+  img
+    max-height: 70px
+.cp-nav
+  text-align: right
+  text-transform: uppercase
+  font-size: 1.1rem
+  position: relative
+  li
+    display: inline-flex
+    align-items: center
+    height: 80px
+    margin: 0 10px
+.cp-menu-toggle
+  display: none
+  font-size: 1.5rem
+  position: absolute
+  top: 10px
+  right: 15px
+  cursor: pointer
+.cp-nav  a, .cp-wrapper h1
+    color: #fff
+.cp-title
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  align-content: center
+  text-align: center
+  height: 100%
+  width: 100%
+  padding: 0 20%
+  z-index: 10
+  font-size: 2.5rem
+  text-transform: uppercase
+.cp-main-slider
+  img
+    height: 100vh
+    max-height: 550px
+
+.cp-wrapper
+  color: #666
+  section
+    padding: 50px 0
+    text-align: center
+    border-bottom: 1px solid $gray
+  input, textarea, button
+    margin-bottom: 10px
+    width: 100%
+    border-color: $gray
+  textarea
+    height: 100px
+
+.cp-section-title
+  margin-bottom: 30px
+  h2
+    text-transform: uppercase
+    font-size: 3rem
+    &:after
+      content: ''
+      display: block
+      height: 2px
+      width: 5rem
+      margin: 0 auto
+
+.double-section-wrapper
+  display: flex
+  section
+    flex: 1 0 50%
+    width: 50%
+    min-height: 0
+    min-width: 0
+
+#cp-about, #cp-news, #cp-contact, #cp-video
+  background-color: #fff
+
+#cp-features
+  background-color: #fff
+  word-wrap: break-word
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  -ms-hyphens: auto
+  hyphens: auto
+.cp-features-item
+  padding: 1rem
+  i
+    font-size: 3.5rem
+    display: block
+    margin-bottom: 1rem
+
+#cp-achieves
+  color: #fff
+  word-wrap: break-word
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  -ms-hyphens: auto
+  hyphens: auto
+.cp-achieves-number
+  font-size: 3.5rem
+  display: block
+  margin-bottom: 1rem
+.cp-achieves-title
+  text-transform: uppercase
+
+.cp-shop-items
+  flex-wrap: wrap
+.cp-shop-item-wrapper
+  background-color: #fff
+  line-height: 1
+  margin-bottom: 30px
+  height: 550px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.cp-shop-img
+  margin-bottom: 15px
+  img
+    width: 100%
+    height: 250px
+.cp-shop-title
+  text-transform: uppercase
+  font-size: 1.5rem
+  margin-bottom: 15px
+  padding: 0 15px
+.cp-shop-excerpt
+  text-align: left
+  line-height: 1.1
+  font-size: 1rem
+  padding: 0 15px
+  word-wrap: break-word
+  hyphens: auto
+.cp-shop-price
+  background-color: $gray
+  margin: 0
+  padding: 8px
+button.cp-shop-buy
+  color: $bg
+  margin: 0
+  border-radius: 0
+// .cp-shop-buy
+//   background-color: $gray
+//   height: 30px
+//   text-transform: uppercase
+//   display: flex
+//   justify-content: space-between
+//   *
+//     height: 100%
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     padding: 0 3px
+// .val
+//   color: $bg
+//   width: 60%
+//   font-size: 1rem
+//   input
+//     width: 10px
+//     height: initial
+//     border: none
+//     display: inline
+//     background-color: initial
+//     padding: 0
+//     color: $bg
+//   .minus, .plus
+//     cursor: pointer
+
+#cp-news .cp-section-title h2
+  color: $font-light
+#cp-news .cp-section-title h2:after
+  background-color: $font-light
+.cp-news-item
+  text-align: left
+  margin-bottom: 15px
+  *
+    display: inline
+    text-transform: uppercase
+  time
+    margin-right: 5px
+  a
+    text-decoration: underline
+
+#cp-action
+  position: relative
+#cp-action .cp-section-title h2, .cp-action-title h3, .cp-action-text, .cp-action-slider.slider .slick-dots .slick-active:before
+  color: #fff
+  transition: color 0.2s ease
+#cp-action .cp-section-title h2:after
+  background-color: #fff
+#cp-action h3:hover
+  color: $font-light
+  transition: color 0.2s ease
+.cp-action-slider
+  position: static
+.cp-action-slider .slick-dots
+  margin-left: -30px
+.cp-action-title h3
+  text-transform: uppercase
+  font-size: 1.8rem
+  margin-bottom: 30px
+.cp-action-title, .cp-action-text
+  padding: 0 30px
+
+.cp-gallery-items-wrapper, .cp-video-frame
+  // max-height: 650px
+  // overflow-x: scroll
+
+.cp-gallery-items
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  // text-align: left
+.cp-gallery-items a
+  overflow: hidden
+  background-color: #000
+.cp-gallery-items img, .cp-gallery-all
+  display: inline-block
+  width: 200px
+  height: 150px
+  opacity: .6
+  transition: all 0.2s ease
+.cp-gallery-items img:hover, .cp-gallery-all a:hover
+  transform: scale(1.1)
+  opacity: 1
+  transition: all 0.2s ease
+.cp-gallery-all
+  overflow: hidden
+.cp-gallery-all a
+  width: 100%
+  height: 100%
+  color: #fff
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  text-transform: uppercase
+
+#cp-video>.container
+  height: 100%
+.cp-video-frame
+  max-width: 640px
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 100%
+
+#cp-review
+  padding-bottom: 80px
+.cp-review-slider
+  max-width: 800px
+  margin: 0 auto
+.cp-review-item
+  margin-bottom: 30px
+.cp-review-add a
+  color: $bg
+  text-transform: uppercase
+  padding: 15px 30px
+  &:hover
+    background-color: $bg
+  i
+    margin-right: 15px
+
+#cp-contact
+  address
+    text-align: left
+
+
+.cp-footer
+  padding: 5px 0
+  .logo, .icons
+    margin-bottom: 0
+
+
+.cp-cart-icon
+  display: none
+  position: fixed
+  top: 150px
+  right: 50px
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  padding: 15px
+  opacity: 0.9
+  cursor: pointer
+  z-index: 10
+  // &:hover
+  //   .fa-shopping-cart
+  //     transition: all 0.2s ease
+  //     transform: rotateZ(-360deg)
+  i
+    color: $bg
+  .fa-shopping-cart
+    font-size: 3rem
+  span
+    position: absolute
+    background-color: $red
+    border-radius: 50%
+    width: 28px
+    height: 28px
+    color: $bg
+    line-height: 1
+    display: flex
+    justify-content: center
+    align-items: center
+  #val_cart
+    bottom: 0
+    right: -10px
+  #clear_cart
+    color: #000 !important
+    top: 0
+    right: -10px
+#modalCart
+  max-width: 500px
+  table
+    width: 100%
+  td
+    padding: 5px
+    border-top: 1px solid $gray
+#cartPriceSum, #cartValSum
+  font-weight: bold
+
+.message-wrapper
+  position: fixed
+  left: 0
+  top: 150px
+  z-index: 10
+.message-button
+  transform: rotate(-90deg)
+  position: absolute
+  right: -140px
+  top: 100px
+  width: 220px
+  text-align: center
+  padding: 5px 15px
+  color: $bg
+  cursor: pointer
+  transition: all 0.2s ease
+  opacity: 0.9
+  &:hover
+    background-color: $gray
+    color: $font-light
+    transition: all 0.2s ease
+.message-panel
+  display: none
+  position: absolute
+  top: 0
+  left: 5px
+  width: 300px
+  background-color: $bg
+  border-radius: 4px
+  padding: 10px
+  box-shadow: 1px 1px 5px $font-light
+
+.ajaxContent
+  width: 90%
+  max-width: 992px
+
+
+
+
+// @media only screen and (max-width : 1200px)
+
+
+@media only screen and (max-width : 992px)
+  .cp-gallery-items img, .cp-gallery-all
+    width: 160px
+
+
+@media only screen and (max-width : 767px)
+  .double-section-wrapper
+    flex-wrap: wrap
+    section
+      flex: 1 0 100%
+      width: 100%
+  .cp-gallery-items
+    justify-content: space-around
+  .cp-gallery-items a
+    margin-bottom: 1rem
+  .cp-gallery-items img, .cp-gallery-all
+    // width: 210px
+
+// @media only screen and (max-width : 576px)
+
+
+@media only screen and (max-width : 480px)
+  .cp-gallery-items img, .cp-gallery-all
+    width: 120px
+    height: 90px
+
+
+// @media only screen and (max-width : 320px)
+

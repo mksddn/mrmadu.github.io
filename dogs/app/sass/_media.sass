@@ -1,0 +1,239 @@
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  header li
+    margin: 0 20px
+  header ul
+    font-size: 1rem
+  .cart-icon
+    right: -5px
+
+  .main .container
+    background: none
+  .main
+    background-image: url(../img/bgmain.png)
+    background-repeat: no-repeat
+    background-position: calc(50% - 40px) 0
+    background-size: cover
+
+  .about .img .ny
+    top: -7%
+  .about .text
+    padding-left: 50px
+
+  .already .bloquote
+    right: 0
+    bottom: 0
+
+  .constructor .const-img
+    justify-content: space-around
+  .constructor .const-form img
+    width: 40px
+    height: 40px
+  .constructor .order p
+    font-size: 2rem
+  .constructor .order svg
+    right: 10px
+
+  .thank .bg > img:first-child
+    left: -200px
+  .thank .bg > img:nth-child(2)
+    right: -150px
+  .thank .bg .bloquote
+    right: 0
+
+  .form .bloquote
+    width: 180px
+  .form .container
+    background-size: 15%
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  body
+    margin-top: 50px
+  header nav
+    display: none
+  .mmenu
+    display: block
+  header .container
+    position: initial
+  header ul
+    position: absolute
+    display: block
+    width: 100%
+    height: auto
+    left: 0
+    top: 50px
+    background-color: $white
+    border: 1px solid $gray
+    z-index: 1000
+    li
+      margin: 30px
+  .cart-icon
+    top: 15px
+    right: 30px
+
+  .about .img .ny
+    display: none
+  .about .img
+    position: absolute
+    opacity: 0.2
+    right: 0
+
+  .constructor .const-img
+    display: none
+  .constructor .const-form
+    width: 100%
+  .constructor .const-form img
+    width: 100px
+    height: 100px
+
+  .thank .ny
+    display: none
+
+  .form .bloquote
+    width: 100%
+    top: -50px
+
+  footer .logo .decor
+    width: 200px
+  footer .contacts
+    width: 40%
+  footer .disclamer
+    width: 25%
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  h1
+    font-size: 3.2rem
+  h2
+    font-size: 1.5rem
+  .main .title h2
+    left: -20px
+    bottom: -70px
+
+  .about .bloquote
+    display: none
+
+  #summ
+    font-size: 2rem
+  #summ *
+    width: 100px
+    height: 100px
+  .already .bloquote
+    bottom: -90px
+
+  .help-items
+    flex-wrap: wrap
+  .help-item
+    width: 45%
+
+  .thank .bg > img:nth-child(2)
+    display: none
+  .thank .bg > img:first-child
+    opacity: 0.2
+    left: 0
+  .thank .bg .bloquote
+    display: none
+
+  .form .bloquote
+    top: -80px
+  .form .container
+    background: none
+
+  footer
+    padding: 0
+  footer .container
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+  footer .container>*
+    width: 100%
+    margin: 50px auto
+    height: auto
+  footer .disclamer
+    margin-top: 0
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  h1
+    font-size: 2rem
+  h2
+    font-size: 1.3rem
+  .main .title h2
+    font-size: 1.5rem
+    top: 40px
+    left: 0
+  .main .btn
+    padding: 10px 40px
+    font-size: 1rem
+  .main .bloquote
+    width: initial
+  .bloquote
+    font-size: 1.5rem
+
+  .about .text
+    padding: 0 15px
+
+  #summ span
+    width: 50px
+    height: 50px
+    font-size: 1.2rem
+
+  .constructor .container
+    padding: 30px
+
+  .help-item
+    width: 100%
+
+  .thank
+    padding-top: 30px
+  .thank p
+    padding: 0 15px
+  .thank .bloquote
+    width: 100%
+
+  .form input, .form button
+    font-size: 1rem
+    padding: 10px
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+
+/*==========  Mobile First  ==========*/
+
+@media only screen and (min-width : 320px)
+  /**/
+
+
+@media only screen and (min-width : 480px)
+  /**/
+
+@media only screen and (min-width : 576px)
+  .container
+    max-width: 540px
+
+
+@media only screen and (min-width : 768px)
+  .container
+    max-width: 720px
+
+
+@media only screen and (min-width : 992px)
+  .container
+    max-width: 960px
+
+
+@media only screen and (min-width : 1200px)
+  .container
+    max-width: 1280px
+

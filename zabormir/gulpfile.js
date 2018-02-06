@@ -120,6 +120,55 @@ gulp.task('fileinclude', function() {
 	}))
 	.pipe(concat('index.html'))
 	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/product.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('product.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/about.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('about.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/price.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('price.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/photo.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('photo.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/actions.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('actions.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/vacancy.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('vacancy.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/contacts.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('contacts.html'))
+	.pipe(gulp.dest('app/'));
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });

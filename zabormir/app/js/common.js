@@ -88,6 +88,8 @@ $(function() {
 
   $('.feats .section__content p').prepend('<i class="fas fa-check"></i>');
 
+  $('.about img').wrap('<div class="img_wr"></div>');
+
   $('.popup-link').magnificPopup({
     type: 'inline',
     fixedContentPos: false,

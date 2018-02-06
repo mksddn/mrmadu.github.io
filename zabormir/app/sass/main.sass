@@ -49,7 +49,7 @@ img
   display: inline-block
   text-transform: uppercase
   border: 1px solid $accent
-  padding: 15px 29px
+  padding: 15px 50px
   cursor: pointer
   transition: background-color 0.2s ease
   &:hover
@@ -101,7 +101,7 @@ section, footer
   background-position: 50%
   background-repeat: no-repeat
 
-.section__title
+.section__title, blockquote
   font-size: 2.3rem
   color: rgba(0, 0, 0, 0.8)
   position: relative
@@ -117,8 +117,31 @@ section, footer
     left: 0
     background-color: $accent
 
+blockquote
+  font-size: inherit
+  color: inherit
+
+form span
+  display: block
+  text-align: left
+  font-style: italic
+  margin-top: 15px
+
+.accent
+  color: $accent
+
+svg
+  color: $accent
+
 .section__content
   margin-bottom: 50px
+
+.section__content ul li
+  list-style-type: none
+  &:before
+    color: $accent
+    content: '•'
+    padding-right: 10px
 
 .thumb
   padding-left: 30px
@@ -153,6 +176,8 @@ section, footer
   background-color: #fff
   z-index: 90
   transition: 500ms all ease
+  .btn
+    padding: 15px 29px
   >.container
     padding: 15px 0
   &__logo img
@@ -183,7 +208,6 @@ section, footer
         top: 20%
         right: 0
         font-size: 1.7rem
-        color: $accent
     &__tel
       text-transform: uppercase
       color: $accent
@@ -248,6 +272,9 @@ section, footer
   h2
     font-size: 2rem
 
+.page_title
+  height: 220px
+
 .cats
   &__items
     justify-content: space-between
@@ -260,12 +287,6 @@ section, footer
     background-position: 50%
     position: relative
     transition: box-shadow 0.2s ease
-    &:hover
-      box-shadow: 0 0 30px $grey
-      transition: box-shadow 0.2s ease
-      h3
-        color: $accent
-        transition: color 0.2s ease
   h3
     position: absolute
     bottom: 0
@@ -277,12 +298,17 @@ section, footer
     margin: 0
     font-size: 1.5rem
     transition: color 0.2s ease
+.cats__item:hover, .product__item img:hover, .gallery img:hover
+  box-shadow: 0 0 30px $grey
+  transition: box-shadow 0.2s ease
+  h3
+    color: $accent
+    transition: color 0.2s ease
 
 .about
   &__item
     margin-top: 30px
     svg
-      color: $accent
       font-size: 2rem
       margin-bottom: 15px
 
@@ -308,7 +334,6 @@ section, footer
       position: absolute
       top: 5px
       left: 0
-      color: $accent
 
 .process
   .section__title
@@ -349,7 +374,6 @@ section, footer
     display: flex
   svg
     margin: 5px 15px 0 0
-    color: $accent
   address a
     color: inherit
 .disclamer
@@ -362,6 +386,99 @@ section, footer
   width: 100%
   position: absolute
   bottom: 0
+
+.about
+  .img
+    padding-right: 50px
+
+.img_wr
+  position: relative
+  max-width: 100%
+  width: 350px
+  height: 250px
+  display: block
+  margin-bottom: 50px
+  img
+    z-index: 10
+    position: relative
+  &:after
+    content: ''
+    max-width: 100%
+    width: 350px
+    height: 250px
+    border: 5px solid $accent
+    position: absolute
+    top: 30px
+    left: 30px
+    z-index: 0
+  &:nth-child(2n)
+    margin-left: auto
+    &:after
+      left: initial
+      right: 30px
+
+.product
+  &__items
+    justify-content: center
+    text-align: center
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-bottom: 30px
+    >*
+      margin-bottom: 15px
+    img
+      width: 90%
+      height: 250px
+      margin-left: auto
+      margin-right: auto
+    .btn
+      display: inline-table
+      margin-left: auto
+      margin-right: auto
+    h2
+      font-size: 1.5rem
+      font-weight: bold
+      margin: 0
+
+.gallery
+  ul
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    width: 100%
+    padding: 0
+    margin-bottom: 50px
+    list-style-type: none
+  li
+    padding: 0 15px
+    cursor: pointer
+    border-bottom: 3px solid $grey
+    transition: border 0.2s ease
+    &:hover
+      border-bottom: 3px solid $accent
+      transition: border 0.2s ease
+  li.current
+    border-bottom: 3px solid $accent
+  .section__content
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+    a
+      display: inline
+      width: 18%
+      height: 100%
+      margin: 5px
+
+.contacts
+  &__item
+    display: flex
+    margin-bottom: 15px
+    svg
+      margin-right: 15px
+      margin-top: 4px
 
 
 .modal
@@ -377,10 +494,6 @@ section, footer
     font-size: 2rem
   .btn
     margin-bottom: 15px
-  span
-    display: block
-    text-align: left
-    font-style: italic
 .my-mfp-slide-bottom
   .zoom-anim-dialog
     opacity: 0

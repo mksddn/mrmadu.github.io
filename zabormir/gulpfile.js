@@ -169,6 +169,21 @@ gulp.task('fileinclude', function() {
 	}))
 	.pipe(concat('contacts.html'))
 	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/archive.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('archive.html'))
+	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/single.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('single.html'))
+	.pipe(gulp.dest('app/'));
+
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });

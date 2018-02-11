@@ -170,9 +170,9 @@ svg
 
 
 .header
-  position: fixed
-  width: 100%
-  top: 0
+  // position: fixed
+  // width: 100%
+  // top: 0
   background-color: #fff
   z-index: 90
   transition: 500ms all ease
@@ -218,6 +218,10 @@ svg
         &:hover
           color: $accent
   &__menu
+    position: fixed
+    width: 100%
+    top: 150px
+    z-index: 100
     background-color: $grey
     color: #fff
   ul
@@ -253,7 +257,7 @@ svg
   z-index: 100
 
 .main
-  margin-top: 200px
+  // margin-top: 200px
   height: 540px
   text-align: center
   .container, .row
@@ -317,6 +321,7 @@ svg
   color: #fff
   p
     margin-bottom: 30px
+    text-shadow: 1px 1px 2px #000, 0 0 1em #000
 
 .feats
   .section__content
@@ -387,7 +392,7 @@ svg
   position: absolute
   bottom: 0
 
-.about, .archive
+.page_about, .archive
   .img
     padding-right: 50px
 

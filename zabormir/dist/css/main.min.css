@@ -2855,9 +2855,6 @@ svg {
     margin-right: 10px; }
 
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
   background-color: #fff;
   z-index: 90;
   -webkit-transition: 500ms all ease;
@@ -2924,6 +2921,10 @@ svg {
         .header__info__tel a:hover {
           color: #96a63a; }
   .header__menu {
+    position: fixed;
+    width: 100%;
+    top: 150px;
+    z-index: 100;
     background-color: #646464;
     color: #fff; }
   .header ul {
@@ -2985,7 +2986,6 @@ svg {
   z-index: 100; }
 
 .main {
-  margin-top: 200px;
   height: 540px;
   text-align: center; }
   .main .container, .main .row {
@@ -3083,7 +3083,8 @@ svg {
   text-align: center;
   color: #fff; }
   .cta p {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #000, 0 0 1em #000; }
 
 .feats .section__content {
   display: -webkit-box;
@@ -3174,7 +3175,7 @@ svg {
   position: absolute;
   bottom: 0; }
 
-.about .img, .archive .img {
+.page_about .img, .archive .img {
   padding-right: 50px; }
 
 .img_wr {
@@ -3389,6 +3390,10 @@ svg {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0; }
   .header__info__hours, .header__buttons, .header__menu {
     display: none; }
   .header__info__tel {
@@ -3397,6 +3402,8 @@ svg {
     padding-left: 20px; }
   .m-menu {
     display: block; }
+  .header__menu {
+    top: 80px; }
   .header__menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3409,7 +3416,7 @@ svg {
   .header ul a:hover {
     border: none; }
   .main {
-    margin-top: 95px;
+    margin-top: 80px;
     height: 420px; }
   .main h1 {
     font-size: 2.5rem; }
@@ -3426,7 +3433,7 @@ svg {
     padding: 50px; }
   .page_title {
     height: 180px; }
-  .about .img .img_wr:not(:nth-child(1)) {
+  .page_about .img .img_wr:not(:nth-child(1)) {
     display: none; }
   .contacts form {
     margin-bottom: 80px; } }
@@ -3437,8 +3444,6 @@ svg {
     display: none; }
   .m-menu {
     top: 15px; }
-  .main {
-    margin-top: 65px; }
   .main h1 {
     font-size: 2rem; }
   .main h2 {

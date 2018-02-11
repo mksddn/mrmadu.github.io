@@ -1,60 +1,40 @@
 $(function() {
 
-  $.throttle = function(func, wait, options) {
-    var context, args, result;
-    var timeout = null;
-    var previous = 0;
-    if (!options) options = {};
-    var later = function() {
-      previous = options.leading === false ? 0 : $.now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-    return function() {
-      var now = $.now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
-        }
-        previous = now;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining);
+  var h_hght = 150;
+  var h_mrg = 0;
+  var elem = $('.header__menu');
+  var top = $(this).scrollTop();
+  if ($(window).width() > 767){
+    if(top > h_hght){
+      elem.css('top', h_mrg);
+    }           
+    $(window).scroll(function(){
+      top = $(this).scrollTop();
+
+      if (top+h_mrg < h_hght) {
+        elem.css('top', (h_hght-top));
+      } else {
+        elem.css('top', h_mrg);
       }
-      return result;
-    };
-  };    
-  var lastScrollTop = 0;    
-  $(document).on('scroll', $.throttle(function() {
-    var stop = $(this).scrollTop();
-    if($(window).scrollTop() > (80)) {          
-      if (stop > lastScrollTop){
-        console.log('down');
-        if($('header').hasClass('header-fix'))
-        {
-          $('header').addClass('header-close');
-          $('header').removeClass('header-fix');
+    });
+  }
+  $(window).resize(function() {
+    if ($(window).width() > 767){
+      if(top > h_hght){
+        elem.css('top', h_mrg);
+      }           
+      $(window).scroll(function(){
+        top = $(this).scrollTop();
+
+        if (top+h_mrg < h_hght) {
+          elem.css('top', (h_hght-top));
+        } else {
+          elem.css('top', h_mrg);
         }
-      }
-      else
-      {
-        if($('header').hasClass('header-close'))
-        {
-          console.log('up');
-          $('header').addClass('header-fix');
-          $('header').removeClass('header-close');
-        } 
-      } 
-      lastScrollTop = stop;
+      });
     }
-  }, 100));
+  });
+
 
   $(".m-menu").click(function() {
     if($(".header__menu").is( ':hidden' )){
@@ -88,7 +68,7 @@ $(function() {
 
   $('.feats .section__content p').prepend('<i class="fas fa-check"></i>');
 
-  $('.about img, .archive img').wrap('<div class="img_wr"></div>');
+  $('.page_about img, .archive img').wrap('<div class="img_wr"></div>');
 
   $('.popup-link').magnificPopup({
     type: 'inline',

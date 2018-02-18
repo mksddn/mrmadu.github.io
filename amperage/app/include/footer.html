@@ -1,0 +1,130 @@
+<div id="call" class="zoom-anim-dialog mfp-hide">
+  <h1>Вызвать электрика</h1>
+  <form>
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="AMPERAGE">
+    <input type="hidden" name="admin_email" value="info@web-makster.ru">
+    <input type="hidden" name="form_subject" value="Вызов электрика из всплывающей формы">
+    <!-- END Hidden Required Fields -->
+    <div class="form__half">
+      <input type="text" name="Имя" placeholder="Имя" required>
+      <input type="email" name="E-mail" placeholder="E-mail" required>
+      <input type="tel" name="Телефон" placeholder="+7" required>
+    </div>
+    <div class="form__half">
+      <input type="text" name="Город" placeholder="Город" required>
+      <input type="text" name="Район" placeholder="Район">
+      <input type="text" name="Улица, номер дома" placeholder="Улица, номер дома">
+    </div>
+    <textarea name="Описание проблемы" placeholder="Описание проблемы" rows="5"></textarea>
+    <button class="btn btn-green">Вызвать электрика</button>
+  </form>
+</div>
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+// autohide header
+$.throttle = function(func, wait, options) {
+  var context, args, result;
+  var timeout = null;
+  var previous = 0;
+  if (!options) options = {};
+  var later = function() {
+    previous = options.leading === false ? 0 : $.now();
+    timeout = null;
+    result = func.apply(context, args);
+    if (!timeout) context = args = null;
+  };
+  return function() {
+    var now = $.now();
+    if (!previous && options.leading === false) previous = now;
+    var remaining = wait - (now - previous);
+    context = this;
+    args = arguments;
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+      previous = now;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining);
+    }
+    return result;
+  };
+};
+var lastScrollTop = 0;    
+$(document).on('scroll', $.throttle(function() {
+  var stop = $(this).scrollTop();
+  if($(window).scrollTop() > (80)) {          
+    if (stop > lastScrollTop){
+      console.log('down');
+      if($('.header').hasClass('header-min'))
+      {
+        $('.header').addClass('header-close');
+        $('.header').removeClass('header-min');
+      }
+    }
+    else
+    {
+      if($('.header').hasClass('header-close'))
+      {
+        console.log('up');
+        $('.header').addClass('header-min');
+        $('.header').removeClass('header-close');
+      } 
+    } 
+    lastScrollTop = stop;
+  }
+}, 100));
+
+// nav menu
+$(".header__menu").click(function() {
+  if($("header nav").is( ':hidden' )){
+    $("header nav").slideToggle(500);
+  } else {
+    $("header nav").slideUp(500);
+  }
+});
+$(document).mouseup(function (e) {
+  var container = $('header nav');
+  if (container.has(e.target).length === 0){
+    container.slideUp('fast');
+  }
+});
+
+// scroll to #
+$("nav").on('click','a[href^="#"]', function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+  top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
+});
+$(".main").on('click','a[href="#form"]', function (event) {
+  event.preventDefault();
+  var id  = $(this).attr('href'),
+  top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
+});
+
+// popup
+$('.popup').magnificPopup({
+  type: 'inline',
+  fixedContentPos: false,
+  fixedBgPos: true,
+  overflowY: 'auto',
+  closeBtnInside: true,
+  preloader: false,
+  midClick: true,
+  removalDelay: 300,
+  mainClass: 'my-mfp-slide-bottom'
+});
+
+});
+</script>
+</body>
+</html>

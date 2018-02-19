@@ -29,7 +29,7 @@
 
   .constructor .const-img
     justify-content: space-around
-  .constructor .const-form img
+  .constructor .const-form .des img
     width: 40px
     height: 40px
   .constructor .order p
@@ -83,11 +83,19 @@
     opacity: 0.2
     right: 0
 
+  .constructor>.container
+    flex-direction: column
   .constructor .const-img
-    display: none
+    width: 100%
+    .slider
+      padding-right: 0
+      img
+        height: 480px
+    .decor
+      display: none
   .constructor .const-form
     width: 100%
-  .constructor .const-form img
+  .constructor .const-form .des img
     width: 100px
     height: 100px
 
@@ -127,10 +135,15 @@
   .already .bloquote
     bottom: -90px
 
+  .constructor .const-img .slider img
+    height: 320px
+
   .help-items
     flex-wrap: wrap
   .help-item
     width: 45%
+  .help-item:nth-child(2n)
+    display: none
 
   .thank .bg > img:nth-child(2)
     display: none

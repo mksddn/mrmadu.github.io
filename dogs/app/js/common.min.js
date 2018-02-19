@@ -84,14 +84,34 @@ $('.slider').slick({
   asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
-  arrows: 0,
+  arrows: false,
   slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: '.slider',
   infinite: true,
   centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
+  responsive: [
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2
+    }
+  }
+  ]
 });
+
+if ($(window).width() < 992){
+    $('.const-img').insertBefore($('.const-form .form'));
+  }
 
 
 // Всплывашки

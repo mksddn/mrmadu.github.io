@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,700');
+
+@import "../libs/bootstrap-4.0.0-dist/css/bootstrap-reboot.min"
+@import "../libs/bootstrap-4.0.0-dist/css/bootstrap-grid.min"
+@import "../libs/font-awesome-4.7.0/css/font-awesome.min"
+
+$default-font: 'Roboto', sans-serif;
+$h-font: 'Montserrat', sans-serif;
+$light-font: #888888
+$accent: #bc9465
+$grey: #eeeeee
+$border-color: #e4e4e4
+$red: #c40b2b
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.7
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+img
+  max-width: 100%
+  max-height: 100%
+  object-fit: cover
+
+section
+  padding: 50px 0
+
+a
+  color: $accent
+  transition: all 0.2s ease
+  &:hover
+    transition: all 0.2s ease
+    text-decoration: none
+    color: inherit
+a.tel, a.email, a.social, nav a, .search i, .main__all-pr a, .catalog__item a
+  color: inherit
+  &:hover
+    color: $accent
+
+i, i:hover
+  transition: all 0.2s ease
+
+.title
+  font-family: $h-font
+
+.tozoom:before
+  content: '\f06e'
+  font-family: fontAwesome
+  margin-right: 5px
+
+.towish:before
+  content: '\f08a'
+  font-family: fontAwesome
+  margin-right: 5px
+
+.towish-already:before
+  content: '\f004'
+  font-family: fontAwesome
+  margin-right: 5px
+
+nav ul 
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+#mmenu
+  display: none
+
+.header
+  &__info
+    background-color: $grey
+    padding: 10px 0
+    &__items
+      display: flex
+      justify-content: space-between
+  &__menu
+    position: fixed
+    width: 100%
+    top: 50px
+    background-color: #fff
+    z-index: 100
+    padding: 10px 0
+    transition: 0.2s all ease
+    &-close
+      transform: translateY(-100%)
+      opacity: 0
+  nav
+    height: 100%
+  ul
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+  .search
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    i
+      cursor: pointer
+
+main
+  margin-top: 100px
+
+.main
+  &__all-pr
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    text-transform: uppercase
+    font-size: .9rem
+    font-weight: 700
+    i
+      margin-left: 15px
+
+.catalog
+  &__item
+    margin-bottom: 50px
+    img
+      background-color: $border-color
+      margin-bottom: 15px
+      transition: background-color 0.2s ease
+      &:hover
+        background-color: rgba(0,0,0,0.05)
+        transition: background-color 0.2s ease
+    &__order
+      color: $light-font
+      height: 75px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-bottom: 1px solid $border-color
+      padding-bottom: 15px
+      margin-bottom: 10px
+      span
+        display: block
+      .price-old
+        font-size: .9rem
+      i
+        font-size: 1.5rem
+    &__inter
+      color: $light-font
+      font-weight: 300
+      display: flex
+      justify-content: space-between
+  .action
+    &:before
+      content: 'Акция'
+      position: absolute
+      top: 0
+      padding: 5px 10px
+      background-color: $red
+      color: #fff
+      text-transform: uppercase
+
+.footer__info
+  padding: 50px 0
+  background-color: $grey
+.footer__logo
+  text-align: center
+  margin-bottom: 30px
+.footer__social
+  display: flex
+  justify-content: space-between
+.footer__copyright
+  background-color: #000
+  color: #fff
+  padding: 10px 0
+
+#toTop
+  position: fixed
+  bottom: 10px
+  right: 10px
+  cursor: pointer
+  display: none
+  background-color: $accent
+  color: #fff
+  border-radius: 50%
+  width: 40px
+  height: 40px
+  padding: 7px 12px
+
+
+@import "media" // Всегда в конце

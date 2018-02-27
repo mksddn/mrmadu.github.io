@@ -123,4 +123,10 @@ $('#toTop').click(function(){
 });
 
 
+// поле поиска
+$('#searchBtn').click(function(){
+  $('.search input').slideToggle();
+});
+
+
 });

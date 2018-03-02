@@ -4660,9 +4660,12 @@ main {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
 
-.catalog .action:before {
+.action:before {
   content: 'Акция';
   position: absolute;
   top: 0;
@@ -4675,6 +4678,10 @@ main {
   text-align: center; }
 
 .pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
@@ -4701,6 +4708,92 @@ main {
   text-align: center; }
   .page__title .title {
     text-transform: uppercase; }
+
+.object__img img {
+  background-color: #e4e4e4;
+  margin-bottom: 30px; }
+
+.object__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px; }
+
+.object__title h2 {
+  color: #bc9465;
+  font-weight: 400;
+  font-size: 2.5rem; }
+
+.object__price {
+  font-size: 2rem;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 30px; }
+
+.object__buttons {
+  margin-bottom: 30px; }
+  .object__buttons i {
+    margin-right: 10px; }
+
+.single__thumbnail {
+  text-align: center;
+  max-height: 300px;
+  margin-bottom: 30px; }
+
+.single__info {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 30px; }
+
+.single__date {
+  margin-bottom: 15px; }
+
+.single__title {
+  margin-bottom: 30px;
+  font-size: 1.5rem; }
+
+.single__share {
+  margin: 15px 0 30px 0; }
+
+.single__more {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.recommend__title {
+  text-align: center;
+  color: #bc9465;
+  font-size: 2rem;
+  margin: 50px auto; }
+
+table {
+  text-align: center;
+  width: 100%;
+  max-width: 100%; }
+  table .img img {
+    max-width: 100px; }
+  table th, table td {
+    padding: 15px; }
+  table .remove {
+    cursor: pointer; }
+  table i {
+    margin-right: 10px; }
 
 .sidebar__title {
   color: #bc9465;

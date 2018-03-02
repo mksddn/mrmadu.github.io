@@ -154,6 +154,13 @@ gulp.task('fileinclude', function() {
 	}))
 	.pipe(concat('single.html'))
 	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/object.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('object.html'))
+	.pipe(gulp.dest('app/'));
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });

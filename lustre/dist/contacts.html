@@ -185,6 +185,32 @@
   </div>
 </footer>
 
+<div class="modals">
+  <div id="cartModal" class="modal-window zoom-anim-dialog mfp-hide">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="img/1.png" alt="АЛЬТ">
+      </div>
+      <div class="col-sm-6">
+        <h3>Оформить заказ</h3>
+        <h4 class="title">Название товара</h4>
+        <form>
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Site Name">
+          <input type="hidden" name="admin_email" value="admin@mail.com">
+          <input type="hidden" name="form_subject" value="Form Subject">
+          <!-- END Hidden Required Fields -->
+          <input type="text" name="Имя" placeholder="Имя*" required><br>
+          <input type="email" name="E-mail" placeholder="E-mail*" required><br>
+          <input type="tel" name="Телефон" placeholder="Телефон"><br>
+          <textarea name="Комментарии" placeholder="Комментарии"></textarea>
+          <button class="btn btn-black">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <link rel="stylesheet" href="css/main.min.css">
 <script src="js/scripts.min.js"></script>
 

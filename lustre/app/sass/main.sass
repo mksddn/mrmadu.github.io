@@ -3,6 +3,7 @@
 @import "../libs/bootstrap-4.0.0-dist/css/bootstrap-reboot.min"
 @import "../libs/bootstrap-4.0.0-dist/css/bootstrap-grid.min"
 @import "../libs/font-awesome-4.7.0/css/font-awesome.min"
+@import "../libs/Magnific-Popup/dist/magnific-popup"
 
 $default-font: 'Roboto', sans-serif;
 $h-font: 'Montserrat', sans-serif;
@@ -405,6 +406,17 @@ table
   padding: 30px 0
   font-weight: 300
 
+.modal-window
+  background: white
+  padding: 30px 50px
+  text-align: left
+  max-width: 1000px
+  margin: 40px auto
+  position: relative
+  .title
+    color: $accent
+    margin: 15px 0
+
 #toTop
   position: fixed
   bottom: 100px
@@ -417,6 +429,26 @@ table
   width: 40px
   height: 40px
   padding: 7px 12px
+
+
+.my-mfp-slide-bottom
+  .zoom-anim-dialog
+    opacity: 0
+    transition: all 0.2s ease-out
+    transform: translateY(-20px) perspective(600px) rotateX(10deg)
+  &.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    transform: translateY(0) perspective(600px) rotateX(0)
+  &.mfp-removing .zoom-anim-dialog
+    opacity: 0
+    transform: translateY(-10px) perspective(600px) rotateX(10deg)
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.3s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0.8
+  &.mfp-removing.mfp-bg
+    opacity: 0
 
 
 @import "media" // Всегда в конце

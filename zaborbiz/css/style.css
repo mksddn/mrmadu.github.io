@@ -78,9 +78,9 @@ a:hover .ico{color:#445161;}
 .reviews .review-item{margin-bottom:20px;}
 .reviews .review-item .ava{width:50px;height:50px;border-radius:50px;overflow:hidden;}
 .badge{width:50px;height:auto;padding:0;font-size:50px;background-color:#ff8383;}
-.reviews .review-body{border-radius:5px;background-color:#fff;padding:10px;margin-left:100px;position:relative;border:3px solid #c5ced9;}
-.reviews .review-body:before{display:block;position:absolute;content:"";width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #c5ced9;left:-13px;top:28px;}
-.reviews .review-body p{font-size:20px;line-height:18px;font-style:italic;}
+.reviews .review-body{border-radius:5px;background-color:#fff;padding:10px;position:relative;border:3px solid #c5ced9;}
+/*.reviews .review-body:before{display:block;position:absolute;content:"";width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:10px solid #c5ced9;left:-13px;top:28px;}
+*/.reviews .review-body p{font-size:20px;line-height:18px;font-style:italic;}
 .reviews .review-body p.text-muted{margin-bottom:0;}
 .buy .price .head{text-align:center;text-transform:uppercase;color:white;padding:10px 0;background:#CC4545 url("../img/bg-buy.png") repeat;border-radius:5px 5px 0 0;}
 .buy .price .head h3{margin-bottom:0;}
@@ -123,9 +123,26 @@ a:hover .ico{color:#445161;}
 .show-more { margin-bottom: 30px; }
 .faq .show-more { width: 100%; text-align: left; }
 .reviews { text-align: center; }
+.reviews .icon {
+  font-size: 50px;
+  line-height: 0;
+}
+.review-item>.row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
 .reviews-slider { font-style: italic; }
 .slick-arrow { position: absolute; top: 38%; font-size: 30px; z-index: 10; cursor: pointer; left: -30px; }
 .slick-arrow.right { left: initial; right: -30px; }
+#action { text-align: center; }
+#action p { font-size: 20px; font-style: italic; }
 #modal {
   display: none;
   position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 1050;
@@ -136,6 +153,16 @@ a:hover .ico{color:#445161;}
   margin: 100px auto;
   padding: 30px;
   text-align: center;
+}
+#action, #faq {
+  background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
 }
 @media (min-width:1024px){body{font-size:16px;line-height:1.6;}
 h1{font-size:46px;margin-bottom:30px;}

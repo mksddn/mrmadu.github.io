@@ -1,0 +1,322 @@
+@import "fonts"
+
+@import "../libs/bootstrap/bootstrap-reboot"
+@import "../libs/bootstrap/bootstrap-grid"
+
+// $default-font: "roboto-example", sans-serif
+$accent: #05a2e9
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+  overflow-x: hidden
+  -webkit-overflow-scrolling: touch
+
+body
+  min-width: 320px
+  position: relative
+  // line-height: 1.75
+  // font-family: $default-font
+  overflow-x: hidden
+  opacity: 1
+  color: #727272
+
+.container
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+  width: 100%
+
+input, button
+  border: none
+  border-radius: 0
+  padding: 10px 30px
+  text-align: center
+  text-transform: uppercase
+  margin-bottom: 10px
+button
+  background-color: $accent
+  color: #fff
+  cursor: pointer
+  transition: all 0.2s ease
+  &:hover
+    transition: all 0.2s ease
+    background-color: lighten($accent, 15%)
+
+a
+  color: $accent
+  transition: all 0.2s ease
+  &:hover
+    transition: all 0.2s ease
+    text-decoration: none
+
+img
+  max-width: 100%
+  object-fit: cover
+
+section
+  padding: 80px 0
+  position: relative
+
+h1
+  font-size: 2rem
+  font-weight: bold
+
+span, h3
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+
+.title
+  display: block
+  text-transform: uppercase
+  text-align: center
+  span
+    font-size: 1.5rem
+    font-weight: 300
+
+.section__title
+  margin-bottom: 30px
+  color: #000
+  &:after
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $accent
+    margin: 0 auto
+    margin-top: -5px
+    display: block
+  h2:after
+    content: ''
+    width: 50px
+    height: 3px
+    background-color: $accent
+    margin: 0 auto
+    display: block
+
+.bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.4)
+
+.shadow
+  text-shadow: 1px 1px 2px #222, 0 0 0.3em #222
+  img, svg
+    -webkit-filter: drop-shadow(1px 1px 2px #222)
+    filter: drop-shadow(1px 1px 2px #222)
+
+blockquote
+  .quote
+    display: inline
+    color: $accent
+    font-size: 1.5rem
+    margin-right: 10px
+    margin-top: 30px
+
+#main
+  padding: 15px 0 50px
+  background-image: url(../img/header.jpg)
+  background-position: center
+  background-size: cover
+  height: 100vh
+  color: #fff
+  .container
+    height: 100%
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .logo img
+    width: 200px
+  .section__title
+    color: #fff
+    &:after
+      content: none
+  .pluse
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-content: center
+    text-align: center
+    margin-bottom: 15px
+    svg
+      font-size: 2rem
+      margin-bottom: 15px
+    span
+      font-weight: lighter
+      line-height: 1.2
+.main__contacts
+  position: relative
+  justify-content: space-around
+  font-weight: lighter
+  a
+    color: inherit
+    &:hover
+      text-decoration: underline
+
+
+.service__items
+  justify-content: center
+.service__item
+  margin-bottom: 30px
+  img
+    width: 100%
+    height: 150px
+    margin-bottom: 15px
+  .title
+    color: $accent
+    font-weight: bold
+    width: 90%
+    margin: 0 auto
+    font-size: 1rem
+
+#features
+  padding: 0
+  color: #fff
+  background-color: $accent
+  .section__title
+    color: #fff
+    text-align: right
+    padding-right: 100px
+    &:after, h2:after
+      background-color: #fff
+      margin-right: 0
+    &:after
+      margin-right: 15px
+      width: 50px
+    h2:after
+      width: 30px
+.features__img
+  background-image: url(../img/s6.jpg)
+  background-position: center
+  background-size: cover
+.features__wrapper
+  padding: 50px 0
+.features__item
+  padding-left: 70px
+.features__text
+  span
+    display: block
+    font-weight: lighter
+    margin-bottom: 30px
+.features__icon
+  color: $accent
+  background-color: #fff
+  border-radius: 50%
+  width: 50px
+  height: 50px
+  font-size: 1.5rem
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  margin-left: -95px
+  margin-top: 15px
+  position: absolute
+
+#cta
+  background-image: url(../img/form.jpg)
+  background-position: left top
+  background-size: cover
+  text-align: center
+.cta__title
+  color: #fff
+  font-size: 1.5rem
+.cta__form
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  justify-content: center
+  input, button
+    margin: 30px 15px 15px
+
+#reviews
+  background-image: url(../img/testimonials.png)
+  background-position: center
+  background-size: 100%
+  .bg
+    background-color: rgba(7, 164, 235, 0.7)
+  .section__title
+    color: #fff
+    &:after, h2:after
+      background-color: #fff
+      position: relative
+.reviews__item
+  background-color: #fff
+  padding: 30px
+  font-size: 0.8rem
+  span
+    color: $accent
+    font-style: italic
+    font-weight: bold
+
+#about
+  .section__title
+    text-align: left
+    padding-right: 100px
+    &:after, h2:after
+      margin-left: 0
+    &:after
+      margin-left: 15px
+      width: 50px
+    h2:after
+      width: 30px
+.about__text
+  font-size: 0.8rem
+
+footer
+  background-color: #122134
+  color: #fff
+  font-weight: lighter
+  padding: 15px 0
+.copyright
+  justify-content: center
+  margin-top: 15px
+
+
+
+
+
+
+@import "media" // Всегда в конце

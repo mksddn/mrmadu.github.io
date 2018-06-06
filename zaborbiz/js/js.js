@@ -50,17 +50,17 @@ $(window).scroll(function(){if($(window).scrollTop()>300)$('#slidebox').animate(
     return false;
   });
 
-  $(document).mouseleave(function(e){
-    if (e.clientY < 0) {
-      $('#modal').show();
-    }     
-  });
-  $(document).mouseup(function (e) {
-    var container = $('#modal');
-    if (container.has(e.target).length === 0){
-      container.hide();
-    }
-  });
+  // $(document).mouseleave(function(e){
+  //   if (e.clientY < 0) {
+  //     $('#modal').show();
+  //   }     
+  // });
+  // $(document).mouseup(function (e) {
+  //   var container = $('#modal');
+  //   if (container.has(e.target).length === 0){
+  //     container.hide();
+  //   }
+  // });
 
 
 });

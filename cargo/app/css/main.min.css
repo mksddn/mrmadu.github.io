@@ -2378,27 +2378,29 @@ body {
   padding-left: 15px;
   width: 100%; }
 
-input, button {
+input, button, .btn {
   border: none;
   -webkit-border-radius: 0;
           border-radius: 0;
   padding: 10px 30px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  max-width: 300px; }
 
-button {
+button, .btn {
   background-color: #05a2e9;
   color: #fff;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-  button:hover {
+  button:hover, .btn:hover {
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    background-color: #40c1fb; }
+    background-color: #40c1fb;
+    color: inherit; }
 
 a {
   color: #05a2e9;
@@ -2480,7 +2482,7 @@ blockquote .quote {
 
 #main {
   padding: 15px 0 50px;
-  background-image: url(../img/header.jpg);
+  background-image: url(https://images.unsplash.com/photo-1515358335577-551b1aa9ba09?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9c224b65bd4b07571ab0012eab64f1bc&auto=format&fit=crop&w=1350&q=80);
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2549,6 +2551,11 @@ blockquote .quote {
     color: inherit; }
     .main__contacts a:hover {
       text-decoration: underline; }
+
+.main__button .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .service__items {
   -webkit-box-pack: center;

@@ -1,4 +1,34 @@
-@@include('header.html')
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Title</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
 
 <section id="main" class="shadow">
   <div class="bg"></div>
@@ -24,7 +54,8 @@
         <img src="img/logo.png" alt="АЛЬТ">
       </div>
       <div class="col-12">
-        <h1>Доставка сложных грузов без задержек</h1>
+        <h1>Таможенное оформление</h1>
+        <h3>Доставка сложных грузов без задержек</h3>
         <span>Любым транспортом до двери</span>
       </div>
     </div>
@@ -54,21 +85,17 @@
   </div>
 </section>
 
-<section id="service">
+<section id="content">
   <div class="container">
     <div class="row title section__title">
       <div class="col-12">
-        <h2>Услуги</h2>
+        <h2>Таможенное оформление</h2>
       </div>
     </div>
-    <div class="row service__items">
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s1.jpg" alt="АЛЬТ"><h3 class="title">Таможенное оформление</h3></a></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s2.jpg" alt="АЛЬТ"><h3 class="title">Морские перевозки грузов</h3></a></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s3.jpg" alt="АЛЬТ"><h3 class="title">Контейнерные перевозки</h3></a></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s4.jpg" alt="АЛЬТ"><h3 class="title">Негабаритные грузы</h3></a></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s5.jpg" alt="АЛЬТ"><h3 class="title">Перетарка грузов</h3></a></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/port.jpeg" alt="АЛЬТ"><h3 class="title">Портовое экспедирование</h3></a></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s7.jpg" alt="АЛЬТ"><h3 class="title">Логистика</h3></a></div>
+    <div class="row content__text">
+      <div class="col-12">
+        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переписали путь над которой бросил заглавных, проектах текстами буквенных меня снова возвращайся заманивший жаренные образ щеке имени она, рукописи страна!</p>
+      </div>
     </div>
   </div>
 </section>
@@ -162,41 +189,16 @@
           <!-- END Hidden Required Fields -->
           <div id="step1" class="form__step">
             <div class="btn">Ответьте на вопросы</div>
-            <input type="text" name="Откуда везем" placeholder="Откуда везем" required>
-            <div class="btn toStep toStep2">Далее</div>
+            <input type="text" name="Вопрос 1" placeholder="Вопрос 1" required>
+            <div class="btn toStep2">Далее</div>
           </div>
           <div id="step2" class="form__step">
-            <div class="btn toStep toBack toStep1">Назад</div>
-            <input type="text" name="Куда везем" placeholder="Куда везем" required>
-            <div class="btn toStep toStep3">Далее</div>
+            <div class="btn toStep1">Назад</div>
+            <input type="text" name="Вопрос 2" placeholder="Вопрос 2" required>
+            <div class="btn toStep3">Далее</div>
           </div>
           <div id="step3" class="form__step">
-            <div class="btn toStep toBack toStep2">Назад</div>
-            <input type="text" name="Что везем" placeholder="Что везем" required>
-            <div class="btn toStep toStep4">Далее</div>
-          </div>
-          <div id="step4" class="form__step">
-            <div class="btn toStep toBack toStep3">Назад</div>
-            <input type="text" name="Вес" placeholder="Вес" required>
-            <div class="btn toStep toStep5">Далее</div>
-          </div>
-          <div id="step5" class="form__step">
-            <div class="btn toStep toBack toStep4">Назад</div>
-            <input type="text" name="Тип контейнера" placeholder="Тип контейнера" required>
-            <div class="btn toStep toStep6">Далее</div>
-          </div>
-          <div id="step6" class="form__step">
-            <div class="btn toStep toBack toStep5">Назад</div>
-            <input type="text" name="Количество контейнеров" placeholder="Количество контейнеров" required>
-            <div class="btn toStep toStep7">Далее</div>
-          </div>
-          <div id="step7" class="form__step">
-            <div class="btn toStep toBack toStep6">Назад</div>
-            <input type="text" name="Комментарий" placeholder="Комментарий" required>
-            <div class="btn toStep toStep8">Далее</div>
-          </div>
-          <div id="step8" class="form__step">
-            <div class="btn toStep toBack toStep7">Назад</div>
+            <div class="btn toStep2">Назад</div>
             <input type="tel" name="Телефон" placeholder="Ваш телефон" required><br>
             <button>Заказать расчет</button>
           </div>
@@ -284,4 +286,8 @@
   </div>
 </footer>
 
-@@include('footer.html')
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

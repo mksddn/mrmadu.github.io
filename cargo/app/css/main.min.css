@@ -2482,10 +2482,11 @@ blockquote .quote {
 
 #main {
   padding: 15px 0 50px;
-  background-image: url(https://images.unsplash.com/photo-1515358335577-551b1aa9ba09?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9c224b65bd4b07571ab0012eab64f1bc&auto=format&fit=crop&w=1350&q=80);
+  background-image: url(../img/header.jpg);
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: #fff; }
   #main .container {
@@ -2555,7 +2556,8 @@ blockquote .quote {
 .main__button .btn {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 30px; }
 
 .service__items {
   -webkit-box-pack: center;
@@ -2637,18 +2639,22 @@ blockquote .quote {
   margin-top: 15px;
   position: absolute; }
 
-#cta {
+#cta, #cta__steps {
   background-image: url(../img/form.jpg);
   background-position: left top;
   -webkit-background-size: cover;
           background-size: cover;
   text-align: center; }
 
+#cta__steps {
+  background-image: url(../img/cta.jpeg);
+  background-position: center; }
+
 .cta__title {
   color: #fff;
   font-size: 1.5rem; }
 
-.cta__form {
+.cta__form, .form__step {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -2660,14 +2666,28 @@ blockquote .quote {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  .cta__form input, .cta__form button {
-    margin: 30px 15px 15px; }
+  .cta__form input, .cta__form button, .cta__form .btn, .form__step input, .form__step button, .form__step .btn {
+    margin: 30px 15px 15px;
+    text-shadow: none; }
+
+.form__step {
+  display: none; }
+
+#step1 {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 #reviews {
   background-image: url(../img/testimonials.png);
   background-position: center;
   -webkit-background-size: 100% 100%;
-          background-size: 100%; }
+          background-size: 100%;
+  background-attachment: fixed; }
   #reviews .bg {
     background-color: rgba(7, 164, 235, 0.7); }
   #reviews .section__title {
@@ -2734,12 +2754,13 @@ footer {
     text-align: right; }
   .features__icon {
     margin-left: 30px; }
-  .cta__form {
+  .cta__form, .form__step {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
-  .cta__form input, .cta__form button {
-    margin: 15px; } }
+  .cta__form input, .cta__form button, .cta__form .btn {
+    margin: 15px;
+    width: 100%; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

@@ -146,9 +146,10 @@ blockquote
 
 #main
   padding: 15px 0 50px
-  background-image: url(https://images.unsplash.com/photo-1515358335577-551b1aa9ba09?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9c224b65bd4b07571ab0012eab64f1bc&auto=format&fit=crop&w=1350&q=80)
+  background-image: url(../img/header.jpg)
   background-position: center
   background-size: cover
+  background-attachment: fixed
   height: 100vh
   color: #fff
   .container
@@ -195,6 +196,7 @@ blockquote
   display: block
   margin-left: auto
   margin-right: auto
+  margin-bottom: 30px
 
 
 .service__items
@@ -259,28 +261,42 @@ blockquote
   margin-top: 15px
   position: absolute
 
-#cta
+#cta, #cta__steps
   background-image: url(../img/form.jpg)
   background-position: left top
   background-size: cover
   text-align: center
+#cta__steps
+  background-image: url(../img/cta.jpeg)
+  background-position: center
 .cta__title
   color: #fff
   font-size: 1.5rem
-.cta__form
+.cta__form, .form__step
   display: -webkit-flex
   display: -moz-flex
   display: -ms-flex
   display: -o-flex
   display: flex
   justify-content: center
-  input, button
+  input, button, .btn
     margin: 30px 15px 15px
+    text-shadow: none
+
+.form__step
+  display: none
+#step1
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
 
 #reviews
   background-image: url(../img/testimonials.png)
   background-position: center
   background-size: 100%
+  background-attachment: fixed
   .bg
     background-color: rgba(7, 164, 235, 0.7)
   .section__title

@@ -60,7 +60,7 @@
     </div>
     <div class="row main__button">
       <div class="col-12">
-        <a href="#" class="btn">Рассчитать стоимость</a>
+        <a href="#cta__steps" class="btn">Рассчитать стоимость</a>
       </div>
     </div>
     <div class="row pluses">
@@ -92,13 +92,37 @@
       </div>
     </div>
     <div class="row service__items">
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="img/s1.jpg" alt="АЛЬТ"><h3 class="title">Таможенное оформление</h3></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="img/s2.jpg" alt="АЛЬТ"><h3 class="title">Морские перевозки грузов</h3></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="img/s3.jpg" alt="АЛЬТ"><h3 class="title">Контейнерные перевозки</h3></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="img/s4.jpg" alt="АЛЬТ"><h3 class="title">Негабаритные грузы</h3></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="img/s5.jpg" alt="АЛЬТ"><h3 class="title">Перетарка грузов</h3></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="https://images.unsplash.com/photo-1510681916233-314f497f3301?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8d98f0d50ef38004d5188e44d79226d9&auto=format&fit=crop&w=750&q=80" alt="АЛЬТ"><h3 class="title">Портовое экспедирование</h3></div>
-      <div class="col-6 col-sm-4 col-md-3 service__item"><img src="img/s7.jpg" alt="АЛЬТ"><h3 class="title">Логистика</h3></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s1.jpg" alt="АЛЬТ"><h3 class="title">Таможенное оформление</h3></a></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s2.jpg" alt="АЛЬТ"><h3 class="title">Морские перевозки грузов</h3></a></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s3.jpg" alt="АЛЬТ"><h3 class="title">Контейнерные перевозки</h3></a></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s4.jpg" alt="АЛЬТ"><h3 class="title">Негабаритные грузы</h3></a></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s5.jpg" alt="АЛЬТ"><h3 class="title">Перетарка грузов</h3></a></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/port.jpeg" alt="АЛЬТ"><h3 class="title">Портовое экспедирование</h3></a></div>
+      <div class="col-6 col-sm-4 col-md-3 service__item"><a href="singular.html"><img src="img/s7.jpg" alt="АЛЬТ"><h3 class="title">Логистика</h3></a></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="shadow">
+  <div class="bg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 cta__title">
+        <h4>Закажите перевозку Вашего груза у нас впервые и получите экспедирование В ПОДАРОК</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <form class="cta__form">
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Site Name">
+          <input type="hidden" name="admin_email" value="admin@mail.com">
+          <input type="hidden" name="form_subject" value="Form Subject">
+          <!-- END Hidden Required Fields -->
+          <input type="tel" name="Телефон" placeholder="Ваш телефон" required>
+          <button>Заказать звонок</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -150,12 +174,12 @@
   </div>
 </section>
 
-<section id="cta" class="shadow">
+<section id="cta__steps" class="shadow">
   <div class="bg"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2 cta__title">
-        <h4>Закажите перевозку Вашего груза у нас впервые и получите экспедирование В ПОДАРОК</h4>
+        <h4>Рассчитать стоимость перевозки груза</h4>
       </div>
     </div>
     <div class="row">
@@ -166,8 +190,46 @@
           <input type="hidden" name="admin_email" value="admin@mail.com">
           <input type="hidden" name="form_subject" value="Form Subject">
           <!-- END Hidden Required Fields -->
-          <input type="tel" name="Телефон" placeholder="Ваш телефон" required><br>
-          <button>Заказать звонок</button>
+          <div id="step1" class="form__step">
+            <div class="btn">Ответьте на вопросы</div>
+            <input type="text" name="Откуда везем" placeholder="Откуда везем" required>
+            <div class="btn toStep toStep2">Далее</div>
+          </div>
+          <div id="step2" class="form__step">
+            <div class="btn toStep toBack toStep1">Назад</div>
+            <input type="text" name="Куда везем" placeholder="Куда везем" required>
+            <div class="btn toStep toStep3">Далее</div>
+          </div>
+          <div id="step3" class="form__step">
+            <div class="btn toStep toBack toStep2">Назад</div>
+            <input type="text" name="Что везем" placeholder="Что везем" required>
+            <div class="btn toStep toStep4">Далее</div>
+          </div>
+          <div id="step4" class="form__step">
+            <div class="btn toStep toBack toStep3">Назад</div>
+            <input type="text" name="Вес" placeholder="Вес" required>
+            <div class="btn toStep toStep5">Далее</div>
+          </div>
+          <div id="step5" class="form__step">
+            <div class="btn toStep toBack toStep4">Назад</div>
+            <input type="text" name="Тип контейнера" placeholder="Тип контейнера" required>
+            <div class="btn toStep toStep6">Далее</div>
+          </div>
+          <div id="step6" class="form__step">
+            <div class="btn toStep toBack toStep5">Назад</div>
+            <input type="text" name="Количество контейнеров" placeholder="Количество контейнеров" required>
+            <div class="btn toStep toStep7">Далее</div>
+          </div>
+          <div id="step7" class="form__step">
+            <div class="btn toStep toBack toStep6">Назад</div>
+            <input type="text" name="Комментарий" placeholder="Комментарий" required>
+            <div class="btn toStep toStep8">Далее</div>
+          </div>
+          <div id="step8" class="form__step">
+            <div class="btn toStep toBack toStep7">Назад</div>
+            <input type="tel" name="Телефон" placeholder="Ваш телефон" required><br>
+            <button>Заказать расчет</button>
+          </div>
         </form>
       </div>
     </div>
@@ -208,23 +270,23 @@
 <section id="about">
   <div class="container">
     <div class="row">
-    <div class="col-md-6 about__wrapper">
-      <div class="row title section__title">
-        <div class="col-12">
-          <h2>О компании</h2>
+      <div class="col-md-6 about__wrapper">
+        <div class="row title section__title">
+          <div class="col-12">
+            <h2>О компании</h2>
+          </div>
+        </div>
+        <div class="row about__text">
+          <div class="col-12">
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Рекламных власти он своих приставка что единственное семь, скатился страна заглавных встретил одна предупреждал инициал возвращайся она, жизни вопроса точках!</p>
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Продолжил они страну родного парадигматическая щеке послушавшись буквенных рот живет текстами курсивных рекламных, дорогу если, ведущими, языком злых предупреждал необходимыми.</p>
+          </div>
         </div>
       </div>
-      <div class="row about__text">
-        <div class="col-12">
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Рекламных власти он своих приставка что единственное семь, скатился страна заглавных встретил одна предупреждал инициал возвращайся она, жизни вопроса точках!</p>
-          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Продолжил они страну родного парадигматическая щеке послушавшись буквенных рот живет текстами курсивных рекламных, дорогу если, ведущими, языком злых предупреждал необходимыми.</p>
-        </div>
+      <div class="col-md-6 d-none d-md-block about__img">
+        <img src="img/about.jpg" alt="АЛЬТ">
       </div>
     </div>
-    <div class="col-md-6 d-none d-md-block about__img">
-      <img src="img/about.jpg" alt="АЛЬТ">
-    </div>
-  </div>
   </div>
 </section>
 

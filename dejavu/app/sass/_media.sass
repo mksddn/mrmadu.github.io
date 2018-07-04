@@ -1,0 +1,114 @@
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .book__form > div:last-child
+    width: auto
+  .contacts__form textarea
+    width: auto
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  .vcard
+    flex-wrap: wrap
+  .book
+    bottom: -150px
+  .book__form
+    flex-wrap: wrap
+    height: auto
+    & > div
+      border: none
+      margin-bottom: 15px
+    & .to, & .out
+      width: 50%
+    & .place, & .child
+      justify-content: flex-end
+    & input
+      margin-bottom: 15px
+
+  .about__wrapper .text
+    width: 100%
+  .about__wrapper .img
+    position: absolute
+    right: 0
+    opacity: 0.2
+    height: 100%
+    img
+      height: 100%
+
+  .fond__slider__for__item__wrapper
+    flex-wrap: wrap
+  .fond__slider__for__img
+    width: 100%
+  .fond__slider__for__img img
+    max-height: initial
+  .fond__slider__nav
+    .slick-prev
+      left: 0
+    .slick-next
+      right: 0
+
+  .contacts
+    flex-wrap: wrap
+  .ymap-container
+    width: 100%
+  .contacts__form
+    width: 100%
+  .contacts__form__wrapper
+    flex-direction: column
+    align-items: baseline
+  .contacts__form input, .contacts__form textarea
+    display: block
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .vcard
+    flex-direction: column
+    .tel a
+      display: block
+  .book__form .accept
+    width: 400px
+    line-height: 0.3
+    bottom: -5px
+
+  .description
+    flex-wrap: wrap
+  .features, .reviews
+    width: 100%
+
+  .fond__slider__for__desc
+    width: 100%
+  .fond .table
+    flex-wrap: wrap
+    justify-content: space-between
+    .month
+      margin-bottom: 15px
+  .fond__slider__nav img
+    width: 40%
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .book
+    bottom: -500px
+  .book__form > div
+    width: 100% !important
+
+  .about
+    padding-top: 550px
+
+  .features__item
+    width: 100%
+
+  .fond__slider__nav img
+    width: 30%
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+

@@ -1,0 +1,475 @@
+@import "fonts"
+
+@import "../libs/bootstrap/bootstrap-reboot"
+@import "../libs/bootstrap/bootstrap-grid"
+@import "../libs/slick/slick"
+@import "../libs/fancybox/jquery.fancybox.min"
+
+$default-font: "montserrat", sans-serif
+$accent: linear-gradient( 90deg, rgb(235,163,37) 0%, rgb(235,37,46) 100%)
+$yellow: rgb(235, 163, 37)
+$red: rgb(255, 0, 0)
+$white: #ffffff
+$shadow: 1px 2px 2px rgba(159, 56, 0, 0.9)
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+body
+  min-width: 320px
+  position: relative
+  line-height: 1.5
+  font-family: $default-font
+  overflow-x: hidden
+  opacity: 1
+  color: rgb(65, 81, 106)
+
+a
+  color: $white
+  transition: all 0.2s ease
+  &:hover
+    transition: all 0.2s ease
+    text-decoration: none
+  &:after
+    transition: all 0.2s ease
+  &:hover:after
+    transition: all 0.2s ease
+
+input, textarea
+  display: block
+  padding: 10px
+input[type=checkbox]
+  display: inline-block
+label
+  
+
+section
+  padding: 50px 0
+
+img
+  max-width: 100%
+  object-fit: cover
+
+#toTop
+  position: fixed
+  bottom: 50px
+  left: 50px
+  cursor: pointer
+  display: none
+  background-color: $red
+  color: $white
+  opacity: 0.7
+  font-size: 2rem
+  border-radius: 50%
+  width: 50px
+  height: 50px
+  padding: 0 15px
+
+.btn, button:not(.fancybox-close-small)
+  background: $accent
+  padding: 15px 30px
+  width: 250px
+  display: inline-block
+  border-radius: 50px
+  text-transform: uppercase
+  font-weight: bold
+  text-shadow: $shadow
+  position: relative
+  text-align: center
+  color: $white
+  cursor: pointer
+  transition: all 0.2s ease
+  &:hover
+    color: $white
+    box-shadow: 2px 2px 20px rgba(159, 56, 0, 1)
+    transition: all 0.2s ease
+
+
+.header
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 100
+  // overflow: hidden
+  transition: 500ms all ease
+  &_close
+    opacity: 0
+    transform: translateY(-100%)
+  &_bg
+    background-color: rgba(0,0,0,0.5)
+  .contacts, .nav
+    padding: 30px 0
+  a
+    padding: 15px
+  .tel
+    z-index: 5
+    position: relative
+nav
+  width: 100%
+  text-align: right
+  text-transform: uppercase
+  ul
+    list-style-type: none
+    width: 100%
+    margin: 0
+    padding: 0
+  li
+    display: inline-block
+  a
+    position: relative
+    &:hover
+      color: $white
+    &:after
+      content: ''
+      width: 0%
+      height: 3px
+      position: absolute
+      bottom: 5px
+      left: 0
+      background-color: $white
+    &:hover:after
+      width: 100%
+
+.mmenu
+  display: none
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  height: 100%
+  text-align: right
+  color: $white
+  font-size: 1.8rem
+  svg
+    margin-top: 32px
+    cursor: pointer
+    transition: all 0.2s ease
+    &:hover
+      color: $yellow
+      transition: all 0.2s ease
+  .mnav
+    transform: translateX(120%)
+    transition: transform 0.5s ease
+    box-shadow: 0 0 30px rgba(0,0,0,1)
+    position: absolute
+    top: 0
+    right: 0
+    height: 100vh
+    min-width: 40vw
+    background: $accent
+    z-index: 6
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    align-content: center
+    li
+      display: block
+      text-align: center
+      margin-bottom: 30px
+      font-size: 1.2rem
+    &__logo
+      display: flex
+
+.main
+  background-image: url(../img/main.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 0% 100%
+  text-align: center
+  padding-top: 150px
+  padding-bottom: 150px
+  color: $white
+  text-shadow: 1px 1px 2px #000
+  &__logo
+    margin-bottom: 30px
+  &__title
+    text-transform: uppercase
+    width: 60%
+    margin: auto
+    font-size: 2.2rem
+  &__subtitle
+    font-size: 1.3rem
+    margin-bottom: 50px
+
+.section__title
+  text-align: center
+  font-size: 1.8rem
+  margin-bottom: 50px
+  &:after
+    content: ''
+    display: block
+    width: 50px
+    height: 3px
+    background-color: $yellow
+    margin: 10px auto
+.full_title
+  background: $accent
+  padding: 15px 0
+  h2
+    margin: 0
+    color: $white
+    text-shadow: $shadow
+    &:after
+      background-color: $white
+      box-shadow: $shadow
+
+.left
+  text-align: left
+.right
+  text-align: right
+
+.service
+  &__img
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+  &__item
+    display: flex
+    margin-bottom: 30px
+  &__text
+    width: 80%
+    p
+      font-size: 0.9rem
+  &__icon
+    width: 25%
+    font-size: 2.5rem
+    color: $yellow
+    margin-top: -5px
+  &__btn
+    text-align: center
+    margin-top: 30px
+
+.portfolio
+  &__items
+    display: flex
+    flex-wrap: wrap
+  &__item
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    min-height: 300px
+    flex-grow: 1
+    width: 30%
+    overflow: hidden
+    &__info
+      height: 100%
+      width: 100%
+      color: $white
+      text-shadow: $shadow
+      padding: 15px
+      background: $accent
+      opacity: 0.8
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      transform: translateY(100%)
+      transition: transform 1s ease
+    &:hover
+      .portfolio__item__info
+        transform: translateY(0)
+        transition: transform 1s ease
+  h3
+    position: relative
+    margin-bottom: 20px
+    &:after
+      content: ''
+      width: 50px
+      height: 3px
+      background-color: $white
+      position: absolute
+      left: 0
+      bottom: -10px
+      box-shadow: $shadow
+  p
+    margin: 0
+    margin-bottom: 15px
+  .btn
+    background: $white
+    color: $red
+
+
+.steps
+  &__items
+    justify-content: center
+    align-content: center
+  &__item
+    text-align: center
+    font-weight: 600
+    margin-bottom: 30px
+  &__item__icon
+    background: $accent
+    display: inline-block
+    padding: 10px
+    color: $white
+    border-radius: 50%
+    font-size: 2.2rem
+    width: 80px
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto 15px
+    filter: drop-shadow($shadow)
+
+.achieve
+  &__item
+    text-align: center
+    color: $white
+    text-shadow: $shadow
+    padding: 30px
+    &__icon
+      font-size: 2.5rem
+      filter: drop-shadow($shadow)
+    span:first-child
+      display: block
+      font-size: 1.8rem
+      font-weight: bold
+
+.cta
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  color: $white
+  text-align: center
+  padding: 50px 0
+  p
+    font-size: 1.5rem
+    font-weight: bold
+
+.reviews
+  text-align: center
+
+.logos
+  background-color: rgb(247, 249, 251)
+  &__items
+    justify-content: center
+    align-items: center
+    align-content: center
+  &__item
+    margin-bottom: 30px
+
+.price
+  &__item
+    text-align: center
+    padding: 5px
+    &__wrapper
+      box-shadow: 0px 15px 18px 2px rgba(39, 34, 28, 0.1)
+      padding: 30px
+    &:hover
+      background: $accent
+      color: $white
+      box-shadow: 0px 15px 18px 2px rgba(39, 34, 28, 0.1)
+      .price__item__wrapper
+        box-shadow: none
+      .price__summ
+        color: $white
+        border-bottom: 1px solid rgba(255,255,255,0.3)
+      .btn
+        background: $white
+        color: $red
+        text-shadow: none
+  h4
+    font-size: 1.8rem
+    font-weight: bold
+  &__summ
+    display: inline-block
+    color: $yellow
+    font-size: 2.2rem
+    font-weight: bold
+    border-bottom: 1px solid rgba(0,0,0,0.3)
+    padding-bottom: 15px
+    margin-bottom: 20px
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    margin-bottom: 30px
+  li
+    margin-bottom: 15px
+  .btn
+    width: auto
+
+.footer
+  background-color: rgb(44, 56, 62)
+  padding: 30px 0 0
+  color: $white
+  a
+    padding: 15px
+  ul
+    padding: 0
+.copyright
+  border-top: 1px solid rgba(255,255,255,0.3)
+  margin-top: 15px
+  span
+    display: inline-block
+    padding: 15px
+
+.slick-dots
+  padding: 0
+  li
+    display: inline-block
+    margin: 60px 15px 0
+    &:after
+      content: ''
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: $yellow
+      position: absolute
+      cursor: pointer
+  .slick-active
+    &:after
+      background-color: $red
+  button
+    display: none
+
+.modal
+  text-align: center
+  background: rgba(255,255,255,0.8)
+  border-radius: 4px
+  .input_item
+    margin-bottom: 15px
+  span
+    display: inline-block
+    margin-bottom: 15px
+    font-style: italic
+    font-weight: bold
+  label
+    &:not(.forCheck)
+      width: 100%
+    input, textarea
+      margin-top: 5px
+      width: 100%
+    input[type=checbox]
+      width: auto
+  textarea
+    height: 100px
+
+
+@import "media" // Всегда в конце

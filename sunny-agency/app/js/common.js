@@ -88,11 +88,30 @@
       slidesToShow: 1,
       slidesToScroll: 1
     });
+    $('.testimonials__slider').slick({
+      autoplay: true,
+      arrows: false,
+      dots: true,
+      autoHeigth: true,
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
+    });
 
     if(navigator.userAgent.match(/(iPhone|iPod|iPad)/i)){
       $('.portfolio__item').hover(function(){
         console.log('Так и не разобрался! Без этого куска кода на айфонах событие не срабатывает...')
       });
     }
+
+    $( "#accordion" ).accordion();
 
   });

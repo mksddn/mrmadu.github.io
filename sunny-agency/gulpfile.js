@@ -123,6 +123,13 @@ gulp.task('fileinclude', function() {
 	}))
 	.pipe(concat('index.html'))
 	.pipe(gulp.dest('app/'));
+	gulp.src(['app/include/service.html'])
+	.pipe(fileinclude({
+		prefix: '@@',
+		basepath: '@file'
+	}))
+	.pipe(concat('service.html'))
+	.pipe(gulp.dest('app/'));
 });
 
 gulp.task('removedist', function() { return del.sync('dist'); });

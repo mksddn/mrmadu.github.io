@@ -11,6 +11,8 @@ $yellow: rgb(235, 163, 37)
 $red: rgb(255, 0, 0)
 $white: #ffffff
 $shadow: 1px 2px 2px rgba(159, 56, 0, 0.9)
+$box-shadow: 0px 5px 18px 2px rgba(39, 34, 28, 0.1)
+$black: rgb(65, 81, 106)
 
 *::-webkit-input-placeholder
   color: #666
@@ -45,7 +47,7 @@ body
   font-family: $default-font
   overflow-x: hidden
   opacity: 1
-  color: rgb(65, 81, 106)
+  color: $black
 
 a
   color: $white
@@ -71,6 +73,7 @@ section
 
 img
   max-width: 100%
+  max-height: 100%
   object-fit: cover
 
 #toTop
@@ -128,6 +131,13 @@ img
   .tel
     z-index: 5
     position: relative
+  &__logo
+    display: flex
+    justify-content: center
+    align-items: center
+    align-content: center
+    img
+      max-height: 70px
 nav
   width: 100%
   text-align: right
@@ -153,6 +163,19 @@ nav
       background-color: $white
     &:hover:after
       width: 100%
+
+.page
+  .header
+    background-color: rgba(255,255,255,0.9)
+    a
+      color: $black
+    &__logo
+      a
+        padding: 0
+    nav
+      a
+        &:after
+          background-color: $yellow
 
 .mmenu
   display: none
@@ -194,6 +217,14 @@ nav
       font-size: 1.2rem
     &__logo
       display: flex
+.page
+  .mmenu
+    color: $black
+  .mnav
+    a
+      color: $white
+      &:hover:after
+        background-color: $white
 
 .main
   background-image: url(../img/main.jpg)
@@ -215,6 +246,10 @@ nav
   &__subtitle
     font-size: 1.3rem
     margin-bottom: 50px
+
+.page
+  .main
+    padding-bottom: 100px
 
 .section__title
   text-align: center
@@ -264,6 +299,34 @@ nav
   &__btn
     text-align: center
     margin-top: 30px
+
+.faq
+  padding-top: 0
+  &__items
+    .btn
+      width: 100%
+      text-align: left
+      padding: 5px 30px
+      text-transform: none
+    div
+      margin-bottom: 15px
+.service__description
+  margin-bottom: 15px
+  ul
+    list-style: none
+    padding: 0
+  li
+    padding-left: 15px
+    margin-bottom: 10px
+  li:before
+    content: "\f058"
+    font-family: "Font Awesome 5 Free"
+    display: inline-block
+    font-size: 0
+  li svg 
+    color: $red
+    font-size: 1.2rem
+    margin: 0 15px 0 -15px
 
 .portfolio
   &__items
@@ -365,6 +428,46 @@ nav
 .reviews
   text-align: center
 
+.testimonials
+  &__item
+    display: flex
+    flex-direction: column
+    box-shadow: $box-shadow
+    padding: 30px
+    border-radius: 10px
+    position: relative
+    &:after
+      content: '\201d'
+      position: absolute
+      font-family: serif
+      bottom: 5%
+      left: 5%
+      font-size: 500px
+      line-height: 0
+      opacity: 0.1
+      z-index: 0
+    &__wrapper
+      padding: 15px
+  .author
+    display: flex
+    align-items: center
+    margin-bottom: 30px
+    z-index: 1
+    span
+      display: block
+      font-weight: bold
+      &:nth-child(2)
+        color: $yellow
+        font-size: 0.9rem
+  img
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    margin-right: 30px
+  .comment
+    z-index: 1
+
+
 .logos
   background-color: rgb(247, 249, 251)
   &__items
@@ -379,12 +482,12 @@ nav
     text-align: center
     padding: 5px
     &__wrapper
-      box-shadow: 0px 15px 18px 2px rgba(39, 34, 28, 0.1)
+      box-shadow: $box-shadow
       padding: 30px
     &:hover
       background: $accent
       color: $white
-      box-shadow: 0px 15px 18px 2px rgba(39, 34, 28, 0.1)
+      box-shadow: $box-shadow
       .price__item__wrapper
         box-shadow: none
       .price__summ
@@ -432,6 +535,7 @@ nav
 
 .slick-dots
   padding: 0
+  text-align: center
   li
     display: inline-block
     margin: 60px 15px 0

@@ -91,7 +91,7 @@ img
   height: 50px
   padding: 0 15px
 
-.btn, button:not(.fancybox-close-small)
+.btn, form button
   background: $accent
   padding: 15px 30px
   width: 250px
@@ -136,8 +136,10 @@ img
     justify-content: center
     align-items: center
     align-content: center
-    img
-      max-height: 70px
+    svg
+      max-height: 60px
+      width: 100%
+      height: 100%
 nav
   width: 100%
   text-align: right
@@ -207,7 +209,7 @@ nav
     z-index: 6
     display: flex
     flex-direction: column
-    justify-content: space-around
+    justify-content: space-evenly
     align-items: center
     align-content: center
     li
@@ -217,6 +219,9 @@ nav
       font-size: 1.2rem
     &__logo
       display: flex
+      svg
+        width: 100%
+        height: 100%
 .page
   .mmenu
     color: $black
@@ -238,6 +243,8 @@ nav
   text-shadow: 1px 1px 2px #000
   &__logo
     margin-bottom: 30px
+    svg
+      max-height: 120px
   &__title
     text-transform: uppercase
     width: 60%
@@ -318,11 +325,10 @@ nav
   li
     padding-left: 15px
     margin-bottom: 10px
-  li:before
-    content: "\f058"
-    font-family: "Font Awesome 5 Free"
-    display: inline-block
-    font-size: 0
+    &:before
+      content: "\f058"
+      font-family: "Font Awesome 5 Free"
+      font-size: 0
   li svg 
     color: $red
     font-size: 1.2rem
@@ -427,6 +433,25 @@ nav
 
 .reviews
   text-align: center
+  &__item
+    text-align: center
+    padding: 15px
+    a
+      max-width: 520px
+      width: 100%
+      height: 290px
+      display: block
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      align-content: center
+      font-size: 4rem
+      color: $yellow
+      &:hover
+        color: $red
 
 .testimonials
   &__item
@@ -497,6 +522,11 @@ nav
         background: $white
         color: $red
         text-shadow: none
+  &__link
+    color: $white
+    display: inline-block
+    margin-top: 15px
+    border-bottom: 1px dashed $white
   h4
     font-size: 1.8rem
     font-weight: bold
@@ -570,10 +600,82 @@ nav
     input, textarea
       margin-top: 5px
       width: 100%
+      border-radius: 4px
+      border: none
     input[type=checbox]
       width: auto
   textarea
     height: 100px
+
+
+.morphing-btn
+  -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s
+  -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s
+  -o-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s
+  transition: color 0.3s 0.2s, width 0.2s 0s
+
+.morphing-btn_circle
+  color: transparent !important
+  padding-left: 0
+  padding-right: 0
+  width: 35.6px !important
+  -webkit-transition: color 0.2s 0s, width .3s 0.2s
+  -moz-transition: color 0.2s 0s, width .3s 0.2s
+  -o-transition: color 0.2s 0s, width .3s 0.2s
+  transition: color 0.2s 0s, width .3s 0.2s
+
+.morphing-btn-clone
+  position: fixed
+  background: $accent
+  border-radius: 50%
+  z-index: 3
+  -webkit-transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)
+  -moz-transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)
+  -o-transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)
+  transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1)
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+
+.morphing-btn-clone_visible
+  display: block
+  -webkit-transform: scale(1) !important
+  -moz-transform: scale(1) !important
+  -ms-transform: scale(1) !important
+  -o-transform: scale(1) !important
+  transform: scale(1) !important
+
+.fancybox-morphing
+  .fancybox-bg
+    background: $accent
+    opacity: 1
+  .fancybox-toolbar
+    top: 20px
+    right: 40px
+  .fancybox-button--close
+    background: rgba(0, 0, 0, 0.2)
+    border-radius: 50%
+    color: #fff
+    &::after, &::before
+      height: 1.55px
+      width: 22px
+      left: calc(50% - 11px)
+    &:hover
+      background: rgba(0, 0, 0, 0.25)
+
+#morphing-content
+  margin: 0
+  position: relative
+  background: transparent
+  color: #fff
+  text-shadow: $shadow
+  padding: 6em 10vw
+  line-height: 2
+  z-index: 3
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  a
+    color: #fff
+
 
 
 @import "media" // Всегда в конце

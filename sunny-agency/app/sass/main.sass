@@ -449,9 +449,10 @@ nav
       align-items: center
       align-content: center
       font-size: 4rem
-      color: $yellow
+      color: $red
+      opacity: 0.9
       &:hover
-        color: $red
+        color: $yellow
 
 .testimonials
   &__item
@@ -492,6 +493,30 @@ nav
   .comment
     z-index: 1
 
+.archive
+  &__item
+    display: flex
+    flex-direction: column
+    box-shadow: $box-shadow
+    padding: 30px
+    border-radius: 10px
+    position: relative
+    &__bg
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      opacity: 0.2
+      border-radius: 10px
+      z-index: 0
+    &__title
+      z-index: 1
+      a
+        color: inherit
 
 .logos
   background-color: rgb(247, 249, 251)
@@ -533,7 +558,7 @@ nav
   &__summ
     display: inline-block
     color: $yellow
-    font-size: 2.2rem
+    font-size: 1.5rem
     font-weight: bold
     border-bottom: 1px solid rgba(0,0,0,0.3)
     padding-bottom: 15px
@@ -559,9 +584,14 @@ nav
 .copyright
   border-top: 1px solid rgba(255,255,255,0.3)
   margin-top: 15px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  align-content: center
   span
-    display: inline-block
+    display: inline-flex
     padding: 15px
+    text-align: center
 
 .slick-dots
   padding: 0

@@ -1,23 +1,23 @@
 function myFunction(x) {
     x.classList.toggle("change");
-    const popupMenu =  document.querySelector('.popup-menu');
+    const popupMenu =  document.querySelector('.burger-menu');
     if (popupMenu.classList.contains('active')) {
       popupMenu.classList.remove('active');
       document.querySelector('body').style.overflow = 'auto';
-      document.querySelector('.header__logo').style.opacity = '1';
-      document.querySelector('.header__menu').style.opacity = '1';
+      document.querySelector('.header-logo').style.opacity = '1';
+      document.querySelector('.header-menu').style.opacity = '1';
       popupMenu.style.zIndex = '-1';
     } else {
       popupMenu.classList.add('active');
       document.querySelector('body').style.overflow = 'hidden';
-      document.querySelector('.header__logo').style.opacity = '0';
-      document.querySelector('.header__menu').style.opacity = '0';
+      document.querySelector('.header-logo').style.opacity = '0';
+      document.querySelector('.header-menu').style.opacity = '0';
       popupMenu.style.zIndex = '2';
     }
   }
 
 
-  $('.slider').slick({
+  $('.hero-slider .slider').slick({
     dots: true,
     infinite: true,
     speed: 300,

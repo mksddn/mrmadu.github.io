@@ -1678,6 +1678,9 @@ section.gallery .section-title:after {
     .double-slider .slide-text {
         padding: 15px;
     }
+    .double-slider:after {
+        content: '';
+    }
 
     .details .half-first p {
         font-size: 120%;

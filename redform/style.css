@@ -357,6 +357,7 @@ section {
     background-color: #14474b;
     display: flex;
     align-items: end;
+    align-content: end;
     padding: 10px;
     margin-bottom: -30px;
     z-index: 3;
@@ -1686,6 +1687,10 @@ section.gallery .section-title:after {
         font-size: 120%;
     }
 
+    .details .half-sec img {
+        height: 300px;
+    }
+
     .details .half-third {
         flex-wrap: wrap;
     }
@@ -1706,7 +1711,7 @@ section.gallery .section-title:after {
         width: 100%;
     }
     .steps-item:before {
-        left: 33%;
+        left: 25%;
     }
 
     .features-item {

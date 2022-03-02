@@ -1637,6 +1637,9 @@ section.gallery .section-title:after {
     .about .half-wrapper>* {
         padding: 30px;
     }
+    .about .half-sec {
+        padding-top: 80px;
+    }
 
     .section-title, .utp-desc p, .steps-comment {
         font-size: 150%;

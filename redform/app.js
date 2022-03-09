@@ -20,6 +20,7 @@ function myFunction(x) {
 
 
   $('.hero-slider').slick({
+    fade: true,
     dots: true,
     infinite: true,
     speed: 300,
@@ -45,10 +46,47 @@ function myFunction(x) {
     // dotsClass: "my-dots",
     // autoplay: true,
   });
+  $('.gallery-slider').slick({
+    // dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    prevArrow: $('.gallery .slider-arrows .prev'),
+    nextArrow: $('.gallery .slider-arrows .next'),
+    adaptiveHeight: true,
+    // arrows: false,
+    // dotsClass: "my-dots",
+    // autoplay: true,
+  });
 
 
   $(document).ready(function() {
     $('.gallery-wrapper').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      mainClass: 'mfp-with-zoom mfp-img-mobile',
+      image: {
+        verticalFit: true,
+      },
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300, // don't foget to change the duration also in CSS
+        opener: function(element) {
+          return element.find('img');
+        }
+      }
+      
+    });
+  });
+
+  $(document).ready(function() {
+    $('.gallery-slider').magnificPopup({
       delegate: 'a',
       type: 'image',
       closeOnContentClick: false,

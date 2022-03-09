@@ -1858,4 +1858,11 @@ section.gallery .section-title:after {
         column-count: 2;
     }
 
+    .gallery-slider a {
+        margin: 10px;
+    }
+    .gallery .slider-arrows .prev, .gallery .slider-arrows .next {
+        top: 50px;
+    }
+
 }

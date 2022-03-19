@@ -1,3 +1,29 @@
+.delighter.toright {
+    transform: translateX(-30%);
+  }
+  .delighter.toleft {
+    transform: translateX(30%);
+  }
+  .delighter.toup, .section-title {
+    transform: translateY(30%);
+  }
+  .delighter.todown {
+    transform: translateY(-30%);
+  }
+
+.delighter {
+    transition: all .5s ease-out;
+    opacity: 0;
+  }
+  .delighter.started {
+    transform: none;
+    opacity: 1;
+  }
+  .delighter.started.ended {
+    /* border: solid red 10px; */
+  }
+  
+
 /* @font-face {
     font-family: "MagistralC";
     src: url("fonts/MagistralC/MagistralC.woff") format("woff"),

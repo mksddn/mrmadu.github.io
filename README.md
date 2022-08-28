@@ -1,2 +1,2 @@
 # mrmadu.github.io
-temporary storage for my work
+https://mrmadu.github.io/

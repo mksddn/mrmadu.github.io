@@ -1,5 +1,5 @@
 <template>
-  <section id="staffSlider">
+  <section id="staffSlider" class="bg">
     <b-container>
       <b-row>
         <b-col>
@@ -12,20 +12,13 @@
       <b-row>
         <b-col class="slider-wrapper">
           <VueSlickCarousel v-bind="settings">
-            <b-card
+            <CardStaff
               v-for="pers in staff"
               :key="pers.id"
               :title="pers.name"
-              :img-src="pers.img"
-              :img-alt="pers.name"
-              img-top
-              class="m-1"
-            >
-              <b-card-text>
-                {{ pers.text }}
-              </b-card-text>
-              <b-button href="#" variant="primary">Подробнее</b-button>
-            </b-card>
+              :img="pers.img"
+              :desc="pers.text"
+            />
           </VueSlickCarousel>
         </b-col>
       </b-row>
@@ -35,13 +28,14 @@
 
 <script>
 import VueSlickCarousel from 'vue-slick-carousel'
+import CardStaff from '~/components/CardStaff'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
   name: 'SliderStaff',
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, CardStaff },
   data: () => ({
     staff: [
       {
@@ -82,6 +76,7 @@ export default {
       },
     ],
     settings: {
+      lazyLoad: 'ondemand',
       dots: true,
       arrows: true,
       focusOnSelect: true,
@@ -114,7 +109,9 @@ export default {
   }),
 }
 </script>
-<style lang="sass">
+<style lang="sass" scoped>
+section
+  background-color: #f1f1f1
 .slider-wrapper
   padding: 0 !important
 .slick-slide

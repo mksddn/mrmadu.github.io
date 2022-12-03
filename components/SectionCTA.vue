@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'CTA',
+  name: 'SectionCTA',
 }
 </script>
 

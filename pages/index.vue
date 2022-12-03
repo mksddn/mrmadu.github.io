@@ -3,30 +3,37 @@
     <HeaderComp />
     <main class="main">
       <SliderHero />
-      <HomeAbout />
-      <CTA />
-      <ProductsComp title="Услуги и цены" bg />
+      <SectionAbout />
+      <SectionCTA />
+      <SectionProducts title="Услуги и цены" bg />
       <SliderStaff />
+      <SliderPosts />
+      <SectionCreed />
+      <SliderReviews />
     </main>
   </div>
 </template>
 
 <script>
 import HeaderComp from '~/components/Header'
-import HomeAbout from '~/components/home/About'
-import CTA from '~/components/CTA'
-import SliderHero from '~/components/home/SliderHero'
-import SliderStaff from '~/components/home/SliderStuff'
-import ProductsComp from '~/components/Products'
+import SectionAbout from '~/components/SectionAbout'
+import SectionCTA from '~/components/SectionCTA'
+import SliderHero from '~/components/SliderHero'
+import SliderStaff from '~/components/SliderStuff'
+import SectionProducts from '~/components/SectionProducts'
+import SliderPosts from '~/components/SliderPosts'
+import SectionCreed from '~/components/SectionCreed'
 export default {
   name: 'IndexPage',
   components: {
     HeaderComp,
-    HomeAbout,
-    CTA,
+    SectionAbout,
+    SectionCTA,
     SliderHero,
     SliderStaff,
-    ProductsComp,
+    SectionProducts,
+    SliderPosts,
+    SectionCreed,
   },
 }
 </script>

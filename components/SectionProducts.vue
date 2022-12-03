@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'ProductsComp',
+  name: 'SectionProducts',
   props: {
     bg: {
       type: Boolean,

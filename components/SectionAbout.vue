@@ -66,7 +66,7 @@
 
 <script>
 export default {
-  name: 'HomeAbout',
+  name: 'SectionAbout',
 }
 </script>
 

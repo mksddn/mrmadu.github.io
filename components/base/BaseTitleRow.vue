@@ -1,16 +1,29 @@
 <template>
-  <div>
-    <h2 class="title">{{ title }}</h2>
-  </div>
+  <b-row>
+    <b-col>
+      <h2 class="title">{{ title }}</h2>
+    </b-col>
+    <b-col v-if="btnLink" class="text-right">
+      <a href="/" class="btn btn-primary">смотреть все</a>
+    </b-col>
+  </b-row>
 </template>
 
 <script>
 export default {
-  name: 'SectionTitle',
+  name: 'SectionTitleRow',
   props: {
     title: {
       type: String,
       required: true,
+    },
+    btnLink: {
+      type: String,
+      default: null,
+    },
+    btnText: {
+      type: String,
+      default: 'смотреть все',
     },
   },
 }

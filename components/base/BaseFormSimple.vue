@@ -1,5 +1,5 @@
 <template>
-  <b-form class="mb-5">
+  <b-form>
     <b-container fluid>
       <b-row class="align-items-end">
         <b-col lg="4">

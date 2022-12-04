@@ -1,14 +1,7 @@
 <template>
   <section id="staffSlider" class="bg">
     <b-container>
-      <b-row>
-        <b-col>
-          <BaseTitle title="Наши врачи" />
-        </b-col>
-        <b-col class="text-right">
-          <a href="/" class="btn btn-primary">смотреть все</a>
-        </b-col>
-      </b-row>
+      <BaseTitleRow title="Наши врачи" btn-link="/" />
       <b-row>
         <b-col class="slider-wrapper">
           <VueSlickCarousel v-bind="settings">

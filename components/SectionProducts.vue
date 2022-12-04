@@ -1,11 +1,7 @@
 <template>
-  <section id="products" :class="{bg}">
+  <section id="products" :class="{ bg }">
     <b-container>
-      <b-row>
-        <b-col v-if="title">
-          <BaseTitle :title="title" />
-        </b-col>
-      </b-row>
+      <BaseTitleRow v-if="title" :title="title" />
       <b-row>
         <b-col>
           <BaseProducts />

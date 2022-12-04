@@ -3,12 +3,12 @@
     <b-container>
       <b-row>
         <b-col md="3">
-          <img src="doctor.png" alt="">
+          <img :src="imgSrc" :alt="title" />
         </b-col>
         <b-col md="9">
-          <h3 class="cta-title">Запишитесь на прием!</h3>
-          <p class="cta-text">Мы свяжемся с Вами, чтобы уточнить подробности</p>
-          <BaseFormSimple btn-title="Записаться на прием" />
+          <h3 class="cta-title">{{ title }}</h3>
+          <p class="cta-text">{{ subtitle }}</p>
+          <BaseFormSimple :btn-title="btnText" />
         </b-col>
       </b-row>
     </b-container>
@@ -18,6 +18,24 @@
 <script>
 export default {
   name: 'SectionCTA',
+  props: {
+    title: {
+      type: String,
+      default: 'Отправьте заявку!',
+    },
+    subtitle: {
+      type: String,
+      default: 'Мы свяжемся с Вами, чтобы уточнить подробности',
+    },
+    imgSrc: {
+      type: String,
+      default: 'doctor.png',
+    },
+    btnText: {
+      type: String,
+      default: 'Отправить',
+    },
+  },
 }
 </script>
 

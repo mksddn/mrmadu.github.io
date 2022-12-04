@@ -16,10 +16,6 @@
 export default {
   name: 'CardStaff',
   props: {
-    id: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,

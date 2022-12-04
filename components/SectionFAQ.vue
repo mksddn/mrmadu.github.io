@@ -1,0 +1,95 @@
+<template>
+  <section id="faq">
+    <b-container>
+      <BaseTitleRow title="Вопрос-ответ" />
+      <b-row>
+        <b-col>
+          <div class="accordion" role="tablist">
+            <b-card v-for="(item, index) in faq" :key="index" no-body>
+              <b-card-header
+                v-b-toggle="'accordion-' + index"
+                header-tag="header"
+                class="p-2"
+                role="tab"
+              >
+                <span class="faq-btn">{{ item.question }}</span>
+                <svg
+                  class="faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 10"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15 1.2l-7 7-7-7"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </b-card-header>
+              <b-collapse :id="'accordion-' + index" role="tabpanel">
+                <b-card-body>
+                  <b-card-text>{{ item.answer }}</b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'SectionFAQ',
+  data: () => ({
+    faq: [
+      {
+        question: 'Как и где можно записаться на прием? Сколько он стоит?',
+        answer:
+          'Всю необходимую информацию вы найдете на странице «Контакты» нашего сайта.',
+      },
+      {
+        question: 'Какие документы нужны для записи на прием?',
+        answer: 'Достаточно вашего паспорта.',
+      },
+      {
+        question:
+          'Клиника работает в субботу? Принимает ли в этот день маммолог?',
+        answer:
+          'Мы работаем по субботам. Записаться на прием к врачу-маммологу вы можете по телефону: 8 800 100 7632.',
+      },
+    ],
+  }),
+}
+</script>
+
+<style lang="sass" scoped>
+.card-header
+  display: flex !important
+  justify-content: space-between
+  cursor: pointer
+  transition: background-color 0.2s
+.collapsed .faq-icon
+    transform: rotate(0deg)
+.not-collapsed
+  background-color: $primary
+  color: #fff
+  .faq-icon
+    color: #fff
+.faq-btn
+    max-width: 85%
+    font-weight: bold
+    padding: 10px
+.faq-icon
+  width: 20px
+  margin-right: 15px
+  color: $primary
+  transform: rotate(90deg)
+  transition: all 0.2s
+.card-text:last-child
+  margin-bottom: 20px
+</style>

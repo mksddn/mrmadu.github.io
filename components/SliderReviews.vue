@@ -1,14 +1,7 @@
 <template>
   <section id="reviewsSlider">
     <b-container>
-      <b-row>
-        <b-col>
-          <BaseTitle title="Отзывы" />
-        </b-col>
-        <b-col class="text-right">
-          <a href="/" class="btn btn-primary">смотреть все</a>
-        </b-col>
-      </b-row>
+      <BaseTitleRow title="Отзывы" btn-link="/" />
       <b-row>
         <b-col>
           <VueSlickCarousel v-bind="settings">

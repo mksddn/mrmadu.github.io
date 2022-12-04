@@ -1,6 +1,7 @@
 <template>
   <b-container fluid>
     <b-row>
+      <!-- глянуть реализацию цикла у раздела FAQ -->
       <b-col lg="4">
         <b-button v-b-toggle.collapse-1 variant="light" class="mb-2 mt-2 w-100"
           >Toggle Collapse <font-awesome-icon icon="fa-solid fa-plus"

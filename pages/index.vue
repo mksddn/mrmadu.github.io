@@ -4,12 +4,18 @@
     <main class="main">
       <SliderHero />
       <SectionAbout />
-      <SectionCTA />
+      <SectionCTA title="Запишитесь на прием!" btn-text="Записаться на прием" />
       <SectionProducts title="Услуги и цены" bg />
       <SliderStaff />
       <SliderPosts />
       <SectionCreed />
       <SliderReviews />
+      <SectionCTA
+        title="Запишитесь на прием!"
+        btn-text="Записаться на прием"
+        img-src="doc1.png"
+      />
+      <SectionFAQ />
     </main>
   </div>
 </template>
@@ -23,6 +29,7 @@ import SliderStaff from '~/components/SliderStuff'
 import SectionProducts from '~/components/SectionProducts'
 import SliderPosts from '~/components/SliderPosts'
 import SectionCreed from '~/components/SectionCreed'
+import SectionFAQ from '~/components/SectionFAQ'
 export default {
   name: 'IndexPage',
   components: {
@@ -34,6 +41,7 @@ export default {
     SectionProducts,
     SliderPosts,
     SectionCreed,
+    SectionFAQ,
   },
 }
 </script>

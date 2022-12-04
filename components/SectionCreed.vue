@@ -1,13 +1,13 @@
 <template>
   <section id="creed" class="bg">
     <b-container>
-      <b-ro>
+      <b-row>
         <b-col>
           <span class="creed-text"
             >Кредо клиники маммэ: «интересы пациента — прежде всего!»</span
           >
         </b-col>
-      </b-ro>
+      </b-row>
     </b-container>
   </section>
 </template>

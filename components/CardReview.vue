@@ -1,5 +1,6 @@
 <template>
   <div class="review-item">
+    <font-awesome-icon icon="fa-solid fa-quote-left" />
     <div class="review-text">{{ text }}</div>
     <div class="review-author">{{ author }}</div>
   </div>
@@ -21,4 +22,18 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.review-item
+  position: relative
+.review-text
+  padding: 15px
+.review-author
+  font-weight: bold
+svg
+  position: absolute
+  left: -5px
+  top: -15px
+  font-size: 5rem
+  color: #dadada
+  z-index: -1
+</style>

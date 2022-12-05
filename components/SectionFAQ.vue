@@ -72,7 +72,7 @@ export default {
   display: flex !important
   justify-content: space-between
   cursor: pointer
-  transition: background-color 0.2s
+  transition: all 0.2s
 .collapsed .faq-icon
     transform: rotate(0deg)
 .not-collapsed

@@ -74,6 +74,7 @@ export default {
           breakpoint: 768,
           settings: {
             slidesToShow: 1,
+            arrows: false,
           },
         },
       ],

@@ -1,3 +1,6 @@
+body
+  color: #444 !important
+  
 $primary: #c21d2b
 // $primary: #c73f2f
 
@@ -15,9 +18,15 @@ a, a svg, a:hover, a:hover svg
   transition: all ease-out 0.1s
 
 section
-  padding: 50px 0
-  &.bg
-    background-color: #f1f1f1
+  padding: 60px 0
+
+.bg-image, .bg-pattern
+  background-size: cover
+.bg-image
+  background-image: url('/bg-pr.jpg')
+  background-color: #f1f1f1
+.bg-pattern
+  background-image: url('/bgn-grad.png')
 
 .btn
   // padding: 10px 25px !important
@@ -33,6 +42,6 @@ section
   color: #66666690
   font-size: 2rem
 .slick-list
-  margin-bottom: 50px !important
+  margin-bottom: 60px !important
 .slick-dots
-  bottom: -50px
+  bottom: -60px

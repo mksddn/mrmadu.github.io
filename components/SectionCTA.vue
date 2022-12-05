@@ -2,13 +2,16 @@
   <section class="cta">
     <b-container>
       <b-row>
-        <b-col md="3">
+        <b-col md="3" :class="{ 'align-self-end': imgBtm }">
           <img :src="imgSrc" :alt="title" />
         </b-col>
-        <b-col md="9">
+        <b-col md="9" class="cta-content">
           <h3 class="cta-title">{{ title }}</h3>
           <p class="cta-text">{{ subtitle }}</p>
-          <BaseFormSimple :btn-title="btnText" />
+          <BaseFormSimple v-if="form" :btn-title="btnText" />
+          <a v-if="btnLink" :href="btnLink" class="btn btn-light">{{
+            btnText
+          }}</a>
         </b-col>
       </b-row>
     </b-container>
@@ -19,6 +22,14 @@
 export default {
   name: 'SectionCTA',
   props: {
+    form: {
+      type: Boolean,
+      default: false,
+    },
+    imgBtm: {
+      type: Boolean,
+      default: false,
+    },
     title: {
       type: String,
       default: 'Отправьте заявку!',
@@ -35,6 +46,10 @@ export default {
       type: String,
       default: 'Отправить',
     },
+    btnLink: {
+      type: String,
+      default: null,
+    },
   },
 }
 </script>
@@ -47,6 +62,8 @@ export default {
   background-position: 50% 50%
   color: #fff
   padding-bottom: 0
+  &-content
+    margin-bottom: 60px
   &-title
     font-size: 2rem
     text-transform: uppercase

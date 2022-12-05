@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <header>
     <b-navbar class="navbar-top">
       <b-container>
         <b-navbar-nav class="ml-auto">
@@ -18,7 +18,7 @@
               <font-awesome-icon icon="fa-brands fa-vk" color="#007bff" />
             </a>
             <a href="/" class="visimp">
-              <font-awesome-icon icon="fa-solid fa-glasses" color="" />
+              <font-awesome-icon icon="fa-solid fa-glasses" />
               <span>версия для слабовидящих</span>
             </a>
           </div>
@@ -87,12 +87,12 @@
         </b-container>
       </b-navbar>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
 export default {
-  name: 'HeaderComp',
+  name: 'SiteHeader',
   data: () => ({
     logoUrl: `/logo.png`,
     menuMain: [

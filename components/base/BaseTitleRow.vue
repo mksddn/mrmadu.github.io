@@ -1,6 +1,6 @@
 <template>
   <b-row>
-    <b-col>
+    <b-col lg="5">
       <h2 class="title">{{ title }}</h2>
     </b-col>
     <b-col v-if="btnLink" class="text-right">
@@ -34,7 +34,7 @@ export default {
   font-size: 2.2rem
   text-transform: uppercase
   font-weight: bold
-  margin-bottom: 30px
+  margin-bottom: 40px
   &:after
     content: ''
     display: block

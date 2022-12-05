@@ -1,5 +1,5 @@
 <template>
-  <section id="staffSlider" class="bg">
+  <section id="staffSlider">
     <b-container>
       <BaseTitleRow title="Наши врачи" btn-link="/" />
       <b-row>
@@ -89,6 +89,7 @@ export default {
           breakpoint: 768,
           settings: {
             slidesToShow: 2,
+            arrows: false,
           },
         },
         {

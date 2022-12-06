@@ -99,6 +99,28 @@ export default {
       {
         title: 'О клинике',
         link: '/',
+        submenu: [
+          {
+            title: 'Лицензии',
+            link: '/',
+          },
+          {
+            title: 'Вакансии',
+            link: '/',
+          },
+          {
+            title: 'Партнеры',
+            link: '/',
+          },
+          {
+            title: 'Отзывы',
+            link: '/',
+          },
+          {
+            title: 'Расписание',
+            link: '/',
+          },
+        ],
       },
       {
         title: 'Коронавирус',
@@ -160,7 +182,7 @@ export default {
 
 #sthead
   z-index: 90
-  box-shadow: 0px 0 5px 0 #666
+  box-shadow: 0px 0 3px 0 #999
 .sticky
   position: fixed
   top: 0

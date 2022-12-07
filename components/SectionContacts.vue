@@ -4,7 +4,7 @@
     <b-container>
       <b-row>
         <!-- eslint-disable vue/no-v-html -->
-        <b-col md="3" offset="md-1" class="contacts-wrapper">
+        <b-col lg="3" md="7" class="contacts-wrapper offset-lg-1 offset-md-4">
           <div class="contacts-item">
             <font-awesome-icon icon="fa-solid fa-location-dot" />
             <div>

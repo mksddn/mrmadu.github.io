@@ -197,8 +197,7 @@ export default {
   &-top, &-middle, &-bottom
     border-top: 1px solid #ced4da
 .navbar-top
-  padding-top: 0
-  padding-bottom: 0
+  padding: 0
 .navbar-search
   input
     border-top: 0

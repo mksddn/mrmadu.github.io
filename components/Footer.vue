@@ -3,14 +3,14 @@
     <section class="footer">
       <b-container>
         <b-row>
-          <b-col lg="4">
+          <b-col lg="4" class="mb-4 mb-lg-0">
             <b-nav vertical>
               <b-nav-item v-for="(item, index) in menu" :key="index">{{
                 item.title
               }}</b-nav-item>
             </b-nav>
           </b-col>
-          <b-col lg="4">
+          <b-col lg="4" class="mb-4 mb-lg-0">
             <div class="widget">
               <img :src="about.logo" alt="" />
               <div v-html="about.text" />
@@ -74,10 +74,10 @@
     <section class="absolute-footer">
       <b-container>
         <b-row align-v="center">
-          <b-col lg="4" class="copyright">
+          <b-col lg="4" class="copyright mb-4 mb-lg-0">
             <span>2011-{{ crntYear }} © Все права защищены</span>
           </b-col>
-          <b-col lg="4" class="dev">
+          <b-col lg="4" class="dev mb-4 mb-lg-0">
             <a href="https://sunny-agency.ru" target="_blank"
               >Создание и поддержка сайта: Sunny Agency</a
             >
@@ -142,6 +142,11 @@ export default {
 footer
   background-color: #f1f1f1
   font-size: 0.9rem
+  @media (max-width: 992px)
+    text-align: center
+    // align-items: center
+    // align-content: center
+    // justify-content: center
   a
     color: inherit
 .nav-link
@@ -149,6 +154,8 @@ footer
   margin-bottom: 5px
 .widget
   margin-bottom: 20px
+  @media (max-width: 992px)
+    margin-bottom: 1.5rem
   img
     max-width: 100px
     margin-bottom: 10px
@@ -166,6 +173,8 @@ footer
     display: flex
     align-items: center
     justify-content: flex-end
+    @media (max-width: 992px)
+      justify-content: center
     svg
       font-size: 1rem
       margin: 0 10px
@@ -173,4 +182,8 @@ footer
       font-size: 2rem
     .visimp svg
       margin-right: 2px
+
+@media (max-width: 992px)
+  #pd_widget_column
+    margin: auto
 </style>

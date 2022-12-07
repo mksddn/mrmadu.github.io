@@ -103,12 +103,4 @@ export default {
   }),
 }
 </script>
-<style lang="sass">
-.slider-wrapper
-  padding: 0 !important
-.slick-slide
-  // margin: 0 15px
-  padding: 0 15px
-.slick-list
-  // margin: 0 -15px !important
-</style>
+<style lang="sass" scoped></style>

@@ -2,7 +2,7 @@
   <section class="cta">
     <b-container>
       <b-row>
-        <b-col md="3" :class="{ 'align-self-end': imgBtm }">
+        <b-col md="3" class="d-none d-md-block" :class="{ 'align-self-end': imgBtm }">
           <img :src="imgSrc" :alt="title" />
         </b-col>
         <b-col md="9" class="cta-content">

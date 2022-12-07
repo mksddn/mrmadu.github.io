@@ -1,5 +1,5 @@
 <template>
-  <section id="creed" class="bg">
+  <section id="creed">
     <b-container>
       <b-row>
         <b-col>
@@ -19,6 +19,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+#creed
+  background-color: #f1f1f1
 .creed-text
   text-transform: uppercase
   display: block

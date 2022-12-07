@@ -1,6 +1,6 @@
 <template>
   <b-row>
-    <b-col lg="5">
+    <b-col xs="5">
       <h2 class="title">{{ title }}</h2>
     </b-col>
     <b-col v-if="btnLink" class="text-right">

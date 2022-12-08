@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <span class="creed-text"
+          <span v-animate-fadein class="creed-text"
             >Кредо клиники маммэ: «интересы пациента — прежде всего!»</span
           >
         </b-col>

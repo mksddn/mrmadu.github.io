@@ -12,13 +12,21 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide v-for="(slide, index) in slider" :key="index" :img-src="slide.img" class="slide">
+      <!-- <b-skeleton-img v-if="sceleton"></b-skeleton-img> -->
+      <b-carousel-slide
+        v-for="(slide, index) in slider"
+        :key="index"
+        :img-src="slide.img"
+        class="slide"
+      >
         <!-- <div class="slide-overlay"></div> -->
         <b-row>
           <b-col col lg="6" class="ml-auto">
             <span class="slide-title">{{ slide.title }}</span>
             <p class="slide-text">{{ slide.text }}</p>
-            <a :href="slide.link" class="slide-btn btn btn-primary">{{ slide.btn }}</a>
+            <a :href="slide.link" class="slide-btn btn btn-primary">{{
+              slide.btn
+            }}</a>
           </b-col>
         </b-row>
       </b-carousel-slide>

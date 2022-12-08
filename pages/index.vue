@@ -74,6 +74,10 @@ export default {
     SectionAddinfo,
     SiteFooter,
   },
+  // mounted() {
+  //   // eslint-disable-next-line no-undef
+  //   AOS.init()
+  // },
 }
 </script>
 

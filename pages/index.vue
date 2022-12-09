@@ -1,6 +1,5 @@
 <template>
   <div>
-    <SiteHeader />
     <main class="main">
       <SliderHero />
       <SectionAbout />
@@ -38,12 +37,10 @@
       <SectionContacts />
       <SectionAddinfo />
     </main>
-    <SiteFooter />
   </div>
 </template>
 
 <script>
-import SiteHeader from '~/components/Header'
 import SectionAbout from '~/components/SectionAbout'
 import SectionCTA from '~/components/SectionCTA'
 import SliderHero from '~/components/SliderHero'
@@ -55,12 +52,10 @@ import SectionFAQ from '~/components/SectionFAQ'
 import SectionFeats from '~/components/SectionFeats'
 import SectionContacts from '~/components/SectionContacts'
 import SectionAddinfo from '~/components/SectionAddinfo'
-import SiteFooter from '~/components/Footer'
 
 export default {
   name: 'IndexPage',
   components: {
-    SiteHeader,
     SectionAbout,
     SectionCTA,
     SliderHero,
@@ -72,7 +67,6 @@ export default {
     SectionFeats,
     SectionContacts,
     SectionAddinfo,
-    SiteFooter,
   },
   // mounted() {
   //   // eslint-disable-next-line no-undef

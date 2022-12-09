@@ -29,7 +29,7 @@
     <div id="sthead">
       <b-navbar toggleable="lg" type="light" class="navbar-middle">
         <b-container>
-          <b-navbar-brand href="#">
+          <b-navbar-brand href="/">
             <img :src="logoUrl" alt="" />
           </b-navbar-brand>
 
@@ -98,7 +98,7 @@ export default {
     menuMain: [
       {
         title: 'О клинике',
-        link: '/',
+        link: 'about',
         submenu: [
           {
             title: 'Лицензии',

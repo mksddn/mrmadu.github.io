@@ -98,7 +98,7 @@ export default {
     menuMain: [
       {
         title: 'О клинике',
-        link: 'about',
+        link: '/about',
         submenu: [
           {
             title: 'Лицензии',

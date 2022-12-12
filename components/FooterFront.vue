@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <footer>
     <section class="footer">
@@ -16,7 +17,7 @@
               <div v-html="about.text" />
             </div>
             <div class="widget">
-              <script src="https://vk.com/js/api/openapi.js?168"></script>
+              <!-- <script src="https://vk.com/js/api/openapi.js?168"></script>
               <div id="vk_groups"></div>
               <script>
                 VK.Widgets.Group(
@@ -24,7 +25,7 @@
                   { mode: 3, no_cover: 1, width: '340' },
                   73108189
                 )
-              </script>
+              </script> -->
             </div>
           </b-col>
           <b-col lg="4">
@@ -35,7 +36,7 @@
               >
             </div>
             <div class="widget">
-              <div id="pd_widget_column" data-lpu="20934">
+              <!-- <div id="pd_widget_column" data-lpu="20934">
                 <a target="_blank" href="https://prodoctorov.ru/"
                   ><img
                     class="pd_logo"
@@ -55,17 +56,17 @@
                   >читать отзывы</a
                 >
                 <script src="https://prodoctorov.ru/static/js/widget_column.js"></script>
-              </div>
+              </div> -->
             </div>
             <div class="widget">
-              <div class="ya-widget" style="height: 50px">
+              <!-- <div class="ya-widget" style="height: 50px">
                 <iframe
                   src="https://yandex.ru/sprav/widget/rating-badge/1262911293"
                   width="150"
                   height="50"
                   frameborder="0"
                 ></iframe>
-              </div>
+              </div> -->
             </div>
           </b-col>
         </b-row>

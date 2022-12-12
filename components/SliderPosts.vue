@@ -1,7 +1,7 @@
 <template>
   <section id="staffSlider">
     <b-container>
-      <BaseTitleRow title="Новости" btn-link="/" />
+      <BaseTitleSection title="Новости" btn-link="/" />
       <b-row>
         <b-col class="slider-wrapper">
           <VueSlickCarousel v-bind="settings">

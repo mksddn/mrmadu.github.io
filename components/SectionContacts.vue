@@ -1,6 +1,6 @@
 <template>
   <section id="contacts" class="p-0">
-    <MapYa />
+    <!-- <MapYa /> -->
     <b-container>
       <b-row>
         <!-- eslint-disable vue/no-v-html -->
@@ -56,10 +56,10 @@
 </template>
 
 <script>
-import MapYa from '~/components/MapYa'
+// import MapYa from '~/components/MapYa'
 export default {
   name: 'SectionContacts',
-  components: { MapYa },
+  // components: { MapYa },
   data: () => ({
     address: [`г. Краснодар<br>проезд Карасунский, д. 15/2`],
     email: ['info@mammae-clinic.ru'],

@@ -2,13 +2,17 @@
   <section class="cta">
     <b-container>
       <b-row>
-        <b-col md="3" class="d-none d-md-block" :class="{ 'align-self-end': imgBtm }">
+        <b-col
+          md="3"
+          class="d-none d-md-block"
+          :class="{ 'align-self-end': imgBtm }"
+        >
           <img :src="imgSrc" :alt="title" />
         </b-col>
         <b-col md="9" class="cta-content">
           <h3 class="cta-title">{{ title }}</h3>
           <p class="cta-text">{{ subtitle }}</p>
-          <BaseFormSimple v-if="form" :btn-title="btnText" />
+          <FormSimple v-if="form" :btn-title="btnText" />
           <a v-if="btnLink" :href="btnLink" class="btn btn-light">{{
             btnText
           }}</a>
@@ -19,8 +23,12 @@
 </template>
 
 <script>
+import FormSimple from '~/components/FormSimple'
 export default {
   name: 'SectionCTA',
+  components: {
+    FormSimple,
+  },
   props: {
     form: {
       type: Boolean,

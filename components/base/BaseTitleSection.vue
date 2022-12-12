@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'SectionTitleRow',
+  name: 'SectionTitle',
   props: {
     title: {
       type: String,

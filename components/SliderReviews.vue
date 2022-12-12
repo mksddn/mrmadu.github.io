@@ -1,7 +1,7 @@
 <template>
   <section id="reviewsSlider">
     <b-container>
-      <BaseTitleRow title="Отзывы" btn-link="/" />
+      <BaseTitleSection title="Отзывы" btn-link="/" />
       <b-row>
         <b-col>
           <VueSlickCarousel v-bind="settings">

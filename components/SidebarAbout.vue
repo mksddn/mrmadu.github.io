@@ -1,0 +1,63 @@
+<template>
+  <div>
+    <b-button
+      v-for="link in links"
+      :key="link.to"
+      :href="link.to"
+      block
+      variant="outline-dark"
+      >{{ link.title }}</b-button
+    >
+    <b-button
+      v-if="isSchedule"
+      :href="scheduleLink"
+      block
+      variant="primary"
+      >Скачать расписание</b-button
+    >
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SidebarAbout',
+  props: {
+    isSchedule: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data: () => ({
+    scheduleLink: '/',
+    links: [
+      {
+        title: 'Расписание',
+        to: '/about/raspisanie',
+      },
+      {
+        title: 'Регистрационные данные',
+        to: '/about/registratsionnye-dannye',
+      },
+      {
+        title: 'Правовая информация',
+        to: '/about/pravovaya-informatsiya',
+      },
+      {
+        title: 'Лицензии',
+        to: '/about/licenses',
+      },
+      {
+        title: 'Адреса и телефоны контролирующих организаций',
+        to: '/about/adresa-i-telefony-kontroliruyushhih-organizatsij',
+      },
+    ],
+  }),
+}
+</script>
+
+<style lang="sass" scoped>
+.btn
+  text-align: left
+  margin-bottom: 15px
+  font-weight: 600
+</style>

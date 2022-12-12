@@ -1,7 +1,7 @@
 <template>
   <section id="feats">
     <b-container>
-      <BaseTitleRow title="Доступность клиники" />
+      <BaseTitleSection title="Доступность клиники" />
       <b-row>
         <b-col
           v-for="(item, index) in feats"

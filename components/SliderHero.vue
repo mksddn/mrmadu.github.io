@@ -80,12 +80,12 @@ export default {
   //   top: 0
   //   background-color: #000
   img.img-fluid
-    opacity: 0.7
+    opacity: 0.8
     height: 100%
     vertical-align: middle
   .slide
     // display: flex
-    height: 400px
+    height: 380px
     .carousel-caption
       display: flex
       height: 100%

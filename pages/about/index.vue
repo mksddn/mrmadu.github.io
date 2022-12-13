@@ -54,14 +54,7 @@
         </b-row>
         <b-row>
           <b-col>
-            <VueSlickCarousel v-bind="settings">
-              <img
-                v-for="(img, index) in photos"
-                :key="index"
-                :src="img.src"
-                :alt="img.alt"
-              />
-            </VueSlickCarousel>
+            <SliderGallery />
           </b-col>
         </b-row>
       </b-container>
@@ -70,94 +63,16 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// optional style for arrows & dots
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import SliderGallery from '../../components/SliderGallery.vue'
 import SidebarAbout from '~/components/SidebarAbout'
 export default {
   components: {
     SidebarAbout,
-    VueSlickCarousel,
+    SliderGallery,
   },
   layout: 'page',
   data: () => ({
     title: 'О клинике',
-    photos: [
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-      {
-        src: '/post.jpg',
-        alt: '',
-      },
-    ],
-    settings: {
-      lazyLoad: 'ondemand',
-      arrows: false,
-      dots: true,
-      infinite: true,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: 'linear',
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            arrows: false,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    },
   }),
 }
 </script>

@@ -136,7 +136,7 @@ export default {
       },
       {
         title: 'Стационар',
-        link: '/',
+        link: '/stacionar',
       },
       {
         title: 'Акции',

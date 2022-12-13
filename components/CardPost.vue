@@ -4,9 +4,9 @@
       <b-card-img :src="img" :alt="title" />
     </b-link>
     <b-card-body>
-      <h4>{{ title }}</h4>
+      <b-link to="/post"><h4>{{ title }}</h4></b-link>
       <!-- <b-button href="#" variant="primary">Подробнее</b-button> -->
-      <b-button href="#" variant="primary">Подробнее</b-button>
+      <b-button to="/post" variant="primary">Подробнее</b-button>
     </b-card-body>
   </b-card>
 </template>

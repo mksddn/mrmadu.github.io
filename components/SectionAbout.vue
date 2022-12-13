@@ -47,10 +47,10 @@
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </b-card-text> -->
-            <b-button href="#" variant="primary" class="mb-2" size="sm"
+            <b-button href="#" variant="primary" block class="mb-2" size="sm"
               >Прейскурант на услуги клиники</b-button
             >
-            <b-button href="#" variant="outline-secondary" class="mb-2" size="sm"
+            <b-button href="#" variant="outline-secondary" block class="mb-2" size="sm"
               >Расписание на этот месяц</b-button
             >
           </b-card>
@@ -77,7 +77,7 @@ export default {
 .about-btns
   .btn
     text-transform: uppercase
-    font-weight: 600
+    font-weight: 500
 p
   font-size: 0.9rem
 </style>

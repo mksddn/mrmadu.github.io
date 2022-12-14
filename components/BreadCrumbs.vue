@@ -31,7 +31,7 @@ export default {
   color: #fff
   margin-bottom: 0
   a
-    color: #dadada
+    color: #b2b2b2
 .breadcrumb-item.active
   display: none
 </style>

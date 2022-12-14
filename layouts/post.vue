@@ -2,23 +2,11 @@
   <div>
     <HeaderFront />
     <main class="main">
-      <b-container>
-        <b-row>
-          <b-col>
-            <Nuxt />
-          </b-col>
-          <b-col lg="3">
-            <SidebarBlog />
-          </b-col>
-        </b-row>
-      </b-container>
+      <Nuxt />
     </main>
     <FooterFront />
   </div>
 </template>
 <script>
-import SidebarBlog from '~/components/SidebarBlog'
-export default {
-  components: { SidebarBlog },
-}
+export default {}
 </script>

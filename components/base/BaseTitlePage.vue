@@ -36,20 +36,20 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-section
+#pageTitle
   background-image: url('static/bgn-grad.png')
   background-color: $primary
   background-size: cover
   background-position: 50% 50%
   color: #fff
-  text-transform: uppercase
   padding: 40px 0
 h1
   font-weight: bold
   font-size: 2.3rem
-  transition: opacity 0.5s ease-in-out
+  text-transform: uppercase
+  transition: opacity 0.2s ease-in-out
   opacity: 0
-  transition: opacity 0.5s ease-in-out
+  transition: opacity 0.2s ease-in-out
   &.show
     opacity: 1
 </style>

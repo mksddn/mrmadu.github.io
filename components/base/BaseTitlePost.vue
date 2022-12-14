@@ -1,5 +1,6 @@
 <template>
   <section id="postTitle">
+    <b-container>
       <b-row>
         <b-col>
           <h1 :class="{ show }" v-text="title" />
@@ -8,6 +9,7 @@
       <b-row>
         <BreadCrumbs />
       </b-row>
+    </b-container>
   </section>
 </template>
 
@@ -39,9 +41,9 @@ export default {
 h1
   font-weight: bold
   font-size: 2.3rem
-  transition: opacity 0.5s ease-in-out
+  transition: opacity 0.2s ease-in-out
   opacity: 0
-  transition: opacity 0.5s ease-in-out
+  transition: opacity 0.2s ease-in-out
   &.show
     opacity: 1
 </style>

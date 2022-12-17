@@ -195,6 +195,15 @@
               </p>
             </div>
             <br />
+            <div class="tags">
+              <TagItem
+                v-for="tag in tags"
+                :key="tag.url"
+                :name="tag.title"
+                :url="tag.url"
+              />
+            </div>
+            <br />
             <ShareIcons />
             <PrevNextPost />
           </b-col>
@@ -210,13 +219,30 @@
 <script>
 import ShareIcons from '../../components/ShareIcons.vue'
 import PrevNextPost from '../../components/PrevNextPost.vue'
+import TagItem from '~/components/TagItem.vue'
 import SidebarBlog from '~/components/SidebarBlog'
 export default {
-  components: { SidebarBlog, ShareIcons, PrevNextPost },
+  components: { TagItem, SidebarBlog, ShareIcons, PrevNextPost },
   layout: 'post',
   data: () => ({
     title: 'Курс «Когнитивно-поведенческая терапия ожирения»',
     thumbnail: '/post1.jpeg',
+    cats: [
+      {
+        title: 'Category 1',
+        url: 'archive',
+      },
+    ],
+    tags: [
+      {
+        title: 'Tag 1',
+        url: 'archive',
+      },
+      {
+        title: 'Tag 2',
+        url: 'archive',
+      },
+    ],
   }),
 }
 </script>

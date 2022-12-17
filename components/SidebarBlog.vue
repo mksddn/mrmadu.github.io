@@ -25,20 +25,21 @@
     </div>
     <div class="wdgt wdht-tags">
       <h3 class="wdgt-title">Метки</h3>
-      <b-link
+      <TagItem
         v-for="tag in tags"
         :key="tag.url"
-        :to="tag.url"
-        class="tag-item"
-        >{{ tag.title }}</b-link
-      >
+        :name="tag.title"
+        :url="tag.url"
+      />
     </div>
   </aside>
 </template>
 
 <script>
+import TagItem from './TagItem.vue'
 export default {
   name: 'SidebarBlog',
+  components: { TagItem },
   data: () => ({
     cats: [
       {
@@ -161,12 +162,4 @@ export default {
     flex-direction: column
   .post-date
     margin-bottom: 5px
-
-  .tag-item
-    background-color: $primary
-    color: #fff
-    padding: 8px 10px
-    margin: 0 2px 2px 0
-    &:hover
-      background-color: darken($primary, 10%)
 </style>

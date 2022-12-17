@@ -140,11 +140,11 @@ export default {
       },
       {
         title: 'Акции',
-        link: '/',
+        link: 'archive',
       },
       {
         title: 'Новости',
-        link: '/',
+        link: 'archive',
       },
       {
         title: 'Контакты',

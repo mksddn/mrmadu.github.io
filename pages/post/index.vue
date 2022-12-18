@@ -204,7 +204,10 @@
               />
             </div>
             <br />
-            <ShareIcons />
+            <div id="shareIcons">
+              <div class="title"><span>Поделиться:</span></div>
+              <ShareIcons />
+            </div>
             <PrevNextPost />
           </b-col>
           <b-col lg="4" class="sdbr">
@@ -254,4 +257,10 @@ export default {
   margin-bottom: 60px
 .thumbnail
   margin-bottom: 50px
+#shareIcons
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-top: 1px solid rgba(0, 0, 0, 0.07)
+  padding: 10px 0
 </style>

@@ -1,11 +1,26 @@
 <template>
   <div>
     <BaseTitlePost :title="title" />
-    <section id="postContent">
+    <section id="archiveContent">
       <b-container>
         <b-row>
           <b-col class="cntnt">
-            <PostPreview v-for="post in posts" :key="post.id" />
+            <PostPreview
+              v-for="post in posts"
+              :key="post.id"
+              :title="post.title"
+              :post-id="post.id"
+              :thumbnail="post.thumbnail"
+              :desc="post.desc"
+              :url="post.url"
+            />
+            <div class="pagination">
+              <b-pagination-nav
+                :link-gen="linkGen"
+                :number-of-pages="10"
+                use-router
+              ></b-pagination-nav>
+            </div>
           </b-col>
           <b-col lg="4" class="sdbr">
             <SidebarBlog />
@@ -22,6 +37,7 @@ export default {
   components: { PostPreview },
   layout: 'page',
   data: () => ({
+    title: 'Архив записей',
     posts: [
       {
         title: 'post 1',
@@ -60,7 +76,18 @@ export default {
       },
     ],
   }),
+  methods: {
+    linkGen(pageNum) {
+      return pageNum === 1 ? '?' : `?page=${pageNum}`
+    },
+  },
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+#archiveContent
+  padding-top: 0
+.pagination
+  justify-content: center
+  margin: 30px
+</style>

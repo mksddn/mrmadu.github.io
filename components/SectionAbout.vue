@@ -1,7 +1,7 @@
 <template>
   <section id="about">
     <b-container>
-      <BaseTitleSection title="О клинике" />
+      <TitleSection title="О клинике" />
       <b-row>
         <!-- <b-col>
           <img src="/youtube.jpg" alt="" class="yt-thumb">

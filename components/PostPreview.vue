@@ -1,20 +1,22 @@
 <template>
-  <article class="post-preview">
-    <b-link :to="url" class="post-thumbnail"
-      ><img :src="thumbnail" :alt="title"
-    /></b-link>
-    <b-link :to="url" class="post-title"
-      ><h2>{{ title }}</h2></b-link
-    >
-    <div class="post-excerpt">{{ desc }}</div>
-    <hr />
-    <div class="post-btns">
-      <b-link :to="url" class="post-link btn btn-primary"
-        >Продолжить чтение</b-link
+  <b-card no-body img-top class="mb-5">
+    <b-link to="/">
+      <b-card-img :src="thumbnail" :alt="title" />
+    </b-link>
+    <b-card-body>
+      <b-link :to="url" class="post-title"
+        ><h2>{{ title }}</h2></b-link
       >
-      <ShareIcons />
-    </div>
-  </article>
+      <div class="card-text post-excerpt" v-html="desc" />
+      <hr />
+      <div class="post-btns">
+        <b-link :to="url" class="post-link btn btn-primary"
+          >Продолжить чтение</b-link
+        >
+        <ShareIcons />
+      </div>
+    </b-card-body>
+  </b-card>
 </template>
 
 <script>
@@ -59,6 +61,8 @@ export default {
 .post-title
   margin-bottom: 20px
   display: block
+  *
+    font-weight: bold
 .post-excerpt
   margin-bottom: 20px
 .post-btns

@@ -1,7 +1,7 @@
 <template>
   <b-row>
     <b-col xs="5">
-      <h2 v-animate-fromright class="title">{{ title }}</h2>
+      <h2 v-animate-fromright class="title mb-4">{{ title }}</h2>
     </b-col>
     <b-col v-if="btnLink" class="text-right">
       <a href="/" class="btn btn-primary">смотреть все</a>
@@ -34,7 +34,6 @@ export default {
   font-size: 2.2rem
   text-transform: uppercase
   font-weight: bold
-  margin-bottom: 40px
   &:after
     content: ''
     display: block

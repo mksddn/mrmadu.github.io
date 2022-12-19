@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BaseTitlePage :title="title" />
+    <TitlePage :title="title" />
     <section id="pageContent">
       <b-container>
         <b-row>

@@ -1,20 +1,20 @@
 <template>
   <div>
-    <BaseTitlePost :title="title" />
-    <section id="archiveContent">
+    <TitlePost :title="title" />
+    <section id="archiveContent" class="pt-0">
       <b-container>
         <b-row>
           <b-col class="cntnt">
             <PostPreview
               v-for="post in posts"
               :key="post.id"
-              :title="post.title"
+              :title="post.title.rendered"
               :post-id="post.id"
               :thumbnail="post.thumbnail"
-              :desc="post.desc"
-              :url="post.url"
+              :desc="post.excerpt.rendered"
+              url="post"
             />
-            <div class="pagination">
+            <div class="pagination m-3 justify-content-center">
               <b-pagination-nav
                 :link-gen="linkGen"
                 :number-of-pages="10"
@@ -32,50 +32,21 @@
 </template>
 
 <script>
+import axios from "axios"
 import PostPreview from '../components/PostPreview.vue'
 export default {
   components: { PostPreview },
   layout: 'page',
   data: () => ({
     title: 'Архив записей',
-    posts: [
-      {
-        title: 'post 1',
-        id: '01',
-        thumbnail: 'post.jpg',
-        desc: 'excerpt',
-        url: 'post',
-      },
-      {
-        title: 'post 2',
-        id: '02',
-        thumbnail: 'post.jpg',
-        desc: 'excerpt',
-        url: 'post',
-      },
-      {
-        title: 'post 3',
-        id: '03',
-        thumbnail: 'post.jpg',
-        desc: 'excerpt',
-        url: 'post',
-      },
-      {
-        title: 'post 4',
-        id: '04',
-        thumbnail: 'post.jpg',
-        desc: 'excerpt',
-        url: 'post',
-      },
-      {
-        title: 'post 5',
-        id: '05',
-        thumbnail: 'post.jpg',
-        desc: 'excerpt',
-        url: 'post',
-      },
-    ],
+    posts: [],
   }),
+  async fetch() {
+    const { data: posts } = await axios.get(
+      'https://mammae-clinic.ru/wp-json/wp/v2/posts'
+    )
+    this.posts = posts
+  },
   methods: {
     linkGen(pageNum) {
       return pageNum === 1 ? '?' : `?page=${pageNum}`
@@ -84,10 +55,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-#archiveContent
-  padding-top: 0
-.pagination
-  justify-content: center
-  margin: 30px
-</style>
+<style lang="sass" scoped></style>

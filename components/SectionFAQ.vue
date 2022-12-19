@@ -1,7 +1,7 @@
 <template>
   <section id="faq">
     <b-container>
-      <BaseTitleSection title="Вопрос-ответ" />
+      <TitleSection title="Вопрос-ответ" />
       <b-row>
         <b-col>
           <div class="accordion" role="tablist">

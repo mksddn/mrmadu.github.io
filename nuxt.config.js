@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'ssr',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -16,13 +16,14 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '~static/custom.sass', 
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    { src: '~static/custom.sass', lang: 'sass' },
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@plugins/global.js',
+    // '@plugins/global.js',  // сначала так глобально регистрировал и импортировал компоненты, а потом узнал, что можно сделать просто через плагин
+    // '~/plugins/app-components.js', // а потом вообще узнал, что у накста есть такая штука, как авто импорт компонентов (см ниже)
     '~/plugins/fontawesome.js',
     '~/plugins/animateOnScroll.client.js',
   ],

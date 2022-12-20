@@ -5,7 +5,7 @@
     </b-link>
     <b-card-body>
       <h4>{{ title }}</h4>
-      <p class="card-text">{{ desc }}</p>
+      <div class="card-text" v-html="desc" />
       <!-- <b-button href="#" variant="primary">Подробнее</b-button> -->
       <b-link to="/">Подробнее</b-link>
     </b-card-body>

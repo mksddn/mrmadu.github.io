@@ -30,7 +30,7 @@ export default {
       required: true,
     },
     postId: {
-      type: String,
+      type: Number,
       required: true,
     },
     thumbnail: {

@@ -1,7 +1,7 @@
 <template>
   <b-card no-body img-top class="m-1">
     <b-link to="/">
-      <b-card-img :src="img" :alt="title" />
+      <b-card-img :src="thumbnail" :alt="title" />
     </b-link>
     <b-card-body>
       <b-link to="/post"><h4>{{ title }}</h4></b-link>
@@ -19,7 +19,7 @@ export default {
       type: String,
       required: true,
     },
-    img: {
+    thumbnail: {
       type: String,
       required: true,
     },

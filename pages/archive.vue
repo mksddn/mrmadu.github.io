@@ -5,13 +5,27 @@
       <b-container>
         <b-row>
           <b-col class="cntnt">
+            <b-skeleton-wrapper v-if="loading" :loading="loading">
+              <template #loading>
+                <b-card>
+                  <b-skeleton-img></b-skeleton-img>
+                  <br />
+                  <b-skeleton width="85%"></b-skeleton>
+                  <b-skeleton width="55%"></b-skeleton>
+                  <b-skeleton width="70%"></b-skeleton>
+                  <br />
+                  <b-skeleton type="button"></b-skeleton>
+                </b-card>
+              </template>
+            </b-skeleton-wrapper>
             <PostPreview
-              v-for="post in posts"
+              v-for="post in ARTICLES"
+              v-else
               :key="post.id"
               :title="post.title.rendered"
               :post-id="post.id"
-              :thumbnail="post.thumbnail"
-              :desc="post.excerpt.rendered"
+              :thumbnail="post.fimg_url"
+              :desc="post.content.rendered"
               url="post"
             />
             <div class="pagination m-3 justify-content-center">
@@ -32,22 +46,34 @@
 </template>
 
 <script>
-import axios from "axios"
+import { mapActions, mapGetters } from 'vuex'
 import PostPreview from '../components/PostPreview.vue'
 export default {
   components: { PostPreview },
   layout: 'page',
   data: () => ({
     title: 'Архив записей',
-    posts: [],
+    loading: true,
+    // posts: [],
   }),
-  async fetch() {
-    const { data: posts } = await axios.get(
-      'https://mammae-clinic.ru/wp-json/wp/v2/posts'
-    )
-    this.posts = posts
+  // async fetch() {
+  //   const { data: posts } = await axios.get(
+  //     'https://mammae-clinic.ru/wp-json/wp/v2/posts'
+  //   )
+  //   this.posts = posts
+  // },
+  computed: {
+    ...mapGetters(['ARTICLES']),
+  },
+  mounted() {
+    this.GET_ARTICLES_FROM_API().then((response) => {
+      if (response.data) {
+        this.loading = false
+      }
+    })
   },
   methods: {
+    ...mapActions(['GET_ARTICLES_FROM_API']),
     linkGen(pageNum) {
       return pageNum === 1 ? '?' : `?page=${pageNum}`
     },

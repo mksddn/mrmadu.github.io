@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderFront />
+    <TheHeader />
     <main class="main">
       <Nuxt />
       <SectionCreed />
@@ -12,7 +12,7 @@
         btn-text="Записаться на прием"
       />
     </main>
-    <FooterFront />
+    <TheFooter />
   </div>
 </template>
 <script>

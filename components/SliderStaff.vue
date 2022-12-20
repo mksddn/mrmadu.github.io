@@ -1,15 +1,15 @@
 <template>
   <section id="staffSlider">
     <b-container>
-      <TitleSection title="Новости" btn-link="/" />
+      <TitleSection title="Наши врачи" btn-link="/" />
       <b-row>
         <b-col class="slider-wrapper">
           <VueSlickCarousel v-bind="settings">
-            <CardPost
-              v-for="post in posts"
+            <CardStaff
+              v-for="post in staff"
               :key="post.id"
               :title="post.title.rendered"
-              :thumbnail="post.fimg_url"
+              :img="post.fimg_url"
               :desc="post.excerpt.rendered"
             />
           </VueSlickCarousel>
@@ -20,18 +20,18 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios"
 import VueSlickCarousel from 'vue-slick-carousel'
-import CardPost from '~/components/CardPost'
+import CardStaff from '~/components/CardStaff'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-  name: 'SliderPosts',
-  components: { VueSlickCarousel, CardPost },
+  name: 'SliderStaff',
+  components: { VueSlickCarousel, CardStaff },
   data: () => ({
-    posts: [],
+    staff: [],
     settings: {
       lazyLoad: 'ondemand',
       dots: true,
@@ -67,10 +67,20 @@ export default {
   }),
   async fetch() {
     const { data: posts } = await axios.get(
-      'https://mammae-clinic.ru/wp-json/wp/v2/posts'
+      'https://mammae-clinic.ru/wp-json/wp/v2/staff'
     )
-    this.posts = posts
+    this.staff = posts
   },
 }
 </script>
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+section
+  background-color: #f1f1f1
+.slider-wrapper
+  padding: 0 !important
+.slick-slide
+  // margin: 0 15px
+  padding: 0 15px
+.slick-list
+  // margin: 0 -15px !important
+</style>

@@ -39,33 +39,9 @@
 </template>
 
 <script>
-import SectionAbout from '~/components/SectionAbout'
-import SectionCTA from '~/components/SectionCTA'
-import SliderHero from '~/components/SliderHero'
-import SliderStaff from '~/components/SliderStuff'
-import SectionProducts from '~/components/SectionProducts'
-import SliderPosts from '~/components/SliderPosts'
-import SectionCreed from '~/components/SectionCreed'
-import SectionFAQ from '~/components/SectionFAQ'
-import SectionFeats from '~/components/SectionFeats'
-import SectionContacts from '~/components/SectionContacts'
-import SectionAddinfo from '~/components/SectionAddinfo'
 
 export default {
   name: 'IndexPage',
-  components: {
-    SectionAbout,
-    SectionCTA,
-    SliderHero,
-    SliderStaff,
-    SectionProducts,
-    SliderPosts,
-    SectionCreed,
-    SectionFAQ,
-    SectionFeats,
-    SectionContacts,
-    SectionAddinfo,
-  },
   layout: 'home',
   // mounted() {
   //   // eslint-disable-next-line no-undef

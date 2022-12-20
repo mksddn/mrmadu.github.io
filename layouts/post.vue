@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HeaderFront />
+    <TheHeader />
     <main class="main">
       <Nuxt />
     </main>
-    <FooterFront />
+    <TheFooter />
   </div>
 </template>
 <script>

@@ -30,7 +30,7 @@
           </b-col>
           <b-col lg="4">
             <div class="widget">
-              <img src="star.png" alt="" /><br />
+              <img src="/star.png" alt="" /><br />
               <a href="https://yandex.ru/maps/-/CCUqfCQh1C" target="_blank"
                 ><b>выбор пользователей Яндекса - 2020</b></a
               >
@@ -126,7 +126,7 @@ export default {
       },
     ],
     about: {
-      logo: 'logo-min.png',
+      logo: '/logo-min.png',
       text: `Общество с ограниченной ответственностью «Клиника МАММЭ» (ООО «Клиника МАММЭ»)
       <br>
       Лицензия на осуществление медицинской деятельности <b>№ ЛО-23-01-008447</b>

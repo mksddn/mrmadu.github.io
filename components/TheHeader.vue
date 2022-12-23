@@ -14,10 +14,10 @@
             </b-input-group>
           </b-nav-form>
           <div class="nav-icons">
-            <a href="/" class="vk">
+            <a href="/#" class="vk">
               <font-awesome-icon icon="fa-brands fa-vk" color="#007bff" />
             </a>
-            <a href="/" class="visimp">
+            <a href="/#" class="visimp">
               <font-awesome-icon icon="fa-solid fa-glasses" />
               <span>версия для слабовидящих</span>
             </a>
@@ -81,6 +81,8 @@
                 :href="item.link"
                 >{{ item.title }}</b-nav-item
               >
+              <!-- <b-link :to="`/articles`">блог</b-link>
+              <router-link :to="`/articles`">блог</router-link> -->
             </b-navbar-nav>
           </b-collapse>
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -144,7 +146,7 @@ export default {
       },
       {
         title: 'Новости',
-        link: 'archive',
+        link: '/articles',
       },
       {
         title: 'Контакты',

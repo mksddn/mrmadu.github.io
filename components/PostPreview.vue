@@ -1,16 +1,16 @@
 <template>
   <b-card no-body img-top class="mb-5">
-    <b-link to="/">
-      <b-card-img :src="thumbnail" :alt="title" />
+    <b-link :to="`/${post.slug}`">
+      <b-card-img :src="post.fimg_url" :alt="post.title.rendered" />
     </b-link>
     <b-card-body>
-      <b-link :to="url" class="post-title"
-        ><h2>{{ title }}</h2></b-link
+      <b-link :to="`/${post.slug}`" class="post-title"
+        ><h2>{{ post.title.rendered }}</h2></b-link
       >
-      <div class="card-text post-excerpt" v-html="desc" />
+      <div class="card-text post-excerpt" v-html="post.content.rendered" />
       <hr />
       <div class="post-btns">
-        <b-link :to="url" class="post-link btn btn-primary"
+        <b-link :to="`/${post.slug}`" class="post-link btn btn-primary"
           >Продолжить чтение</b-link
         >
         <ShareIcons />
@@ -25,24 +25,8 @@ export default {
   name: 'PostPreview',
   components: { ShareIcons },
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    postId: {
-      type: Number,
-      required: true,
-    },
-    thumbnail: {
-      type: String,
-      required: true,
-    },
-    desc: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
+    post: {
+      type: Object,
       required: true,
     },
   },
@@ -61,6 +45,7 @@ export default {
 .post-title
   margin-bottom: 20px
   display: block
+  text-decoration: none
   *
     font-weight: bold
 .post-excerpt

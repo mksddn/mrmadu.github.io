@@ -6,11 +6,11 @@
         <b-col class="slider-wrapper">
           <VueSlickCarousel v-bind="settings">
             <CardStaff
-              v-for="post in staff"
-              :key="post.id"
-              :title="post.title.rendered"
-              :img="post.fimg_url"
-              :desc="post.excerpt.rendered"
+              v-for="pers in staff"
+              :key="pers.id"
+              :title="pers.name"
+              :img="pers.img"
+              :desc="pers.text"
             />
           </VueSlickCarousel>
         </b-col>
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import axios from "axios"
 import VueSlickCarousel from 'vue-slick-carousel'
 import CardStaff from '~/components/CardStaff'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
@@ -31,7 +30,44 @@ export default {
   name: 'SliderStaff',
   components: { VueSlickCarousel, CardStaff },
   data: () => ({
-    staff: [],
+    staff: [
+      {
+        id: '01',
+        img: '/doc.jpg',
+        name: 'test 1',
+        text: 'Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Сбить которой текста жаренные пояс снова сих вершину, мир текстами свое маленький точках напоивший своего то переписали букв скатился свою!',
+      },
+      {
+        id: '02',
+        img: '/doc.jpg',
+        name: 'test 2',
+        text: 'Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Сбить которой текста жаренные пояс снова сих вершину, мир текстами свое маленький точках напоивший своего то переписали букв скатился свою!',
+      },
+      {
+        id: '03',
+        img: '/doc.jpg',
+        name: 'test 3',
+        text: 'Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Сбить которой текста жаренные пояс снова сих вершину, мир текстами свое маленький точках напоивший своего то переписали букв скатился свою!',
+      },
+      {
+        id: '04',
+        img: '/doc.jpg',
+        name: 'test 4',
+        text: 'Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Сбить которой текста жаренные пояс снова сих вершину, мир текстами свое маленький точках напоивший своего то переписали букв скатился свою!',
+      },
+      {
+        id: '05',
+        img: '/doc.jpg',
+        name: 'test 5',
+        text: 'Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Сбить которой текста жаренные пояс снова сих вершину, мир текстами свое маленький точках напоивший своего то переписали букв скатился свою!',
+      },
+      {
+        id: '06',
+        img: '/doc.jpg',
+        name: 'test 6',
+        text: 'Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Сбить которой текста жаренные пояс снова сих вершину, мир текстами свое маленький точках напоивший своего то переписали букв скатился свою!',
+      },
+    ],
     settings: {
       lazyLoad: 'ondemand',
       dots: true,
@@ -65,12 +101,6 @@ export default {
       ],
     },
   }),
-  async fetch() {
-    const { data: posts } = await axios.get(
-      'https://mammae-clinic.ru/wp-json/wp/v2/staff'
-    )
-    this.staff = posts
-  },
 }
 </script>
 <style lang="sass" scoped>

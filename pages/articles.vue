@@ -5,7 +5,7 @@
       <b-container>
         <b-row>
           <b-col class="cntnt">
-            <b-skeleton-wrapper v-if="loading" :loading="loading">
+            <!-- <b-skeleton-wrapper v-if="loading" :loading="loading">
               <template #loading>
                 <b-card>
                   <b-skeleton-img></b-skeleton-img>
@@ -17,16 +17,11 @@
                   <b-skeleton type="button"></b-skeleton>
                 </b-card>
               </template>
-            </b-skeleton-wrapper>
+            </b-skeleton-wrapper> -->
             <PostPreview
-              v-for="post in ARTICLES"
-              v-else
+              v-for="post in $store.state.articles"
               :key="post.id"
-              :title="post.title.rendered"
-              :post-id="post.id"
-              :thumbnail="post.fimg_url"
-              :desc="post.content.rendered"
-              url="post"
+              :post="post"
             />
             <div class="pagination m-3 justify-content-center">
               <b-pagination-nav
@@ -46,14 +41,27 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-import PostPreview from '../components/PostPreview.vue'
+// import { mapActions, mapGetters } from 'vuex'
+import PostPreview from '@/components/PostPreview.vue'
 export default {
   components: { PostPreview },
   layout: 'page',
+  async asyncData({ app, store, params }) {
+    if (!store.state.articles) {
+      const articles = await app.$axios.get(
+        `https://mammae-clinic.ru/wp-json/wp/v2/posts`,
+        {
+          params: {
+            _embed: true,
+          },
+        }
+      )
+      store.commit('SET_ARTICLES_TO_STATE', articles.data)
+    }
+  },
   data: () => ({
     title: 'Архив записей',
-    loading: true,
+    // loading: true,
     // posts: [],
   }),
   // async fetch() {
@@ -63,17 +71,20 @@ export default {
   //   this.posts = posts
   // },
   computed: {
-    ...mapGetters(['ARTICLES']),
+    // ...mapGetters(['ARTICLES']),
+    // ARTICLES() {
+    //   return this.$store.getters.ARTICLES
+    // },
   },
   mounted() {
-    this.GET_ARTICLES_FROM_API().then((response) => {
-      if (response.data) {
-        this.loading = false
-      }
-    })
+    // this.GET_ARTICLES_FROM_API().then((response) => {
+    //   if (response.data) {
+    //     this.loading = false
+    //   }
+    // })
   },
   methods: {
-    ...mapActions(['GET_ARTICLES_FROM_API']),
+    // ...mapActions(['GET_ARTICLES_FROM_API']),
     linkGen(pageNum) {
       return pageNum === 1 ? '?' : `?page=${pageNum}`
     },

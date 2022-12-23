@@ -8,9 +8,7 @@
             <CardPost
               v-for="post in posts"
               :key="post.id"
-              :title="post.title.rendered"
-              :thumbnail="post.fimg_url"
-              :desc="post.excerpt.rendered"
+              :post="post"
             />
           </VueSlickCarousel>
         </b-col>
@@ -69,6 +67,7 @@ export default {
     const { data: posts } = await axios.get(
       'https://mammae-clinic.ru/wp-json/wp/v2/posts'
     )
+    this.$store.commit('SET_ARTICLES_TO_STATE', posts)
     this.posts = posts
   },
 }

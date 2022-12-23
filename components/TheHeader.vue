@@ -29,7 +29,7 @@
     <div id="sthead">
       <b-navbar toggleable="lg" type="light" class="navbar-middle">
         <b-container>
-          <b-navbar-brand href="/">
+          <b-navbar-brand to="/">
             <img :src="logoUrl" alt="" />
           </b-navbar-brand>
 
@@ -77,8 +77,8 @@
             <b-navbar-nav class="menu-main">
               <b-nav-item
                 v-for="item in menuMain"
-                :key="item.link"
-                :href="item.link"
+                :key="item.index"
+                :to="item.link"
                 >{{ item.title }}</b-nav-item
               >
               <!-- <b-link :to="`/articles`">блог</b-link>

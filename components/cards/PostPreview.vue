@@ -20,10 +20,8 @@
 </template>
 
 <script>
-import ShareIcons from './ShareIcons.vue'
 export default {
   name: 'PostPreview',
-  components: { ShareIcons },
   props: {
     post: {
       type: Object,

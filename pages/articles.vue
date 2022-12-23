@@ -42,9 +42,7 @@
 
 <script>
 // import { mapActions, mapGetters } from 'vuex'
-import PostPreview from '@/components/PostPreview.vue'
 export default {
-  components: { PostPreview },
   layout: 'page',
   async asyncData({ app, store, params }) {
     if (!store.state.articles) {

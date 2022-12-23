@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SliderHero />
+    <SectionHero />
     <SectionAbout />
     <SectionCTA
       form
@@ -11,10 +11,10 @@
     <div class="bg-image">
       <SectionProducts title="Услуги и цены" />
     </div>
-    <SliderStaff />
-    <SliderPosts />
+    <!-- <SectionStaff /> -->
+    <SectionPosts />
     <SectionCreed />
-    <SliderReviews />
+    <SectionReviews />
     <SectionCTA
       form
       img-btm

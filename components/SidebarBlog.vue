@@ -2,7 +2,7 @@
   <aside>
     <div class="wdgt wdgt-cats">
       <h3 class="wdgt-title">Категории</h3>
-      <div v-for="cat in cats" :key="cat.link" class="cat-item">
+      <div v-for="cat in cats" :key="cat.index" class="cat-item">
         <b-link :to="cat.link"
           ><h4 class="cat-title">{{ cat.title }}</h4></b-link
         >

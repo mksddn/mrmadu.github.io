@@ -3,7 +3,8 @@
 export const state = () => ({
   loading: true,
   articles: null,
-  article: null,
+  lastArticles: null,
+  currArticle: null,
 })
 
 export const mutations = {
@@ -11,8 +12,11 @@ export const mutations = {
   SET_ARTICLES_TO_STATE: (state, data) => {
     state.articles = data
   },
-  SET_ARTICLE_TO_STATE: (state, data) => {
-    state.article = data
+  SET_CURR_ARTICLE: (state, data) => {
+    state.currArticle = data
+  },
+  SET_LAST_ARTICLES: (state, data) => {
+    state.lastArticles = data
   },
 }
 

@@ -1,35 +1,37 @@
 <template>
-  <section id="staffSlider">
-    <b-container>
-      <TitleSection title="Новости" btn-link="/" />
-      <b-row>
-        <b-col class="slider-wrapper">
-          <VueSlickCarousel v-bind="settings">
-            <CardPost
-              v-for="post in posts"
-              :key="post.id"
-              :post="post"
-            />
-          </VueSlickCarousel>
-        </b-col>
-      </b-row>
-    </b-container>
-  </section>
+  <div v-if="type === 'post'">
+    <VueSlickCarousel v-bind="settings">
+      <CardPost v-for="post in slides" :key="post.id" :post="post" />
+    </VueSlickCarousel>
+  </div>
+  <div v-else-if="type === 'staff'">
+    <VueSlickCarousel v-bind="settings">
+      <CardStaff v-for="post in slides" :key="post.id" :post="post" />
+    </VueSlickCarousel>
+  </div>
 </template>
 
 <script>
-import axios from 'axios'
 import VueSlickCarousel from 'vue-slick-carousel'
-import CardPost from '~/components/CardPost'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-
 export default {
-  name: 'SliderPosts',
-  components: { VueSlickCarousel, CardPost },
+  components: {
+    VueSlickCarousel,
+  },
+  props: {
+    type: {
+      type: String,
+      required: true,
+    },
+    slides: {
+      type: Array,
+      required: true,
+    },
+  },
   data: () => ({
-    posts: [],
+    // type: this.slides[0].type,
     settings: {
       lazyLoad: 'ondemand',
       dots: true,
@@ -63,13 +65,7 @@ export default {
       ],
     },
   }),
-  async fetch() {
-    const { data: posts } = await axios.get(
-      'https://mammae-clinic.ru/wp-json/wp/v2/posts'
-    )
-    this.$store.commit('SET_ARTICLES_TO_STATE', posts)
-    this.posts = posts
-  },
 }
 </script>
+
 <style lang="sass" scoped></style>

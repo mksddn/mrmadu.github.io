@@ -38,25 +38,28 @@
 </template>
 
 <script>
-import ShareIcons from '~/components/ShareIcons'
-import PrevNextPost from '~/components/PrevNextPost'
-import TagItem from '~/components/TagItem'
-import SidebarBlog from '~/components/SidebarBlog'
 export default {
-  components: { TagItem, SidebarBlog, ShareIcons, PrevNextPost },
   layout: 'post',
-  async asyncData({ app, store, params }) {
-    const { data } = await app.$axios.get(
-      `https://mammae-clinic.ru/wp-json/wp/v2/posts`,
-      {
-        params: {
-          slug: params.slug,
-          _embed: true,
-        },
-      }
-    )
-    store.commit('SET_ARTICLE_TO_STATE', data[0])
-    return { article: data[0] }
+  async asyncData({ app, store, params, route }) {
+    if (
+      !store.state.currArticle ||
+      route.params.slug !== store.state.currArticle.slug
+    ) {
+      const { data } = await app.$axios.get(
+        `https://mammae-clinic.ru/wp-json/wp/v2/posts`,
+        {
+          params: {
+            slug: params.slug,
+            _embed: true,
+          },
+        }
+      )
+      store.commit('SET_CURR_ARTICLE', data[0])
+      return { article: data[0] }
+    }
+  },
+  mounted() {
+    // console.log(this.$route.params.slug)
   },
   // post: {
   //   type: Object,

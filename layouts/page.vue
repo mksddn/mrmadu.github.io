@@ -16,14 +16,5 @@
   </div>
 </template>
 <script>
-import SectionCTA from '~/components/SectionCTA'
-import SliderPosts from '~/components/SliderPosts'
-import SectionCreed from '~/components/SectionCreed'
-export default {
-  components: {
-    SectionCTA,
-    SliderPosts,
-    SectionCreed,
-  },
-}
+export default {}
 </script>

@@ -1,10 +1,10 @@
 <template>
-  <section id="staffSlider">
+  <section v-if="$store.state.lastStaff">
     <b-container>
       <TitleSection title="Наши врачи" btn-link="/" />
       <b-row>
         <b-col class="slider-wrapper">
-          <SliderCarousel :slides="posts" :type="posts[0].type" />
+          <SliderCarousel :slides="$store.state.lastStaff" type="staff" />
         </b-col>
       </b-row>
     </b-container>
@@ -15,26 +15,25 @@
 import axios from 'axios'
 export default {
   name: 'SectionStaff',
-  data: () => ({
-    posts: [],
-  }),
   async fetch() {
-    const { data: posts } = await axios.get(
-      'https://mammae-clinic.ru/wp-json/wp/v2/staff'
-    )
-    this.$store.commit('SET_ARTICLES_TO_STATE', posts)
-    this.posts = posts
+    if (!this.$store.state.lastStaff) {
+      const { data: lastStaff } = await axios.get(
+        'https://mammae-clinic.ru/wp-json/wp/v2/staff?per_page=10'
+      )
+      this.$store.commit('SET_LAST_STAFF', lastStaff)
+      // this.lastStaff = lastStaff
+    }
   },
 }
 </script>
 <style lang="sass" scoped>
 section
   background-color: #f1f1f1
-.slider-wrapper
-  padding: 0 !important
-.slick-slide
-  // margin: 0 15px
-  padding: 0 15px
-.slick-list
-  // margin: 0 -15px !important
+// .slider-wrapper
+//   padding: 0 !important
+// .slick-slide
+//   // margin: 0 15px
+//   padding: 0 15px
+// .slick-list
+//   // margin: 0 -15px !important
 </style>

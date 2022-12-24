@@ -19,7 +19,7 @@
             <pre v-html="article.categories" />
             <pre v-html="article.tags" />
             <div class="tags">
-              <TagItem v-for="tag in article.tags" :key="tag.url" />
+              <!-- <TagItem v-for="tag in article.tags" :key="tag.url" /> -->
             </div>
             <br />
             <div id="shareIcons">

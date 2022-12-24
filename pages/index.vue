@@ -11,7 +11,7 @@
     <div class="bg-image">
       <SectionProducts title="Услуги и цены" />
     </div>
-    <!-- <SectionStaff /> -->
+    <SectionStaff />
     <SectionPosts />
     <SectionCreed />
     <SectionReviews />

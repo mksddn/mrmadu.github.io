@@ -4,7 +4,7 @@
     <main class="main">
       <Nuxt />
       <SectionCreed />
-      <SliderPosts />
+      <SectionPosts />
       <SectionCTA
         form
         img-btm

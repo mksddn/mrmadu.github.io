@@ -9,7 +9,7 @@
       btn-text="Записаться на прием"
     />
     <div class="bg-image">
-      <SectionProducts title="Услуги и цены" />
+      <SectionServices />
     </div>
     <SectionStaff />
     <SectionPosts />

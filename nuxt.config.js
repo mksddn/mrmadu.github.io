@@ -27,6 +27,7 @@ export default {
     // '~/plugins/app-components.js', // а потом вообще узнал, что у накста есть такая штука, как авто импорт компонентов (см ниже)
     '~/plugins/fontawesome.js',
     '~/plugins/animateOnScroll.client.js',
+    { src: '~/plugins/vue-scrollto', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

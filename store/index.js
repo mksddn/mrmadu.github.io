@@ -7,6 +7,7 @@ export const state = () => ({
   currArticle: null,
   allStaff: null,
   lastStaff: null,
+  services: null,
   allCats: null,
   allTags: null,
 })
@@ -27,6 +28,9 @@ export const mutations = {
   },
   SET_LAST_STAFF: (state, data) => {
     state.lastStaff = data
+  },
+  SET_SERVICES: (state, data) => {
+    state.services = data
   },
   SET_ALL_CATS: (state, data) => {
     state.allCats = data

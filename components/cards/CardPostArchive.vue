@@ -7,7 +7,7 @@
       <b-link :to="`/${post.slug}`" class="post-title"
         ><h2>{{ post.title.rendered }}</h2></b-link
       >
-      <div class="card-text post-excerpt" v-html="post.content.rendered" />
+      <div class="card-text post-excerpt" v-html="post.excerpt.rendered" />
       <hr />
       <div class="post-btns">
         <b-link :to="`/${post.slug}`" class="post-link btn btn-primary"

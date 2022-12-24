@@ -29,7 +29,7 @@
     <div id="sthead">
       <b-navbar toggleable="lg" type="light" class="navbar-middle">
         <b-container>
-          <b-navbar-brand to="/">
+          <b-navbar-brand to="/" @click.prevent.stop="homeScrollTop">
             <img :src="logoUrl" alt="" />
           </b-navbar-brand>
 
@@ -160,11 +160,11 @@ export default {
   }),
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('scroll', this.myFunction)
+      window.addEventListener('scroll', this.fixHeader)
     })
   },
   methods: {
-    myFunction() {
+    fixHeader() {
       const header = document.getElementById('sthead')
       const sticky = header.offsetTop
       const main = document.querySelector('main.main')
@@ -174,6 +174,14 @@ export default {
       } else {
         header.classList.remove('sticky')
         main.style.cssText = `padding-top: 0`
+      }
+    },
+    homeScrollTop() {
+      if (window.location.pathname === '/') {
+        this.$scrollTo(document, 500);
+        // console.log('scroll');
+      } else {
+        this.$router.push('/');
       }
     },
   },

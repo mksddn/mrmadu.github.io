@@ -1,7 +1,7 @@
 <template>
   <b-card no-body img-top class="m-1">
     <b-link :to="`/staff/${post.slug}`">
-      <b-card-img :src="post.fimg_url" :alt="post.title.rendered" />
+      <b-card-img-lazy :src="post.fimg_url" :alt="post.title.rendered" />
     </b-link>
     <b-card-body>
       <h4>{{ post.title.rendered }}</h4>

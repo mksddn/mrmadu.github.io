@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'CardPost',
+  name: 'CardPostSlider',
   props: {
     post: {
       type: Array,

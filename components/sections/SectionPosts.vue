@@ -1,10 +1,10 @@
 <template>
-  <section id="staffSlider">
+  <section v-if="$store.state.lastArticles">
     <b-container>
       <TitleSection title="Новости" btn-link="/" />
       <b-row>
         <b-col class="slider-wrapper">
-          <SliderCarousel :slides="lastArticles" />
+          <SliderCarousel :slides="$store.state.lastArticles" type="post" />
         </b-col>
       </b-row>
     </b-container>
@@ -12,33 +12,18 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   name: 'SectionPosts',
-  async asyncData({ app, store, params }) {
-    if (!store.state.lastArticles) {
-      const lastArticles = await app.$axios.get(
-        `https://mammae-clinic.ru/wp-json/wp/v2/posts`,
-        {
-          params: {
-            _embed: true,
-          },
-        }
+  async fetch() {
+    if (!this.$store.state.lastArticles) {
+      const { data: lastArticles } = await axios.get(
+        'https://mammae-clinic.ru/wp-json/wp/v2/posts?per_page=4'
       )
-      store.commit('SET_LAST_ARTICLES', lastArticles.data)
-      // return lastArticles
+      this.$store.commit('SET_LAST_ARTICLES', lastArticles)
+      // this.lastArticles = lastArticles
     }
   },
-  data: () => ({
-    // posts: [],
-  }),
-  // async fetch() {
-  //   const { data: posts } = await axios.get(
-  //     'https://mammae-clinic.ru/wp-json/wp/v2/posts'
-  //   )
-  //   this.$store.commit('SET_ARTICLES_TO_STATE', posts)
-  //   this.posts = posts
-  // },
 }
 </script>
 <style lang="sass" scoped></style>

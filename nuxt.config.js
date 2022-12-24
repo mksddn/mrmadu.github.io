@@ -38,6 +38,7 @@ export default {
     { path: '~/components/global', extensions: ['vue'] },
     { path: '~/components/titles', extensions: ['vue'] },
     { path: '~/components/sliders', extensions: ['vue'] },
+    { path: '~/components/sidebar', extensions: ['vue'] },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

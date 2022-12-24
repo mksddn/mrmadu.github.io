@@ -18,7 +18,7 @@
                 </b-card>
               </template>
             </b-skeleton-wrapper> -->
-            <PostPreview
+            <CardPostArchive
               v-for="post in $store.state.articles"
               :key="post.id"
               :post="post"

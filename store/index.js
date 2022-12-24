@@ -5,6 +5,8 @@ export const state = () => ({
   articles: null,
   lastArticles: null,
   currArticle: null,
+  allCats: null,
+  allTags: null,
 })
 
 export const mutations = {
@@ -17,6 +19,12 @@ export const mutations = {
   },
   SET_LAST_ARTICLES: (state, data) => {
     state.lastArticles = data
+  },
+  SET_ALL_CATS: (state, data) => {
+    state.allCats = data
+  },
+  SET_ALL_TAGS: (state, data) => {
+    state.allTags = data
   },
 }
 

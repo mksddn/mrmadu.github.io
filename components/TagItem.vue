@@ -1,17 +1,13 @@
 <template>
-  <b-link :to="url" class="tag-item">{{ name }}</b-link>
+  <b-link :to="`/tag/${tag.slug}`" class="tag-item">{{ tag.name }}</b-link>
 </template>
 
 <script>
 export default {
   name: 'TagItem',
   props: {
-    name: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
+    tag: {
+      type: Array,
       required: true,
     },
   },
@@ -20,6 +16,9 @@ export default {
 
 <style lang="sass" scoped>
 .tag-item
+  display: inline-block
+  font-size: 0.75rem
+  text-transform: uppercase
   background-color: $primary
   color: #fff !important
   text-decoration: none

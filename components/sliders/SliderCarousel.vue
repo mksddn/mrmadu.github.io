@@ -1,11 +1,9 @@
 <template>
-  <div v-if="type === 'post'">
-    <VueSlickCarousel v-bind="settings">
-      <CardPost v-for="post in slides" :key="post.id" :post="post" />
+  <div>
+    <VueSlickCarousel v-if="type === 'post'" v-bind="settings">
+      <CardPostSlider v-for="post in slides" :key="post.id" :post="post" />
     </VueSlickCarousel>
-  </div>
-  <div v-else-if="type === 'staff'">
-    <VueSlickCarousel v-bind="settings">
+    <VueSlickCarousel v-else-if="type === 'staff'" v-bind="settings">
       <CardStaff v-for="post in slides" :key="post.id" :post="post" />
     </VueSlickCarousel>
   </div>

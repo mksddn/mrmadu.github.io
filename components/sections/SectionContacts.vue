@@ -56,10 +56,8 @@
 </template>
 
 <script>
-import MapYa from '~/components/MapYa'
 export default {
   name: 'SectionContacts',
-  components: { MapYa },
   data: () => ({
     address: [`г. Краснодар<br>проезд Карасунский, д. 15/2`],
     email: ['info@mammae-clinic.ru'],

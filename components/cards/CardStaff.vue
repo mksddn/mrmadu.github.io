@@ -16,7 +16,7 @@ export default {
   name: 'CardStaff',
   props: {
     post: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },

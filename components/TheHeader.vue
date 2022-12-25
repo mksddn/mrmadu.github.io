@@ -134,7 +134,7 @@ export default {
       },
       {
         title: 'Врачи',
-        link: '/',
+        link: '/staff',
       },
       {
         title: 'Стационар',

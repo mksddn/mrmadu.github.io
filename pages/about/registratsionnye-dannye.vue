@@ -211,11 +211,7 @@
 </template>
 
 <script>
-import SidebarAbout from '~/components/SidebarAbout'
 export default {
-  components: {
-    SidebarAbout,
-  },
   layout: 'page',
   data: () => ({
     title: 'Регистрационные данные',

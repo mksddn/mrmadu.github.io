@@ -1,5 +1,5 @@
 <template>
-  <b-card no-body img-top class="m-1">
+  <b-card no-body img-top class="m-2">
     <b-link :to="`/staff/${post.slug}`">
       <b-card-img-lazy :src="post.fimg_url" :alt="post.title.rendered" />
     </b-link>

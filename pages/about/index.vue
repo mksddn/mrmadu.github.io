@@ -63,11 +63,9 @@
 </template>
 
 <script>
-import SliderGallery from '../../components/SliderGallery.vue'
-import SidebarAbout from '~/components/SidebarAbout'
+import SliderGallery from '~/components/SliderGallery.vue'
 export default {
   components: {
-    SidebarAbout,
     SliderGallery,
   },
   layout: 'page',

@@ -3,14 +3,14 @@
     <b-button
       v-for="link in links"
       :key="link.to"
-      :href="link.to"
+      :to="link.to"
       block
       variant="outline-dark"
       >{{ link.title }}</b-button
     >
     <b-button
       v-if="isSchedule"
-      :href="scheduleLink"
+      :to="scheduleLink"
       block
       variant="primary"
       >Скачать расписание</b-button

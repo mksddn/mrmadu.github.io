@@ -23,12 +23,8 @@
 </template>
 
 <script>
-import FormSimple from '~/components/FormSimple'
 export default {
   name: 'SectionCTA',
-  components: {
-    FormSimple,
-  },
   props: {
     form: {
       type: Boolean,
@@ -48,7 +44,7 @@ export default {
     },
     imgSrc: {
       type: String,
-      default: 'doctor.png',
+      default: '/doctor.png',
     },
     btnText: {
       type: String,

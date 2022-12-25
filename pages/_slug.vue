@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitlePost :title="article.title.rendered" />
+    <TitlePage :title="article.title.rendered" type="post" />
     <section id="postContent">
       <b-container>
         <b-row>

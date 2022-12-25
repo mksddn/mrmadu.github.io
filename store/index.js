@@ -1,12 +1,13 @@
 // import axios from 'axios'
 
 export const state = () => ({
-  loading: true,
+  // loading: true,
   articles: null,
   lastArticles: null,
   currArticle: null,
   allStaff: null,
   lastStaff: null,
+  currDoc: null,
   services: null,
   allCats: null,
   allTags: null,
@@ -28,6 +29,9 @@ export const mutations = {
   },
   SET_LAST_STAFF: (state, data) => {
     state.lastStaff = data
+  },
+  SET_CURR_DOC: (state, data) => {
+    state.currDoc = data
   },
   SET_SERVICES: (state, data) => {
     state.services = data

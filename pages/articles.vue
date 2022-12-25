@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitlePost :title="title" />
+    <TitlePage :title="title" type="post" />
     <section id="archiveContent" class="pt-0">
       <b-container>
         <b-row>

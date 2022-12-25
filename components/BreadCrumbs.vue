@@ -30,6 +30,8 @@ export default {
   background: none
   color: #fff
   margin-bottom: 0
+  margin-left: 0
+  padding-left: 0
   a
     color: #b2b2b2
 .breadcrumb-item.active

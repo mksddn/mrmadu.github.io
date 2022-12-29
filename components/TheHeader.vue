@@ -1,6 +1,6 @@
 <template>
   <header>
-    <b-navbar class="navbar-top">
+    <b-navbar class="navbar-wrapper navbar-top">
       <b-container>
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
@@ -27,66 +27,70 @@
     </b-navbar>
 
     <div id="sthead">
-      <b-navbar toggleable="lg" type="light" class="navbar-middle">
-        <b-container>
-          <b-navbar-brand to="/" @click.prevent.stop="homeScrollTop">
-            <img :src="logoUrl" alt="" />
-          </b-navbar-brand>
+      <b-navbar toggleable="lg" type="light" class="wrapper-middle">
+        <div class="navbar-wrapper navbar-middle">
+          <b-container>
+            <b-navbar-brand to="/" @click.prevent.stop="homeScrollTop">
+              <img :src="logoUrl" alt="" />
+            </b-navbar-brand>
 
-          <div class="navbar-info-wrapper ml-auto">
-            <div class="navbar-info">
-              <div class="navbar-info-icon">
-                <font-awesome-icon icon="fa-regular fa-clock" />
+            <div class="navbar-info-wrapper ml-auto d-none d-lg-flex">
+              <div class="navbar-info">
+                <div class="navbar-info-icon">
+                  <font-awesome-icon icon="fa-regular fa-clock" />
+                </div>
+                <div class="navbar-info-text">
+                  <span>Пн-Пт: 8:30 до 18:30</span>
+                  <span class="text-muted"
+                    >Сб: 8:30 до 14:30, Вс: выходной</span
+                  >
+                </div>
               </div>
-              <div class="navbar-info-text">
-                <span>Пн-Пт: 8:30 до 18:30</span>
-                <span class="text-muted">Сб: 8:30 до 14:30, Вс: выходной</span>
+              <div class="navbar-info">
+                <div class="navbar-info-icon">
+                  <font-awesome-icon icon="fa-solid fa-mobile-screen" />
+                </div>
+                <div class="navbar-info-text">
+                  <span
+                    ><a href="tel:8 (800) 100 76 32">8 (800) 100 76 32</a></span
+                  >
+                  <span
+                    ><a href="mailto:info@mammae-clinic.ru"
+                      >info@mammae-clinic.ru</a
+                    ></span
+                  >
+                </div>
+              </div>
+              <div class="navbar-info">
+                <div class="navbar-info-icon">
+                  <font-awesome-icon icon="fa-solid fa-location-dot" />
+                </div>
+                <div class="navbar-info-text">
+                  <span>г. Краснодар</span>
+                  <span class="text-muted">проезд Карасунский, д. 15/2</span>
+                </div>
               </div>
             </div>
-            <div class="navbar-info">
-              <div class="navbar-info-icon">
-                <font-awesome-icon icon="fa-solid fa-mobile-screen" />
-              </div>
-              <div class="navbar-info-text">
-                <span
-                  ><a href="tel:8 (800) 100 76 32">8 (800) 100 76 32</a></span
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+          </b-container>
+        </div>
+        <div class="navbar-wrapper navbar-bottom">
+          <b-container>
+            <b-collapse id="nav-collapse" is-nav>
+              <b-navbar-nav class="menu-main">
+                <b-nav-item
+                  v-for="item in menuMain"
+                  :key="item.index"
+                  :to="item.link"
+                  >{{ item.title }}</b-nav-item
                 >
-                <span
-                  ><a href="mailto:info@mammae-clinic.ru"
-                    >info@mammae-clinic.ru</a
-                  ></span
-                >
-              </div>
-            </div>
-            <div class="navbar-info">
-              <div class="navbar-info-icon">
-                <font-awesome-icon icon="fa-solid fa-location-dot" />
-              </div>
-              <div class="navbar-info-text">
-                <span>г. Краснодар</span>
-                <span class="text-muted">проезд Карасунский, д. 15/2</span>
-              </div>
-            </div>
-          </div>
-        </b-container>
-      </b-navbar>
-
-      <b-navbar class="navbar-bottom">
-        <b-container>
-          <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav class="menu-main">
-              <b-nav-item
-                v-for="item in menuMain"
-                :key="item.index"
-                :to="item.link"
-                >{{ item.title }}</b-nav-item
-              >
-              <!-- <b-link :to="`/articles`">блог</b-link>
+                <!-- <b-link :to="`/articles`">блог</b-link>
               <router-link :to="`/articles`">блог</router-link> -->
-            </b-navbar-nav>
-          </b-collapse>
-          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-        </b-container>
+              </b-navbar-nav>
+            </b-collapse>
+            
+          </b-container>
+        </div>
       </b-navbar>
     </div>
   </header>
@@ -178,10 +182,10 @@ export default {
     },
     homeScrollTop() {
       if (window.location.pathname === '/') {
-        this.$scrollTo(document, 500);
+        this.$scrollTo(document, 500)
         // console.log('scroll');
       } else {
-        this.$router.push('/');
+        this.$router.push('/')
       }
     },
   },
@@ -201,13 +205,29 @@ export default {
 .sticky + .content
   // padding-top: 102px
 
+.navbar-nav
+  align-items: center
+  text-align: center
 
 .navbar
   background-color: #fff
-  &-top, &-middle, &-bottom
+  flex-direction: column
+  &-wrapper
     border-top: 1px solid #ced4da
 .navbar-top
   padding: 0
+.navbar.wrapper-middle
+  padding: 0
+.navbar-middle, .navbar-bottom
+  width: 100%
+  padding: 10px 0
+  .container
+    flex-wrap: nowrap
+.navbar-bottom
+  padding: 0
+  ul
+    padding: 5px 0
+
 .navbar-search
   input
     border-top: 0
@@ -263,4 +283,7 @@ export default {
       font-size: 1rem
       font-weight: bold
       font-size: 0.9rem
+
+.collapse.show
+  margin: 20px
 </style>

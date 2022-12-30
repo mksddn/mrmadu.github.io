@@ -28,7 +28,7 @@ export default {
   async fetch() {
     if (!this.$store.state.services) {
       const { data: services } = await axios.get(
-        'https://mammae-clinic.ru/wp-json/wp/v2/uslugi?parent=0&per_page=40'
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?parent=0&per_page=40`
       )
       this.$store.commit('SET_SERVICES', services)
       // this.services = services

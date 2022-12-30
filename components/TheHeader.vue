@@ -166,6 +166,7 @@ export default {
     this.$nextTick(() => {
       window.addEventListener('scroll', this.fixHeader)
     })
+    console.log(process.env.VUE_APP_WP_API_URL);
   },
   methods: {
     fixHeader() {

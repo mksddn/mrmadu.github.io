@@ -46,7 +46,7 @@ export default {
       route.params.slug !== store.state.currArticle.slug
     ) {
       const { data } = await app.$axios.get(
-        `https://mammae-clinic.ru/wp-json/wp/v2/posts`,
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts`,
         {
           params: {
             slug: params.slug,

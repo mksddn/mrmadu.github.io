@@ -134,7 +134,7 @@ export default {
       },
       {
         title: 'Услуги и цены',
-        link: '/',
+        link: '/uslugi',
       },
       {
         title: 'Врачи',

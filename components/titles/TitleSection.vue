@@ -4,7 +4,7 @@
       <h2 v-animate-fromright class="title mb-4">{{ title }}</h2>
     </b-col>
     <b-col v-if="btnLink" class="text-right">
-      <a href="/" class="btn btn-primary">смотреть все</a>
+      <a href="/" class="btn btn-primary">{{ btnText }}</a>
     </b-col>
   </b-row>
 </template>

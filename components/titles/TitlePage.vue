@@ -8,9 +8,17 @@
   >
     <b-container>
       <b-row>
-        <b-col :class="{ 'offset-lg-4': type === 'staff' }">
-          <h1 :class="{ show }" v-text="title" />
+        <b-col xs="5" :class="{ 'offset-lg-4': type === 'staff' }">
+          <h1
+            v-animate-fromright
+            class="title"
+            :class="{ show }"
+            v-text="title"
+          />
           <BreadCrumbs />
+        </b-col>
+        <b-col v-if="btnLink" class="text-right">
+          <a href="/" class="btn btn-light">{{ btnText }}</a>
         </b-col>
       </b-row>
     </b-container>
@@ -28,6 +36,14 @@ export default {
     type: {
       type: String,
       default: 'page',
+    },
+    btnLink: {
+      type: String,
+      default: null,
+    },
+    btnText: {
+      type: String,
+      default: 'смотреть все',
     },
   },
   data: () => ({

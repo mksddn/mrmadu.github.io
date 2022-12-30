@@ -20,7 +20,7 @@
             </div>
           </b-col>
           <b-col class="doc-info">
-            <TheTabs />
+            <TheTabs :post="currDoc" type="doc" />
           </b-col>
         </b-row>
         <b-row>

@@ -7,19 +7,9 @@
     />
     <section id="pageContent">
       <b-container>
-        <b-row>
-          <b-col>
-            <b-container fluid>
-              <b-row no-gutters>
-                <b-col
-                  v-for="serv in $store.state.services"
-                  :key="serv.id"
-                  lg="4"
-                >
-                  <CardService :serv="serv" />
-                </b-col>
-              </b-row>
-            </b-container>
+        <b-row no-gutters>
+          <b-col v-for="serv in $store.state.services" :key="serv.id" lg="4">
+            <CardService :serv="serv" />
           </b-col>
         </b-row>
       </b-container>
@@ -28,34 +18,24 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   layout: 'page',
-  // async asyncData({ app, store, params }) {
-  //   if (!store.state.allStaff) {
-  //     const allStaff = await app.$axios.get(
-  //       `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff?per_page=99`,
-  //       {
-  //         params: {
-  //           _embed: true,
-  //         },
-  //       }
-  //     )
-  //     store.commit('SET_ALL_STAFF', allStaff.data)
-  //   }
-  // },
+  async asyncData({ app, store, params }) {
+    if (!store.state.services) {
+      const services = await app.$axios.get(
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?parent=0&per_page=99`,
+        {
+          params: {
+            _embed: true,
+          },
+        }
+      )
+      store.commit('SET_SERVICES', services.data)
+    }
+  },
   data: () => ({
     title: 'Услуги и цены',
   }),
-  async fetch() {
-    if (!this.$store.state.services) {
-      const { data: services } = await axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?parent=0&per_page=40`
-      )
-      this.$store.commit('SET_SERVICES', services)
-      // this.services = services
-    }
-  },
 }
 </script>
 

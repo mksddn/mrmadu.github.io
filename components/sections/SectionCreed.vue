@@ -3,9 +3,9 @@
     <b-container>
       <b-row>
         <b-col>
-          <span v-animate-fadein class="creed-text"
-            >Кредо клиники маммэ: «интересы пациента — прежде всего!»</span
-          >
+          <span v-animate-fadein class="creed-text">{{
+            $store.state.homePage.acf.clinic_creed
+          }}</span>
         </b-col>
       </b-row>
     </b-container>

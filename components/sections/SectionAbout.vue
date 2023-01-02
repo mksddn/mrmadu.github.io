@@ -17,21 +17,12 @@
             <b-embed
               type="embed"
               aspect="16by9"
-              src="https://www.youtube.com/embed/243Qj-nDK-g"
+              :src="`${$store.state.homePage.acf.about_video}`"
               allowfullscreen
             ></b-embed>
           </b-modal>
           <p>
-            Многопрофильная клиника «МАММЭ» находится в Краснодаре. В ней 17
-            отделений, которые осуществляют все виды комплексной диагностики и
-            хирургии, в том числе эстетические и реконструктивные операции.
-            Абсолютное большинство врачей имеют высшую квалификационную
-            категорию. В собственной оборудованной лаборатории мы можем точно и
-            оперативно диагностировать различные заболевания, а в круглосуточном
-            стационаре — обеспечивать комфорт, квалифицированный уход и
-            всестороннюю реабилитацию. Запишитесь на прием по телефонам: 8 800
-            100 76 32 или 8 (861) 299 53 23, 8 (861) 299 53 24, 8 (861) 299 53
-            25
+            {{ $store.state.homePage.acf.about_text }}
           </p>
         </b-col>
         <b-col>
@@ -47,10 +38,20 @@
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </b-card-text> -->
-            <b-button href="#" variant="primary" block class="mb-2" size="sm"
+            <b-button
+              :to="`${$store.state.homePage.acf.about_price}`"
+              variant="primary"
+              block
+              class="mb-2"
+              size="sm"
               >Прейскурант на услуги клиники</b-button
             >
-            <b-button href="#" variant="outline-secondary" block class="mb-2" size="sm"
+            <b-button
+              to="/about/paspisanie"
+              variant="outline-secondary"
+              block
+              class="mb-2"
+              size="sm"
               >Расписание на этот месяц</b-button
             >
           </b-card>

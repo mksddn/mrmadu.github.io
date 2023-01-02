@@ -1,8 +1,7 @@
 <template>
   <div id="heroSlider">
-    <b-skeleton-img v-if="loading">wsfssf</b-skeleton-img>
+    <!-- <b-skeleton-img v-if="loading"></b-skeleton-img> -->
     <b-carousel
-      v-else
       id="carousel-1"
       v-model="slideIndex"
       :interval="400000"
@@ -15,7 +14,7 @@
       @sliding-end="onSlideEnd"
     >
       <b-carousel-slide
-        v-for="slide in slides"
+        v-for="slide in $store.state.homePage.acf.slides"
         :key="slide.index"
         :img-src="slide.slide_img"
         class="slide"
@@ -37,16 +36,6 @@
 <script>
 export default {
   name: 'SliderHero',
-  props: {
-    loading: {
-      type: Boolean,
-      default: true,
-    },
-    slides: {
-      type: Array,
-      required: true,
-    },
-  },
   data() {
     return {
       slideIndex: 0,
@@ -76,7 +65,7 @@ export default {
     .slide-item
       display: flex
       flex-direction: column
-      align-items: start
+      align-items: flex-start
       justify-content: center
       height: 100%
     .carousel-caption

@@ -1,20 +1,10 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <section id="addInfo">
     <b-container>
       <b-row>
         <b-col>
-          <b-link to="/"
-            >Сведения о национальном календаре профилактических прививок и
-            календаре профилактических прививок по эпидпоказаниям</b-link
-          >
-          <p>
-            Адрес и контактные данные ТФОМС: 350020, Краснодар, ул. Красная 178
-            <br />
-            E-mail: tfomskk@kubanoms.ru
-            <br />
-            Горячая линия: 8-800-200-60-50 (круглосуточно) Телефон: (861)
-            215-24-62
-          </p>
+          <div v-html="$store.state.homePage.acf.add_text" />
         </b-col>
       </b-row>
     </b-container>

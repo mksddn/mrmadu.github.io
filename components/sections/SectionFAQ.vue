@@ -5,14 +5,14 @@
       <b-row>
         <b-col>
           <div class="accordion" role="tablist">
-            <b-card v-for="(item, index) in faq" :key="index" no-body>
+            <b-card v-for="(item, index) in $store.state.homePage.acf.faq" :key="index" no-body>
               <b-card-header
                 v-b-toggle="'accordion-' + index"
                 header-tag="header"
                 class="p-2"
                 role="tab"
               >
-                <span class="faq-btn">{{ item.question }}</span>
+                <span class="faq-btn">{{ item.faq_question }}</span>
                 <svg
                   class="faq-icon"
                   fill="none"
@@ -31,7 +31,7 @@
               </b-card-header>
               <b-collapse :id="'accordion-' + index" role="tabpanel">
                 <b-card-body>
-                  <b-card-text>{{ item.answer }}</b-card-text>
+                  <b-card-text>{{ item.faq_answer }}</b-card-text>
                 </b-card-body>
               </b-collapse>
             </b-card>

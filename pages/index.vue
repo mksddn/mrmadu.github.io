@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SectionHero :slides="homePage.acf.slides" :loading="sliderLoading" />
+    <SectionHero />
     <SectionAbout />
     <SectionCTA
       form
@@ -53,12 +53,11 @@ export default {
         }
       )
       store.commit('SET_HOME_PAGE', data)
-      return { homePage: data, sliderLoading: false }
+      return { homePage: data }
     }
   },
-  // data: () => ({
-  //   sliderLoading: true,
-  // }),
+  data: () => ({
+  }),
 }
 </script>
 

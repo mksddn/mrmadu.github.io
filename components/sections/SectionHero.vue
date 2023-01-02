@@ -24,9 +24,9 @@
           <b-col col lg="6" class="ml-auto slide-item">
             <span class="slide-title">{{ slide.slide_title }}</span>
             <p class="slide-text">{{ slide.slide_text }}</p>
-            <a :href="slide.slide_link" class="slide-btn btn btn-primary">{{
+            <b-link v-if="slide.slide_link" :to="slide.slide_link" class="slide-btn btn btn-primary">{{
               slide.slide_btn
-            }}</a>
+            }}</b-link>
           </b-col>
         </b-row>
       </b-carousel-slide>
@@ -91,10 +91,14 @@ export default {
       font-weight: bold
       line-height: 1
       margin-bottom: 1rem
+      @media (max-width: 991px)
+        font-size: 1.5rem
     .slide-text
       font-size: 1.1rem
       line-height: 1.2
       margin-bottom: 2rem
+      @media (max-width: 991px)
+        font-size: 1rem
     .slide-title, .slide-text
       text-shadow: 1px 1px 2px black, 0 0 5px black
     .slide-btn

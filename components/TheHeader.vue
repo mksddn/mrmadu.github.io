@@ -211,7 +211,7 @@ export default {
   text-align: center
 
 .navbar
-  background-color: #fff
+  background-color: rgba(255,255,255,.95)
   flex-direction: column
   &-wrapper
     border-top: 1px solid #ced4da

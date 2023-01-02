@@ -1,9 +1,11 @@
 <template>
   <div id="heroSlider">
+    <b-skeleton-img v-if="loading">wsfssf</b-skeleton-img>
     <b-carousel
+      v-else
       id="carousel-1"
       v-model="slideIndex"
-      :interval="4000"
+      :interval="400000"
       controls
       indicators
       img-height="1000"
@@ -12,20 +14,18 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <!-- <b-skeleton-img v-if="sceleton"></b-skeleton-img> -->
       <b-carousel-slide
-        v-for="(slide, index) in slider"
-        :key="index"
-        :img-src="slide.img"
+        v-for="slide in slides"
+        :key="slide.index"
+        :img-src="slide.slide_img"
         class="slide"
       >
-        <!-- <div class="slide-overlay"></div> -->
-        <b-row>
-          <b-col col lg="6" class="ml-auto">
-            <span class="slide-title">{{ slide.title }}</span>
-            <p class="slide-text">{{ slide.text }}</p>
-            <a :href="slide.link" class="slide-btn btn btn-primary">{{
-              slide.btn
+        <b-row class="h-100">
+          <b-col col lg="6" class="ml-auto slide-item">
+            <span class="slide-title">{{ slide.slide_title }}</span>
+            <p class="slide-text">{{ slide.slide_text }}</p>
+            <a :href="slide.slide_link" class="slide-btn btn btn-primary">{{
+              slide.slide_btn
             }}</a>
           </b-col>
         </b-row>
@@ -37,24 +37,18 @@
 <script>
 export default {
   name: 'SliderHero',
+  props: {
+    loading: {
+      type: Boolean,
+      default: true,
+    },
+    slides: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      slider: [
-        {
-          img: '/slide1.jpg',
-          title: 'Внимание!',
-          text: 'Открыт набор на курс «Когнитивно-поведенческая терапия ожирения» под кураторством врача-эндокринолога клиники МАММЭ Зоз Натальи Леонидовны.',
-          btn: 'Подробнее',
-          link: '/',
-        },
-        {
-          img: '/slide2.jpg',
-          title: 'Внимание!',
-          text: 'Открыт набор на курс «Когнитивно-поведенческая терапия ожирения» под кураторством врача-эндокринолога клиники МАММЭ Зоз Натальи Леонидовны.',
-          btn: 'Подробнее',
-          link: '/',
-        },
-      ],
       slideIndex: 0,
       sliding: null,
     }
@@ -72,13 +66,6 @@ export default {
 
 <style lang="sass">
 #heroSlider
-  // .slide-overlay
-  //   position: absolute
-  //   width: 100%
-  //   height: 100%
-  //   left: 0
-  //   top: 0
-  //   background-color: #000
   img.img-fluid
     opacity: 0.8
     height: 100%
@@ -86,18 +73,30 @@ export default {
   .slide
     // display: flex
     height: 380px
-    .carousel-caption
+    .slide-item
       display: flex
+      flex-direction: column
+      align-items: start
+      justify-content: center
       height: 100%
+    .carousel-caption
+      // display: flex
+      height: 100%
+      // width: 100%
       bottom: 0
       align-items: center
       text-align: initial
     .slide-title
       font-size: 2.5rem
       font-weight: bold
+      line-height: 1
+      margin-bottom: 1rem
     .slide-text
       font-size: 1.1rem
       line-height: 1.2
+      margin-bottom: 2rem
     .slide-title, .slide-text
       text-shadow: 1px 1px 2px black, 0 0 5px black
+    .slide-btn
+      text-transform: lowercase
 </style>

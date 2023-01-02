@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SectionHero />
+    <SectionHero :slides="homePage.acf.slides" :loading="sliderLoading" />
     <SectionAbout />
     <SectionCTA
       form
@@ -39,14 +39,26 @@
 </template>
 
 <script>
-
 export default {
-  name: 'IndexPage',
+  name: 'HomePage',
   layout: 'home',
-  // mounted() {
-  //   // eslint-disable-next-line no-undef
-  //   AOS.init()
-  // },
+  async asyncData({ app, store, params, route }) {
+    if (!store.state.homePage) {
+      const { data } = await app.$axios.get(
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages/779`,
+        {
+          params: {
+            _embed: true,
+          },
+        }
+      )
+      store.commit('SET_HOME_PAGE', data)
+      return { homePage: data, sliderLoading: false }
+    }
+  },
+  // data: () => ({
+  //   sliderLoading: true,
+  // }),
 }
 </script>
 

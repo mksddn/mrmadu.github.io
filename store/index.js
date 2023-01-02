@@ -2,6 +2,7 @@
 
 export const state = () => ({
   // loading: true,
+  homePage: null,
   articles: null,
   lastArticles: null,
   currArticle: null,
@@ -16,6 +17,9 @@ export const state = () => ({
 
 export const mutations = {
   // SET_LOADING_TO_FALSE: (state)
+  SET_HOME_PAGE: (state, data) => {
+    state.homePage = data
+  },
   SET_ARTICLES_TO_STATE: (state, data) => {
     state.articles = data
   },

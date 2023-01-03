@@ -141,7 +141,7 @@ export default {
 
 <style lang="sass" scoped>
 footer
-  background-color: #f1f1f1
+  background-color: var(--bg-soft)
   font-size: 0.9rem
   @media (max-width: 992px)
     text-align: center
@@ -163,7 +163,7 @@ footer
   &:last-child
     margin-bottom: 0
 .absolute-footer
-  background-color: #fff
+  background-color: var(--bg-main)
   padding: 15px 0
   .dev
     font-size: 0.7rem

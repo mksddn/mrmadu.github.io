@@ -53,7 +53,7 @@ export default {
     color: #888
   svg
     font-size: 4rem
-    color: #555
+    color: var(--grey)
     margin-bottom: 20px
     transition: color 0.2s
   span

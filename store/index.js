@@ -2,6 +2,7 @@
 
 export const state = () => ({
   // loading: true,
+  darkMode: false,
   homePage: null,
   articles: null,
   lastArticles: null,
@@ -9,7 +10,7 @@ export const state = () => ({
   allStaff: null,
   lastStaff: null,
   currDoc: null,
-  currDocACF: null,
+  // currDocACF: null,
   services: null,
   allCats: null,
   allTags: null,
@@ -38,9 +39,9 @@ export const mutations = {
   SET_CURR_DOC: (state, data) => {
     state.currDoc = data
   },
-  SET_CURR_DOC_ACF: (state, data) => {
-    state.currDocACF = data
-  },
+  // SET_CURR_DOC_ACF: (state, data) => {
+  //   state.currDocACF = data
+  // },
   SET_SERVICES: (state, data) => {
     state.services = data
   },

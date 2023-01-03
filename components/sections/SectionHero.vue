@@ -54,6 +54,11 @@ export default {
 </script>
 
 <style lang="sass">
+.dark #heroSlider
+  img.img-fluid
+    opacity: 0.5
+    height: 100%
+    vertical-align: middle
 #heroSlider
   img.img-fluid
     opacity: 0.8
@@ -75,6 +80,7 @@ export default {
       bottom: 0
       align-items: center
       text-align: initial
+      color: var(--text-light)
     .slide-title
       font-size: 2.5rem
       font-weight: bold

@@ -28,12 +28,5 @@ export default {
 </script>
 <style lang="sass" scoped>
 section
-  background-color: #f1f1f1
-// .slider-wrapper
-//   padding: 0 !important
-// .slick-slide
-//   // margin: 0 15px
-//   padding: 0 15px
-// .slick-list
-//   // margin: 0 -15px !important
+  background-color: var(--bg-soft)
 </style>

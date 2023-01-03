@@ -27,7 +27,6 @@
         </b-col>
         <b-col>
           <b-card
-            bg-variant="light"
             img-src="/heart-health.jpg"
             img-alt="Image"
             img-top
@@ -81,4 +80,6 @@ export default {
     font-weight: 500
 p
   font-size: 0.9rem
+.card.about-btns
+  background-color: var(--bg-soft)
 </style>

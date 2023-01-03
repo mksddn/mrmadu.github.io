@@ -9,52 +9,52 @@
     </template>
   </b-skeleton-wrapper>
   <div v-else>
-    <b-tabs v-if="type === 'doc'" content-class="mt-3" fill>
+    <b-tabs content-class="mt-3" fill>
       <b-tab
-        v-if="$store.state.currDocACF.acf.staff_main"
+        v-if="$store.state.currDoc.acf.staff_main"
         title="Общая информация"
         active
       >
-        <div v-html="$store.state.currDocACF.acf.staff_main" />
+        <div v-html="$store.state.currDoc.acf.staff_main" />
       </b-tab>
       <b-tab
-        v-if="$store.state.currDocACF.acf.staff_activity"
+        v-if="$store.state.currDoc.acf.staff_activity"
         title="Научная и практическая деятельность"
       >
-        <div v-html="$store.state.currDocACF.acf.staff_activity" />
+        <div v-html="$store.state.currDoc.acf.staff_activity" />
       </b-tab>
-      <b-tab v-if="$store.state.currDocACF.acf.staff_sert" title="Сертификаты">
-        <div v-html="$store.state.currDocACF.acf.staff_sert" />
+      <b-tab v-if="$store.state.currDoc.acf.staff_sert" title="Сертификаты">
+        <div v-html="$store.state.currDoc.acf.staff_sert" />
       </b-tab>
     </b-tabs>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 export default {
   name: 'TheTabs',
   props: {
-    type: {
-      type: String,
-      required: true,
-    },
-    post: {
-      type: Object,
-      required: true,
-    },
+    // type: {
+    //   type: String,
+    //   required: true,
+    // },
+    // post: {
+    //   type: Object,
+    //   required: true,
+    // },
   },
   data: () => ({
-    loading: true,
+    // loading: true,
   }),
-  async fetch() {
-    const { data: currDocACF } = await axios.get(
-      `${process.env.VUE_APP_WP_API_URL}/acf/v3/posts/${this.post.id}`
-    )
-    this.$store.commit('SET_CURR_DOC_ACF', currDocACF)
-    // this.currDocACF = currDocACF
-    this.loading = false
-  },
+  // async fetch() {
+  //   const { data: currDocACF } = await axios.get(
+  //     `${process.env.VUE_APP_WP_API_URL}/acf/v3/posts/${this.post.id}`
+  //   )
+  //   this.$store.commit('SET_CURR_DOC_ACF', currDocACF)
+  //   // this.currDocACF = currDocACF
+  //   this.loading = false
+  // },
 }
 </script>
 

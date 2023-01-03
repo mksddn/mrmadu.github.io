@@ -19,11 +19,11 @@ export default {
   display: inline-block
   font-size: 0.75rem
   text-transform: uppercase
-  background-color: $primary
+  background-color: var(--primary)
   color: #fff !important
   text-decoration: none
   padding: 8px 10px
   margin: 0 2px 2px 0
   &:hover
-    background-color: darken($primary, 10%)
+    background-color: var(--primary-darken)
 </style>

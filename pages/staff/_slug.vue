@@ -20,7 +20,7 @@
             </div>
           </b-col>
           <b-col class="doc-info">
-            <TheTabs :post="currDoc" type="doc" />
+            <TheTabs />
           </b-col>
         </b-row>
         <b-row>
@@ -59,13 +59,13 @@ export default {
 
 <style lang="sass" scoped>
 section
-  background-color: #f1f1f1
+  background-color: var(--bg-soft)
 .doc-img img
   margin-top: -240px
   @media (max-width: 991px)
     margin-top: 0
 .doc-excerpt
-  background-color: #fff
+  background-color: var(--bg-main)
   padding: 20px 15px
   font-weight: bold
   font-size: 0.9rem

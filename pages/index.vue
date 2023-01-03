@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'static/custom.sass';
-@import '~bootstrap/scss/bootstrap.scss';
-@import '~bootstrap-vue/src/index.scss';
+// @import 'static/custom.sass';
+// @import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap-vue/src/index.scss';
 </style>

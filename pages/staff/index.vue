@@ -105,5 +105,5 @@ export default {
     color: #dadada
     z-index: -1
 .archive-staff
-  background-color: #f1f1f1
+  background-color: var(--bg-main)
 </style>

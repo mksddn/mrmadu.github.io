@@ -61,7 +61,7 @@ section.section-title
     padding: 30px 0
   &.title-page
     background-image: url('static/bgn-grad.png')
-    background-color: $primary
+    background-color: var(--primary)
     background-size: cover
     background-position: 50% 50%
     color: #fff

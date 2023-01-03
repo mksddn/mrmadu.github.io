@@ -20,7 +20,7 @@ export default {
 
 <style lang="sass" scoped>
 #creed
-  background-color: #f1f1f1
+  background-color: var(--bg-soft)
 .creed-text
   text-transform: uppercase
   display: block

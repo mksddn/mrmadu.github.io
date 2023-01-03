@@ -80,7 +80,7 @@ export default {
   display: flex
   flex-direction: column
   justify-content: space-between
-  background-color: #fff
+  background-color: var(--bg-main)
   z-index: 2
 .contacts-item
   display: flex

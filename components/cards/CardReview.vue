@@ -34,6 +34,6 @@ svg
   left: -5px
   top: -15px
   font-size: 5rem
-  color: #dadada
+  color: var(--bg-soft)
   z-index: -1
 </style>

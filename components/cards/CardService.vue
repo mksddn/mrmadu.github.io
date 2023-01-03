@@ -96,4 +96,10 @@ export default {
   background: none
   text-align: left
   font-size: 0.95rem
+.dark
+  .btn-light
+    color: var(--text-main)
+  .btn-light:hover
+    color: var(--text-main)
+    background-color: var(--grey)
 </style>

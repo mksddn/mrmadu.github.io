@@ -18,6 +18,9 @@ export const state = () => ({
 
 export const mutations = {
   // SET_LOADING_TO_FALSE: (state)
+  SET_DARK_MODE: (state, data) => {
+    state.darkMode = data
+  },
   SET_HOME_PAGE: (state, data) => {
     state.homePage = data
   },
@@ -96,4 +99,5 @@ export const actions = {
 
 export const getters = {
   // ARTICLES: (state) => state.articles,
+  darkMode: state => state.darkMode
 }

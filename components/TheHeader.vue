@@ -168,7 +168,7 @@ export default {
     ],
   }),
   mounted() {
-    document.body.classList.add('dark')
+    // document.body.classList.add('dark')
     this.$nextTick(() => {
       window.addEventListener('scroll', this.fixHeader)
     })

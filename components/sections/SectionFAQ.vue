@@ -57,7 +57,7 @@ export default {
 .collapsed .faq-icon
     transform: rotate(0deg)
 .not-collapsed
-  background-color: $primary
+  background-color: var(--primary)
   color: #fff
   .faq-icon
     color: #fff
@@ -68,7 +68,7 @@ export default {
 .faq-icon
   width: 20px
   margin-right: 15px
-  color: $primary
+  color: var(--primary)
   transform: rotate(90deg)
   transition: all 0.2s
 .card-text:last-child

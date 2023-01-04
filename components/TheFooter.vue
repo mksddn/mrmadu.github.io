@@ -149,7 +149,9 @@ footer
     // align-content: center
     // justify-content: center
   a
-    color: inherit
+    color: inherit !important
+    &:hover
+      color: var(--primary) !important
 .nav-link
   padding: 0
   margin-bottom: 5px

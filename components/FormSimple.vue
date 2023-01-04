@@ -65,5 +65,7 @@ export default {
 form .container-fluid
   padding: 0
 .btn-light
-  background-color: #fff
+  // background-color: #fff
+// .dark .btn-light
+//   background-color: var()
 </style>

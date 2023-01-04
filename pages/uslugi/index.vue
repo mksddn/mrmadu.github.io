@@ -65,7 +65,7 @@ export default {
     width: 60px
     height: 2px
     margin-top: 5px
-    background-color: $primary
+    background-color: var(--primary)
 .doc-text
   position: relative
   padding-left: 30px

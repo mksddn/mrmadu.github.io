@@ -63,7 +63,7 @@ export default {
   background-color: transparent
   border-color: transparent
 .tabs .nav-tabs .nav-link.active
-  border-bottom-color: $primary
+  border-bottom-color: var(--primary)
 a.nav-link
   color: inherit
 </style>

@@ -29,7 +29,9 @@ img
 .post-title
   display: inline-block
   margin-top: 10px
-  color: inherit
+  color: inherit !important
+  &:hover
+    color: var(--primary) !important
   *
     font-size: 1rem
 .btn.post-link

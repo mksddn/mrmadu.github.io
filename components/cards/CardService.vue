@@ -98,7 +98,7 @@ export default {
   font-size: 0.95rem
 .dark
   .btn-light
-    color: var(--text-main)
+    // color: var(--text-main)
   .btn-light:hover
     color: var(--text-main)
     background-color: var(--grey)

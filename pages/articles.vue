@@ -90,7 +90,18 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.pagination .page-link
-  background-color: var(--bg-main)
+<style lang="sass">
+.pagination
+  &, *
+    border-radius: 0 !important
+  .page-link, .page-item.disabled .page-link
+    background-color: var(--bg-soft)
+    border-color: var(--grey)
+  .page-item.disabled .page-link
+    color: var(--text-main)
+  .page-item.active .page-link
+    background-color: var(--primary)
+    border-color: var(--grey)
+  .page-link:hover
+    color: inherit
 </style>

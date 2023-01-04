@@ -12,6 +12,7 @@ body
   --grey: #969696
   background-color: var(--bg-main)
   color: var(--text-main)
+  transition: all 0.2s ease-in-out
 
 .dark
   --text-main: #dcdcdc
@@ -22,13 +23,16 @@ body
   --primary-darken: #9e3225
   --grey: #969696
 
-$primary: #c21d2b
+// $primary: #c21d2b
 // $primary: #c73f2f
 
-a
+a:not(.btn)
   color: var(--primary)
 
-a, a svg, input, button
+.text-primary
+  color: var(--primary) !important
+
+a, a:hover, a svg, input, button
   transition: all ease-out 0.2s
   text-decoration: none
 
@@ -39,22 +43,29 @@ input, .btn, .card, img
   input, button
     border-color: var(--bg-soft)
 
-a.btn, a.btn:hover
+a.btn
   text-shadow: none
   padding: 10px 20px !important
 
 .btn
-  color: var(--text-main)
+  // color: var(--text-main)
   
 .dark .btn-light
-  background-color: var(--bg-soft)
+  background-color: var(--text-main)
   &:hover
-    background-color: var(--text-main)
+    background-color: var(--grey)
 
 .btn-primary
   background-color: var(--primary)
+  border-color: var(--primary)
   &:hover
     background-color: var(--primary-darken)
+    border-color: var(--primary-darken)
+
+.dark
+  .btn-outline-dark, .btn-outline-secondary
+    color: var(--text-main)
+    border-color: var(--text-main)
 
 .form-control
   background-color: var(--bg-main)

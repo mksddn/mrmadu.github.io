@@ -36,9 +36,9 @@ export default {
     font-size: 1rem
     font-weight: normal
   &:hover
-    border-bottom-color: $primary
+    border-bottom-color: var(--primary)
     a
-      color: $primary
+      color: var(--primary)
   a:has(.cat-title)
     width: 100%
   a

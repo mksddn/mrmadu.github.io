@@ -219,9 +219,10 @@ export default {
   background-color: var(--bg-main)
   flex-direction: column
   &-wrapper
-    border-top: 1px solid var(--grey)
+    border-bottom: 1px solid var(--grey)
 .navbar-top
   padding: 0
+  border-top: 1px solid var(--grey)
 .navbar.wrapper-middle
   padding: 0
 .navbar-middle, .navbar-bottom
@@ -260,7 +261,7 @@ export default {
       display: flex
       align-items: center
     &:hover, &:hover svg
-      color: $primary
+      color: var(--primary)
 
 .navbar-brand
   img

@@ -1,5 +1,5 @@
 <template>
-  <section id="creed">
+  <section v-if="$store.state.homePage.acf.clinic_creed" id="creed">
     <b-container>
       <b-row>
         <b-col>
@@ -13,8 +13,23 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'SectionCreed',
+  async fetch() {
+    if (!this.$store.state.homePage) {
+      const { data: homePage } = await axios.get(
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages/779`,
+        {
+          params: {
+            _embed: true,
+          },
+        }
+      )
+      this.$store.commit('SET_HOME_PAGE', homePage)
+      // this.homePage = homePage
+    }
+  },
 }
 </script>
 

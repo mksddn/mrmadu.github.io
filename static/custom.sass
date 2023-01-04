@@ -2,6 +2,10 @@
   // font-size: 14px
   // color: #444
 
+::selection
+  background-color: var(--primary)
+  color: var(--text-light)
+
 body
   --text-main: #444
   --text-light: #eeeeee
@@ -17,8 +21,8 @@ body
 .dark
   --text-main: #dcdcdc
   --text-light: #eeeeee
-  --bg-main: #444
-  --bg-soft: #707070
+  --bg-main: #333
+  --bg-soft: #505050
   --primary: #c73f2f
   --primary-darken: #9e3225
   --grey: #969696
@@ -72,6 +76,11 @@ a.btn
 
 pre
   color: var(--text-main)
+
+table, .table-hover tbody tr:hover
+  color: var(--text-main)
+.table-striped tbody tr:nth-of-type(odd)
+  background-color: var(--bg-soft)
 
 img
   object-fit: cover

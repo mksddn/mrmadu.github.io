@@ -243,7 +243,7 @@ export default {
     height: 40px !important
     background-color: var(--bg-main)
   button
-    border-right: 1px solid #ced4da
+    // border-right: 1px solid #ced4da
 .nav-icons
   padding: 0 15px
   display: flex

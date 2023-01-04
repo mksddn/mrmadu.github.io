@@ -50,8 +50,9 @@ export default {
   height: 25px
   width: 50px
   border-radius: 100px
-  background-color: #fff
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+  // border: 1px solid #939393
+  background-color: var(--bg-main)
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
   cursor: pointer
 .toggle::before
   content: ''
@@ -66,7 +67,7 @@ export default {
   // background: #4070f4
   border-radius: 50%
   top: 50%
-  left: 5px
+  left: 3px
   transform: translateY(-50%)
   transition: all 0.3s ease-in-out
 .toggle.active::before

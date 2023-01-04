@@ -12,6 +12,7 @@ export const state = () => ({
   currDoc: null,
   // currDocACF: null,
   services: null,
+  currServ: null,
   allCats: null,
   allTags: null,
 })
@@ -47,6 +48,9 @@ export const mutations = {
   // },
   SET_SERVICES: (state, data) => {
     state.services = data
+  },
+  SET_CURR_SERV: (state, data) => {
+    state.currServ = data
   },
   SET_ALL_CATS: (state, data) => {
     state.allCats = data

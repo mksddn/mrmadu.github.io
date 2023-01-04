@@ -1,16 +1,20 @@
 <template>
   <div class="serv-card-item">
-    <b-button
-      v-b-toggle="`collapse-${serv.id}`"
-      variant="light"
-      class="btn-serv w-100 mb-2"
-      @click="fetchChilds(serv.id)"
-      >{{ serv.title.rendered }} <font-awesome-icon icon="fa-solid fa-plus"
+    <b-button variant="light" class="btn-serv w-100 mb-2"
+      ><b-link :to="`/uslugi/${serv.slug}`">{{ serv.title.rendered }}</b-link>
+      <font-awesome-icon
+        v-b-toggle="`collapse-${serv.id}`"
+        icon="fa-solid fa-plus"
+        @click="fetchChilds(serv.id)"
     /></b-button>
     <b-collapse :id="`collapse-${serv.id}`">
       <b-card class="mb-1">
         <div v-if="loading">
-          <b-skeleton-wrapper v-if="loading" :loading="loading" class="skeleton-wrapper">
+          <b-skeleton-wrapper
+            v-if="loading"
+            :loading="loading"
+            class="skeleton-wrapper"
+          >
             <template #loading>
               <b-skeleton width="85%"></b-skeleton>
               <b-skeleton width="55%"></b-skeleton>
@@ -53,6 +57,7 @@ export default {
   },
   data: () => ({
     loading: false,
+    childs: [],
   }),
   methods: {
     async fetchChilds(parID) {
@@ -74,7 +79,8 @@ export default {
 .serv-card-item
   margin: 0 10px 0 0
 .btn-serv
-  background-color: rgba(0,0,0,.07)
+  background-color: var(--bg-soft)
+  // background-color: rgba(0,0,0,.07)
   display: flex
   justify-content: space-between
   align-items: center
@@ -85,6 +91,10 @@ export default {
   // width: calc(100% - 10px)
   font-size: 0.95rem
   // font-size: 15px
+  a
+    color: inherit
+  svg
+    padding: 5px
 // .collapse.show
 //   margin-top: 10px
 .card
@@ -97,9 +107,12 @@ export default {
   text-align: left
   font-size: 0.95rem
 .dark
-  .btn-light
-    // color: var(--text-main)
-  .btn-light:hover
+  .btn-serv, .child-serv
+    &
+      color: var(--text-main)
+      background-color: var(--bg-soft)
+      border: none
+  &:hover
     color: var(--text-main)
     background-color: var(--grey)
 </style>

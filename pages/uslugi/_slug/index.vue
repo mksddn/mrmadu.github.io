@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
     <TitlePage :title="currServ.title.rendered" />
@@ -5,16 +6,7 @@
       <b-container>
         <b-row>
           <b-col v-if="childs" lg="3">
-            <aside>
-              <b-button
-                v-for="child in childs"
-                :key="child.id"
-                :to="`/uslugi/${currServ.slug}/${child.slug}`"
-                block
-                variant="outline-dark"
-                >{{ child.title.rendered }}</b-button
-              >
-            </aside>
+            <SidebarService :btns="childs" :curr-serv="currServ" />
           </b-col>
           <b-col>
             <h2>Описание и цены</h2>
@@ -81,7 +73,6 @@ export default {
     } else {
       this.childs = childs
     }
-    console.log(childs)
     return this.childs
   },
 }
@@ -100,9 +91,4 @@ table
 // .dark
 //   table td
 //     color: var(--text-main)
-aside
-  .btn
-    text-align: left
-    margin-bottom: 15px
-    // font-weight: 600
 </style>

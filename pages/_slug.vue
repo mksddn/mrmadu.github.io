@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
     <TitlePage :title="article.title.rendered" type="post" />
@@ -58,6 +59,9 @@ export default {
       return { article: data[0] }
     }
   },
+  computed: {
+    // slug: this.$route.params.slug,
+  },
   mounted() {
     // console.log(this.$route.params.slug)
   },
@@ -85,9 +89,6 @@ export default {
   //     },
   //   ],
   // }),
-  computed: {
-    // slug: this.$route.params.slug,
-  },
 }
 </script>
 

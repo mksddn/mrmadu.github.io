@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <aside>
     <b-button
       v-for="link in links"
       :key="link.to"
@@ -15,7 +15,7 @@
       variant="primary"
       >Скачать расписание</b-button
     >
-  </div>
+  </aside>
 </template>
 
 <script>

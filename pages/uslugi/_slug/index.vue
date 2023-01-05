@@ -6,7 +6,7 @@
       <b-container>
         <b-row>
           <b-col v-if="childs" lg="3">
-            <SidebarService :btns="childs" :curr-serv="currServ" />
+            <SidebarService :btns="childs" :curr-serv="currServ.slug" />
           </b-col>
           <b-col>
             <h2>Описание и цены</h2>

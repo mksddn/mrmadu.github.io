@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <b-skeleton-wrapper v-if="loading" :loading="loading">
     <template #loading>
@@ -62,8 +63,9 @@ export default {
 .tabs .nav-tabs .nav-link.active, .tabs .nav-tabs .nav-item.show .nav-link
   background-color: transparent
   border-color: transparent
+  color: var(--text-main)
 .tabs .nav-tabs .nav-link.active
   border-bottom-color: var(--primary)
-a.nav-link
+.nav-tabs .nav-link
   color: inherit
 </style>

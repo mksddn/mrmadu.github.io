@@ -1,5 +1,5 @@
 <template>
-  <section v-if="$store.state.homePage.acf.clinic_creed" id="creed">
+  <section v-if="$store.state.homePage && $store.state.homePage.acf.clinic_creed" id="creed">
     <b-container>
       <b-row>
         <b-col>
@@ -27,7 +27,7 @@ export default {
         }
       )
       this.$store.commit('SET_HOME_PAGE', homePage)
-      // this.homePage = homePage
+      this.homePage = homePage
     }
   },
 }

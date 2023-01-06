@@ -1,7 +1,6 @@
 // import axios from 'axios'
 
 export const state = () => ({
-  // loading: true,
   darkMode: false,
   homePage: null,
   articles: null,
@@ -10,7 +9,6 @@ export const state = () => ({
   allStaff: null,
   lastStaff: null,
   currDoc: null,
-  // currDocACF: null,
   services: null,
   currServ: null,
   allCats: null,
@@ -18,7 +16,6 @@ export const state = () => ({
 })
 
 export const mutations = {
-  // SET_LOADING_TO_FALSE: (state)
   SET_DARK_MODE: (state, data) => {
     state.darkMode = data
   },
@@ -43,9 +40,6 @@ export const mutations = {
   SET_CURR_DOC: (state, data) => {
     state.currDoc = data
   },
-  // SET_CURR_DOC_ACF: (state, data) => {
-  //   state.currDocACF = data
-  // },
   SET_SERVICES: (state, data) => {
     state.services = data
   },
@@ -81,18 +75,6 @@ export const actions = {
   //     .then((articles) => {
   //       commit('SET_ARTICLES_TO_STATE', articles.data)
   //       return articles
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //       return error
-  //     })
-  // },
-  // GET_ARTICLE_FROM_API({ commit }) {
-  //   return axios
-  //     .get('https://mammae-clinic.ru/wp-json/wp/v2/posts')
-  //     .then((article) => {
-  //       commit('SET_ARTICLES_TO_STATE', article.data)
-  //       return article
   //     })
   //     .catch((error) => {
   //       console.log(error)

@@ -1,13 +1,25 @@
 <template>
   <aside>
-    <b-button
-      v-for="btn in btns"
-      :key="btn.id"
-      :to="`/uslugi/${currServ}/${btn.slug}`"
-      block
-      variant="outline-dark"
-      >{{ btn.title.rendered }}</b-button
-    >
+    <div v-if="currServ">
+      <b-button
+        v-for="btn in btns"
+        :key="btn.id"
+        :to="`/uslugi/${currServ}/${btn.slug}`"
+        block
+        variant="outline-dark"
+        >{{ btn.title.rendered }}</b-button
+      >
+    </div>
+    <div v-else>
+      <b-button
+        v-for="btn in btns"
+        :key="btn.id"
+        :to="`/uslugi/${btn.slug}`"
+        block
+        variant="outline-dark"
+        >{{ btn.title.rendered }}</b-button
+      >
+    </div>
   </aside>
 </template>
 
@@ -21,7 +33,7 @@ export default {
     },
     currServ: {
       type: String,
-      required: true,
+      default: null,
     },
   },
 }

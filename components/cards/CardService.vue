@@ -9,22 +9,7 @@
     /></b-button>
     <b-collapse :id="`collapse-${serv.id}`">
       <b-card class="mb-1">
-        <div v-if="loading">
-          <b-skeleton-wrapper
-            v-if="loading"
-            :loading="loading"
-            class="skeleton-wrapper"
-          >
-            <template #loading>
-              <b-skeleton width="85%"></b-skeleton>
-              <b-skeleton width="55%"></b-skeleton>
-              <b-skeleton width="70%"></b-skeleton>
-              <br />
-              <b-skeleton type="button"></b-skeleton>
-            </template>
-          </b-skeleton-wrapper>
-        </div>
-        <div v-else>
+        <div v-if="childs">
           <b-button
             variant="light"
             class="child-serv w-100 mb-2"
@@ -40,6 +25,14 @@
             >{{ child.title.rendered }}</b-button
           >
         </div>
+        <b-skeleton-wrapper v-else class="skeleton-wrapper">
+          <b-skeleton width="85%"></b-skeleton>
+          <b-skeleton width="55%"></b-skeleton>
+          <b-skeleton width="70%"></b-skeleton>
+          <br>
+          <b-skeleton type="button"></b-skeleton>
+          <br>
+        </b-skeleton-wrapper>
       </b-card>
     </b-collapse>
   </div>
@@ -56,16 +49,16 @@ export default {
     },
   },
   data: () => ({
-    loading: false,
-    childs: [],
+    // loading: false,
+    childs: null,
   }),
   methods: {
     async fetchChilds(parID) {
-      this.loading = true
+      // this.loading = true
       const { data: childs } = await axios.get(
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?parent=${parID}&per_page=99`
       )
-      this.loading = false
+      // this.loading = false
       this.childs = childs
       return this.childs
     },

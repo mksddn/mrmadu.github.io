@@ -1,26 +1,37 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
-    <TitlePage :title="article.title.rendered" type="post" />
+    <TitlePage :title="post.title.rendered" type="post" />
     <section id="postContent">
       <b-container>
         <b-row>
           <b-col class="cntnt">
-            <img
+            <!-- <img
               :src="
-                article._embedded['wp:featuredmedia'][0].media_details.sizes
+                post._embedded['wp:featuredmedia'][0].media_details.sizes
                   .large.source_url
               "
-              :alt="article.title.rendered"
+              :alt="post.title.rendered"
+              class="thumbnail"
+            /> -->
+            <img
+              :src="post.fimg_url"
+              :alt="post.title.rendered"
               class="thumbnail"
             />
             <br />
-            <div class="post-text" v-html="article.content.rendered" />
+            <div class="post-text" v-html="post.content.rendered" />
             <br />
-            <pre v-html="article.categories" />
-            <pre v-html="article.tags" />
-            <div class="tags">
-              <!-- <TagItem v-for="tag in article.tags" :key="tag.url" /> -->
+            <b-link
+              v-for="cat in postCats"
+              :key="cat.id"
+              :to="`/${cat.slug}`"
+              class="post-cat"
+              >{{ cat.name }}</b-link
+            >
+            <div v-if="postTags" class="tags">
+              <hr />
+              <TagItem v-for="tag in postTags" :key="tag.slug" :tag="tag" />
             </div>
             <br />
             <div id="shareIcons">
@@ -39,12 +50,13 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   layout: 'post',
   async asyncData({ app, store, params, route }) {
     if (
-      !store.state.currArticle ||
-      route.params.slug !== store.state.currArticle.slug
+      !store.state.currPost ||
+      route.params.slug !== store.state.currPost.slug
     ) {
       const { data } = await app.$axios.get(
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts`,
@@ -55,40 +67,32 @@ export default {
           },
         }
       )
-      store.commit('SET_CURR_ARTICLE', data[0])
-      return { article: data[0] }
+      store.commit('SET_CURR_POST', data[0])
+      const post = data[0]
+      return { post }
+    } else {
+      return { post: store.state.currPost }
     }
   },
-  computed: {
-    // slug: this.$route.params.slug,
+
+  data: () => ({
+    postTags: null,
+    postCats: null,
+  }),
+  async fetch() {
+    if (this.$store.state.currPost.tags > 0) {
+      const { data: postTags } = await axios.get(
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/tags?include=${this.post.tags}`
+      )
+      this.postTags = postTags
+    }
+
+    const { data: postCats } = await axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/categories?include=${this.post.categories}`
+    )
+    this.postCats = postCats
+    // console.log(postCats);
   },
-  mounted() {
-    // console.log(this.$route.params.slug)
-  },
-  // post: {
-  //   type: Object,
-  //   required: true,
-  // },
-  // data: () => ({
-  //   title: 'Курс «Когнитивно-поведенческая терапия ожирения»',
-  //   thumbnail: '/post1.jpeg',
-  //   cats: [
-  //     {
-  //       title: 'Category 1',
-  //       url: 'archive',
-  //     },
-  //   ],
-  //   tags: [
-  //     {
-  //       title: 'Tag 1',
-  //       url: 'archive',
-  //     },
-  //     {
-  //       title: 'Tag 2',
-  //       url: 'archive',
-  //     },
-  //   ],
-  // }),
 }
 </script>
 
@@ -99,6 +103,8 @@ export default {
   margin-bottom: 60px
 .thumbnail
   margin-bottom: 50px
+.post-cat
+  display: block
 #shareIcons
   display: flex
   align-items: center

@@ -15,7 +15,7 @@ export default {
   async fetch() {
     if (!this.$store.state.allTags) {
       const { data: allTags } = await axios.get(
-        'https://mammae-clinic.ru/wp-json/wp/v2/tags?hide_empty=1'
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/tags?hide_empty=1`
       )
       this.$store.commit('SET_ALL_TAGS', allTags)
       // this.allTags = allTags

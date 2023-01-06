@@ -7,7 +7,7 @@ export default {
   name: 'TagItem',
   props: {
     tag: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },

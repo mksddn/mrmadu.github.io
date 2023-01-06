@@ -89,8 +89,6 @@
                     :to="item.link"
                     >{{ item.title }}</b-nav-item
                   >
-                  <!-- <b-link :to="`/articles`">блог</b-link>
-              <router-link :to="`/articles`">блог</router-link> -->
                 </b-navbar-nav>
               </b-collapse>
             </b-container>
@@ -155,7 +153,7 @@ export default {
       },
       {
         title: 'Новости',
-        link: '/articles',
+        link: '/news',
       },
       {
         title: 'Контакты',

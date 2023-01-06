@@ -1,7 +1,7 @@
 <template>
-  <div v-if="$store.state.lastArticles" class="wdgt wdgt-posts">
+  <div v-if="$store.state.lastNews" class="wdgt wdgt-posts">
     <h3 class="wdgt-title">Последние записи</h3>
-    <CardPostSidebar v-for="post in $store.state.lastArticles" :key="post.id" :post="post">
+    <CardPostSidebar v-for="post in $store.state.lastNews" :key="post.id" :post="post">
     </CardPostSidebar>
   </div>
 </template>
@@ -10,12 +10,13 @@
 import axios from 'axios'
 export default {
   async fetch() {
-    if (!this.$store.state.lastArticles) {
-      const { data: lastArticles } = await axios.get(
-        'https://mammae-clinic.ru/wp-json/wp/v2/posts?per_page=4'
+    // ЗАМЕНИТЬ НОВОСТИ НА ВСЕ ЗАПИСИ!
+    if (!this.$store.state.lastNews) {
+      const { data: lastNews } = await axios.get(
+        'https://mammae-clinic.ru/wp-json/wp/v2/posts?caregories=36&per_page=4'
       )
-      this.$store.commit('SET_LAST_ARTICLES', lastArticles)
-      // this.lastArticles = lastArticles
+      this.$store.commit('SET_LAST_NEWS', lastNews)
+      // this.lastNews = lastNews
     }
   },
 }

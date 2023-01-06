@@ -3,9 +3,9 @@
 export const state = () => ({
   darkMode: false,
   homePage: null,
-  articles: null,
-  lastArticles: null,
-  currArticle: null,
+  posts: null,
+  lastNews: null,
+  currPost: null,
   allStaff: null,
   lastStaff: null,
   currDoc: null,
@@ -22,14 +22,14 @@ export const mutations = {
   SET_HOME_PAGE: (state, data) => {
     state.homePage = data
   },
-  SET_ARTICLES_TO_STATE: (state, data) => {
-    state.articles = data
+  SET_POSTS_TO_STATE: (state, data) => {
+    state.posts = data
   },
-  SET_CURR_ARTICLE: (state, data) => {
-    state.currArticle = data
+  SET_CURR_POST: (state, data) => {
+    state.currPost = data
   },
-  SET_LAST_ARTICLES: (state, data) => {
-    state.lastArticles = data
+  SET_LAST_NEWS: (state, data) => {
+    state.lastNews = data
   },
   SET_ALL_STAFF: (state, data) => {
     state.allStaff = data

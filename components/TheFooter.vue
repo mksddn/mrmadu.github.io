@@ -16,7 +16,7 @@
               <img :src="about.logo" alt="" />
               <div v-html="about.text" />
             </div>
-            <div class="widget">
+            <!-- <div class="widget">
               <script src="https://vk.com/js/api/openapi.js?168"></script>
               <div id="vk_groups"></div>
               <script>
@@ -26,16 +26,16 @@
                   73108189
                 )
               </script>
-            </div>
+            </div> -->
           </b-col>
           <b-col lg="4">
-            <div class="widget">
+            <!-- <div class="widget">
               <img src="/star.png" alt="" /><br />
               <a href="https://yandex.ru/maps/-/CCUqfCQh1C" target="_blank"
                 ><b>выбор пользователей Яндекса - 2020</b></a
               >
-            </div>
-            <div class="widget">
+            </div> -->
+            <!-- <div class="widget">
               <div id="pd_widget_column" data-lpu="20934">
                 <a target="_blank" href="https://prodoctorov.ru/"
                   ><img
@@ -57,8 +57,8 @@
                 >
                 <script src="https://prodoctorov.ru/static/js/widget_column.js"></script>
               </div>
-            </div>
-            <div class="widget">
+            </div> -->
+            <!-- <div class="widget">
               <div class="ya-widget" style="height: 50px">
                 <iframe
                   src="https://yandex.ru/sprav/widget/rating-badge/1262911293"
@@ -67,7 +67,7 @@
                   frameborder="0"
                 ></iframe>
               </div>
-            </div>
+            </div> -->
           </b-col>
         </b-row>
       </b-container>

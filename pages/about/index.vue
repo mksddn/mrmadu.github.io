@@ -68,7 +68,7 @@ export default {
   components: {
     SliderGallery,
   },
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'О клинике',
   }),

@@ -1,13 +1,13 @@
 <template>
   <div>
     <TitlePage :title="title" type="post" />
-    <ArchiveContent :posts="posts" :totalpages="totalpages" />
+    <ContentArchive :posts="posts" :totalpages="totalpages" />
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   async asyncData({ app, params, route, headers }) {
     const page = route.params.page
     let posts = await app.$axios.get(

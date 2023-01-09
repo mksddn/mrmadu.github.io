@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   async asyncData({ app, store, params }) {
     if (!store.state.services) {
       const services = await app.$axios.get(

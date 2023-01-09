@@ -120,7 +120,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'Правовая информация',
   }),

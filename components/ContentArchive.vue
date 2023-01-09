@@ -1,5 +1,5 @@
 <template>
-  <section id="archiveContent" class="pt-0">
+  <section id="ContentArchive" class="pt-0">
     <b-container>
       <b-row>
         <b-col class="cntnt">

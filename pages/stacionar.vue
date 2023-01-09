@@ -50,7 +50,7 @@ import SliderGallery from '../components/SliderGallery.vue'
 
 export default {
   components: { SliderGallery },
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'Стационар',
   }),

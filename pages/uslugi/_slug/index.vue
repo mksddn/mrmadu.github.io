@@ -1,5 +1,5 @@
 <template>
-  <ServicesContent :curr-serv="currServ" />
+  <ContentServices :curr-serv="currServ" />
 </template>
 
 <script>

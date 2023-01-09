@@ -212,7 +212,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'Регистрационные данные',
   }),

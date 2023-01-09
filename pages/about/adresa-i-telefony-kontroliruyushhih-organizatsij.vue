@@ -380,7 +380,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'Адреса и телефоны контролирующих организаций',
   }),

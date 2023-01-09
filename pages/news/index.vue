@@ -11,7 +11,7 @@ export default {
   beforeRouteEnter(to, from, next) {
     next({ path: '/news/page/1' })
   },
-  // layout: 'page',
+  // layout: 'post',
   // created() {
   //   // const cat = this.$rout.params
   //   this.$router.push(`/news/page/1`)

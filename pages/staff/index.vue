@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   async asyncData({ app, store, params }) {
     if (!store.state.allStaff) {
       const allStaff = await app.$axios.get(

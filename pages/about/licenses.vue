@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'Лицензии',
     imgs: [

@@ -13665,7 +13665,7 @@
 
 <script>
 export default {
-  layout: 'page',
+  layout: 'post',
   data: () => ({
     title: 'Расписание',
   }),

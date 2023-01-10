@@ -2,6 +2,8 @@
   <div>
     <GlobalStyles />
     <header>
+      <VisimpPanel />
+
       <b-navbar class="navbar-wrapper navbar-top">
         <b-container>
           <b-navbar-nav class="ml-auto">

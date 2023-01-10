@@ -2,6 +2,7 @@
 
 export const state = () => ({
   darkMode: false,
+  visImp: null,
   homePage: null,
   posts: null,
   lastNews: null,
@@ -18,6 +19,9 @@ export const state = () => ({
 export const mutations = {
   SET_DARK_MODE: (state, data) => {
     state.darkMode = data
+  },
+  SET_VISIMP: (state, data) => {
+    state.visImp = data
   },
   SET_HOME_PAGE: (state, data) => {
     state.homePage = data

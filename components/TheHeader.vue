@@ -18,10 +18,16 @@
               </b-input-group>
             </b-nav-form>
             <div class="nav-icons">
-              <a href="/#" class="vk">
+              <a href="#0" class="vk">
                 <font-awesome-icon icon="fa-brands fa-vk" color="#007bff" />
               </a>
-              <a href="/#" class="visimp">
+              <a
+                href="#0"
+                class="visimp-toggle"
+                @click.prevent="
+                  $store.commit('SET_IS_VISIMP', !$store.state.visimp.active)
+                "
+              >
                 <font-awesome-icon icon="fa-solid fa-glasses" />
                 <span>версия для слабовидящих</span>
               </a>
@@ -84,14 +90,7 @@
           <div class="navbar-wrapper navbar-bottom">
             <b-container>
               <b-collapse id="nav-collapse" is-nav>
-                <b-navbar-nav class="menu-main">
-                  <b-nav-item
-                    v-for="item in menuMain"
-                    :key="item.index"
-                    :to="item.link"
-                    >{{ item.title }}</b-nav-item
-                  >
-                </b-navbar-nav>
+                <HeaderMenu />
               </b-collapse>
             </b-container>
           </div>
@@ -105,73 +104,20 @@
 export default {
   name: 'SiteHeader',
   data: () => ({
+    // visimpActive: this.$store.state.visimp.active,
     logoUrl: `/logo.png`,
-    menuMain: [
-      {
-        title: 'О клинике',
-        link: '/about',
-        submenu: [
-          {
-            title: 'Лицензии',
-            link: '/',
-          },
-          {
-            title: 'Вакансии',
-            link: '/',
-          },
-          {
-            title: 'Партнеры',
-            link: '/',
-          },
-          {
-            title: 'Отзывы',
-            link: '/',
-          },
-          {
-            title: 'Расписание',
-            link: '/',
-          },
-        ],
-      },
-      {
-        title: 'Коронавирус',
-        link: '/',
-      },
-      {
-        title: 'Услуги и цены',
-        link: '/uslugi',
-      },
-      {
-        title: 'Врачи',
-        link: '/staff',
-      },
-      {
-        title: 'Стационар',
-        link: '/stacionar',
-      },
-      {
-        title: 'Акции',
-        link: 'archive',
-      },
-      {
-        title: 'Новости',
-        link: '/news',
-      },
-      {
-        title: 'Контакты',
-        link: '/',
-      },
-      {
-        title: 'Расписание',
-        link: '/',
-      },
-    ],
   }),
+  computed: {
+    active() {
+      return this.$store.state.visimp.active
+    },
+  },
   mounted() {
     // document.body.classList.add('dark')
     this.$nextTick(() => {
       window.addEventListener('scroll', this.fixHeader)
     })
+
   },
   methods: {
     fixHeader() {
@@ -194,6 +140,11 @@ export default {
         this.$router.push('/')
       }
     },
+    // visimpToggle() {
+    //   // const visimpActive = this.$store.state.visimp.active
+    //   const visimpActive = {active: true}
+    //   this.$store.commit('SET_VISIMP', visimpActive)
+    // },
   },
 }
 </script>
@@ -255,7 +206,7 @@ export default {
     span
       font-size: 0.9rem
       margin-left: 5px
-    &.visimp
+    &.visimp-toggle
       font-size: 1.2rem
       color: inherit
       display: flex
@@ -281,21 +232,12 @@ export default {
     font-size: 0.9rem
   &-icon
     font-size: 2.5rem
-    color: #c73f2f
+    color: var(--primary)
     margin-right: 10px
   a
     color: inherit
   .text-grey
     color: var(--grey)
-
-.menu-main
-  li
-    a
-      text-transform: uppercase
-      font-size: 1rem
-      font-weight: bold
-      font-size: 0.9rem
-
 .collapse.show
   margin: 20px
 </style>

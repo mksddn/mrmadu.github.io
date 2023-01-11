@@ -2,7 +2,13 @@
 
 export const state = () => ({
   darkMode: false,
-  visImp: null,
+  visimp: {
+    active: false,
+    size: 'text-x1',
+    color: 'light',
+    img: 'img-wb',
+  },
+  // isVisimp: false,
   homePage: null,
   posts: null,
   lastNews: null,
@@ -20,8 +26,17 @@ export const mutations = {
   SET_DARK_MODE: (state, data) => {
     state.darkMode = data
   },
-  SET_VISIMP: (state, data) => {
-    state.visImp = data
+  SET_IS_VISIMP: (state, data) => {
+    state.visimp.active = data
+  },
+  SET_VISIMP_SIZE: (state, data) => {
+    state.visimp.size = data
+  },
+  SET_VISIMP_COLOR: (state, data) => {
+    state.visimp.color = data
+  },
+  SET_VISIMP_IMG: (state, data) => {
+    state.visimp.img = data
   },
   SET_HOME_PAGE: (state, data) => {
     state.homePage = data
@@ -89,5 +104,5 @@ export const actions = {
 
 export const getters = {
   // ARTICLES: (state) => state.articles,
-  darkMode: state => state.darkMode
+  // visimp: state => state.visimp
 }

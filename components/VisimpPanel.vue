@@ -1,35 +1,137 @@
 <template>
   <div class="visimp-panel">
-        <b-container>
-          <b-row class="justify-center">
-            <b-col class="visimp-col visimp-size">
-              <a href="#0" title="Нормальный размер шрифта" class="visimp-x1 active">А</a>
-              <a href="#0" title="Увеличенный размер шрифта" class="visimp-x2">А</a>
-              <a href="#0" title="Большой размер шрифта" class="visimp-x3">А</a>
-            </b-col>
-            <b-col class="visimp-col visimp-color">
-              <a href="#0" title="Цветовая схема: Черным по белому" class="visimp-light active">Ц</a>
-              <a href="#0" title="Цветовая схема: Белым по черному" class="visimp-dark">Ц</a>
-              <a href="#0" title="Цветовая схема: Темно-синим по голубому" class="visimp-blue">Ц</a>
-            </b-col>
-            <b-col class="visimp-col visimp-img">
-              <a href="#0" title="Включить изображения" class="visimp-img-on"><font-awesome-icon icon="fa-solid fa-palette" /></a>
-              <a href="#0" title="Черно-белые изображения" class="visimp-img-wb active"><font-awesome-icon icon="fa-solid fa-image" /></a>
-              <a href="#0" title="Отключить изображения" class="visimp-img-off"><font-awesome-icon icon="fa-regular fa-note-sticky" /></a>
-            </b-col>
-          </b-row>
-        </b-container>
-      </div>
+    <b-container>
+      <b-row class="justify-center">
+        <b-col class="visimp-col visimp-size">
+          <a
+            href="#0"
+            title="Нормальный размер шрифта"
+            class="visimp-x1 active"
+            @click.prevent="setSize($event, 'text-x1')"
+            >А</a
+          >
+          <a
+            href="#0"
+            title="Увеличенный размер шрифта"
+            class="visimp-x2"
+            @click.prevent="setSize($event, 'text-x2')"
+            >А</a
+          >
+          <a
+            href="#0"
+            title="Большой размер шрифта"
+            class="visimp-x3"
+            @click.prevent="setSize($event, 'text-x3')"
+            >А</a
+          >
+        </b-col>
+        <b-col class="visimp-col visimp-color">
+          <a
+            href="#0"
+            title="Цветовая схема: Черным по белому"
+            class="visimp-light active"
+            @click.prevent="setColor($event, 'light')"
+            >Ц</a
+          >
+          <a
+            href="#0"
+            title="Цветовая схема: Белым по черному"
+            class="visimp-dark"
+            @click.prevent="setColor($event, 'dark')"
+            >Ц</a
+          >
+          <a
+            href="#0"
+            title="Цветовая схема: Темно-синим по голубому"
+            class="visimp-blue"
+            @click.prevent="setColor($event, 'blue')"
+            >Ц</a
+          >
+        </b-col>
+        <b-col class="visimp-col visimp-img">
+          <a
+            href="#0"
+            title="Отключить изображения"
+            class="visimp-img-off"
+            @click.prevent="setImg($event, 'mg-off')"
+            ><font-awesome-icon icon="fa-solid fa-xmark"
+          /></a>
+          <a
+            href="#0"
+            title="Черно-белые изображения"
+            class="visimp-img-wb active"
+            @click.prevent="setImg($event, 'img-wb')"
+            ><font-awesome-icon icon="fa-solid fa-image"
+          /></a>
+          <a
+            href="#0"
+            title="Включить изображения"
+            class="visimp-img-on"
+            @click.prevent="setImg($event, 'img-on')"
+            ><font-awesome-icon icon="fa-solid fa-palette"
+          /></a>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'VisimpPanel'
-  }
+export default {
+  name: 'VisimpPanel',
+  mounted() {
+    const body = document.querySelector('body')
+    const visimpToggle = document.querySelector('.visimp-toggle')
+    const modeToggle = document.querySelector('.mode-toggle')
+    const isVisimp = this.$store.state.visimp.active
+    const visimpSize = this.$store.state.visimp.size
+    const visimpColor = this.$store.state.visimp.color
+    const visimpImg = this.$store.state.visimp.img
+    if (isVisimp) {
+      body.classList.add('visimp', visimpSize, visimpColor, visimpImg)
+      modeToggle.style.display = 'none'
+    }
+    // else {
+    //   body.classList.remove('visimp')
+    // }
+    visimpToggle.addEventListener('click', () => {
+      body.classList.toggle('visimp')
+      body.classList.add(visimpSize, visimpColor, visimpImg)
+      modeToggle.style.display =
+        modeToggle.style.display === 'none' ? '' : 'none'
+    })
+  },
+  methods: {
+    setSize(e, size) {
+      this.$store.commit('SET_VISIMP_SIZE', size)
+      document.querySelectorAll('.visimp-size a').forEach((el) => {
+        el.classList.remove('active')
+      })
+      e.target.classList.add('active')
+    },
+    setColor(e, color) {
+      this.$store.commit('SET_VISIMP_COLOR', color)
+      document.querySelectorAll('.visimp-color a').forEach((el) => {
+        el.classList.remove('active')
+      })
+      e.target.classList.add('active')
+    },
+    setImg(e, img) {
+      this.$store.commit('SET_VISIMP_IMG', img)
+      document.querySelectorAll('.visimp-img a').forEach((el) => {
+        el.classList.remove('active')
+      })
+      e.currentTarget.classList.add('active')
+    },
+  },
+}
 </script>
 
 <style lang="sass" scoped>
+.visimp .visimp-panel
+  display: block
 .visimp-panel
+  display: none
   font-size: 16px
 .visimp-col
   display: flex
@@ -45,7 +147,6 @@
       transition: none !important
 .visimp-size
   .visimp
-    &-x1
     &-x2
       font-size: 24px
     &-x3
@@ -58,7 +159,6 @@
   a
     border: 1px solid #000
   .visimp
-    &-light
     &-dark
       background-color: #000
       color: #fff
@@ -79,8 +179,9 @@
       background-color: #000
       color: #fff
     &-off
-      // background-color: #000
-      // color: #fff
+      background-color: #000
+      color: #fff
+      padding: 0 10px
   .active
     font-size: 2rem
   a:hover

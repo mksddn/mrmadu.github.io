@@ -1,5 +1,5 @@
 ::root
-  // font-size: 14px
+  font-size: 14px
   // color: #444
 
 ::selection
@@ -150,3 +150,33 @@ header .navbar-nav .nav-link
   transform: translateX(0)
   ransform: translateY(0)
   transform: scale(1)
+
+
+
+
+
+
+// VISIMP
+.visimp
+  --text-main: #444
+  --text-light: #eeeeee
+  --bg-main: #fff
+  --bg-soft: #f1f1f1
+  --primary: #35060a
+  --primary-darken: #35070b
+  --grey: #969696
+  &.img-wb
+    img
+      filter: grayscale(1)
+    .bg-image
+      background-image: none
+  &.img-off
+    img
+      filter: brightness(100)
+    .bg-image
+      background-image: none
+  
+  // &.text-x2 *
+  //   font-size: 101%
+  // &.text-x3 ::root
+  //   font-size: 30px

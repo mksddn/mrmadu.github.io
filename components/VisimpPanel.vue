@@ -53,7 +53,7 @@
             href="#0"
             title="Отключить изображения"
             class="visimp-img-off"
-            @click.prevent="setImg($event, 'mg-off')"
+            @click.prevent="setImg($event, 'img-off')"
             ><font-awesome-icon icon="fa-solid fa-xmark"
           /></a>
           <a
@@ -83,10 +83,12 @@ export default {
     const body = document.querySelector('body')
     const visimpToggle = document.querySelector('.visimp-toggle')
     const modeToggle = document.querySelector('.mode-toggle')
+    // перенести в компьютед
     const isVisimp = this.$store.state.visimp.active
     const visimpSize = this.$store.state.visimp.size
     const visimpColor = this.$store.state.visimp.color
     const visimpImg = this.$store.state.visimp.img
+    const prefsArray = ['text-x1', 'text-x2', 'text-x3', 'light', 'dark', 'blue', 'img-off', 'img-wb', 'img-on']
     if (isVisimp) {
       body.classList.add('visimp', visimpSize, visimpColor, visimpImg)
       modeToggle.style.display = 'none'
@@ -95,8 +97,13 @@ export default {
     //   body.classList.remove('visimp')
     // }
     visimpToggle.addEventListener('click', () => {
+      // body.classList.remove(visimpSize, visimpColor, visimpImg)
       body.classList.toggle('visimp')
-      body.classList.add(visimpSize, visimpColor, visimpImg)
+      if (body.classList.contains('visimp')) {
+        body.classList.add(visimpSize, visimpColor, visimpImg)
+      } else {
+        body.classList.remove(...prefsArray)
+      }
       modeToggle.style.display =
         modeToggle.style.display === 'none' ? '' : 'none'
     })
@@ -104,6 +111,10 @@ export default {
   methods: {
     setSize(e, size) {
       this.$store.commit('SET_VISIMP_SIZE', size)
+      document
+        .querySelector('body')
+        .classList.remove('text-x1', 'text-x2', 'text-x3')
+      document.querySelector('body').classList.add(size)
       document.querySelectorAll('.visimp-size a').forEach((el) => {
         el.classList.remove('active')
       })
@@ -111,6 +122,8 @@ export default {
     },
     setColor(e, color) {
       this.$store.commit('SET_VISIMP_COLOR', color)
+      document.querySelector('body').classList.remove('light', 'dark', 'blue')
+      document.querySelector('body').classList.add(color)
       document.querySelectorAll('.visimp-color a').forEach((el) => {
         el.classList.remove('active')
       })
@@ -118,6 +131,10 @@ export default {
     },
     setImg(e, img) {
       this.$store.commit('SET_VISIMP_IMG', img)
+      document
+        .querySelector('body')
+        .classList.remove('img-off', 'img-wb', 'img-on')
+      document.querySelector('body').classList.add(img)
       document.querySelectorAll('.visimp-img a').forEach((el) => {
         el.classList.remove('active')
       })

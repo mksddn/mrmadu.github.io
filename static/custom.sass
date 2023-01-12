@@ -1,5 +1,5 @@
-::root
-  font-size: 14px
+html
+  font-size: 16px
   // color: #444
 
 ::selection
@@ -17,6 +17,7 @@ body
   background-color: var(--bg-main)
   color: var(--text-main)
   transition: all 0.2s ease-in-out
+  // font-size: 16px
 
 .dark
   --text-main: #dcdcdc
@@ -157,24 +158,31 @@ header .navbar-nav .nav-link
 
 
 // VISIMP
+html:has(body.visimp.text-x2)
+  font-size: 20px
+html:has(body.visimp.text-x3)
+  font-size: 24px
 .visimp
   --text-main: #444
   --text-light: #eeeeee
   --bg-main: #fff
   --bg-soft: #f1f1f1
-  --primary: #35060a
-  --primary-darken: #35070b
   --grey: #969696
+
+  &.text-x2
+    font-size: 18px
+
+  &.img-wb, &.img-off
+    --primary: #35060a
+    --primary-darken: #35070b
+    .bg-image
+      background-image: none
   &.img-wb
     img
       filter: grayscale(1)
-    .bg-image
-      background-image: none
   &.img-off
     img
-      filter: brightness(100)
-    .bg-image
-      background-image: none
+      opacity: 0 !important
   
   // &.text-x2 *
   //   font-size: 101%

@@ -19,7 +19,7 @@ body
   transition: all 0.2s ease-in-out
   // font-size: 16px
 
-.dark
+.dark, .visimp.dark
   --text-main: #dcdcdc
   --text-light: #eeeeee
   --bg-main: #333
@@ -168,6 +168,12 @@ html:has(body.visimp.text-x3)
   --bg-main: #fff
   --bg-soft: #f1f1f1
   --grey: #969696
+  &.blue
+    --text-main: #063462
+    // --text-light: #eeeeee
+    --bg-main: #9dd1ff
+    // --bg-soft: #f1f1f1
+    // --grey: #969696
 
   &.text-x2
     font-size: 18px
@@ -179,10 +185,19 @@ html:has(body.visimp.text-x3)
       background-image: none
   &.img-wb
     img
-      filter: grayscale(1)
+      filter: grayscale(1) !important
   &.img-off
     img
       opacity: 0 !important
+
+  // &.dark
+  //   background-color: #444
+  //   color: #fff !important
+  // &.dark
+  //   svg
+  //     background-color: #444
+  //   a
+  //     color: #fff
   
   // &.text-x2 *
   //   font-size: 101%

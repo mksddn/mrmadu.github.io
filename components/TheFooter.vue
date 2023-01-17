@@ -189,4 +189,9 @@ footer
 @media (max-width: 992px)
   #pd_widget_column
     margin: auto
+
+// .visimp.dark
+//   footer, .absolute-footer
+//     background-color: #444
+//     color: #fff
 </style>

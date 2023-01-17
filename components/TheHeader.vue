@@ -240,4 +240,11 @@ export default {
     color: var(--grey)
 .collapse.show
   margin: 20px
+
+// .visimp.dark
+//   header, .navbar
+//     background-color: #444
+//     color: #fff
+//   .navbar-info-icon
+//     color: #fff
 </style>

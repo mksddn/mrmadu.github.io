@@ -103,7 +103,7 @@ export default {
       return this.$store.state.visimp.color
     },
     visimpImg() {
-      return this.$store.state.visimp.actimgive
+      return this.$store.state.visimp.img
     },
   },
   mounted() {

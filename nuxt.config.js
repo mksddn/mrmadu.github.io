@@ -40,6 +40,12 @@ export default {
     { path: '~/components/titles', extensions: ['vue'] },
     { path: '~/components/sliders', extensions: ['vue'] },
     { path: '~/components/sidebar', extensions: ['vue'] },
+    { path: '~/components/content', extensions: ['vue'] },
+    { path: '~/components/header', extensions: ['vue'] },
+    { path: '~/components/footer', extensions: ['vue'] },
+    { path: '~/components/blog', extensions: ['vue'] },
+    { path: '~/components/forms', extensions: ['vue'] },
+    { path: '~/components/reuse', extensions: ['vue'] },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

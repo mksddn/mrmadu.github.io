@@ -21,16 +21,7 @@
               <a href="#0" class="vk">
                 <font-awesome-icon icon="fa-brands fa-vk" color="#007bff" />
               </a>
-              <a
-                href="#0"
-                class="visimp-toggle"
-                @click.prevent="
-                  $store.commit('SET_IS_VISIMP', !$store.state.visimp.active)
-                "
-              >
-                <font-awesome-icon icon="fa-solid fa-glasses" />
-                <span>версия для слабовидящих</span>
-              </a>
+              <VisimpToggle />
               <ModeToggle />
             </div>
           </b-navbar-nav>
@@ -107,11 +98,6 @@ export default {
     // visimpActive: this.$store.state.visimp.active,
     logoUrl: `/logo.png`,
   }),
-  computed: {
-    active() {
-      return this.$store.state.visimp.active
-    },
-  },
   mounted() {
     // document.body.classList.add('dark')
     this.$nextTick(() => {
@@ -183,8 +169,6 @@ export default {
     flex-wrap: nowrap
 .navbar-bottom
   padding: 0
-  ul
-    padding: 5px 0
 
 .navbar-search
   input
@@ -203,14 +187,6 @@ export default {
   font-size: 1.8rem
   a
     padding: 0 10px
-    span
-      font-size: 0.9rem
-      margin-left: 5px
-    &.visimp-toggle
-      font-size: 1.2rem
-      color: inherit
-      display: flex
-      align-items: center
     &:hover, &:hover svg
       color: var(--primary)
 

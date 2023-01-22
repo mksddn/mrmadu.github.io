@@ -9,6 +9,8 @@ export const state = () => ({
     img: 'img-wb',
   },
   // isVisimp: false,
+  menuMain: null,
+  menuFooter: null,
   homePage: null,
   pageSlugs: null,
   posts: null,
@@ -38,6 +40,12 @@ export const mutations = {
   },
   SET_VISIMP_IMG: (state, data) => {
     state.visimp.img = data
+  },
+  SET_MENU_MAIN: (state, data) => {
+    state.menuMain = data
+  },
+  SET_MENU_FOOTER: (state, data) => {
+    state.menuFooter = data
   },
   SET_HOME_PAGE: (state, data) => {
     state.homePage = data

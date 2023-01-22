@@ -5,69 +5,27 @@
       <b-container>
         <b-row>
           <b-col lg="4" class="mb-4 mb-lg-0">
-            <b-nav vertical>
-              <b-nav-item v-for="(item, index) in menu" :key="index">{{
-                item.title
-              }}</b-nav-item>
-            </b-nav>
+            <FooterMenu />
           </b-col>
           <b-col lg="4" class="mb-4 mb-lg-0">
             <div class="widget">
               <img :src="about.logo" alt="" />
               <div v-html="about.text" />
             </div>
-            <!-- <div class="widget">
-              <script src="https://vk.com/js/api/openapi.js?168"></script>
-              <div id="vk_groups"></div>
-              <script>
-                VK.Widgets.Group(
-                  'vk_groups',
-                  { mode: 3, no_cover: 1, width: '340' },
-                  73108189
-                )
-              </script>
-            </div> -->
+            <div class="widget">
+              <WidgetVK />
+            </div>
           </b-col>
           <b-col lg="4">
-            <!-- <div class="widget">
-              <img src="/star.png" alt="" /><br />
-              <a href="https://yandex.ru/maps/-/CCUqfCQh1C" target="_blank"
-                ><b>выбор пользователей Яндекса - 2020</b></a
-              >
-            </div> -->
-            <!-- <div class="widget">
-              <div id="pd_widget_column" data-lpu="20934">
-                <a target="_blank" href="https://prodoctorov.ru/"
-                  ><img
-                    class="pd_logo"
-                    src="https://prodoctorov.ru/static/logo_widget.png"
-                /></a>
-                <a
-                  target="_blank"
-                  class="pd_lpu_name"
-                  href="https://prodoctorov.ru/krasnodar/lpu/20934-mamme/"
-                  >Клиника «Маммэ»</a
-                >
-
-                <div id="pd_widget_column_content"></div>
-                <a
-                  target="_blank"
-                  href="https://prodoctorov.ru/krasnodar/lpu/20934-mamme/#otzivi"
-                  >читать отзывы</a
-                >
-                <script src="https://prodoctorov.ru/static/js/widget_column.js"></script>
-              </div>
-            </div> -->
-            <!-- <div class="widget">
-              <div class="ya-widget" style="height: 50px">
-                <iframe
-                  src="https://yandex.ru/sprav/widget/rating-badge/1262911293"
-                  width="150"
-                  height="50"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div> -->
+            <div class="widget">
+              <WidgetYaPlace />
+            </div>
+            <div class="widget">
+              <WidgetProDoc />
+            </div>
+            <div class="widget">
+              <WidgetYaRate />
+            </div>
           </b-col>
         </b-row>
       </b-container>
@@ -84,13 +42,10 @@
             >
           </b-col>
           <b-col lg="4" class="nav-icons">
-            <a href="/" class="vk">
+            <a href="/" class="vk mr-3">
               <font-awesome-icon icon="fa-brands fa-vk" color="#007bff" />
             </a>
-            <a href="/" class="visimp">
-              <font-awesome-icon icon="fa-solid fa-glasses" />
-              <span>версия для слабовидящих</span>
-            </a>
+            <VisimpToggle />
           </b-col>
         </b-row>
       </b-container>
@@ -103,28 +58,6 @@ export default {
   name: 'SiteFooter',
   data: () => ({
     crntYear: new Date().getFullYear(),
-    menu: [
-      {
-        title: 'О клинике',
-        link: '/',
-      },
-      {
-        title: 'Лицензии',
-        link: '/',
-      },
-      {
-        title: 'Отзывы',
-        link: '/',
-      },
-      {
-        title: 'Вакансии',
-        link: '/',
-      },
-      {
-        title: 'Врачи',
-        link: '/',
-      },
-    ],
     about: {
       logo: '/logo-min.png',
       text: `Общество с ограниченной ответственностью «Клиника МАММЭ» (ООО «Клиника МАММЭ»)
@@ -159,9 +92,6 @@ footer
   margin-bottom: 20px
   @media (max-width: 992px)
     margin-bottom: 1.5rem
-  img
-    max-width: 100px
-    margin-bottom: 10px
   &:last-child
     margin-bottom: 0
 .absolute-footer
@@ -180,7 +110,7 @@ footer
       justify-content: center
     svg
       font-size: 1rem
-      margin: 0 10px
+      // margin: 0 10px
     .vk svg
       font-size: 2rem
     .visimp svg

@@ -28,6 +28,7 @@ export default {
     '~/plugins/fontawesome.js',
     '~/plugins/animateOnScroll.client.js',
     { src: '~/plugins/vue-scrollto', ssr: false },
+    { src: "~/plugins/vClickOutside", ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -45,6 +46,7 @@ export default {
     { path: '~/components/footer', extensions: ['vue'] },
     { path: '~/components/forms', extensions: ['vue'] },
     { path: '~/components/reuse', extensions: ['vue'] },
+    { path: '~/components/embed', extensions: ['vue'] },
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

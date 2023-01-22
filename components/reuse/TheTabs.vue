@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
-  <b-skeleton-wrapper v-if="loading" :loading="loading">
+  <!-- <b-skeleton-wrapper v-if="loading" :loading="loading">
     <template #loading>
       <b-skeleton-table
         :rows="5"
@@ -8,8 +8,8 @@
         :table-props="{ bordered: true, striped: true }"
       ></b-skeleton-table>
     </template>
-  </b-skeleton-wrapper>
-  <div v-else>
+  </b-skeleton-wrapper> -->
+  <div>
     <b-tabs content-class="mt-3" fill>
       <b-tab
         v-if="$store.state.currDoc.acf.staff_main"

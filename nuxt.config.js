@@ -43,7 +43,6 @@ export default {
     { path: '~/components/content', extensions: ['vue'] },
     { path: '~/components/header', extensions: ['vue'] },
     { path: '~/components/footer', extensions: ['vue'] },
-    { path: '~/components/blog', extensions: ['vue'] },
     { path: '~/components/forms', extensions: ['vue'] },
     { path: '~/components/reuse', extensions: ['vue'] },
   ],

@@ -42,13 +42,7 @@ export default {
       route.params.slug !== store.state.currDoc.slug
     ) {
       const { data } = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff`,
-        {
-          params: {
-            slug: params.slug,
-            _embed: true,
-          },
-        }
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff?_embed&slug=${params.slug}`,
       )
       store.commit('SET_CURR_DOC', data[0])
       return { currDoc: data[0] }

@@ -26,7 +26,7 @@ export default {
       required: true,
     },
     totalpages: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

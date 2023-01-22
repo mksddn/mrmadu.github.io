@@ -10,6 +10,7 @@ export const state = () => ({
   },
   // isVisimp: false,
   homePage: null,
+  pageSlugs: null,
   posts: null,
   lastNews: null,
   currPost: null,
@@ -40,6 +41,9 @@ export const mutations = {
   },
   SET_HOME_PAGE: (state, data) => {
     state.homePage = data
+  },
+  SET_PAGE_SLUGS_TO_STATE: (state, data) => {
+    state.pageSlugs = data
   },
   SET_POSTS_TO_STATE: (state, data) => {
     state.posts = data
@@ -74,20 +78,16 @@ export const mutations = {
 }
 
 export const actions = {
-  // nuxtServerInit({ commit }, context) {
-  //   return axios
-  //     .get('https://mammae-clinic.ru/wp-json/wp/v2/posts', context)
-  //     .then((articles) => {
-  //       // console.log(articles);
-  //       commit('SET_ARTICLES_TO_STATE', articles.data)
-  //       this.loading = false
-  //       return articles
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //       return error
-  //     })
-  // },
+  async nuxtServerInit({ commit }) {
+    const pages = await this.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?per_page=99`
+    )
+    const pageSlugs = []
+    pages.data.forEach((el) => {
+      pageSlugs.push(el.slug)
+    })
+    commit('SET_PAGE_SLUGS_TO_STATE', pageSlugs)
+  },
   // GET_ARTICLES_FROM_API({ commit }) {
   //   return axios
   //     .get('https://mammae-clinic.ru/wp-json/wp/v2/posts')

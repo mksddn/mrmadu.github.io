@@ -42,15 +42,10 @@
 export default {
   name: 'HomePage',
   layout: 'home',
-  async asyncData({ app, store, params, route }) {
+  async asyncData({ app, store, route }) {
     if (!store.state.homePage) {
       const { data } = await app.$axios.get(
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages/779`,
-        {
-          params: {
-            _embed: true,
-          },
-        }
       )
       store.commit('SET_HOME_PAGE', data)
       return { homePage: data }

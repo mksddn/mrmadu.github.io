@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col>
-          <h3 class="suptitle">Такой страницы не существует </h3>
+          <h3 class="suptitle">Что-то пошло не так</h3>
           <br>
           <h1 v-if="error.statusCode === 404" class="title">Ошибка 404</h1>
           <h1 v-else class="title">An error occurred</h1>

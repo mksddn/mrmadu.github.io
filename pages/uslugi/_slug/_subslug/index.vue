@@ -11,13 +11,7 @@ export default {
       route.params.subslug !== store.state.currServ.slug
     ) {
       const { data } = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi`,
-        {
-          params: {
-            slug: params.subslug,
-            _embed: true,
-          },
-        }
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?_embed&slug=${params.subslug}`,
       )
       store.commit('SET_CURR_SERV', data[0])
       return { currServ: data[0] }

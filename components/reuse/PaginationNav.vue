@@ -13,7 +13,7 @@ export default {
   name: 'PaginationNav',
   props: {
     totalpages: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

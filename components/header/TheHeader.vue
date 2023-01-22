@@ -1,6 +1,6 @@
 <template>
   <div>
-    <GlobalStyles />
+    <!-- <GlobalStyles /> -->
     <header>
       <VisimpPanel />
 

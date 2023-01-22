@@ -12,9 +12,9 @@
             <CardService :serv="serv" />
           </b-col>
         </b-row>
-        <br>
-        <hr>
-        <br>
+        <br />
+        <hr />
+        <br />
         <b-row>
           <b-col>
             <p>
@@ -40,12 +40,7 @@ export default {
   async asyncData({ app, store, params }) {
     if (!store.state.services) {
       const services = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?parent=0&per_page=99`,
-        {
-          params: {
-            _embed: true,
-          },
-        }
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?_embed&parent=0&per_page=99`
       )
       store.commit('SET_SERVICES', services.data)
     }

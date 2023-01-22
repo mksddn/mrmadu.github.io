@@ -67,12 +67,7 @@ export default {
   async asyncData({ app, store, params }) {
     if (!store.state.allStaff) {
       const allStaff = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff?per_page=99`,
-        {
-          params: {
-            _embed: true,
-          },
-        }
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff?_embed&per_page=99`,
       )
       store.commit('SET_ALL_STAFF', allStaff.data)
     }

@@ -21,7 +21,7 @@ export default {
       }
     } else {
       const { data } = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts?slug=${slug}&embed`
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts?_embed&slug=${slug}`
       )
       if (data[0]) {
         store.commit('SET_CURR_POST', data[0])

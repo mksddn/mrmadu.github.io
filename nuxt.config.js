@@ -4,16 +4,16 @@ export default {
   ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: 'vue2-clinic',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-  },
+  // head: {
+  //   title: 'vue2-clinic',
+  //   meta: [
+  //     { charset: 'utf-8' },
+  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  //     { hid: 'description', name: 'description', content: '' },
+  //     { name: 'format-detection', content: 'telephone=no' },
+  //   ],
+  //   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  // },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
@@ -25,6 +25,7 @@ export default {
   plugins: [
     // '@plugins/global.js',  // сначала так глобально регистрировал и импортировал компоненты, а потом узнал, что можно сделать просто через плагин
     // '~/plugins/app-components.js', // а потом вообще узнал, что у накста есть такая штука, как авто импорт компонентов (см ниже)
+    '~/plugins/meta.js',
     '~/plugins/fontawesome.js',
     '~/plugins/animateOnScroll.client.js',
     { src: '~/plugins/vue-scrollto', ssr: false },
@@ -38,7 +39,6 @@ export default {
     { path: '~/components/sections', extensions: ['vue'] },
     { path: '~/components/cards', extensions: ['vue'] },
     { path: '~/components/global', extensions: ['vue'] },
-    { path: '~/components/titles', extensions: ['vue'] },
     { path: '~/components/sliders', extensions: ['vue'] },
     { path: '~/components/sidebar', extensions: ['vue'] },
     { path: '~/components/content', extensions: ['vue'] },

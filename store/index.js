@@ -1,6 +1,7 @@
 // import axios from 'axios'
 
 export const state = () => ({
+  siteInfo: null,
   darkMode: false,
   visimp: {
     active: false,
@@ -26,6 +27,9 @@ export const state = () => ({
 })
 
 export const mutations = {
+  SET_SITE_INFO: (state, data) => {
+    state.siteInfo = data
+  },
   SET_DARK_MODE: (state, data) => {
     state.darkMode = data
   },
@@ -87,6 +91,10 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit }) {
+    const siteInfo = await this.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/`
+    )
+    commit('SET_SITE_INFO', siteInfo.data)
     const pages = await this.$axios.get(
       `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?per_page=99`
     )

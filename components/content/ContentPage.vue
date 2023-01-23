@@ -4,8 +4,10 @@
     <section id="postContent">
       <b-container>
         <b-row>
+          <b-col v-if="$route.fullPath.includes('/about/')" lg="3">
+            <SidebarAbout isSchedule />
+          </b-col>
           <b-col class="cntnt">
-            <br />
             <div class="post-text" v-html="post.content.rendered" />
             <br />
           </b-col>

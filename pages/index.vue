@@ -39,20 +39,30 @@
 </template>
 
 <script>
+// import Meta from '~/plugins/meta'
 export default {
   name: 'HomePage',
+  // mixins: [Meta],
   layout: 'home',
-  async asyncData({ app, store, route }) {
+  async asyncData({ app, store }) {
     if (!store.state.homePage) {
       const { data } = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages/779`,
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages/779`
       )
       store.commit('SET_HOME_PAGE', data)
       return { homePage: data }
     }
   },
   data: () => ({
+    homePage: null,
+    // meta_title: this.homePage.yoast_head_json.og_title,
+    // meta_descr: this.homePage.yoast_head_json.og_description,
+    // meta_url: this.homePage.yoast_head_json.og_url,
+    // meta_type: 'website',
+    // meta_img: this.homePage.yoast_head_json.og_image[0],
   }),
+  mounted() {
+  },
 }
 </script>
 

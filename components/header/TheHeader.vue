@@ -7,16 +7,7 @@
       <b-navbar class="navbar-wrapper navbar-top">
         <b-container>
           <b-navbar-nav class="ml-auto">
-            <b-nav-form>
-              <b-input-group size="sm" class="navbar-search">
-                <b-form-input type="search" placeholder="Поиск"></b-form-input>
-                <b-input-group-append>
-                  <b-button size="sm" text="Search" variant="outline"
-                    ><font-awesome-icon icon="fa-solid fa-search"
-                  /></b-button>
-                </b-input-group-append>
-              </b-input-group>
-            </b-nav-form>
+            <HeaderSearch />
             <div class="nav-icons">
               <a href="#0" class="vk">
                 <font-awesome-icon icon="fa-brands fa-vk" color="#007bff" />
@@ -170,15 +161,6 @@ export default {
 .navbar-bottom
   padding: 0
 
-.navbar-search
-  input
-    border-top: 0
-    border-bottom: 0
-    border-right: 0
-    height: 40px !important
-    background-color: var(--bg-main)
-  button
-    // border-right: 1px solid #ced4da
 .nav-icons
   padding: 0 15px
   display: flex

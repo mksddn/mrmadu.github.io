@@ -15,7 +15,7 @@
             :class="{ show }"
             v-text="title"
           />
-          <BreadCrumbs />
+          <BreadCrumbs v-if="!isSearch" />
         </b-col>
         <b-col v-if="btnLink" class="text-right">
           <a href="/" class="btn btn-light">{{ btnText }}</a>
@@ -44,6 +44,10 @@ export default {
     btnText: {
       type: String,
       default: 'смотреть все',
+    },
+    isSearch: {
+      type: Boolean,
+      default: false,
     },
   },
   data: () => ({

@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div v-if="$route.query.s">
+    <SearchResults :query="$route.query.s" />
+  </div>
+  <div v-else>
     <SectionHero />
     <SectionAbout />
     <SectionCTA
@@ -44,7 +47,7 @@ export default {
   name: 'HomePage',
   mixins: [Meta],
   layout: 'home',
-  async asyncData({ app, store }) {
+  async asyncData({ app, store, query }) {
     if (!store.state.homePage) {
       const { data } = await app.$axios.get(
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages/779`

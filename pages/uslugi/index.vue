@@ -49,6 +49,7 @@ export default {
     const currPage = await app.$axios.get(
       `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?&slug=uslugi`
     )
+    store.commit('SET_PAGE_INFO', currPage.data[0])
     return { currPage: currPage.data[0] }
   },
   computed: {

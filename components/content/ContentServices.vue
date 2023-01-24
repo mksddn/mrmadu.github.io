@@ -5,20 +5,7 @@
     <section id="pageContent">
       <b-container>
         <b-row>
-          <b-col lg="3">
-            <SidebarService
-              v-if="sidebarBtns"
-              :btns="sidebarBtns"
-              :curr-serv="currServ.slug"
-            />
-            <b-skeleton-table
-              v-else
-              :rows="10"
-              :columns="1"
-              :table-props="{ bordered: true, striped: true }"
-            ></b-skeleton-table>
-          </b-col>
-          <b-col>
+          <b-col class="order-xl-2">
             <h2>Описание и цены</h2>
             <h3>{{ currServ.title.rendered }}</h3>
             <br />
@@ -56,6 +43,20 @@
               ></b-skeleton-table>
             </div>
           </b-col>
+          <b-col lg="3">
+            <SidebarService
+              v-if="sidebarBtns"
+              :btns="sidebarBtns"
+              :curr-serv="currServ.slug"
+              :has-childs="hasChilds"
+            />
+            <b-skeleton-table
+              v-else
+              :rows="10"
+              :columns="1"
+              :table-props="{ bordered: true, striped: true }"
+            ></b-skeleton-table>
+          </b-col>
         </b-row>
       </b-container>
     </section>
@@ -75,6 +76,7 @@ export default {
     sidebarBtns: null,
     hasParent: false,
     parent: null,
+    hasChilds: false,
   }),
   async fetch() {
     const { data: childs } = await axios.get(
@@ -92,6 +94,7 @@ export default {
       }
     } else {
       this.sidebarBtns = childs
+      this.hasChilds = true
     }
 
     if (!this.currServ.acf.service_price) {

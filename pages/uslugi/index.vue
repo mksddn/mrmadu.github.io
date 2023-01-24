@@ -1,7 +1,7 @@
 <template>
   <div>
     <TitlePage
-      :title="title"
+      :title="pageInfo.title.rendered"
       btn-link="/"
       btn-text="скачать прейскурант на услуги клиники"
     />
@@ -35,19 +35,30 @@
 </template>
 
 <script>
+import Meta from '~/plugins/meta'
 export default {
+  mixins: [Meta],
   layout: 'post',
-  async asyncData({ app, store, params }) {
+  async asyncData({ app, store }) {
     if (!store.state.services) {
       const services = await app.$axios.get(
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/uslugi?_embed&parent=0&per_page=99`
       )
       store.commit('SET_SERVICES', services.data)
     }
+    const currPage = await app.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?&slug=uslugi`
+    )
+    return { currPage: currPage.data[0] }
   },
-  data: () => ({
-    title: 'Услуги и цены',
-  }),
+  computed: {
+    pageInfo() {
+      return this.currPage
+    },
+    metaType() {
+      return 'page'
+    },
+  },
 }
 </script>
 

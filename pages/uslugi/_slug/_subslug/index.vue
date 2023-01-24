@@ -3,7 +3,9 @@
 </template>
 
 <script>
+import Meta from '~/plugins/meta'
 export default {
+  mixins: [Meta],
   layout: 'post',
   async asyncData({ app, store, params, route }) {
     if (
@@ -16,6 +18,11 @@ export default {
       store.commit('SET_CURR_SERV', data[0])
       return { currServ: data[0] }
     }
+  },
+  computed: {
+    pageInfo() {
+      return this.currServ
+    },
   },
 }
 </script>

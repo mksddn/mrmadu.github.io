@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TitlePage :title="title" />
+    <TitlePage :title="pageInfo.title.rendered" />
     <section id="pageContent">
       <b-container>
         <b-row align-v="center">
@@ -34,20 +34,6 @@
           </b-col>
         </b-row>
       </b-container>
-      <br />
-      <b-container>
-        <b-row>
-          <b-col>
-            <h3>Фотогалерея</h3>
-            <br />
-          </b-col>
-        </b-row>
-        <b-row>
-          <b-col>
-            <SliderGallery />
-          </b-col>
-        </b-row>
-      </b-container>
     </section>
     <section class="archive-staff">
       <b-container>
@@ -62,7 +48,9 @@
 </template>
 
 <script>
+import Meta from '~/plugins/meta'
 export default {
+  mixins: [Meta],
   layout: 'post',
   async asyncData({ app, store, params }) {
     if (!store.state.allStaff) {
@@ -71,10 +59,19 @@ export default {
       )
       store.commit('SET_ALL_STAFF', allStaff.data)
     }
+    const currPage = await app.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?_embed&slug=staff`
+    )
+    return { currPage: currPage.data[0] }
   },
-  data: () => ({
-    title: 'Врачи',
-  }),
+  computed: {
+    pageInfo() {
+      return this.currPage
+    },
+    metaType() {
+      return 'page'
+    },
+  },
 }
 </script>
 
@@ -100,5 +97,5 @@ export default {
     color: #dadada
     z-index: -1
 .archive-staff
-  background-color: var(--bg-main)
+  background-color: var(--bg-soft)
 </style>

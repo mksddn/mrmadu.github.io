@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div>
     <TitlePage :title="currDoc.title.rendered" type="staff" />
@@ -10,13 +11,7 @@
               :alt="currDoc.title.rendered"
               class="thumbnail"
             />
-            <div class="doc-excerpt">
-              <p>
-                Директор ООО «Клиника МАММЭ», реконструктивно-пластический
-                хирург, онколог, маммолог, действительный член общества РОПРЭХ,
-                заведующий кафедрой онкологии КМИ, доцент, кандидат медицинских
-                наук
-              </p>
+            <div class="doc-excerpt" v-html="currDoc.excerpt.rendered">
             </div>
           </b-col>
           <b-col class="doc-info">
@@ -34,7 +29,9 @@
 </template>
 
 <script>
+import Meta from '~/plugins/meta'
 export default {
+  mixins: [Meta],
   layout: 'post',
   async asyncData({ app, store, params, route }) {
     if (
@@ -42,11 +39,19 @@ export default {
       route.params.slug !== store.state.currDoc.slug
     ) {
       const { data } = await app.$axios.get(
-        `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff?_embed&slug=${params.slug}`,
+        `${process.env.VUE_APP_WP_API_URL}/wp/v2/staff?_embed&slug=${params.slug}`
       )
       store.commit('SET_CURR_DOC', data[0])
       return { currDoc: data[0] }
     }
+  },
+  // data: () => ({
+  //   currDoc: null,
+  // }),
+  computed: {
+    pageInfo() {
+      return this.currDoc
+    },
   },
 }
 </script>

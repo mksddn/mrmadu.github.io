@@ -1,6 +1,6 @@
 <template>
   <aside>
-    <div v-if="currServ">
+    <div v-if="hasChilds">
       <b-button
         v-for="btn in btns"
         :key="btn.id"
@@ -34,6 +34,10 @@ export default {
     currServ: {
       type: String,
       default: null,
+    },
+    hasChilds: {
+      type: Boolean,
+      default: false,
     },
   },
 }

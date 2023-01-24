@@ -39,10 +39,10 @@
 </template>
 
 <script>
-// import Meta from '~/plugins/meta'
+import Meta from '~/plugins/meta'
 export default {
   name: 'HomePage',
-  // mixins: [Meta],
+  mixins: [Meta],
   layout: 'home',
   async asyncData({ app, store }) {
     if (!store.state.homePage) {
@@ -55,19 +55,17 @@ export default {
   },
   data: () => ({
     homePage: null,
-    // meta_title: this.homePage.yoast_head_json.og_title,
-    // meta_descr: this.homePage.yoast_head_json.og_description,
-    // meta_url: this.homePage.yoast_head_json.og_url,
-    // meta_type: 'website',
-    // meta_img: this.homePage.yoast_head_json.og_image[0],
   }),
-  mounted() {
+  computed: {
+    pageInfo() {
+      return this.homePage
+    },
+    metaType() {
+      return 'website'
+    },
   },
+  mounted() {},
 }
 </script>
 
-<style lang="scss">
-// @import 'static/custom.sass';
-// @import '~bootstrap/scss/bootstrap.scss';
-// @import '~bootstrap-vue/src/index.scss';
-</style>
+<style lang="sass"></style>

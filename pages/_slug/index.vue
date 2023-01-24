@@ -5,7 +5,9 @@
 </template>
 
 <script>
+import Meta from '~/plugins/meta'
 export default {
+  mixins: [Meta],
   layout: 'post',
   async asyncData({ app, store, params, error }) {
     const slug = params.slug
@@ -35,6 +37,11 @@ export default {
     post: null,
     type: 'error',
   }),
+  computed: {
+    pageInfo() {
+      return this.post
+    },
+  },
 }
 </script>
 

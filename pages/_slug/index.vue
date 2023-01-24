@@ -16,7 +16,7 @@ export default {
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?_embed&slug=${slug}`
       )
       if (data[0]) {
-        store.commit('SET_CURR_POST', data[0])
+        store.commit('SET_PAGE_INFO', data[0])
         return { post: data[0], type: 'page' }
       } else {
         return error({ statusCode: 404, message: 'Page not found' })
@@ -26,7 +26,7 @@ export default {
         `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts?_embed&slug=${slug}`
       )
       if (data[0]) {
-        store.commit('SET_CURR_POST', data[0])
+        store.commit('SET_PAGE_INFO', data[0])
         return { post: data[0], type: 'post' }
       } else {
         return error({ statusCode: 404, message: 'Post not found' })

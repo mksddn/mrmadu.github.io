@@ -1,38 +1,33 @@
 <template>
-  <div>
-    <b-breadcrumb :items="pathLinks"></b-breadcrumb>
-    <!-- {{ pathLinks }} -->
-  </div>
+  <b-breadcrumb :items="breadcrumbs"></b-breadcrumb>
 </template>
 
 <script>
 export default {
   data: () => ({}),
   computed: {
-    pathParts() {
-      return this.$route.fullPath.split('/').filter((n) => n)
+    yoastArray() {
+      return this.$store.state.pageInfo.yoast_head_json.schema['@graph'][2]
+        .itemListElement
     },
-    pathLinks() {
-      const pathLinks = [
-        {
-          text: 'Главная',
-          to: '/',
-        },
-      ]
-      for (let i = 0; i < this.pathParts.length; i++) {
-        const anotherLink = {}
-        anotherLink.text = 'aerfsfs'
-        anotherLink.to = `/${this.pathParts[0]}`
-        pathLinks.push(anotherLink)
+    breadcrumbs() {
+      const breadcrumbs = []
+      for (let i = 0; i < this.yoastArray.length; i++) {
+        let link = this.yoastArray[i].item
+        if (link) {
+          link = new URL(this.yoastArray[i].item).pathname
+        } else {
+          link = null
+        }
+        breadcrumbs.push({
+          text: this.yoastArray[i].name,
+          to: { path: link },
+        })
       }
-      return pathLinks
+      return breadcrumbs
     },
   },
-  mounted() {
-    // console.log(this.$store.state.currPost.yoast_head_json.schema.value[`@graph`][2].itemListElement);
-    // console.log(this.pathParts);
-    // console.log(this.pathLinks);
-  },
+  mounted() {},
 }
 </script>
 
@@ -48,5 +43,5 @@ export default {
 .title-page a
   color: #fff
 .breadcrumb-item.active
-  // display: none
+  display: none
 </style>

@@ -2,6 +2,7 @@
 
 export const state = () => ({
   siteInfo: null,
+  pageInfo: null,
   darkMode: false,
   visimp: {
     active: false,
@@ -29,6 +30,9 @@ export const state = () => ({
 export const mutations = {
   SET_SITE_INFO: (state, data) => {
     state.siteInfo = data
+  },
+  SET_PAGE_INFO: (state, data) => {
+    state.pageInfo = data
   },
   SET_DARK_MODE: (state, data) => {
     state.darkMode = data

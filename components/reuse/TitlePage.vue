@@ -15,7 +15,7 @@
             :class="{ show }"
             v-text="title"
           />
-          <BreadCrumbs />
+          <!-- <BreadCrumbs /> -->
         </b-col>
         <b-col v-if="btnLink" class="text-right">
           <a href="/" class="btn btn-light">{{ btnText }}</a>

@@ -7,8 +7,9 @@ export default {
   data: () => ({}),
   computed: {
     yoastArray() {
-      return this.$store.state.pageInfo.yoast_head_json.schema['@graph'][2]
-        .itemListElement
+      return this.$store.state.pageInfo.yoast_head_json.schema['@graph'].find(
+        (x) => x['@type'] === 'BreadcrumbList'
+      ).itemListElement
     },
     breadcrumbs() {
       const breadcrumbs = []

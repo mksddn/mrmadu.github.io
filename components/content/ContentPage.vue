@@ -7,7 +7,7 @@
           <b-col v-if="$route.fullPath.includes('/about/')" lg="3">
             <SidebarAbout isSchedule />
           </b-col>
-          <b-col class="cntnt">
+          <b-col class="cntnt" :class="{'col-lg-9': $route.fullPath.includes('/about/')}">
             <div class="post-text" v-html="post.content.rendered" />
             <br />
           </b-col>

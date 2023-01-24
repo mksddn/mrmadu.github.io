@@ -78,12 +78,20 @@ a.btn
 pre
   color: var(--text-main)
 
+table
+  overflow: scroll
 table, .table-hover tbody tr:hover
   color: var(--text-main)
 .table-hover tbody tr:hover
   background-color: rgba(0,0,0,.2) !important
 .table-striped tbody tr:nth-of-type(odd)
   background-color: var(--bg-soft)
+table td
+  border: 1px solid #000
+  border-collapse: collapse
+  padding: 10px
+  text-align: center
+  font-size: 0.9rem
 
 img
   object-fit: cover
@@ -91,6 +99,9 @@ img
 
 .dark img
   filter: brightness(0.8)
+
+.cntnt
+  overflow-x: scroll
 
 .card
   background-color: var(--bg-main)
@@ -141,6 +152,10 @@ header .navbar-nav .nav-link
 .before-fromright
   opacity: 0
   transform: translateX(100px)
+  transition: all 0.5s ease
+.before-fromdown
+  opacity: 0
+  transform: translateY(100px)
   transition: all 0.5s ease
 .before-fadein
   opacity: 0

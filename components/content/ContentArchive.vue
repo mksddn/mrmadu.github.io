@@ -6,6 +6,7 @@
           <CardPostArchive
             v-for="post in posts || $store.state.posts"
             :key="post.id"
+            v-animate-fromdown
             :post="post"
           />
           <PaginationNav :totalpages="totalpages" />

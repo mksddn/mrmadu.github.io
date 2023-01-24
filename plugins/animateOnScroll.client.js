@@ -18,6 +18,13 @@ Vue.directive('animate-fromright', {
   }
 })
 
+Vue.directive('animate-fromdown', {
+  bind: el => {
+    el.classList.add('before-fromdown')
+    animateOnScrollObserver.observe(el)
+  }
+})
+
 Vue.directive('animate-fadein', {
   bind: el => {
     el.classList.add('before-fadein')

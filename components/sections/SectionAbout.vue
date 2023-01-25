@@ -46,7 +46,7 @@
               >Прейскурант на услуги клиники</b-button
             >
             <b-button
-              to="/about/paspisanie"
+              to="/about/raspisanie"
               variant="outline-secondary"
               block
               class="mb-2"

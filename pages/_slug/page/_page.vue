@@ -10,7 +10,7 @@ import Meta from '~/plugins/meta'
 export default {
   mixins: [Meta],
   layout: 'post',
-  async asyncData({ app, params, route, headers }) {
+  async asyncData({ app, store, params, route, headers }) {
     const page = route.params.page
     let cat = Number
     let title = String
@@ -27,6 +27,7 @@ export default {
       `${process.env.VUE_APP_WP_API_URL}/wp/v2/categories/${cat}`
     )
     catInfo = catInfo.data
+    store.commit('SET_PAGE_INFO', catInfo)
     
     let posts = await app.$axios.get(
       `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts`,

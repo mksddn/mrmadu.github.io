@@ -1,8 +1,11 @@
 <template>
   <div>
     <TitlePage :title="query" type="post" is-search />
+    <!-- {{ sResults.length }} -->
     <ContentArchive
       v-if="sResults"
+      ref="content"
+      :key="componentKey"
       :posts="sResults"
       :totalpages="totalpages"
       is-search
@@ -11,14 +14,15 @@
       <b-container>
         <b-row>
           <b-col>
-            <h3>Ничего не найдено</h3>
-            <hr>
-            <b-link to="/">Вернуться на главную</b-link>
+            <b-skeleton-table
+              :rows="10"
+              :columns="2"
+              :table-props="{ bordered: true, striped: true }"
+            ></b-skeleton-table>
           </b-col>
         </b-row>
       </b-container>
     </section>
-    <!-- <pre>{{ this.sResults }}</pre> -->
   </div>
 </template>
 
@@ -35,6 +39,7 @@ export default {
   data: () => ({
     sResults: null,
     totalpages: null,
+    componentKey: 0,
   }),
   async fetch() {
     const sResults = await axios.get(
@@ -43,22 +48,21 @@ export default {
       )}`,
       {
         params: {
-          s: this.query,
+          // s: this.query,
           ContentType: 'application/json; charset=utf-8',
-          _embed: true,
+          // _embed: true,
           per_page: 99,
         },
       }
     )
     this.totalpages = sResults.headers['x-wp-totalpages']
     this.sResults = sResults.data
-    // console.log(this.sResults.length)
   },
-  // computed: {
-  //   totalpages() {
-  //     return this.sResults.headers['x-wp-totalpages']
-  //   }
-  // },
+  watch: {
+    '$route.query.s'() {
+      this.methodThatForcesUpdate()
+    },
+  },
 }
 </script>
 

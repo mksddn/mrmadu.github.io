@@ -1,6 +1,6 @@
 <template>
   <div v-if="$route.query.s">
-    <SearchResults :query="$route.query.s" />
+    <SearchResults :key="$route.query.s" :query="$route.query.s" />
   </div>
   <div v-else>
     <SectionHero />

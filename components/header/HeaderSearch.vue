@@ -19,10 +19,10 @@ export default {
   }),
   methods: {
     search(sQuery) {
-      this.$nuxt.refresh()
-      this.$router.push({ path: `/?s=${sQuery}` })
+      this.sInput = null
+      this.$router.replace({ path: `/?s=${sQuery}` })
     }
-  }
+  },
 }
 </script>
 

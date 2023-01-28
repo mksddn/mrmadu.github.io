@@ -9,27 +9,34 @@ export default {
     favicon() {
       return this.$store.state.siteInfo.site_icon_url
     },
-    siteImg() {
+    pageImg() {
       if (this.pageInfo.yoast_head_json.og_image) {
         return this.pageInfo.yoast_head_json.og_image[0].url
       } else {
         return null
       }
     },
-    siteImgWidth() {
-      if (this.siteImg) {
+    pageImgWidth() {
+      if (this.pageImg) {
         return this.pageInfo.yoast_head_json.og_image[0].width
       } else {
         return null
       }
     },
-    siteImgHeight() {
-      if (this.siteImg) {
+    pageImgHeight() {
+      if (this.pageImg) {
         return this.pageInfo.yoast_head_json.og_image[0].height
       } else {
         return null
       }
     },
+    // pageDescr() {
+    //   if (this.pageInfo.yoast_head_json.og_description) {
+    //     return this.pageInfo.yoast_head_json.og_description
+    //   } else {
+    //     return this.$store.state.siteInfo.description
+    //   }
+    // }
   },
   head() {
     return {
@@ -41,7 +48,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            this.pageInfo.yoast_head_json.og_description || this.siteDesc,
+            this.pageInfo.yoast_head_json.description || this.siteDesc,
         },
         {
           hid: 'og:type',
@@ -57,7 +64,7 @@ export default {
           hid: 'og:description',
           name: 'og:description',
           content:
-            this.pageInfo.yoast_head_json.og_description || this.siteDesc,
+            this.pageInfo.yoast_head_json.description || this.siteDesc,
         },
         {
           hid: 'og:url',
@@ -72,25 +79,25 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.siteImg,
+          content: this.pageImg,
         },
         {
           hid: 'og:image:width',
           name: 'og:image:width',
-          content: this.siteImgWidth,
+          content: this.pageImgWidth,
         },
         {
           hid: 'og:image:height',
           name: 'og:image:height',
-          content: this.siteImgHeight,
+          content: this.pageImgHeight,
         },
       ],
       link: [
-        {
-          rel: 'icon',
-          type: 'image/x-icon',
-          href: this.favicon,
-        },
+        // {
+        //   rel: 'icon',
+        //   type: 'image/x-icon',
+        //   href: this.favicon,
+        // },
         {
           rel: 'canonical',
           href: this.pageInfo.yoast_head_json.og_url,

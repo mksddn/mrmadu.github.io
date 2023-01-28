@@ -10,50 +10,39 @@ import Meta from '~/plugins/meta'
 export default {
   mixins: [Meta],
   layout: 'post',
-  async asyncData({ app, store, params, route, headers }) {
-    const page = route.params.page
-    let cat = Number
-    let title = String
-    // TODO remake via loop
-    if (params.slug.includes('news')) {
-      cat = 36
-      title = 'Новости'
-    } else if (params.slug.includes('akcii')) {
-      cat = 37
-      title = 'Акции'
-    }
-
-    let catInfo = await app.$axios.get(
-      `${process.env.VUE_APP_WP_API_URL}/wp/v2/categories/${cat}`
+  async asyncData({ app, store, route }) {
+    const tax = store.state.taxSlugs.find(
+      (tax) => tax.slug === route.params.slug
     )
-    catInfo = catInfo.data
-    store.commit('SET_PAGE_INFO', catInfo)
-    
+    const type = tax.type === 'category' ? 'categories' : 'tags'
+    let taxInfo = await app.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/${type}/${tax.id}`
+    )
+    taxInfo = taxInfo.data
+    store.commit('SET_PAGE_INFO', taxInfo)
     let posts = await app.$axios.get(
-      `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts`,
-      {
-        params: {
-          categories: cat,
-          page,
-          _embed: true,
-        },
-        headers,
-      }
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/posts?_embed&${type}=${tax.id}&page=${route.params.page}`
     )
     const totalpages = posts.headers['x-wp-totalpages']
     posts = posts.data
-    return { title, catInfo, posts, page, totalpages }
+    return {
+      title: tax.name,
+      taxInfo,
+      posts,
+      page: route.params.page,
+      totalpages,
+    }
   },
   data: () => ({
     title: null,
   }),
   computed: {
     pageInfo() {
-      return this.catInfo
+      return this.taxInfo
     },
     metaTitle() {
-      return `${this.catInfo.yoast_head_json.title} | Стр. ${this.page}`
-    }
+      return `${this.taxInfo.yoast_head_json.title} | Стр. ${this.page}`
+    },
   },
 }
 </script>

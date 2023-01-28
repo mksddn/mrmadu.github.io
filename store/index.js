@@ -15,6 +15,7 @@ export const state = () => ({
   menuFooter: null,
   homePage: null,
   pageSlugs: null,
+  taxSlugs: null,
   posts: null,
   lastNews: null,
   currPost: null,
@@ -61,6 +62,9 @@ export const mutations = {
   SET_PAGE_SLUGS_TO_STATE: (state, data) => {
     state.pageSlugs = data
   },
+  SET_TAX_SLUGS_TO_STATE: (state, data) => {
+    state.taxSlugs = data
+  },
   SET_POSTS_TO_STATE: (state, data) => {
     state.posts = data
   },
@@ -95,10 +99,10 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit({ commit }) {
-    const siteInfo = await this.$axios.get(
-      `${process.env.VUE_APP_WP_API_URL}/`
-    )
+    // SET SITE INFO
+    const siteInfo = await this.$axios.get(`${process.env.VUE_APP_WP_API_URL}/`)
     commit('SET_SITE_INFO', siteInfo.data)
+    // SET LIST OF PAGES
     const pages = await this.$axios.get(
       `${process.env.VUE_APP_WP_API_URL}/wp/v2/pages?per_page=99`
     )
@@ -107,6 +111,24 @@ export const actions = {
       pageSlugs.push(el.slug)
     })
     commit('SET_PAGE_SLUGS_TO_STATE', pageSlugs)
+    // SET LIST OF TAXONOMIES
+    const cats = await this.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/categories?per_page=99`
+    )
+    const tags = await this.$axios.get(
+      `${process.env.VUE_APP_WP_API_URL}/wp/v2/tags?per_page=99`
+    )
+    const taxes = [...cats.data, ...tags.data]
+    const taxSlugs = []
+    taxes.forEach((el) => {
+      taxSlugs.push({
+        slug: el.slug,
+        id: el.id,
+        name: el.name,
+        type: el.taxonomy,
+      })
+    })
+    commit('SET_TAX_SLUGS_TO_STATE', taxSlugs)
   },
   // GET_ARTICLES_FROM_API({ commit }) {
   //   return axios

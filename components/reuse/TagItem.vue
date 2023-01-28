@@ -1,5 +1,5 @@
 <template>
-  <b-link :to="`/tag/${tag.slug}`" class="tag-item">{{ tag.name }}</b-link>
+  <b-link :to="`/${tag.slug}`" class="tag-item">{{ tag.name }}</b-link>
 </template>
 
 <script>

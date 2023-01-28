@@ -2,7 +2,7 @@
   <div v-if="$store.state.allCats" class="wdgt wdgt-cats">
       <h3 class="wdgt-title">Категории</h3>
       <div v-for="cat in $store.state.allCats" :key="cat.id" class="cat-item">
-        <b-link :to="cat.link"
+        <b-link :to="`/${cat.slug}`"
           ><h4 class="cat-title">{{ cat.name }}</h4></b-link
         >
         <span class="cat-count">{{ cat.count }}</span>
